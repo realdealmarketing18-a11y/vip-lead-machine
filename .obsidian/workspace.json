@@ -1,0 +1,202 @@
+{
+  "main": {
+    "id": "f19e7a8b523c246c",
+    "type": "split",
+    "children": [
+      {
+        "id": "59b7e2013678a4b7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2b595b78de56d07e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03-Episodes/DS-001-Douglas-Sheri/render-queue.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "render-queue"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9cf9cd252e6f3c5a",
+    "type": "split",
+    "children": [
+      {
+        "id": "54d7abf52c8e5fc6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a0f42f7f4d1a5456",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d18347228309a862",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "fbee8baad7c601a9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2de14a6aed4baad6",
+    "type": "split",
+    "children": [
+      {
+        "id": "698bf389ec22d7e2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a11968ca6ef5cb5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "03-Episodes/DS-001-Douglas-Sheri/render-queue.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for render-queue"
+            }
+          },
+          {
+            "id": "2c76337dcef7ef88",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "03-Episodes/DS-001-Douglas-Sheri/render-queue.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from render-queue"
+            }
+          },
+          {
+            "id": "f513df51c9a59357",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c2c0dc53fae0c638",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "edbfe1da538a44c2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "03-Episodes/DS-001-Douglas-Sheri/render-queue.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of render-queue"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "2b595b78de56d07e",
+  "lastOpenFiles": [
+    "test-apis.js",
+    "02-The-Wiki/sales/Claire-Robertson-Avatar.md",
+    "03-Episodes/DS-001-Douglas-Sheri/notes.md",
+    "03-Episodes/DS-001-Douglas-Sheri/brief.md",
+    "03-Episodes/DS-001-Douglas-Sheri/action-plan.md",
+    "02-The-Wiki/marketing/3-Step-Funnel-Framework.md",
+    "log.md",
+    "03-Episodes/DS-001-Douglas-Sheri/render-queue.md",
+    "02-The-Wiki/sales/Doctor-Diagnosis-Script.md",
+    "02-The-Wiki/production/Higgsfield-Prompt-Templates.md",
+    "index.md",
+    "GEMINI.md",
+    "CLAUDE.md"
+  ]
+}
