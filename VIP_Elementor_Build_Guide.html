@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Premier — Elementor Free Build Guide</title>
+<style>
+  :root {
+    --orange: #E8660A;
+    --gold: #C8960C;
+    --navy: #1a1f4e;
+    --navy-light: #252b6b;
+    --white: #ffffff;
+    --gray: #f5f5f5;
+    --gray2: #e8e8e8;
+    --text: #222222;
+    --text-light: #555555;
+    --green: #27ae60;
+    --red: #e74c3c;
+    --yellow: #f39c12;
+    --blue: #2980b9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f0f0; color: var(--text); }
+
+  /* HEADER */
+  .header { background: var(--navy); padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+  .header-logo { color: var(--white); font-size: 1.3rem; font-weight: 800; letter-spacing: 1px; }
+  .header-logo span { color: var(--orange); }
+  .header-badge { background: var(--orange); color: white; font-size: 0.7rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; }
+
+  /* LAYOUT */
+  .layout { display: flex; min-height: 100vh; }
+
+  /* SIDEBAR */
+  .sidebar { width: 280px; background: var(--navy); position: sticky; top: 64px; height: calc(100vh - 64px); overflow-y: auto; flex-shrink: 0; }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--orange); }
+  .sidebar-title { color: var(--gold); font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; padding: 20px 20px 8px; }
+  .sidebar a { display: block; padding: 10px 20px; color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.82rem; border-left: 3px solid transparent; transition: all 0.2s; }
+  .sidebar a:hover { color: white; border-left-color: var(--orange); background: rgba(255,255,255,0.05); }
+  .sidebar a.active { color: white; border-left-color: var(--orange); background: rgba(232,102,10,0.15); }
+  .sidebar-section { margin-top: 16px; }
+  .sidebar-num { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: var(--orange); color: white; font-size: 0.7rem; font-weight: 700; text-align: center; line-height: 20px; margin-right: 8px; flex-shrink: 0; }
+
+  /* MAIN */
+  .main { flex: 1; padding: 40px; max-width: 960px; }
+
+  /* INTRO CARD */
+  .intro-card { background: linear-gradient(135deg, var(--navy), var(--navy-light)); color: white; border-radius: 12px; padding: 32px; margin-bottom: 32px; border-left: 6px solid var(--orange); }
+  .intro-card h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; }
+  .intro-card h1 span { color: var(--orange); }
+  .intro-card p { color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 16px; }
+  .intro-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+  .intro-meta-item { background: rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 16px; font-size: 0.82rem; }
+  .intro-meta-item strong { color: var(--orange); }
+
+  /* BEFORE YOU START */
+  .setup-card { background: white; border-radius: 12px; padding: 28px; margin-bottom: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border-left: 5px solid var(--gold); }
+  .setup-card h2 { color: var(--navy); font-size: 1.2rem; font-weight: 800; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .setup-card h2 .icon { font-size: 1.4rem; }
+
+  /* CHECKLIST */
+  .checklist { list-style: none; }
+  .checklist li { padding: 8px 0; border-bottom: 1px solid var(--gray2); display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; }
+  .checklist li:last-child { border-bottom: none; }
+  .check-box { width: 20px; height: 20px; border: 2px solid var(--gray2); border-radius: 4px; flex-shrink: 0; margin-top: 1px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+
+  /* SECTION CARD */
+  .section-card { background: white; border-radius: 12px; margin-bottom: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); overflow: hidden; }
+  .section-header { background: var(--navy); padding: 20px 28px; display: flex; align-items: center; gap: 16px; cursor: pointer; }
+  .section-num { background: var(--orange); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; flex-shrink: 0; }
+  .section-title { color: white; font-size: 1.1rem; font-weight: 700; }
+  .section-subtitle { color: rgba(255,255,255,0.6); font-size: 0.78rem; }
+  .section-tag { margin-left: auto; background: rgba(232,102,10,0.25); color: var(--orange); font-size: 0.7rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--orange); white-space: nowrap; }
+  .section-body { padding: 28px; }
+
+  /* WIDGET STEPS */
+  .widget-step { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+  .widget-step-num { background: var(--orange); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem; flex-shrink: 0; margin-top: 2px; }
+  .widget-step-content { flex: 1; }
+  .widget-step-content h4 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .widget-step-content p { font-size: 0.85rem; color: var(--text-light); line-height: 1.5; }
+
+  /* SETTINGS TABLE */
+  .settings-table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 0.82rem; }
+  .settings-table th { background: var(--navy); color: white; padding: 8px 12px; text-align: left; font-weight: 700; }
+  .settings-table td { padding: 8px 12px; border-bottom: 1px solid var(--gray2); vertical-align: top; }
+  .settings-table tr:hover td { background: var(--gray); }
+  .settings-table .label { font-weight: 600; color: var(--text); white-space: nowrap; }
+  .settings-table .value { color: var(--navy); font-family: monospace; font-size: 0.8rem; background: #f0f4ff; padding: 2px 6px; border-radius: 4px; display: inline-block; }
+  .settings-table .note { color: var(--text-light); font-size: 0.78rem; font-style: italic; }
+
+  /* COLOR SWATCH */
+  .color-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0; }
+  .color-swatch { display: flex; align-items: center; gap: 8px; background: var(--gray); padding: 6px 12px; border-radius: 8px; font-size: 0.82rem; }
+  .swatch { width: 20px; height: 20px; border-radius: 4px; border: 1px solid rgba(0,0,0,0.15); flex-shrink: 0; }
+
+  /* WIDGET BADGE */
+  .widget-badge { display: inline-block; background: #e8f0fe; color: #1a1f4e; font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; margin-bottom: 8px; border: 1px solid #c5d3f0; }
+  .widget-badge.html { background: #fde8e8; color: #8b0000; border-color: #f0c5c5; }
+  .widget-badge.image { background: #e8f9e8; color: #1a5e1a; border-color: #c5f0c5; }
+  .widget-badge.video { background: #fff3e8; color: #7a3500; border-color: #f0d5c5; }
+  .widget-badge.button { background: #ffe8f5; color: #5a0044; border-color: #f0c5e8; }
+  .widget-badge.section { background: #e8fff5; color: #004422; border-color: #c5f0dc; }
+
+  /* TIP BOX */
+  .tip { background: #fff8e8; border-left: 4px solid var(--gold); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; font-size: 0.84rem; color: #5a4500; }
+  .tip strong { color: var(--gold); }
+  .warn { background: #fff0f0; border-left: 4px solid var(--red); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; font-size: 0.84rem; color: #5a0000; }
+  .warn strong { color: var(--red); }
+  .info { background: #e8f4ff; border-left: 4px solid var(--blue); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; font-size: 0.84rem; color: #003366; }
+  .info strong { color: var(--blue); }
+
+  /* CODE BLOCK */
+  .code-block { background: #1e1e2e; color: #cdd6f4; font-family: 'Courier New', monospace; font-size: 0.8rem; padding: 16px; border-radius: 8px; margin: 12px 0; overflow-x: auto; line-height: 1.6; position: relative; }
+  .code-block .comment { color: #6c7086; }
+  .code-block .token-highlight { color: #fab387; font-weight: 700; }
+  .copy-btn { position: absolute; top: 10px; right: 10px; background: var(--orange); color: white; border: none; padding: 4px 10px; border-radius: 6px; font-size: 0.72rem; cursor: pointer; font-weight: 700; }
+
+  /* DIVIDER */
+  .divider { border: none; border-top: 2px solid var(--gray2); margin: 28px 0; }
+
+  /* TOKEN GRID */
+  .token-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin: 12px 0; }
+  .token-item { background: var(--gray); border: 1px solid var(--gray2); border-radius: 8px; padding: 10px 14px; }
+  .token-item .token-name { font-family: monospace; font-size: 0.78rem; color: var(--orange); font-weight: 700; }
+  .token-item .token-desc { font-size: 0.75rem; color: var(--text-light); margin-top: 3px; }
+
+  /* PROGRESS BAR */
+  .progress-bar { height: 6px; background: var(--gray2); border-radius: 3px; margin: 8px 0; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--orange), var(--gold)); border-radius: 3px; }
+
+  /* FINAL CTA */
+  .final-cta { background: linear-gradient(135deg, var(--navy), var(--navy-light)); color: white; border-radius: 12px; padding: 32px; text-align: center; margin-top: 40px; }
+  .final-cta h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; }
+  .final-cta p { color: rgba(255,255,255,0.75); margin-bottom: 20px; }
+  .cta-btn { display: inline-block; background: var(--orange); color: white; padding: 14px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1rem; margin: 0 8px 10px; }
+  .cta-btn.secondary { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
+
+  @media (max-width: 768px) {
+    .sidebar { display: none; }
+    .main { padding: 20px; }
+    .header { padding: 16px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-logo">VIP <span>PREMIER</span> PAINTING</div>
+  <div class="header-badge">Elementor Build Guide v1.0</div>
+</div>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-title">Before You Build</div>
+  <a href="#setup">⚙️ Setup Checklist</a>
+  <a href="#colors">🎨 Brand Colors</a>
+  <a href="#fonts">🔤 Fonts</a>
+  <a href="#tokens">🔖 Swap Tokens</a>
+
+  <div class="sidebar-title sidebar-section">12 Sections</div>
+  <a href="#s1"><span class="sidebar-num">1</span>Hero</a>
+  <a href="#s2"><span class="sidebar-num">2</span>Why Free Consult</a>
+  <a href="#s3"><span class="sidebar-num">3</span>Our Process</a>
+  <a href="#s4"><span class="sidebar-num">4</span>Case Study #1</a>
+  <a href="#s5"><span class="sidebar-num">5</span>Case Study #2</a>
+  <a href="#s6"><span class="sidebar-num">6</span>Why Choose VIP</a>
+  <a href="#s7"><span class="sidebar-num">7</span>4 Pillars</a>
+  <a href="#s8"><span class="sidebar-num">8</span>What We Do</a>
+  <a href="#s9"><span class="sidebar-num">9</span>Testimonials</a>
+  <a href="#s10"><span class="sidebar-num">10</span>Stats</a>
+  <a href="#s11"><span class="sidebar-num">11</span>Services</a>
+  <a href="#s12"><span class="sidebar-num">12</span>Project Scope</a>
+
+  <div class="sidebar-title sidebar-section">Workflow</div>
+  <a href="#daily">📅 Daily City Routine</a>
+  <a href="#youtube">▶️ Swapping Video IDs</a>
+  <a href="#clone">📋 Clone & Launch</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+  <!-- INTRO -->
+  <div class="intro-card">
+    <h1>Elementor Free <span>Build Guide</span></h1>
+    <p>Build the master template once in Elementor Free. Clone it for each of your 9 communities. This guide maps every section to exact widget settings — no guessing required.</p>
+    <div class="intro-meta">
+      <div class="intro-meta-item"><strong>Builder:</strong> Elementor Free</div>
+      <div class="intro-meta-item"><strong>Host:</strong> Hotstinger / WordPress</div>
+      <div class="intro-meta-item"><strong>Sections:</strong> 12</div>
+      <div class="intro-meta-item"><strong>Communities:</strong> 9</div>
+      <div class="intro-meta-item"><strong>Build Time:</strong> ~3–4 hours (once)</div>
+    </div>
+  </div>
+
+  <!-- SETUP CHECKLIST -->
+  <div id="setup" class="setup-card">
+    <h2><span class="icon">⚙️</span> Before You Start — Setup Checklist</h2>
+    <ul class="checklist">
+      <li><div class="check-box">☐</div><div><strong>Install Elementor Free</strong> — WordPress Admin → Plugins → Add New → Search "Elementor" → Install &amp; Activate</div></li>
+      <li><div class="check-box">☐</div><div><strong>Install Google Fonts plugin</strong> — "Google Fonts for Elementor" or use Elementor's built-in font list (Montserrat &amp; Open Sans are both in Elementor's default font list)</div></li>
+      <li><div class="check-box">☐</div><div><strong>Set Global Colors</strong> — Elementor → Site Settings → Global Colors → Add the 4 brand colors below. You'll select them by name inside every widget.</div></li>
+      <li><div class="check-box">☐</div><div><strong>Set Global Fonts</strong> — Elementor → Site Settings → Global Fonts → Primary = Montserrat (headings), Secondary = Open Sans (body)</div></li>
+      <li><div class="check-box">☐</div><div><strong>Create a blank page template</strong> — Add New Page → "VIP Master Template" → Edit with Elementor → Set Page Layout to "Elementor Full Width" (removes sidebar)</div></li>
+      <li><div class="check-box">☐</div><div><strong>Disable page title</strong> — In Elementor canvas: Settings gear icon → Hide Title = Yes</div></li>
+      <li><div class="check-box">☐</div><div><strong>Have the master HTML template open</strong> in a browser tab as your copy reference (VIP_SalesPage_Master_Template.html)</div></li>
+    </ul>
+  </div>
+
+  <!-- BRAND COLORS -->
+  <div id="colors" class="setup-card">
+    <h2><span class="icon">🎨</span> Global Colors — Enter These Exactly</h2>
+    <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:16px;">Elementor → Site Settings → Global Colors → Add Color (click the + icon for each)</p>
+    <div class="color-row">
+      <div class="color-swatch"><div class="swatch" style="background:#E8660A;"></div><div><strong>VIP Orange</strong><br><code>#E8660A</code></div></div>
+      <div class="color-swatch"><div class="swatch" style="background:#C8960C;"></div><div><strong>VIP Gold</strong><br><code>#C8960C</code></div></div>
+      <div class="color-swatch"><div class="swatch" style="background:#1a1f4e;"></div><div><strong>VIP Navy</strong><br><code>#1a1f4e</code></div></div>
+      <div class="color-swatch"><div class="swatch" style="background:#ffffff;border:1px solid #ddd;"></div><div><strong>White</strong><br><code>#FFFFFF</code></div></div>
+      <div class="color-swatch"><div class="swatch" style="background:#f5f5f5;border:1px solid #ddd;"></div><div><strong>Light Gray</strong><br><code>#F5F5F5</code></div></div>
+      <div class="color-swatch"><div class="swatch" style="background:#222222;"></div><div><strong>Dark Text</strong><br><code>#222222</code></div></div>
+    </div>
+  </div>
+
+  <!-- FONTS -->
+  <div id="fonts" class="setup-card">
+    <h2><span class="icon">🔤</span> Typography Settings</h2>
+    <table class="settings-table">
+      <tr><th>Element</th><th>Font Family</th><th>Weight</th><th>Where to Set</th></tr>
+      <tr><td class="label">All H1 Headings</td><td><span class="value">Montserrat</span></td><td><span class="value">800 / ExtraBold</span></td><td class="note">Heading widget → Style → Typography</td></tr>
+      <tr><td class="label">All H2 Headings</td><td><span class="value">Montserrat</span></td><td><span class="value">700 / Bold</span></td><td class="note">Heading widget → Style → Typography</td></tr>
+      <tr><td class="label">All H3 Headings</td><td><span class="value">Montserrat</span></td><td><span class="value">600 / SemiBold</span></td><td class="note">Heading widget → Style → Typography</td></tr>
+      <tr><td class="label">Body / Paragraphs</td><td><span class="value">Open Sans</span></td><td><span class="value">400 / Regular</span></td><td class="note">Text Editor widget → Style → Typography</td></tr>
+      <tr><td class="label">Buttons</td><td><span class="value">Montserrat</span></td><td><span class="value">700 / Bold</span></td><td class="note">Button widget → Style → Typography</td></tr>
+      <tr><td class="label">Testimonials</td><td><span class="value">Open Sans</span></td><td><span class="value">400 Italic</span></td><td class="note">Text Editor widget → Style</td></tr>
+    </table>
+    <div class="tip"><strong>💡 Tip:</strong> Set these as Global Fonts in Site Settings so you only have to set them once. Every new widget will inherit these defaults.</div>
+  </div>
+
+  <!-- SWAP TOKENS -->
+  <div id="tokens" class="setup-card">
+    <h2><span class="icon">🔖</span> Swap Tokens Reference</h2>
+    <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:14px;">These tokens appear in the HTML template. When building in Elementor, type the token as placeholder text. When cloning for each city, Find &amp; Replace the tokens with real values.</p>
+    <div class="token-grid">
+      <div class="token-item"><div class="token-name">{{CITY}}</div><div class="token-desc">e.g. "Rancho Cucamonga"</div></div>
+      <div class="token-item"><div class="token-name">{{STATE}}</div><div class="token-desc">e.g. "CA"</div></div>
+      <div class="token-item"><div class="token-name">{{REGION}}</div><div class="token-desc">e.g. "Inland Empire"</div></div>
+      <div class="token-item"><div class="token-name">{{ZIP}}</div><div class="token-desc">e.g. "91730"</div></div>
+      <div class="token-item"><div class="token-name">{{HOMEOWNER_1_NAME}}</div><div class="token-desc">Case study client #1 name</div></div>
+      <div class="token-item"><div class="token-name">{{HOMEOWNER_1_AREA}}</div><div class="token-desc">e.g. "The Bridges"</div></div>
+      <div class="token-item"><div class="token-name">{{HOMEOWNER_2_NAME}}</div><div class="token-desc">Case study client #2 name</div></div>
+      <div class="token-item"><div class="token-name">{{HOMEOWNER_2_AREA}}</div><div class="token-desc">e.g. "Eagle Glen"</div></div>
+      <div class="token-item"><div class="token-name">{{HOMEOWNER_3_NAME}}</div><div class="token-desc">Testimonial client name</div></div>
+      <div class="token-item"><div class="token-name">{{HOMEOWNER_3_AREA}}</div><div class="token-desc">Testimonial community</div></div>
+      <div class="token-item"><div class="token-name">{{VIDEO_1_ID}}</div><div class="token-desc">YouTube ID (hero reel)</div></div>
+      <div class="token-item"><div class="token-name">{{VIDEO_2_ID}}</div><div class="token-desc">YouTube ID (case study 1)</div></div>
+      <div class="token-item"><div class="token-name">{{VIDEO_3_ID}}</div><div class="token-desc">YouTube ID (case study 2)</div></div>
+      <div class="token-item"><div class="token-name">{{VIDEO_4_ID}}</div><div class="token-desc">YouTube ID (testimonials)</div></div>
+      <div class="token-item"><div class="token-name">{{SEO_INTRO}}</div><div class="token-desc">SEO opening paragraph</div></div>
+      <div class="token-item"><div class="token-name">{{SEO_BODY}}</div><div class="token-desc">SEO main copy block</div></div>
+    </div>
+    <div class="info"><strong>ℹ️ How to Find &amp; Replace in WordPress/Elementor:</strong> After cloning the page, open in Elementor → right-click on the canvas area → use Ctrl+H (Windows) or Cmd+H (Mac) — OR use the WP plugin "Better Search Replace" to do all tokens across all widgets in one shot.</div>
+  </div>
+
+  <hr class="divider">
+  <h2 style="color:var(--navy);font-size:1.4rem;margin-bottom:24px;padding-left:4px;">📐 Section-by-Section Build Instructions</h2>
+
+  <!-- ==================== SECTION 1: HERO ==================== -->
+  <div id="s1" class="section-card">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <div>
+        <div class="section-title">Hero Section</div>
+        <div class="section-subtitle">Full-screen impact — headline, subhead, CTAs, video</div>
+      </div>
+      <div class="section-tag">⏱ ~20 min</div>
+    </div>
+    <div class="section-body">
+
+      <div class="widget-step">
+        <div class="widget-step-num">A</div>
+        <div class="widget-step-content">
+          <h4>Add a new Section (full-width)</h4>
+          <p>Click the + to add a section. Choose <strong>1 Column</strong> layout. In Section settings → Layout → Content Width = <strong>Full Width</strong>. Min Height = <strong>100vh</strong> (or 700px minimum). Stretch Section = Yes.</p>
+        </div>
+      </div>
+
+      <div class="widget-step">
+        <div class="widget-step-num">B</div>
+        <div class="widget-step-content">
+          <h4>Set the background</h4>
+          <p>Section → Style → Background Type = <strong>Classic</strong>. Color = <code>#1a1f4e</code> (VIP Navy). This is the dark fallback for before the background image loads.</p>
+          <div class="tip"><strong>💡 Optional Hero Image:</strong> After you have a job photo, set Background Type = Image, upload your best exterior before/after photo. Set Position = Center Center, Size = Cover, Repeat = No Repeat. Then add a Background Overlay (navy at 65% opacity) so text stays readable.</div>
+        </div>
+      </div>
+
+      <div class="widget-step">
+        <div class="widget-step-num">C</div>
+        <div class="widget-step-content">
+          <h4>Add Heading Widget — Main Headline</h4>
+          <span class="widget-badge">Heading Widget</span>
+          <table class="settings-table">
+            <tr><th>Setting</th><th>Value</th></tr>
+            <tr><td class="label">Tag</td><td><span class="value">H1</span></td></tr>
+            <tr><td class="label">Text</td><td><span class="value">{{CITY}} Homeowners: See Your Dream Home Color Before We Paint a Single Stroke</span></td></tr>
+            <tr><td class="label">Alignment</td><td><span class="value">Center</span></td></tr>
+            <tr><td class="label">Font Family</td><td><span class="value">Montserrat</span></td></tr>
+            <tr><td class="label">Font Weight</td><td><span class="value">800 (ExtraBold)</span></td></tr>
+            <tr><td class="label">Font Size (Desktop)</td><td><span class="value">52px</span></td></tr>
+            <tr><td class="label">Font Size (Mobile)</td><td><span class="value">32px</span></td></tr>
+            <tr><td class="label">Color</td><td><span class="value">#FFFFFF</span></td></tr>
+            <tr><td class="label">Line Height</td><td><span class="value">1.15em</span></td></tr>
+            <tr><td class="label">Padding Bottom</td><td><span class="value">16px</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="widget-step">
+        <div class="widget-step-num">D</div>
+        <div class="widget-step-content">
+          <h4>Add Text Editor Widget — Subheadline</h4>
+          <span class="widget-badge">Text Editor Widget</span>
+          <table class="settings-table">
+            <tr><th>Setting</th><th>Value</th></tr>
+            <tr><td class="label">Content</td><td><span class="value">Free Custom Color Visualization. Zero Commitment. {{CITY}}'s Premier Home Painting Specialists.</span></td></tr>
+            <tr><td class="label">Alignment</td><td><span class="value">Center</span></td></tr>
+            <tr><td class="label">Font Family</td><td><span class="value">Open Sans</span></td></tr>
+            <tr><td class="label">Font Size</td><td><span class="value">20px</span></td></tr>
+            <tr><td class="label">Color</td><td><span class="value">#E8C88A (warm off-white/gold tint)</span></td></tr>
+            <tr><td class="label">Padding Top/Bottom</td><td><span class="value">0 / 28px</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="widget-step">
+        <div class="widget-step-num">E</div>
+        <div class="widget-step-content">
+          <h4>Add Button Widget × 2 (side by side)</h4>
+          <p>Add a <strong>2-column inner section</strong> first. Then drop one Button widget in each column.</p>
+          <span class="widget-badge button">Button Widget</span>
+          <table class="settings-table">
+            <tr><th>Setting</th><th>Button 1 (Primary)</th><th>Button 2 (Secondary)</th></tr>
+            <tr><td class="label">Text</td><td><span class="value">Get My Free Color Preview →</span></td><td><span class="value">Watch {{CITY}} Transformations</span></td></tr>
+            <tr><td class="label">Link</td><td><span class="value">#contact-form</span></td><td><span class="value">#video-section</span></td></tr>
+            <tr><td class="label">Background</td><td><span class="value">#E8660A</span></td><td><span class="value">Transparent</span></td></tr>
+            <tr><td class="label">Text Color</td><td><span class="value">#FFFFFF</span></td><td><span class="value">#FFFFFF</span></td></tr>
+            <tr><td class="label">Border</td><td><span class="value">None</span></td><td><span class="value">2px solid #C8960C</span></td></tr>
+            <tr><td class="label">Border Radius</td><td><span class="value">6px</span></td><td><span class="value">6px</span></td></tr>
+            <tr><td class="label">Padding</td><td><span class="value">16px 32px</span></td><td><span class="value">14px 28px</span></td></tr>
+            <tr><td class="label">Font</td><td><span class="value">Montserrat 700</span></td><td><span class="value">Montserrat 600</span></td></tr>
+            <tr><td class="label">Font Size</td><td><span class="value">17px</span></td><td><span class="value">15px</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="widget-step">
+        <div class="widget-step-num">F</div>
+        <div class="widget-step-content">
+          <h4>Add trust badges row</h4>
+          <p>Add a <strong>3-column inner section</strong> below the buttons. Add a Text Editor in each column with these trust lines:</p>
+          <div class="code-block">Column 1: ★★★★★ 5-Star Rated (Google)<br>Column 2: 🏠 500+ Homes Transformed<br>Column 3: ✅ Licensed &amp; Insured CA</div>
+          <table class="settings-table">
+            <tr><th>Setting</th><th>Value</th></tr>
+            <tr><td class="label">Font</td><td><span class="value">Open Sans 400</span></td></tr>
+            <tr><td class="label">Font Size</td><td><span class="value">14px</span></td></tr>
+            <tr><td class="label">Color</td><td><span class="value">rgba(255,255,255,0.75)</span></td></tr>
+            <tr><td class="label">Text Align</td><td><span class="value">Center</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="widget-step">
+        <div class="widget-step-num">G</div>
+        <div class="widget-step-content">
+          <h4>Section padding</h4>
+          <p>Section → Advanced → Padding: Top <strong>100px</strong>, Bottom <strong>80px</strong>, Left/Right <strong>40px</strong>. Mobile: Top/Bottom <strong>60px</strong>, Left/Right <strong>20px</strong>.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== SECTION 2: WHY FREE CONSULT ==================== -->
+  <div id="s2" class="section-card">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <div>
+        <div class="section-title">Why a Free Consultation?</div>
+        <div class="section-subtitle">Trust-builder + problem/solution + video embed</div>
+      </div>
+      <div class="section-tag">⏱ ~15 min</div>
+    </div>
+    <div class="section-body">
+
+      <div class="widget-step">
+        <div class="widget-step-num">A</div>
+        <div class="widget-step-content">
+          <h4>Section Background</h4>
+          <p>Color = <code>#F5F5F5</code> (light gray). Padding: 80px top/bottom, 40px left/right.</p>
+        </div>
+      </div>
+
+      <div class="widget-step">
+        <div class="widget-step-num">B</div>
+        <div class="widget-step-content">
+          <h4>2-Column Layout: Left = Text, Right = Video</h4>
+          <p>Add a <strong>2-column section</strong>. Left column width 55%, Right column width 45%. On mobile, stack vertically (this happens automatically in Elementor Free).</p>
+        </div>
+      </div>
+
+      <div class="widget-step">
+        <div class="widget-step-num">C</div>
+        <div class="widget-step-content">
+          <h4>LEFT Column: Heading + Text + Bullet List</h4>
+          <span class="widget-badge">Heading Widget</span>
+          <table class="settings-table">
+            <tr><th>Setting</th><th>Value</th></tr>
+            <tr><td class="label">Tag</td><td><span class="value">H2</span></td></tr>
+            <tr><td class="label">Text</td><td><span class="value">Why {{CITY}} Homeowners Schedule a Free Color Consultation with VIP Premier</span></td></tr>
+            <tr><td class="label">Font</td><td><span class="value">Montserrat 700</span></td></tr>
+            <tr><td class="label">Size</td><td><span class="value">36px desktop / 26px mobile</span></td></tr>
+            <tr><td class="label">Color</td><td><span class="value">#1a1f4e (Navy)</span></td></tr>
+          </table>
+          <br>
+          <span class="widget-badge">Text Editor Widget</span>
+          <p style="font-size:0.83rem;margin:8px 0;">Add the body paragraph text from the HTML template. Font = Open Sans 400, Size = 17px, Color = #444444, Line Height = 1.7em.</p>
+          <br>
+          <div class="tip"><strong>💡 Bullet Points:</strong> In Elementor Free, use the Text Editor widget and format a list using the visual editor's list button (or HTML ul/li tags). Color the bullet markers orange using HTML: <code>&lt;li style="color:#E8660A"&gt;</code></div>
+        </div>
+      </div>
+
+      <div class="widget-step">
+        <div class="widget-step-num">D</div>
+        <div class="widget-step-content">
+          <h4>RIGHT Column: Video Placeholder</h4>
+          <span class="widget-badge video">Video Widget</span>
+          <p style="font-size:0.84rem;margin-bottom:10px;">Drag in the <strong>Video</strong> widget. Source = YouTube. Video URL = <code>https://www.youtube.com/watch?v={{VIDEO_1_ID}}</code></p>
+          <div class="warn"><strong>⚠️ No Video ID Yet?</strong> Use the HTML widget instead and paste this placeholder:<br><br>
+          <code style="font-size:0.75rem;background:rgba(0,0,0,0.1);padding:4px 8px;border-radius:4px;display:block;margin-top:8px;">&lt;div style="background:#1a1f4e;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:#E8660A;font-family:Montserrat;font-weight:700;font-size:18px;border-radius:8px;"&gt;▶ VIDEO COMING SOON&lt;/div&gt;</code></div>
+          <table class="settings-table">
+            <tr><th>Setting</th><th>Value</th></tr>
+            <tr><td class="label">Aspect Ratio</td><td><span class="value">16:9</span></td></tr>
+            <tr><td class="label">Show Controls</td><td><span class="value">Yes</span></td></tr>
+            <tr><td class="label">Autoplay</td><td><span class="value">No</span></td></tr>
+            <tr><td class="label">Mute</td><td><span class="value">No</span></td></tr>
+            <tr><td class="label">Border Radius</td><td><span class="value">Advanced → Border → 10px</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== SECTION 3: OUR PROCESS ==================== -->
+  <div id="s3" class="section-card">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <div>
+        <div class="section-title">Our Process</div>
+        <div class="section-subtitle">5-step numbered process — dark navy background</div>
+      </div>
+      <div class="section-tag">⏱ ~20 min</div>
+    </div>
+    <div class="section-body">
+
+      <div class="widget-step">
+        <div class="widget-step-num">A</div>
+        <div class="widget-step-content">
+          <h4>Section Background = Navy</h4>
+          <p>Background Color = <code>#1a1f4e</code>. Padding: 80px top/bottom, 40px left/right.</p>
+        </div>
+      </div>
+
+      <div class="widget-step">
+        <div class="widget-step-num">B</div>
+        <div class="widget-step-content">
+          <h4>Centered H2 Heading</h4>
+          <table class="settings-table">
+            <tr><th>Setting</th><th>Value</th></tr>
+            <tr><td class="label">Text</td><td><span class="value">How VIP Premier Transforms {{CITY}} Homes — Our 5-Step Signature Process</span></td></tr>
+            <tr><td class="label">Color</td><td><span class="value">#FFFFFF</span></td></tr>
+            <tr><td class="label">Alignment</td><td><span class="value">Center</span></td></tr>
+            <tr><td class="label">Size</td><td><span class="value">38px / 26px mobile</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="widget-step">
+        <div class="widget-step-num">C</div>
+        <div class="widget-step-content">
+          <h4>5 Process Steps — Use HTML Widget</h4>
+          <span class="widget-badge html">HTML Widget</span>
+          <p style="font-size:0.84rem;margin-bottom:10px;">For the 5 numbered steps, use a single <strong>HTML Widget</strong> — this gives you full control over the orange circle numbers, step titles, and descriptions. Paste this starter HTML and customize the text:</p>
+          <div class="code-block" style="position:relative;">
+<pre><span class="comment">&lt;!-- Process Steps Container --&gt;</span>
+&lt;div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;margin-top:32px;"&gt;
+
+  &lt;!-- Step 1 --&gt;
+  &lt;div style="text-align:center;padding:24px 16px;"&gt;
+    &lt;div style="width:60px;height:60px;background:#E8660A;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:24px;color:#fff;margin:0 auto 16px;"&gt;1&lt;/div&gt;
+    &lt;h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:16px;color:#C8960C;margin-bottom:8px;"&gt;Free Color Consultation&lt;/h3&gt;
+    &lt;p style="font-family:Open Sans,sans-serif;font-size:14px;color:rgba(255,255,255,0.75);line-height:1.6;"&gt;We visit your {{CITY}} home, assess architecture, lighting, and HOA rules.&lt;/p&gt;
+  &lt;/div&gt;
+
+  <span class="comment">&lt;!-- Repeat for Steps 2-5, changing number and content --&gt;</span>
+  <span class="comment">&lt;!-- Step 2: AI Color Visualization --&gt;</span>
+  <span class="comment">&lt;!-- Step 3: Premium Material Selection --&gt;</span>
+  <span class="comment">&lt;!-- Step 4: Expert Application --&gt;</span>
+  <span class="comment">&lt;!-- Step 5: Quality Inspection + Warranty --&gt;</span>
+
+&lt;/div&gt;</pre>
+          </div>
+          <div class="tip"><strong>💡 Copy from HTML template:</strong> Open VIP_SalesPage_Master_Template.html → find the "process-steps" div → copy the full inner HTML and paste into your Elementor HTML widget. All styles are inline so they'll work perfectly.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== SECTION 4 & 5: CASE STUDIES ==================== -->
+  <div id="s4" class="section-card">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <div>
+        <div class="section-title">Case Study #1 — {{HOMEOWNER_1_NAME}}</div>
+        <div class="section-subtitle">Before/after story with photo grid + video (white bg)</div>
+      </div>
+      <div class="section-tag">⏱ ~20 min</div>
+    </div>
+    <div class="section-body">
+
+      <div class="widget-step">
+        <div class="widget-step-num">A</div>
+        <div class="widget-step-content">
+          <h4>Section Setup</h4>
+          <p>Background = <code>#FFFFFF</code>. Padding: 80px top/bottom, 40px sides. Layout: <strong>2 columns</strong> (left 60%, right 40%).</p>
+        </div>
+      </div>
+
+      <div class="widget-step">
+        <div class="widget-step-num">B</div>
+        <div class="widget-step-content">
+          <h4>LEFT: Heading + Story Text + Photo Grid</h4>
+          <p style="font-size:0.84rem;">Add Heading Widget (H2) with token text. Add Text Editor with the case study narrative. For the photo grid (before/after), use the <strong>Image Gallery widget</strong> OR an HTML widget:</p>
+          <span class="widget-badge image">Image Gallery Widget</span>
+          <table class="settings-table">
+            <tr><th>Setting</th><th>Value</th></tr>
+            <tr><td class="label">Images</td><td><span class="value">Upload 2–4 job photos (before + after)</span></td></tr>
+            <tr><td class="label">Columns</td><td><span class="value">2</span></td></tr>
+            <tr><td class="label">Image Size</td><td><span class="value">Medium Large (or Full)</span></td></tr>
+            <tr><td class="label">Gap</td><td><span class="value">10px</span></td></tr>
+            <tr><td class="label">Border Radius</td><td><span class="value">8px</span></td></tr>
+          </table>
+          <div class="tip"><strong>💡 No photos yet?</strong> Use a placeholder color block. In the HTML widget:<br><code style="font-size:0.75rem;">&lt;div style="background:#e0e0e0;height:250px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#999;font-family:Montserrat;"&gt;[Before Photo]&lt;/div&gt;</code></div>
+        </div>
+      </div>
+
+      <div class="widget-step">
+        <div class="widget-step-num">C</div>
+        <div class="widget-step-content">
+          <h4>RIGHT: Video + Stats Callout</h4>
+          <p style="font-size:0.84rem;">Add Video Widget ({{VIDEO_2_ID}}). Below it, add an HTML widget with the result stats (e.g. "Completed in 4 Days | Sherwin-Williams Emerald | 15-Year Warranty").</p>
+          <div class="code-block">
+<pre>&lt;div style="background:#f5f5f5;border-left:4px solid #E8660A;padding:16px 20px;border-radius:0 8px 8px 0;margin-top:16px;"&gt;
+  &lt;p style="font-family:Montserrat,sans-serif;font-weight:700;color:#1a1f4e;margin-bottom:8px;"&gt;✅ Project Results:&lt;/p&gt;
+  &lt;p style="font-family:Open Sans,sans-serif;font-size:14px;color:#444;"&gt;
+    Completed in 4 Days &amp;nbsp;|&amp;nbsp; Sherwin-Williams Emerald&lt;br&gt;
+    15-Year Warranty &amp;nbsp;|&amp;nbsp; HOA Approved Colors
+  &lt;/p&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="s5" class="section-card">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <div>
+        <div class="section-title">Case Study #2 — {{HOMEOWNER_2_NAME}}</div>
+        <div class="section-subtitle">Mirrored layout — gray background, right text / left video</div>
+      </div>
+      <div class="section-tag">⏱ ~15 min</div>
+    </div>
+    <div class="section-body">
+      <div class="widget-step">
+        <div class="widget-step-num">A</div>
+        <div class="widget-step-content">
+          <h4>Duplicate Section 4, Flip Columns</h4>
+          <p>Right-click Section 4 → Duplicate. Change background to <code>#F5F5F5</code>. In the duplicated section, right-click the inner columns → <strong>Reverse Columns</strong> (or swap manually). Update all text tokens to HOMEOWNER_2 values. Update video to {{VIDEO_3_ID}}.</p>
+          <div class="tip"><strong>💡 Time Saver:</strong> Duplicating Section 4 saves ~15 minutes. You only need to swap the text, photos, and video ID.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SECTION 6: WHY CHOOSE VIP ==================== -->
+  <div id="s6" class="section-card">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <div>
+        <div class="section-title">Why Choose VIP Premier?</div>
+        <div class="section-subtitle">Comparison / differentiation — dark section</div>
+      </div>
+      <div class="section-tag">⏱ ~15 min</div>
+    </div>
+    <div class="section-body">
+      <div class="widget-step">
+        <div class="widget-step-num">A</div>
+        <div class="widget-step-content">
+          <h4>Section Background = Navy, Centered Heading</h4>
+          <p>Background = <code>#1a1f4e</code>. H2 Heading: "Why {{CITY}} Homeowners Choose VIP Premier Over Every Other Painter". Color = White. Size = 38px.</p>
+        </div>
+      </div>
+      <div class="widget-step">
+        <div class="widget-step-num">B</div>
+        <div class="widget-step-content">
+          <h4>Comparison Table — Use HTML Widget</h4>
+          <span class="widget-badge html">HTML Widget</span>
+          <p style="font-size:0.84rem;margin-bottom:10px;">The comparison table (VIP vs. Other Painters) works best as an HTML widget. Copy the full table from the HTML template's "why-vip" section. Key styles:</p>
+          <div class="code-block">
+<pre><span class="comment">/* Table styling (embed inside HTML widget) */</span>
+table { width:100%; border-collapse:collapse; }
+th { background:#E8660A; color:white; padding:14px; font-family:Montserrat; }
+td { padding:12px 16px; border-bottom:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.8); }
+td:first-child { color:rgba(255,255,255,0.5); } <span class="comment">/* Other painters column */</span>
+td:last-child { color:#4ade80; font-weight:700; } <span class="comment">/* VIP column — green checkmarks */</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SECTION 7: 4 PILLARS ==================== -->
+  <div id="s7" class="section-card">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <div>
+        <div class="section-title">The 4 Pillars of VIP Premier</div>
+        <div class="section-subtitle">4-column icon cards — white background</div>
+      </div>
+      <div class="section-tag">⏱ ~20 min</div>
+    </div>
+    <div class="section-body">
+      <div class="widget-step">
+        <div class="widget-step-num">A</div>
+        <div class="widget-step-content">
+          <h4>4-Column Section</h4>
+          <p>Add a section with <strong>4 equal columns</strong>. Background = <code>#FFFFFF</code>. On mobile, Elementor Free will stack to 1 column automatically if you set each column to 100% mobile width.</p>
+        </div>
+      </div>
+      <div class="widget-step">
+        <div class="widget-step-num">B</div>
+        <div class="widget-step-content">
+          <h4>Each Pillar Card — Icon + Heading + Text</h4>
+          <p>For each of the 4 columns, add these widgets stacked vertically:</p>
+          <span class="widget-badge">Icon Widget</span>
+          <table class="settings-table">
+            <tr><th>Pillar</th><th>Icon (Elementor Icons)</th><th>Heading</th></tr>
+            <tr><td>1</td><td><span class="value">fa-eye (Eye)</span></td><td>See It Before We Paint It</td></tr>
+            <tr><td>2</td><td><span class="value">fa-certificate (Certificate)</span></td><td>Premium Materials Only</td></tr>
+            <tr><td>3</td><td><span class="value">fa-shield-alt (Shield)</span></td><td>Licensed &amp; Insured</td></tr>
+            <tr><td>4</td><td><span class="value">fa-star (Star)</span></td><td>5-Star Service Guarantee</td></tr>
+          </table>
+          <table class="settings-table" style="margin-top:12px;">
+            <tr><th>Icon Setting</th><th>Value</th></tr>
+            <tr><td class="label">Icon Size</td><td><span class="value">48px</span></td></tr>
+            <tr><td class="label">Icon Color</td><td><span class="value">#E8660A</span></td></tr>
+            <tr><td class="label">Alignment</td><td><span class="value">Center</span></td></tr>
+          </table>
+          <p style="font-size:0.84rem;margin-top:10px;">Below each icon: Heading widget (H3, Montserrat 700, 18px, Navy) + Text Editor (Open Sans 400, 15px, #555, centered).</p>
+        </div>
+      </div>
+      <div class="widget-step">
+        <div class="widget-step-num">C</div>
+        <div class="widget-step-content">
+          <h4>Card styling</h4>
+          <p>For each column: Advanced → Background = White, Border = 1px solid #e0e0e0, Border Radius = 12px, Padding = 32px 20px. Hover state (Advanced → Hover → Background = #f5f5f5) adds a subtle lift effect.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SECTION 8: WHAT WE DO ==================== -->
+  <div id="s8" class="section-card">
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <div>
+        <div class="section-title">What We Do</div>
+        <div class="section-subtitle">Service overview — gray background, 2 columns</div>
+      </div>
+      <div class="section-tag">⏱ ~12 min</div>
+    </div>
+    <div class="section-body">
+      <div class="widget-step">
+        <div class="widget-step-num">A</div>
+        <div class="widget-step-content">
+          <h4>Section: Gray background, 2-column layout</h4>
+          <p>Background = <code>#F5F5F5</code>. Full-width heading at top: "What VIP Premier Painting Does for {{CITY}} Homes". H2, Montserrat 700, Navy, centered.</p>
+        </div>
+      </div>
+      <div class="widget-step">
+        <div class="widget-step-num">B</div>
+        <div class="widget-step-content">
+          <h4>Service list with checkmarks</h4>
+          <p>In each column, use a Text Editor widget. Use the HTML list format with orange checkmarks:</p>
+          <div class="code-block">
+<pre>&lt;ul style="list-style:none;padding:0;"&gt;
+  &lt;li style="padding:10px 0;border-bottom:1px solid #e0e0e0;font-family:'Open Sans',sans-serif;font-size:16px;color:#333;"&gt;
+    &lt;span style="color:#E8660A;font-weight:700;margin-right:10px;"&gt;✓&lt;/span&gt;
+    Exterior House Painting
+  &lt;/li&gt;
+  <span class="comment">&lt;!-- Repeat for each service --&gt;</span>
+&lt;/ul&gt;</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SECTION 9: TESTIMONIALS ==================== -->
+  <div id="s9" class="section-card">
+    <div class="section-header">
+      <div class="section-num">9</div>
+      <div>
+        <div class="section-title">Testimonials</div>
+        <div class="section-subtitle">4 Google reviews + video — navy background</div>
+      </div>
+      <div class="section-tag">⏱ ~20 min</div>
+    </div>
+    <div class="section-body">
+      <div class="widget-step">
+        <div class="widget-step-num">A</div>
+        <div class="widget-step-content">
+          <h4>Section Background = Navy</h4>
+          <p>Background = <code>#1a1f4e</code>. Centered H2: "What {{CITY}} Homeowners Say About VIP Premier". White text.</p>
+        </div>
+      </div>
+      <div class="widget-step">
+        <div class="widget-step-num">B</div>
+        <div class="widget-step-content">
+          <h4>Testimonial Cards — HTML Widget (most reliable)</h4>
+          <span class="widget-badge html">HTML Widget</span>
+          <p style="font-size:0.84rem;margin-bottom:10px;">Use a single HTML widget for all 4 testimonial cards in a CSS grid. Copy from the master template's ".testimonial-grid" section. Each card has this structure:</p>
+          <div class="code-block">
+<pre>&lt;div style="background:rgba(255,255,255,0.08);border:1px solid rgba(232,102,10,0.3);border-radius:12px;padding:24px;font-family:'Open Sans',sans-serif;"&gt;
+  &lt;div style="color:#E8660A;font-size:18px;margin-bottom:12px;"&gt;★★★★★&lt;/div&gt;
+  &lt;p style="color:rgba(255,255,255,0.85);font-style:italic;line-height:1.7;margin-bottom:16px;"&gt;
+    "Quote text here..."
+  &lt;/p&gt;
+  &lt;div style="color:#C8960C;font-weight:700;font-family:Montserrat,sans-serif;"&gt;— Reviewer Name, {{CITY}}&lt;/div&gt;
+  &lt;div style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:4px;"&gt;Verified Google Review&lt;/div&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </div>
+      </div>
+      <div class="widget-step">
+        <div class="widget-step-num">C</div>
+        <div class="widget-step-content">
+          <h4>Video Widget Below Cards</h4>
+          <p>Centered Video widget. URL = {{VIDEO_4_ID}} (testimonial compilation video). Same settings as Section 2 video.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SECTION 10: STATS ==================== -->
+  <div id="s10" class="section-card">
+    <div class="section-header">
+      <div class="section-num">10</div>
+      <div>
+        <div class="section-title">Stats / Social Proof Numbers</div>
+        <div class="section-subtitle">3-4 big numbers — orange background bar</div>
+      </div>
+      <div class="section-tag">⏱ ~10 min</div>
+    </div>
+    <div class="section-body">
+      <div class="widget-step">
+        <div class="widget-step-num">A</div>
+        <div class="widget-step-content">
+          <h4>Section: Orange background, 4 columns</h4>
+          <p>Background = <code>#E8660A</code>. Padding: 50px top/bottom. 4 equal columns.</p>
+        </div>
+      </div>
+      <div class="widget-step">
+        <div class="widget-step-num">B</div>
+        <div class="widget-step-content">
+          <h4>Each stat: Large number + label</h4>
+          <table class="settings-table">
+            <tr><th>Stat</th><th>Number</th><th>Label</th></tr>
+            <tr><td>1</td><td><span class="value">500+</span></td><td>Homes Transformed</td></tr>
+            <tr><td>2</td><td><span class="value">★ 4.9</span></td><td>Google Rating</td></tr>
+            <tr><td>3</td><td><span class="value">15 Yr</span></td><td>Warranty Offered</td></tr>
+            <tr><td>4</td><td><span class="value">100%</span></td><td>Satisfaction Guarantee</td></tr>
+          </table>
+          <p style="font-size:0.84rem;margin-top:10px;">Number: Heading widget, Montserrat 800, 52px, White. Label: Text Editor, Open Sans 400, 16px, rgba(255,255,255,0.8). Both centered.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SECTION 11: SERVICES ==================== -->
+  <div id="s11" class="section-card">
+    <div class="section-header">
+      <div class="section-num">11</div>
+      <div>
+        <div class="section-title">Services + Lead Capture Form</div>
+        <div class="section-subtitle">Service cards + contact form — white background</div>
+      </div>
+      <div class="section-tag">⏱ ~25 min</div>
+    </div>
+    <div class="section-body">
+      <div class="widget-step">
+        <div class="widget-step-num">A</div>
+        <div class="widget-step-content">
+          <h4>Section Background = White, 2-column layout</h4>
+          <p>Left column (60%): Service cards. Right column (40%): Lead capture form with sticky positioning.</p>
+        </div>
+      </div>
+      <div class="widget-step">
+        <div class="widget-step-num">B</div>
+        <div class="widget-step-content">
+          <h4>Service Cards — HTML Widget</h4>
+          <p style="font-size:0.84rem;">Copy the service card HTML from the master template. Each card has: orange icon, H3 title, description, price range, and a CTA link. Use the full HTML block — it's faster than rebuilding widget by widget.</p>
+        </div>
+      </div>
+      <div class="widget-step">
+        <div class="widget-step-num">C</div>
+        <div class="widget-step-content">
+          <h4>Lead Capture Form — WPForms Lite (FREE)</h4>
+          <span class="widget-badge html">Shortcode Widget</span>
+          <div class="info"><strong>ℹ️ Install WPForms Lite</strong> (free) from WordPress plugins. Create a form with: Name, Phone, Email, "What service are you interested in?" (dropdown), "Tell us about your project" (textarea). Then in Elementor, drop in the <strong>Shortcode widget</strong> and paste the WPForms shortcode: <code>[wpforms id="YOUR_FORM_ID"]</code></div>
+          <p style="font-size:0.84rem;margin-top:12px;"><strong>Form wrapper box styling:</strong> Wrap the shortcode widget's column in a box with: Background = #1a1f4e, Border Radius = 16px, Padding = 32px, Title = "Get Your Free {{CITY}} Color Consultation" in white Montserrat 700 22px.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SECTION 12: PROJECT SCOPE ==================== -->
+  <div id="s12" class="section-card">
+    <div class="section-header">
+      <div class="section-num">12</div>
+      <div>
+        <div class="section-title">Project Scope + Final CTA</div>
+        <div class="section-subtitle">Deliverables checklist + urgent CTA + SEO block</div>
+      </div>
+      <div class="section-tag">⏱ ~15 min</div>
+    </div>
+    <div class="section-body">
+      <div class="widget-step">
+        <div class="widget-step-num">A</div>
+        <div class="widget-step-content">
+          <h4>Project Scope Checklist</h4>
+          <p>Background = <code>#F5F5F5</code>. Use an HTML widget with the full checklist from the template (✓ items styled with orange checkmarks). Below it, add a dark navy CTA bar with big headline + button.</p>
+        </div>
+      </div>
+      <div class="widget-step">
+        <div class="widget-step-num">B</div>
+        <div class="widget-step-content">
+          <h4>Final CTA Section</h4>
+          <p>Background = <code>#1a1f4e</code>. Padding: 80px. Center everything. Add:</p>
+          <table class="settings-table">
+            <tr><th>Element</th><th>Content</th></tr>
+            <tr><td>H2</td><td>"Ready to Transform Your {{CITY}} Home?" — White, 42px, Montserrat 800</td></tr>
+            <tr><td>Subtext</td><td>"Spots fill fast. Book your free color consultation before we're fully booked this month." — White 70% opacity</td></tr>
+            <tr><td>Button</td><td>"Get My Free Color Consultation →" — Orange background, white text, large (18px, 18px 40px padding)</td></tr>
+            <tr><td>Phone</td><td>"Or call: (909) 312-5400" — Gold color, Montserrat 700, 20px</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="widget-step">
+        <div class="widget-step-num">C</div>
+        <div class="widget-step-content">
+          <h4>SEO Copy Block (Below Fold)</h4>
+          <p>Background = White. Padding: 60px. Add a Text Editor widget:</p>
+          <div class="code-block"><span class="token-highlight">{{SEO_INTRO}}</span> — Opening paragraph (1-2 sentences, city keyword)<br><span class="token-highlight">{{SEO_BODY}}</span> — 150-300 words of city-specific keyword copy<br><br><span class="comment">/* Font: Open Sans 400, 16px, #444, line-height 1.8 */</span></div>
+          <div class="tip"><strong>💡 SEO Note:</strong> This block is intentionally below all the visual content so it doesn't disrupt the sales flow. Google can read it; visitors rarely scroll this far. Place your "painting contractors {{CITY}} CA", "exterior house painting {{CITY}}", etc. keywords here.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- DAILY ROUTINE -->
+  <div id="daily" class="setup-card">
+    <h2><span class="icon">📅</span> Daily City Page Routine (Once Template is Built)</h2>
+    <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:16px;">After your master template page exists in WordPress, follow these steps each morning to launch a new city page:</p>
+    <ul class="checklist">
+      <li><div class="check-box">☐</div><div><strong>Step 1:</strong> Open the automated HTML output from Claude (e.g. <code>RanchoCucamonga_SalesPage.html</code> — generated by the city automation script)</div></li>
+      <li><div class="check-box">☐</div><div><strong>Step 2:</strong> In WordPress admin → Pages → find "VIP Master Template" → Hover → click <strong>Clone</strong> (use "Duplicate Page" plugin) or right-click → Duplicate in Elementor</div></li>
+      <li><div class="check-box">☐</div><div><strong>Step 3:</strong> Rename the cloned page: e.g. "Painting Company {{CITY}} CA | VIP Premier Painting"</div></li>
+      <li><div class="check-box">☐</div><div><strong>Step 4:</strong> Set the URL slug: e.g. <code>/house-painting-rancho-cucamonga-ca/</code></div></li>
+      <li><div class="check-box">☐</div><div><strong>Step 5:</strong> Open in Elementor → use <strong>Ctrl+F / Find &amp; Replace</strong> (or Better Search Replace plugin) to swap all {{CITY}} tokens to the actual city name throughout the page</div></li>
+      <li><div class="check-box">☐</div><div><strong>Step 6:</strong> Paste the SEO copy from the automation output into the SEO block (Section 12C)</div></li>
+      <li><div class="check-box">☐</div><div><strong>Step 7:</strong> Update meta title + description in the page SEO settings (use Rank Math or Yoast Free)</div></li>
+      <li><div class="check-box">☐</div><div><strong>Step 8:</strong> Publish page. Add to your sitemap. Done ✅</div></li>
+    </ul>
+  </div>
+
+  <!-- YOUTUBE IDS -->
+  <div id="youtube" class="setup-card">
+    <h2><span class="icon">▶️</span> Swapping in YouTube Video IDs When Ready</h2>
+    <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:16px;">When you've uploaded videos to YouTube, here's how to activate them:</p>
+    <div class="code-block">
+<pre><span class="comment">// Find your YouTube video ID:
+// URL: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+//                                         ↑
+//                               This part is the ID</span>
+
+<span class="comment">// In Elementor: click the Video widget → Content tab →
+// Change URL from placeholder to:
+// https://www.youtube.com/watch?v=YOUR_ACTUAL_ID_HERE</span></pre>
+    </div>
+    <table class="settings-table">
+      <tr><th>Token</th><th>Video Content</th><th>Section</th></tr>
+      <tr><td><span class="value">{{VIDEO_1_ID}}</span></td><td>Hero reel / brand overview / color visualization demo</td><td>Section 2</td></tr>
+      <tr><td><span class="value">{{VIDEO_2_ID}}</span></td><td>Case Study #1 walkthrough (before/after)</td><td>Section 4</td></tr>
+      <tr><td><span class="value">{{VIDEO_3_ID}}</span></td><td>Case Study #2 walkthrough</td><td>Section 5</td></tr>
+      <tr><td><span class="value">{{VIDEO_4_ID}}</span></td><td>Testimonial compilation</td><td>Section 9</td></tr>
+    </table>
+    <div class="info"><strong>ℹ️ Priority order:</strong> Upload VIDEO_1 first (hero reel has the most impact on conversions). VIDEO_4 (testimonials) second. Cases studies can wait until you have the footage.</div>
+  </div>
+
+  <!-- CLONE WORKFLOW -->
+  <div id="clone" class="setup-card">
+    <h2><span class="icon">📋</span> Full Clone-Per-City Workflow</h2>
+    <div class="color-row" style="margin-bottom:16px;">
+      <div class="color-swatch" style="background:white;border:1px solid #ddd;flex-direction:column;align-items:flex-start;padding:10px 14px;border-radius:8px;min-width:130px;">
+        <div style="font-size:0.7rem;color:#999;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Tier 1 — Now</div>
+        <div style="font-size:0.82rem;color:#1a1f4e;font-weight:600;margin-top:4px;">The Bridges RC<br>Covenant Hills<br>Eagle Glen</div>
+      </div>
+      <div class="color-swatch" style="background:white;border:1px solid #ddd;flex-direction:column;align-items:flex-start;padding:10px 14px;border-radius:8px;min-width:130px;">
+        <div style="font-size:0.7rem;color:#999;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Tier 2 — Week 2</div>
+        <div style="font-size:0.82rem;color:#1a1f4e;font-weight:600;margin-top:4px;">Shady Canyon<br>Coto de Caza<br>The Summit</div>
+      </div>
+      <div class="color-swatch" style="background:white;border:1px solid #ddd;flex-direction:column;align-items:flex-start;padding:10px 14px;border-radius:8px;min-width:130px;">
+        <div style="font-size:0.7rem;color:#999;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Tier 3 — Week 3+</div>
+        <div style="font-size:0.82rem;color:#1a1f4e;font-weight:600;margin-top:4px;">Crystal Cove<br>Pelican Hill<br>Hidden Hills</div>
+      </div>
+    </div>
+    <div class="info"><strong>Recommended Plugin — "Duplicate Page"</strong> (free, 5M+ installs):<br>Install → Activate → Hover over any page in WP Admin Pages → "Duplicate This" appears → click it → new draft page created instantly with all Elementor content intact.</div>
+    <div class="tip" style="margin-top:12px;"><strong>💡 SEO Slugs to Use:</strong>
+      <ul style="margin-top:8px;list-style:disc;padding-left:20px;font-size:0.84rem;">
+        <li>/house-painting-rancho-cucamonga-ca/</li>
+        <li>/exterior-painting-ladera-ranch-ca/</li>
+        <li>/painting-contractor-corona-ca/</li>
+        <li>/home-painting-irvine-ca/</li>
+        <li>/house-painters-newport-beach-ca/</li>
+        <li>/painting-coto-de-caza-ca/</li>
+        <li>/exterior-painters-alta-loma-ca/</li>
+        <li>/painting-newport-coast-ca/</li>
+        <li>/house-painting-hidden-hills-ca/</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="final-cta">
+    <h2>Template Built? Time to Automate. 🚀</h2>
+    <p>Now that you know how to build and clone pages, the city automation script generates ready-to-paste city copy every morning while you're at work — including headlines, SEO copy, and homeowner token values.</p>
+    <a href="#" class="cta-btn">Next: City Automation Script</a>
+    <a href="#" class="cta-btn secondary">Next: Step-by-Step SOP</a>
+  </div>
+
+</main>
+</div>
+
+</body>
+</html>

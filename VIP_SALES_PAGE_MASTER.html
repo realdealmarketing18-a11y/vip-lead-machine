@@ -1,0 +1,2136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VIP Home Painting — Custom Color Visualization for Inland Empire Homes</title>
+<meta name="description" content="Transforming Inland Empire homes with custom color visualization. See your home transformed before we paint. Free 30-minute color consultation. 1-year warranty. Call (909) 312-5400.">
+<meta name="theme-color" content="#262362">
+
+<!-- SEO -->
+<link rel="canonical" href="https://viphomepainting.com/">
+<meta property="og:title" content="VIP Home Painting — Visualize It. See It. Paint It.">
+<meta property="og:description" content="Custom color visualization before you paint. Free consultation for Inland Empire homeowners.">
+<meta property="og:type" content="website">
+
+<!-- Fonts: Cormorant Garamond (luxury serif) + Poppins (elegant body) + Montserrat (strong CTAs) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════════
+   VIP HOME PAINTING — BRAND SYSTEM
+   Luxury Editorial · Deep Navy + VIP Gold · Inland Empire
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  --gold:        #FF8210;
+  --gold-d:      #e06f08;
+  --gold-l:      #ffa84a;
+  --navy:        #262362;
+  --navy-d:      #1a1645;
+  --navy-l:      #3a3680;
+  --beige:       #BAAEA1;
+  --beige-l:     #e8dfd3;
+  --beige-soft:  #f5f0e8;
+  --white:       #ffffff;
+  --off-white:   #fafaf7;
+  --ink:         #1a1a1a;
+
+  --f-display:   'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --f-body:      'Poppins', -apple-system, sans-serif;
+  --f-btn:       'Montserrat', sans-serif;
+
+  --shadow-card: 0 20px 60px -10px rgba(38,35,98,.18), 0 8px 24px -8px rgba(38,35,98,.12);
+  --shadow-gold: 0 12px 40px -8px rgba(255,130,16,.35), 0 4px 16px -4px rgba(255,130,16,.2);
+  --shadow-3d:   0 4px 6px -1px rgba(38,35,98,.1), 0 10px 30px -5px rgba(38,35,98,.15), 0 20px 60px -10px rgba(38,35,98,.1);
+
+  --mw:          520px;
+  --tr:          0.35s cubic-bezier(.4,.0,.2,1);
+}
+
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--f-body);
+  color: var(--navy);
+  background: var(--off-white);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.65;
+  overflow-x: hidden;
+  font-size: 15px;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+.container { max-width: var(--mw); margin: 0 auto; padding: 0 1.4rem; }
+
+/* Typography Scale */
+.display-xl { font-family: var(--f-display); font-weight: 500; font-size: clamp(1.6rem, 5.5vw, 2.4rem); line-height: 1.08; letter-spacing: -0.01em; }
+.display-l  { font-family: var(--f-display); font-weight: 500; font-size: clamp(1.35rem, 4.5vw, 2rem); line-height: 1.15; letter-spacing: -0.005em; }
+.display-m  { font-family: var(--f-display); font-weight: 500; font-size: clamp(1.15rem, 3.8vw, 1.65rem); line-height: 1.2; letter-spacing: 0em; }
+.overline   { font-family: var(--f-btn); font-size: .6rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); display: inline-block; }
+.body-m     { font-size: .9rem; line-height: 1.7; color: #333; font-weight: 300; }
+.body-s     { font-size: .82rem; line-height: 1.72; color: #555; font-weight: 300; }
+em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; font-weight: 400; }
+.gold-text  { color: var(--gold); }
+
+/* ═══════════════════════════════════════════════════════════
+   NAV
+   ═══════════════════════════════════════════════════════════ */
+.vip-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(38,35,98,.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: .9rem 1.4rem;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid rgba(255,130,16,.15);
+}
+.brand { display: flex; align-items: center; gap: .7rem; }
+.brand-crown {
+  width: 30px; height: 36px; flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.3));
+}
+.brand-name {
+  font-family: var(--f-display);
+  font-size: .9rem; font-weight: 600;
+  color: var(--white); letter-spacing: 2px; line-height: 1;
+}
+.brand-sub {
+  display: block; font-family: var(--f-btn);
+  font-size: .4rem; font-weight: 500;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold); margin-top: 3px;
+}
+.nav-phone {
+  color: var(--gold); font-family: var(--f-btn);
+  font-size: .65rem; font-weight: 600; letter-spacing: 1px;
+  border: 1px solid rgba(255,130,16,.4);
+  padding: .5rem .85rem; border-radius: 50px;
+  transition: all var(--tr);
+}
+.nav-phone:hover { background: rgba(255,130,16,.12); border-color: var(--gold); }
+
+/* ═══════════════════════════════════════════════════════════
+   FLOATING COLOR BUBBLES (decorative)
+   ═══════════════════════════════════════════════════════════ */
+.floating-bubbles {
+  position: absolute; inset: 0; pointer-events: none;
+  overflow: hidden; z-index: 0;
+}
+.bubble {
+  position: absolute; border-radius: 50%;
+  filter: blur(.5px);
+  box-shadow:
+    inset -8px -8px 18px rgba(0,0,0,.2),
+    inset 6px 6px 14px rgba(255,255,255,.25),
+    0 12px 30px rgba(38,35,98,.25);
+  animation: float-bubble 8s ease-in-out infinite;
+}
+.bubble.b1 { width:70px; height:70px; background: radial-gradient(circle at 30% 30%, #FF8210, #c75a00); top:10%; right:-15px; animation-delay:0s; opacity:.6; }
+.bubble.b2 { width:45px; height:45px; background: radial-gradient(circle at 30% 30%, #262362, #1a1645); top:45%; right:15%; animation-delay:2s; opacity:.4; }
+.bubble.b3 { width:55px; height:55px; background: radial-gradient(circle at 30% 30%, #BAAEA1, #8c8270); top:75%; left:-20px; animation-delay:4s; opacity:.5; }
+@keyframes float-bubble {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  50%     { transform: translateY(-22px) rotate(8deg); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION 1 — HERO
+   ═══════════════════════════════════════════════════════════ */
+.hero {
+  position: relative;
+  padding: 2rem 1.4rem 2rem;
+  background: var(--white);
+  overflow: hidden;
+}
+.hero-inner { position: relative; z-index: 2; max-width: var(--mw); margin: 0 auto; text-align: center; }
+
+.hero-overline {
+  font-family: var(--f-btn);
+  font-size: .58rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: .7rem;
+  display: inline-flex; align-items: center; gap: .5rem;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.hero-overline::after {
+  content: ''; width: 40px; height: 1px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.hero-h1 {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: clamp(1.15rem, 4vw, 1.65rem);
+  line-height: 1.22;
+  letter-spacing: 0em;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+.hero-h1 .hl {
+  color: var(--gold);
+  font-style: italic;
+  font-weight: 400;
+  display: inline;
+  position: relative;
+}
+.hero-h1 .hl::after {
+  content: ''; position: absolute;
+  left: 0; right: 0; bottom: 2px;
+  height: 6px;
+  background: linear-gradient(90deg, rgba(255,130,16,.3), rgba(255,130,16,.1));
+  z-index: -1;
+  border-radius: 3px;
+}
+
+/* Avatar Pill */
+.avatar-pill {
+  display: inline-flex; align-items: center; gap: .55rem;
+  background: var(--beige-soft);
+  border: 1px solid var(--beige);
+  border-radius: 50px;
+  padding: .25rem .75rem .25rem .3rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(38,35,98,.08);
+  text-align: left;
+}
+.avatar-photo {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-d));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--f-display); font-size: .7rem; font-weight: 700;
+  color: var(--white); flex-shrink: 0;
+  border: 2px solid var(--white);
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+.avatar-name {
+  font-family: var(--f-display); font-size: .88rem;
+  font-weight: 600; color: var(--navy); line-height: 1;
+}
+.avatar-loc {
+  font-family: var(--f-btn);
+  font-size: .48rem; font-weight: 500;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--beige); margin-top: 2px;
+}
+
+/* Video Frame */
+.video-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--navy);
+  margin-bottom: 1.6rem;
+  border: 3px solid var(--gold);
+  box-shadow:
+    0 24px 60px -12px rgba(38,35,98,.3),
+    0 10px 24px -8px rgba(255,130,16,.25);
+  aspect-ratio: 16/9;
+}
+.video-frame iframe {
+  width: 100%; height: 100%;
+  border: none; display: block;
+}
+.video-placeholder {
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-d) 100%);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.video-placeholder::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255,130,16,.12), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(186,174,161,.08), transparent 40%);
+}
+.play-btn {
+  position: relative; z-index: 1;
+  width: 72px; height: 72px; border-radius: 50%;
+  background: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--white); font-size: 1.6rem;
+  box-shadow: 0 8px 24px rgba(255,130,16,.45);
+  animation: pulse-ring 2.5s infinite;
+}
+@keyframes pulse-ring {
+  0%,100% { box-shadow: 0 8px 24px rgba(255,130,16,.45), 0 0 0 0 rgba(255,130,16,.5); }
+  50%     { box-shadow: 0 8px 24px rgba(255,130,16,.45), 0 0 0 16px rgba(255,130,16,0); }
+}
+.before-after-overlay {
+  position: absolute; top: .8rem; left: .8rem;
+  display: flex; gap: .4rem; z-index: 2;
+}
+.ba-badge {
+  background: rgba(38,35,98,.85);
+  backdrop-filter: blur(8px);
+  color: var(--white);
+  font-family: var(--f-btn);
+  font-size: .58rem; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: .35rem .75rem; border-radius: 4px;
+  border: 1px solid rgba(255,130,16,.3);
+}
+
+.hero-body-hook {
+  background: var(--beige-soft);
+  border-left: 3px solid var(--gold);
+  padding: 1.2rem 1.2rem 1.2rem 1.3rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+.hero-body-hook p {
+  font-size: .84rem; line-height: 1.7;
+  color: var(--navy); font-weight: 400;
+}
+.hero-body-hook mark {
+  background: linear-gradient(120deg, rgba(255,130,16,.25), rgba(255,168,74,.15));
+  padding: 2px 4px; border-radius: 2px;
+  color: var(--navy); font-weight: 600;
+}
+
+/* Primary CTA Button */
+.btn-cta {
+  display: block; width: 100%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-d));
+  color: var(--white);
+  font-family: var(--f-btn);
+  font-size: .72rem; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  padding: 1.15rem 1.4rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow-gold);
+  transition: all var(--tr);
+  position: relative; overflow: hidden;
+}
+.btn-cta::before {
+  content: ''; position: absolute; top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
+  transition: left .6s ease;
+}
+.btn-cta:hover { transform: translateY(-2px); box-shadow: 0 18px 48px -8px rgba(255,130,16,.5); }
+.btn-cta:hover::before { left: 100%; }
+.btn-cta-sub {
+  display: block; font-size: .56rem; font-weight: 400;
+  letter-spacing: 1.5px; text-transform: none;
+  opacity: .88; margin-top: .3rem;
+  font-family: var(--f-body);
+}
+
+/* Trust Badges Row — Full Gold Laurel Wreath */
+.trust-badges {
+  display: flex; gap: .8rem; justify-content: center;
+  margin-top: 1.3rem; flex-wrap: nowrap;
+}
+.trust-badge {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(160deg, #fffef8 0%, #fff8e6 50%, #fffbf0 100%);
+  border-radius: 18px;
+  padding: 0;
+  overflow: visible;
+  cursor: default;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.95) inset,
+    0 3px 0 #C8960C,
+    0 5px 0 #9A6E00,
+    0 7px 0 rgba(120,80,0,.35),
+    0 10px 28px rgba(200,150,12,.28),
+    0 20px 50px rgba(38,35,98,.15);
+  transform: perspective(500px) rotateX(1.5deg);
+  transition: transform .2s ease, box-shadow .2s ease;
+  border: 1.5px solid #D4A017;
+}
+.trust-badge:hover {
+  transform: perspective(500px) rotateX(0deg) translateY(-4px);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.95) inset,
+    0 3px 0 #C8960C,
+    0 5px 0 #9A6E00,
+    0 7px 0 rgba(120,80,0,.35),
+    0 16px 40px rgba(200,150,12,.38),
+    0 28px 60px rgba(38,35,98,.18);
+}
+.trust-badge::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 45%;
+  border-radius: 18px 18px 0 0;
+  background: linear-gradient(180deg, rgba(255,255,255,.5) 0%, transparent 100%);
+  pointer-events: none; z-index: 1;
+}
+.badge-wreath-svg { display: block; width: 100%; height: auto; }
+.badge-inner {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: .1rem; z-index: 2;
+  padding-bottom: .6rem;
+}
+.badge-icon-main { font-size: 1rem; line-height: 1; filter: drop-shadow(0 1px 2px rgba(38,35,98,.3)); }
+.badge-lbl-top {
+  font-family: var(--f-btn); font-size: .4rem; font-weight: 700;
+  letter-spacing: 1.8px; text-transform: uppercase; color: var(--navy); line-height: 1.3;
+}
+.badge-lbl-btm {
+  font-family: var(--f-btn); font-size: .42rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); line-height: 1.3;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION 2 — WHY FREE CONSULTATION
+   ═══════════════════════════════════════════════════════════ */
+.section-why {
+  background: var(--white);
+  padding: 3rem 1.4rem;
+  position: relative;
+}
+.why-icon {
+  width: 68px; height: 68px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy), var(--navy-l));
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.2rem;
+  color: var(--gold); font-size: 1.8rem;
+  font-family: var(--f-display); font-weight: 700;
+  box-shadow: var(--shadow-3d);
+  border: 2px solid var(--gold);
+}
+.checklist {
+  margin-top: 1.8rem;
+  display: flex; flex-direction: column; gap: 1rem;
+}
+.check-item {
+  display: flex; gap: .9rem;
+  padding: 1.1rem 1.1rem 1.1rem 1rem;
+  background: linear-gradient(135deg, var(--beige-soft), var(--off-white));
+  border-radius: 14px;
+  border-left: 3px solid var(--gold);
+  box-shadow: 0 4px 12px rgba(38,35,98,.06);
+  transition: transform var(--tr), box-shadow var(--tr);
+}
+.check-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 8px 20px rgba(38,35,98,.1);
+}
+.check-mark {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--gold);
+  color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .8rem; font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(255,130,16,.35);
+}
+.check-text {
+  font-size: .84rem; line-height: 1.72;
+  color: #333; font-weight: 300;
+}
+.check-text b {
+  color: var(--navy); font-weight: 500;
+  display: block; margin-bottom: .2rem;
+  font-family: var(--f-display);
+  font-size: 1.08rem;
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION 3 — PROCESS TIMELINE
+   ═══════════════════════════════════════════════════════════ */
+.section-process {
+  background: var(--navy);
+  color: var(--white);
+  padding: 3.5rem 1.4rem;
+  position: relative;
+  overflow: hidden;
+}
+.section-process::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(255,130,16,.08), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(186,174,161,.05), transparent 40%);
+}
+.section-process .container { position: relative; z-index: 1; }
+.section-process .overline { color: var(--gold); }
+.section-process .display-l { color: var(--white); margin-top: .5rem; }
+.section-process .display-l em { color: var(--gold); }
+
+.timeline {
+  margin-top: 2.5rem;
+  position: relative;
+  padding-left: 3rem;
+}
+.timeline::before {
+  content: ''; position: absolute;
+  left: 22px; top: 22px; bottom: 22px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--gold) 0%, var(--gold-d) 50%, transparent);
+}
+.step {
+  position: relative;
+  margin-bottom: 2.2rem;
+  transition: transform var(--tr);
+}
+.step:hover { transform: translateX(4px); }
+.step:last-child { margin-bottom: 0; }
+.step-num {
+  position: absolute;
+  left: -3rem; top: 0;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-d));
+  color: var(--white);
+  font-family: var(--f-display);
+  font-size: 1.3rem; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow:
+    0 8px 24px rgba(255,130,16,.45),
+    inset 0 2px 4px rgba(255,255,255,.25),
+    inset 0 -2px 4px rgba(0,0,0,.15);
+  border: 2px solid var(--navy);
+}
+.step-title {
+  font-family: var(--f-display);
+  font-size: 1.3rem; font-weight: 500;
+  color: var(--white);
+  margin-bottom: .4rem;
+  line-height: 1.3;
+}
+.step-body {
+  font-size: .83rem; line-height: 1.72;
+  color: rgba(255,255,255,.75);
+  font-weight: 300;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION 4 & 5 — CASE STUDIES
+   ═══════════════════════════════════════════════════════════ */
+.section-case {
+  background: var(--white);
+  padding: 3.5rem 1.4rem;
+}
+.section-case.alt { background: var(--beige-soft); }
+
+.case-header {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+.case-avatar-row {
+  display: inline-flex;
+  align-items: center; gap: .8rem;
+  margin-bottom: 1.2rem;
+  padding: .4rem 1rem .4rem .4rem;
+  background: var(--white);
+  border: 1px solid var(--beige);
+  border-radius: 50px;
+  box-shadow: var(--shadow-card);
+}
+.case-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-d));
+  color: var(--white);
+  font-family: var(--f-display); font-size: 1.1rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--white);
+  box-shadow: 0 3px 8px rgba(0,0,0,.15);
+  flex-shrink: 0;
+}
+.case-avatar-name {
+  font-family: var(--f-display);
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--navy); line-height: 1;
+}
+.case-avatar-label {
+  font-family: var(--f-btn);
+  font-size: .52rem; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--beige); margin-top: 3px;
+}
+.case-tag {
+  font-family: var(--f-btn);
+  font-size: .56rem; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  display: block;
+}
+.case-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(1.7rem, 6vw, 2.4rem);
+  font-weight: 500;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 1.4rem;
+  letter-spacing: -0.01em;
+}
+.case-h2 em { color: var(--gold); font-style: italic; font-weight: 400; }
+
+.case-body {
+  font-size: .9rem; line-height: 1.82;
+  color: #333;
+  margin-bottom: 1.4rem;
+  font-weight: 300;
+}
+.case-body p { margin-bottom: .9rem; }
+.case-body p:first-child::first-letter {
+  font-family: var(--f-display);
+  font-size: 3.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  float: left;
+  line-height: .85;
+  padding: .25rem .5rem 0 0;
+  margin-top: .15rem;
+}
+
+.case-details {
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 16px;
+  padding: 1.5rem 1.3rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow-3d);
+  border: 1px solid rgba(255,130,16,.2);
+}
+.case-detail-row {
+  margin-bottom: 1rem;
+}
+.case-detail-row:last-child { margin-bottom: 0; }
+.case-detail-label {
+  font-family: var(--f-btn);
+  font-size: .52rem; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .25rem;
+  display: block;
+}
+.case-detail-text {
+  font-size: .82rem; line-height: 1.72;
+  color: rgba(255,255,255,.9);
+  font-weight: 300;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION 6 — WARRANTY / WHY CHOOSE US
+   ═══════════════════════════════════════════════════════════ */
+.section-warranty {
+  background: linear-gradient(180deg, var(--off-white), var(--beige-soft));
+  padding: 3.5rem 1.4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.section-warranty::before {
+  content: ''; position: absolute;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,130,16,.08), transparent 70%);
+  top: -100px; right: -150px;
+  pointer-events: none;
+}
+.warranty-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(2rem, 7vw, 2.8rem);
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.01em;
+}
+.warranty-h2::first-letter {
+  color: var(--gold);
+  font-size: 1.2em;
+}
+.warranty-h2 em { color: var(--gold); font-style: italic; font-weight: 400; }
+.warranty-body {
+  font-size: .92rem; line-height: 1.75;
+  color: #333;
+  margin-bottom: 2rem;
+  max-width: 420px;
+  margin-left: auto; margin-right: auto;
+  font-weight: 300;
+}
+.warranty-body b { color: var(--navy); font-weight: 500; }
+
+.warranty-badge {
+  display: inline-flex; flex-direction: column; align-items: center;
+  gap: .3rem;
+  background: var(--white);
+  border: 3px solid var(--gold);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  box-shadow:
+    var(--shadow-3d),
+    inset 0 0 0 1px rgba(255,130,16,.1);
+  position: relative;
+}
+.warranty-laurel {
+  font-size: 3rem; line-height: 1;
+  margin-bottom: .3rem;
+}
+.warranty-pre {
+  font-family: var(--f-btn);
+  font-size: .6rem; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--navy);
+}
+.warranty-main {
+  font-family: var(--f-display);
+  font-size: 2.2rem; font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: .5px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION 7 — 4 OFFERS
+   ═══════════════════════════════════════════════════════════ */
+.section-offers {
+  background: var(--white);
+  padding: 3.5rem 1.4rem;
+}
+.offers-grid {
+  margin-top: 1.8rem;
+  display: flex; flex-direction: column; gap: 1.1rem;
+}
+.offer-card {
+  background: var(--white);
+  border: 1px solid var(--beige);
+  border-radius: 18px;
+  padding: 1.4rem 1.3rem 1.4rem 1.3rem;
+  box-shadow: var(--shadow-card);
+  display: flex; gap: 1rem;
+  transition: all var(--tr);
+  position: relative;
+  overflow: hidden;
+}
+.offer-card::before {
+  content: ''; position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-l));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .5s ease;
+}
+.offer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 60px -12px rgba(38,35,98,.22);
+}
+.offer-card:hover::before { transform: scaleX(1); }
+.offer-num {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy), var(--navy-l));
+  color: var(--gold);
+  font-family: var(--f-display);
+  font-size: 1.4rem; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(38,35,98,.25);
+  border: 2px solid var(--gold);
+}
+.offer-body {
+  flex: 1;
+}
+.offer-title {
+  font-family: var(--f-display);
+  font-size: 1.25rem; font-weight: 500;
+  color: var(--navy);
+  margin-bottom: .45rem;
+  line-height: 1.25;
+}
+.offer-desc {
+  font-size: .82rem; line-height: 1.72;
+  color: #555; font-weight: 300;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION 8 — WHAT WE DO
+   ═══════════════════════════════════════════════════════════ */
+.section-what-we-do {
+  background: var(--beige-soft);
+  padding: 3.5rem 1.4rem;
+}
+.wwd-check-list {
+  margin: 1.4rem 0 1.5rem;
+  display: grid;
+  gap: .7rem;
+}
+.wwd-check {
+  display: flex; align-items: center; gap: .7rem;
+  background: var(--white);
+  padding: .85rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(38,35,98,.05);
+  border-left: 3px solid var(--gold);
+}
+.wwd-check-mark {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--gold);
+  color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .7rem; font-weight: 700;
+  flex-shrink: 0;
+}
+.wwd-check-text {
+  font-size: .84rem; font-weight: 400;
+  color: var(--navy);
+}
+.wwd-body p {
+  font-size: .9rem; line-height: 1.78;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+.wwd-gallery {
+  margin-top: 1.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .7rem;
+}
+.wwd-gallery-img {
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--beige), var(--beige-l));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.4rem;
+  color: var(--navy);
+  box-shadow: 0 6px 16px rgba(38,35,98,.1);
+  overflow: hidden;
+  position: relative;
+}
+.wwd-gallery-img::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(38,35,98,.1));
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION 9 — TESTIMONIALS
+   ═══════════════════════════════════════════════════════════ */
+.section-testimonials {
+  background: var(--white);
+  padding: 3.5rem 1.4rem;
+}
+.test-card {
+  background: var(--white);
+  border: 1px solid var(--beige);
+  border-radius: 16px;
+  padding: 1.4rem 1.2rem;
+  margin-bottom: 1.1rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  transition: transform var(--tr);
+}
+.test-card:hover { transform: translateY(-2px); }
+.test-card::before {
+  content: '"';
+  position: absolute;
+  top: 0rem; right: 1rem;
+  font-family: var(--f-display);
+  font-size: 6rem;
+  color: var(--gold);
+  opacity: .12;
+  line-height: 1;
+}
+.test-meta {
+  display: flex; align-items: center; gap: .6rem;
+  margin-bottom: .8rem;
+}
+.test-name {
+  font-family: var(--f-display);
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--navy);
+}
+.test-date {
+  font-family: var(--f-btn);
+  font-size: .6rem; color: #888; letter-spacing: .5px;
+}
+.test-stars { color: var(--gold); font-size: .85rem; letter-spacing: 1px; }
+.test-google {
+  font-family: var(--f-btn);
+  font-size: .58rem; font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--beige);
+  text-transform: uppercase;
+}
+.test-quote {
+  font-family: var(--f-display);
+  font-size: 1.05rem; font-weight: 400;
+  font-style: italic;
+  line-height: 1.65;
+  color: #333;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION 10 — STATS
+   ═══════════════════════════════════════════════════════════ */
+.section-stats {
+  background: linear-gradient(180deg, var(--beige-soft), var(--off-white));
+  padding: 3.5rem 1.4rem;
+}
+.stats-grid {
+  display: flex; flex-direction: column; gap: 1rem;
+}
+.stat-card {
+  background: var(--white);
+  border: 1px solid var(--beige);
+  border-radius: 16px;
+  padding: 1.6rem 1.3rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--tr);
+  position: relative;
+  overflow: hidden;
+}
+.stat-card:hover { transform: translateY(-4px); }
+.stat-card::after {
+  content: ''; position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 60px; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.stat-icon {
+  width: 54px; height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-d));
+  color: var(--white);
+  font-size: 1.4rem;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto .9rem;
+  box-shadow: var(--shadow-gold);
+}
+.stat-num {
+  font-family: var(--f-display);
+  font-size: 4rem; font-weight: 600;
+  color: var(--navy);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  display: block;
+  margin-bottom: .2rem;
+}
+.stat-label {
+  font-family: var(--f-btn);
+  font-size: .6rem; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .6rem;
+  display: block;
+}
+.stat-desc {
+  font-size: .8rem; line-height: 1.68;
+  color: #555;
+  max-width: 280px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION 11 — SERVICES
+   ═══════════════════════════════════════════════════════════ */
+.section-services {
+  background: var(--white);
+  padding: 3.5rem 1.4rem;
+}
+.service-btn-top {
+  display: inline-flex; align-items: center; gap: .5rem;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--f-btn);
+  font-size: .62rem; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: .75rem 1.2rem;
+  border-radius: 50px;
+  margin: 1.2rem 0 2rem;
+  transition: all var(--tr);
+}
+.service-btn-top:hover {
+  background: var(--gold);
+  color: var(--white);
+}
+.service-block {
+  margin-bottom: 2.2rem;
+}
+.service-block:last-child { margin-bottom: 0; }
+.service-img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-d));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3.5rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-3d);
+  overflow: hidden;
+  position: relative;
+}
+.service-img::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(255,130,16,.15), transparent 60%);
+}
+.service-h3 {
+  font-family: var(--f-display);
+  font-size: 1.65rem; font-weight: 500;
+  color: var(--gold);
+  margin-bottom: .7rem;
+  line-height: 1.2;
+}
+.service-desc {
+  font-size: .86rem; line-height: 1.8;
+  color: #444;
+  margin-bottom: .9rem;
+  font-weight: 300;
+}
+.service-link {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-family: var(--f-btn);
+  font-size: .65rem; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--gold);
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid var(--gold);
+  transition: gap var(--tr);
+}
+.service-link:hover { gap: .6rem; }
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION 12 — PROJECT SCOPE
+   ═══════════════════════════════════════════════════════════ */
+.section-scope {
+  background: linear-gradient(180deg, var(--beige-soft), var(--white));
+  padding: 3.5rem 1.4rem 4rem;
+}
+.scope-body p {
+  font-size: .9rem; line-height: 1.82;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+.scope-body p:first-child::first-letter {
+  font-family: var(--f-display);
+  font-size: 3.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  float: left;
+  line-height: .85;
+  padding: .25rem .5rem 0 0;
+}
+.progress-row {
+  margin-bottom: 1.4rem;
+}
+.progress-label {
+  display: flex; justify-content: space-between;
+  font-size: .76rem; font-weight: 500;
+  color: var(--navy);
+  margin-bottom: .45rem;
+}
+.progress-pct { color: var(--gold); font-family: var(--f-display); font-size: .95rem; }
+.progress-track {
+  height: 10px;
+  background: var(--beige-l);
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(38,35,98,.08);
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-l));
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(255,130,16,.4);
+  transition: width 1.5s cubic-bezier(.4,0,.2,1);
+  position: relative;
+}
+.progress-fill::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent);
+  animation: shimmer 2.5s infinite;
+}
+@keyframes shimmer {
+  0%,100% { transform: translateX(-100%); }
+  50%     { transform: translateX(100%); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════════════ */
+.vip-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.7);
+  padding: 3rem 1.4rem 2rem;
+  text-align: center;
+}
+.vip-footer .brand { justify-content: center; margin-bottom: 1.2rem; }
+.footer-tagline {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--gold);
+  margin-bottom: 1.6rem;
+}
+.footer-nap {
+  font-style: normal;
+  line-height: 2.2;
+  margin-bottom: 1.4rem;
+}
+.footer-nap a { color: var(--gold); font-size: .88rem; }
+.footer-nap span { color: rgba(255,255,255,.45); font-size: .76rem; }
+.footer-copy {
+  font-family: var(--f-btn);
+  font-size: .58rem;
+  color: rgba(255,255,255,.3);
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 1.2rem;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   POPUP FORM MODAL
+   ═══════════════════════════════════════════════════════════ */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(26,22,69,.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 9998;
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  animation: fadeIn .35s ease;
+}
+.modal-overlay.open { display: flex; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.modal {
+  background: var(--white);
+  border-radius: 24px 24px 0 0;
+  width: 100%; max-width: 520px;
+  max-height: 92vh;
+  overflow-y: auto;
+  animation: slideUp .4s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 -20px 60px rgba(38,35,98,.4);
+  position: relative;
+}
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.modal-header {
+  background: linear-gradient(135deg, var(--navy), var(--navy-d));
+  color: var(--white);
+  padding: 1.5rem 1.4rem 1.3rem;
+  border-radius: 24px 24px 0 0;
+  text-align: center;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: .8rem; right: .8rem;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  color: var(--white);
+  font-size: 1.1rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--tr);
+}
+.modal-close:hover { background: rgba(255,255,255,.3); }
+.modal-overline {
+  font-family: var(--f-btn);
+  font-size: .58rem; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .4rem;
+}
+.modal-h {
+  font-family: var(--f-display);
+  font-size: 1.7rem; font-weight: 500;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: .3rem;
+}
+.modal-h em { color: var(--gold); font-style: italic; }
+.modal-sub {
+  font-size: .76rem;
+  color: rgba(255,255,255,.75);
+  line-height: 1.5;
+  font-weight: 300;
+}
+.modal-body { padding: 1.5rem 1.4rem 1.8rem; }
+.form-field {
+  width: 100%;
+  padding: .95rem 1rem;
+  border: 1.5px solid var(--beige);
+  border-radius: 10px;
+  font-family: var(--f-body);
+  font-size: .88rem;
+  color: var(--navy);
+  margin-bottom: .8rem;
+  outline: none;
+  background: var(--white);
+  transition: border-color var(--tr), box-shadow var(--tr);
+}
+.form-field:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(255,130,16,.15);
+}
+.form-field::placeholder { color: #999; }
+
+.upload-zone {
+  border: 2px dashed var(--gold);
+  border-radius: 12px;
+  padding: 1.6rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  background: rgba(255,130,16,.03);
+  margin-bottom: .8rem;
+  transition: all var(--tr);
+}
+.upload-zone:hover, .upload-zone.drag-over {
+  background: rgba(255,130,16,.08);
+  border-color: var(--gold-d);
+}
+.upload-zone.has-file {
+  border-color: #16a34a; border-style: solid;
+  background: rgba(22,163,74,.06);
+}
+.upload-icon { font-size: 1.9rem; color: var(--gold); margin-bottom: .35rem; }
+.upload-text {
+  font-size: .84rem; font-weight: 500; color: var(--navy);
+  margin-bottom: .2rem;
+}
+.upload-sub {
+  font-size: .66rem; color: #888;
+}
+.upload-zone.has-file .upload-text { color: #16a34a; }
+
+.photo-preview {
+  display: none; margin-bottom: .8rem;
+  border-radius: 12px; overflow: hidden;
+  border: 2px solid #16a34a;
+  position: relative;
+}
+.photo-preview img {
+  width: 100%; max-height: 200px; object-fit: cover;
+}
+.photo-preview-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: rgba(22,163,74,.95);
+  color: var(--white);
+  padding: .4rem .8rem;
+  font-family: var(--f-btn);
+  font-size: .65rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  text-align: center;
+}
+
+.form-submit {
+  width: 100%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-d));
+  color: var(--white);
+  font-family: var(--f-btn);
+  font-size: .72rem; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  padding: 1.1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-gold);
+  transition: all var(--tr);
+}
+.form-submit:hover { transform: translateY(-2px); }
+.form-submit:disabled { opacity: .6; transform: none; }
+
+.form-privacy {
+  text-align: center;
+  font-size: .62rem;
+  color: #999;
+  margin-top: .7rem;
+  line-height: 1.5;
+}
+
+.success-msg {
+  display: none;
+  text-align: center;
+  padding: 2rem 1.4rem;
+}
+.success-msg.show { display: block; }
+.success-icon {
+  width: 68px; height: 68px; border-radius: 50%;
+  background: #16a34a;
+  color: var(--white); font-size: 2rem;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 8px 24px rgba(22,163,74,.3);
+}
+.success-h {
+  font-family: var(--f-display);
+  font-size: 1.8rem; font-weight: 500;
+  color: var(--navy); margin-bottom: .5rem;
+}
+.success-body {
+  font-size: .86rem; color: #555; line-height: 1.65;
+  max-width: 340px; margin: 0 auto;
+  font-weight: 300;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   REVEAL ANIMATIONS
+   ═══════════════════════════════════════════════════════════ */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE (tablet+)
+   ═══════════════════════════════════════════════════════════ */
+@media (min-width: 768px) {
+  .stats-grid { flex-direction: row; }
+  .stat-card { flex: 1; }
+  .wwd-gallery { grid-template-columns: repeat(2, 1fr); }
+  .trust-badges { flex-wrap: nowrap; }
+}
+@media (min-width: 1024px) {
+  :root { --mw: 640px; }
+  .section-services .service-block,
+  .section-case .case-body { font-size: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══════════════════════════════════════════════ -->
+<nav class="vip-nav">
+  <div class="brand">
+    <svg class="brand-crown" viewBox="0 0 32 40" fill="none">
+      <polygon points="8,14 10,4 12,10" fill="#FF8210"/>
+      <polygon points="12,12 14,2 16,8" fill="#FFA84A"/>
+      <polygon points="16,12 18,2 20,8" fill="#FFA84A"/>
+      <polygon points="20,12 22,4 24,10" fill="#FF8210"/>
+      <rect x="7" y="13" width="18" height="12" rx="2" fill="#FF8210"/>
+      <circle cx="11" cy="20" r="1.2" fill="#262362"/>
+      <circle cx="16" cy="20" r="1.2" fill="#262362"/>
+      <circle cx="21" cy="20" r="1.2" fill="#262362"/>
+      <rect x="13" y="25" width="6" height="14" rx="3" fill="#FF8210"/>
+    </svg>
+    <div>
+      <div class="brand-name">VIP HOME PAINTING</div>
+      <span class="brand-sub">Visualize · See · Paint</span>
+    </div>
+  </div>
+  <a href="tel:9093125400" class="nav-phone">(909) 312-5400</a>
+</nav>
+
+<!-- ═══ SECTION 1: HERO ═══════════════════════════════════ -->
+<section class="hero">
+  <div class="floating-bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-overline">Inland Empire Customized Home Painting Services</div>
+
+    <h1 class="hero-h1">
+      Discover How VIP Home Painting
+      <span class="hl">Transformed Miguel &amp; Karla's Home</span>
+      In Just 4 Days With Custom Color Consultation
+    </h1>
+
+    <div class="avatar-pill reveal">
+      <div class="avatar-photo">MK</div>
+      <div>
+        <div class="avatar-name">Miguel &amp; Karla</div>
+        <div class="avatar-loc">Fontana Homeowner</div>
+      </div>
+    </div>
+
+    <div class="video-frame reveal">
+      <div class="video-placeholder" id="heroVideo" onclick="loadYouTube(this, 'YOUTUBE_ID_HERO')">
+        <div class="before-after-overlay">
+          <span class="ba-badge">BEFORE</span>
+          <span class="ba-badge">AFTER</span>
+        </div>
+        <button class="play-btn" aria-label="Play video">▶</button>
+      </div>
+    </div>
+
+    <div class="hero-body-hook reveal">
+      <p>
+        <strong>CLAIM YOUR FREE 30-MINUTE CUSTOMIZED HOME COLOR CONSULTATION</strong> and
+        <mark>SAVE $1,000's on expensive consultants</mark> and avoid common home painting mistakes.
+      </p>
+    </div>
+
+    <button class="btn-cta" onclick="openForm('Hero CTA')">
+      CLAIM FREE COLOR CONSULTATION
+      <span class="btn-cta-sub">Irresistible Painting Estimates Included</span>
+    </button>
+
+    <!-- Hidden shared SVG defs for wreath -->
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <linearGradient id="lg1" x1="20%" y1="0%" x2="80%" y2="100%">
+          <stop offset="0%"   stop-color="#FFF5B0"/>
+          <stop offset="18%"  stop-color="#F2C535"/>
+          <stop offset="45%"  stop-color="#C88A00"/>
+          <stop offset="78%"  stop-color="#8B5C00"/>
+          <stop offset="100%" stop-color="#4E3000"/>
+        </linearGradient>
+        <linearGradient id="lg2" x1="80%" y1="0%" x2="20%" y2="100%">
+          <stop offset="0%"   stop-color="#FFE070"/>
+          <stop offset="30%"  stop-color="#E0A010"/>
+          <stop offset="65%"  stop-color="#A06C00"/>
+          <stop offset="100%" stop-color="#5A3800"/>
+        </linearGradient>
+        <linearGradient id="lgStem" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#C88800"/>
+          <stop offset="50%"  stop-color="#FFD840"/>
+          <stop offset="100%" stop-color="#A07000"/>
+        </linearGradient>
+        <filter id="fLeaf" x="-40%" y="-40%" width="180%" height="180%">
+          <feDropShadow dx="0.8" dy="2" stdDeviation="1.8" flood-color="rgba(40,18,0,.65)"/>
+        </filter>
+        <!-- Leaf shape: 34px tall, realistic pointed almond -->
+        <path id="lf" d="M0,0 C-7,-10 -7.5,-23 0,-33 C7.5,-23 7,-10 0,0Z"/>
+      </defs>
+    </svg>
+
+    <div class="trust-badges reveal">
+
+      <!-- Badge 1: Custom Color Schemes -->
+      <div class="trust-badge">
+        <svg class="badge-wreath-svg" viewBox="0 0 200 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- LEFT stem -->
+          <path d="M100,178 C65,172 28,152 20,97 C18,42 68,18 100,17" stroke="url(#lgStem)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- LEFT leaves — positioned along the oval arc, pointing outward -->
+          <g filter="url(#fLeaf)">
+            <use href="#lf" fill="url(#lg1)" transform="translate(88,161) rotate(190)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(62,150) rotate(213)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(41,133) rotate(236)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(28,109) rotate(259)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(24,84) rotate(281)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(32,59) rotate(304)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(51,38) rotate(327)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(76,24) rotate(350)"/>
+          </g>
+          <!-- Midrib highlights LEFT -->
+          <line x1="83" y1="162" x2="76" y2="132" stroke="rgba(255,230,90,.45)" stroke-width="0.8"/>
+          <line x1="58" y1="151" x2="46" y2="123" stroke="rgba(255,230,90,.45)" stroke-width="0.8"/>
+          <line x1="36" y1="134" x2="28" y2="106" stroke="rgba(255,230,90,.45)" stroke-width="0.8"/>
+          <line x1="22" y1="110" x2="20" y2="82" stroke="rgba(255,230,90,.45)" stroke-width="0.8"/>
+          <line x1="20" y1="85" x2="25" y2="57" stroke="rgba(255,230,90,.45)" stroke-width="0.8"/>
+          <!-- RIGHT stem -->
+          <path d="M100,178 C135,172 172,152 180,97 C182,42 132,18 100,17" stroke="url(#lgStem)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- RIGHT leaves — mirror -->
+          <g filter="url(#fLeaf)">
+            <use href="#lf" fill="url(#lg1)" transform="translate(112,161) rotate(170)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(138,150) rotate(147)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(159,133) rotate(124)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(172,109) rotate(101)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(176,84) rotate(79)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(168,59) rotate(56)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(149,38) rotate(33)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(124,24) rotate(10)"/>
+          </g>
+          <!-- Bottom knot -->
+          <ellipse cx="100" cy="179" rx="9" ry="6" fill="url(#lg1)" filter="url(#fLeaf)"/>
+          <ellipse cx="100" cy="178" rx="5" ry="3" fill="#FFE878" opacity=".7"/>
+        </svg>
+        <div class="badge-inner">
+          <span class="badge-icon-main">🎨</span>
+          <span class="badge-lbl-top">Custom</span>
+          <span class="badge-lbl-btm">Color Schemes</span>
+        </div>
+      </div>
+
+      <!-- Badge 2: 1-Year Warranty -->
+      <div class="trust-badge">
+        <svg class="badge-wreath-svg" viewBox="0 0 200 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100,178 C65,172 28,152 20,97 C18,42 68,18 100,17" stroke="url(#lgStem)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <g filter="url(#fLeaf)">
+            <use href="#lf" fill="url(#lg2)" transform="translate(88,161) rotate(190)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(62,150) rotate(213)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(41,133) rotate(236)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(28,109) rotate(259)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(24,84) rotate(281)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(32,59) rotate(304)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(51,38) rotate(327)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(76,24) rotate(350)"/>
+          </g>
+          <path d="M100,178 C135,172 172,152 180,97 C182,42 132,18 100,17" stroke="url(#lgStem)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <g filter="url(#fLeaf)">
+            <use href="#lf" fill="url(#lg2)" transform="translate(112,161) rotate(170)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(138,150) rotate(147)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(159,133) rotate(124)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(172,109) rotate(101)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(176,84) rotate(79)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(168,59) rotate(56)"/>
+            <use href="#lf" fill="url(#lg2)" transform="translate(149,38) rotate(33)"/>
+            <use href="#lf" fill="url(#lg1)" transform="translate(124,24) rotate(10)"/>
+          </g>
+          <ellipse cx="100" cy="179" rx="9" ry="6" fill="url(#lg2)" filter="url(#fLeaf)"/>
+          <ellipse cx="100" cy="178" rx="5" ry="3" fill="#FFE878" opacity=".7"/>
+        </svg>
+        <div class="badge-inner">
+          <span class="badge-icon-main">🏆</span>
+          <span class="badge-lbl-top">Our Insane</span>
+          <span class="badge-lbl-btm">1-Year Warranty</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 2: WHY FREE CONSULTATION ══════════════════ -->
+<section class="section-why">
+  <div class="container">
+    <div class="why-icon reveal">?</div>
+
+    <p class="overline reveal" style="text-align:center;display:block;margin-bottom:.6rem">
+      Why Get A <em style="font-style:italic">FREE</em> Custom Color Consultation
+    </p>
+
+    <h2 class="display-m reveal" style="text-align:center;margin-bottom:1.6rem">
+      Avoid Costly Mistakes — Our Free Consultation Ensures Your Home <em class="serif-italic" style="color:var(--gold)">Stands Out For The Right Reasons</em>
+    </h2>
+
+    <div class="video-frame reveal">
+      <div class="video-placeholder" onclick="loadYouTube(this, 'YOUTUBE_ID_CONSULTATION')">
+        <button class="play-btn" aria-label="Play video">▶</button>
+      </div>
+    </div>
+
+    <div class="checklist reveal">
+      <div class="check-item">
+        <div class="check-mark">✓</div>
+        <p class="check-text">
+          <b>Unlock $1,000 Value in 30 Minutes</b>
+          Discover how our free consultation can save you thousands in costly repainting by getting it right the first time.
+        </p>
+      </div>
+      <div class="check-item">
+        <div class="check-mark">✓</div>
+        <p class="check-text">
+          <b>Fast-Track Your Home Transformation</b>
+          Get expert color advice in just 30 minutes, designed to fit your busy schedule and elevate your home's curb appeal instantly.
+        </p>
+      </div>
+      <div class="check-item">
+        <div class="check-mark">✓</div>
+        <p class="check-text">
+          <b>Why Waste Money on Guesswork?</b>
+          Our free color consultation ensures you avoid expensive mistakes and achieve a timeless look, all at no cost to you.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 3: PROCESS TIMELINE ═══════════════════════ -->
+<section class="section-process">
+  <div class="container">
+    <p class="overline reveal">Here's A Taste Of What To Expect</p>
+    <h2 class="display-l reveal" style="margin-bottom:1.5rem">
+      When You Go Through Our <em class="serif-italic">Color Consult &amp; Painting Service</em>
+    </h2>
+
+    <div class="timeline reveal">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3 class="step-title">Personalized Color Consultation</h3>
+        <p class="step-body">We start by understanding your vision, discussing the colors, mood, and look you want for your home.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3 class="step-title">Customized Visualizations In 30 Minutes</h3>
+        <p class="step-body">We create detailed visualizations showing how different color schemes will transform your home within minutes.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3 class="step-title">Irresistible Estimate</h3>
+        <p class="step-body">Receive a competitive estimate tailored to bring your dream home to life without compromising on quality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 4: CASE STUDY — DOUGLAS & SHERI ═══════════ -->
+<section class="section-case">
+  <div class="container">
+    <div class="case-header reveal">
+      <div class="case-avatar-row">
+        <div class="case-avatar">DS</div>
+        <div>
+          <div class="case-avatar-name">Douglas &amp; Sheri</div>
+          <div class="case-avatar-label">Homeowner</div>
+        </div>
+      </div>
+      <span class="case-tag">Home Exterior Painting Project Details</span>
+
+      <h2 class="case-h2">
+        Douglas &amp; Sheri's Personalized Home Painting Transformation In <em>Fontana, Inland Empire</em>
+      </h2>
+    </div>
+
+    <div class="video-frame reveal">
+      <div class="video-placeholder" onclick="loadYouTube(this, 'YOUTUBE_ID_DOUGLAS')">
+        <div class="before-after-overlay">
+          <span class="ba-badge">BEFORE</span>
+          <span class="ba-badge">AFTER</span>
+        </div>
+        <button class="play-btn" aria-label="Play video">▶</button>
+      </div>
+    </div>
+
+    <div class="case-body reveal">
+      <p>Douglas and Sheri, longtime residents of Fontana, wanted to make their Sierra Lakes home truly their own.</p>
+      <p>With our expert guidance and a FREE 30-Minute Personalized Color Consultation, we helped them choose a sophisticated color scheme that reflected their unique style.</p>
+      <p><em class="serif-italic" style="color:var(--gold);font-size:1.3em">The result?</em></p>
+      <p>A stunning transformation that enhanced their home's curb appeal and made it stand out in the neighborhood.</p>
+    </div>
+
+    <div class="case-details reveal">
+      <div class="case-detail-row">
+        <span class="case-detail-label">Reason For Painting</span>
+        <p class="case-detail-text">Homeowners Douglas and Sheri wanted to stand out in their Sierra Lakes, Fontana neighborhood by personalizing their home with a sophisticated and elegant look.</p>
+      </div>
+      <div class="case-detail-row">
+        <span class="case-detail-label">Strategy</span>
+        <p class="case-detail-text">Through a FREE 30-Minute Personalized Color Consultation, we helped them select a palette that reflected their vision.</p>
+      </div>
+      <div class="case-detail-row">
+        <span class="case-detail-label">Mood Desired</span>
+        <p class="case-detail-text">The transformation achieved their goal, turning their house into a unique masterpiece that stands out with elegance and sophistication.</p>
+      </div>
+    </div>
+
+    <button class="btn-cta" onclick="openForm('Douglas Case Study')">
+      CLAIM FREE COLOR CONSULT
+      <span class="btn-cta-sub">+ Irresistible Painting Estimates Included</span>
+    </button>
+  </div>
+</section>
+
+<!-- ═══ SECTION 5: CASE STUDY — CEASAR & JULIE ═══════════ -->
+<section class="section-case alt">
+  <div class="container">
+    <p class="overline reveal" style="text-align:center;display:block;margin-bottom:.8rem">
+      Inland Empire Home Painting Projects
+    </p>
+    <h2 class="display-l reveal" style="text-align:center;margin-bottom:1.8rem">
+      Transforming Homes With <em class="serif-italic" style="color:var(--gold)">Precision &amp; Care</em>
+    </h2>
+
+    <div class="case-header reveal">
+      <div class="case-avatar-row">
+        <div class="case-avatar">CJ</div>
+        <div>
+          <div class="case-avatar-name">Ceasar &amp; Julie</div>
+          <div class="case-avatar-label">Homeowner</div>
+        </div>
+      </div>
+      <span class="case-tag">Home Exterior Painting Project Details</span>
+
+      <h2 class="case-h2" style="font-size:1.65rem">
+        Ceasar &amp; Julie's Personalized Home Painting Transformation In <em>Rancho Cucamonga, Inland Empire CA</em>
+      </h2>
+    </div>
+
+    <div class="video-frame reveal">
+      <div class="video-placeholder" onclick="loadYouTube(this, 'YOUTUBE_ID_CEASAR')">
+        <div class="before-after-overlay">
+          <span class="ba-badge">BEFORE</span>
+          <span class="ba-badge">AFTER</span>
+        </div>
+        <button class="play-btn" aria-label="Play video">▶</button>
+      </div>
+    </div>
+
+    <div class="case-body reveal">
+      <p>Ceasar and Julie wanted a fresh look for their Rancho Cucamonga home after living there for 10 years.</p>
+    </div>
+
+    <div class="case-details reveal">
+      <div class="case-detail-row">
+        <span class="case-detail-label">Reason For Painting</span>
+        <p class="case-detail-text">Ceasar and Julie sought to inject life and personality into their Rancho Cucamonga home with a creative painting job that would make their home stand out.</p>
+      </div>
+      <div class="case-detail-row">
+        <span class="case-detail-label">Strategy</span>
+        <p class="case-detail-text">Through a FREE 30-Minute Personalized Color Consultation, VIP Home Painting guided them in selecting a harmonious blend of colors.</p>
+      </div>
+      <div class="case-detail-row">
+        <span class="case-detail-label">Mood Desired</span>
+        <p class="case-detail-text"><strong>Harmonious and Distinctive:</strong> The transformation turned their home into a true masterpiece, radiating joy and uniqueness, and enhancing curb appeal with a playful touch that reflects the couple's vibrant personality.</p>
+      </div>
+    </div>
+
+    <button class="btn-cta" onclick="openForm('Ceasar Case Study')">
+      CLAIM FREE COLOR CONSULT
+      <span class="btn-cta-sub">+ Irresistible Painting Estimates Included</span>
+    </button>
+  </div>
+</section>
+
+<!-- ═══ SECTION 6: WARRANTY / WHY CHOOSE US ══════════════ -->
+<section class="section-warranty">
+  <div class="container">
+    <p class="overline reveal" style="display:block;margin-bottom:.8rem">Why Choose Us</p>
+    <h2 class="warranty-h2 reveal">
+      Our Home Painting Work Is Backed By A <em>Solid 1 Year Warranty!</em>
+    </h2>
+    <p class="warranty-body reveal">
+      When you use us at <b>VIP Home Painting</b>, you can invest with confidence because you'll be backed by a 1-Year Warranty.
+      <br><br>
+      <b>No Questions Asked.</b>
+    </p>
+
+    <div class="warranty-badge reveal">
+      <span class="warranty-laurel">🏆</span>
+      <span class="warranty-pre">Our Insane</span>
+      <span class="warranty-main">1-Year Warranty</span>
+      <span class="warranty-pre" style="color:var(--gold)">— No Questions Asked —</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 7: 4 OFFERS ══════════════════════════════ -->
+<section class="section-offers">
+  <div class="container">
+    <h2 class="display-m reveal" style="text-align:center;margin-bottom:.5rem">
+      Our Custom Home Painting <em class="serif-italic" style="color:var(--gold)">Company Offers:</em>
+    </h2>
+
+    <div class="offers-grid">
+      <div class="offer-card reveal">
+        <div class="offer-num">1</div>
+        <div class="offer-body">
+          <h3 class="offer-title">FREE Custom Color Consultation</h3>
+          <p class="offer-desc">We know choosing the right colors can be overwhelming. That's why we offer free color consultations that you can visualize, so it empowers you to make decisions in 30 minutes.</p>
+        </div>
+      </div>
+      <div class="offer-card reveal">
+        <div class="offer-num">2</div>
+        <div class="offer-body">
+          <h3 class="offer-title">Insane 1 Year Warranty</h3>
+          <p class="offer-desc">We stand behind our work, which is why we offer an Insane 1 Year Warranty for every client. If anything goes wrong, we will fix it.</p>
+        </div>
+      </div>
+      <div class="offer-card reveal">
+        <div class="offer-num">3</div>
+        <div class="offer-body">
+          <h3 class="offer-title">Affordable Prices, Top Quality</h3>
+          <p class="offer-desc">We believe everyone deserves a beautiful home without breaking the bank. That's why we offer reasonable prices while still delivering top-quality workmanship.</p>
+        </div>
+      </div>
+      <div class="offer-card reveal">
+        <div class="offer-num">4</div>
+        <div class="offer-body">
+          <h3 class="offer-title">Experienced And Professional</h3>
+          <p class="offer-desc">Our team and professional painters have the skills and expertise to tackle any project, big or small. We take pride in our work and always strive to exceed our clients' expectations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 8: WHAT WE DO ════════════════════════════ -->
+<section class="section-what-we-do">
+  <div class="container">
+    <p class="overline reveal" style="display:block;margin-bottom:.6rem">What We Do</p>
+    <h2 class="display-l reveal" style="margin-bottom:1.2rem">
+      We Paint To <em class="serif-italic" style="color:var(--gold)">Transform Lives</em>
+    </h2>
+
+    <div class="wwd-check-list reveal">
+      <div class="wwd-check"><span class="wwd-check-mark">✓</span><span class="wwd-check-text">Detail-Oriented Craftsmanship</span></div>
+      <div class="wwd-check"><span class="wwd-check-mark">✓</span><span class="wwd-check-text">High-Quality Materials</span></div>
+      <div class="wwd-check"><span class="wwd-check-mark">✓</span><span class="wwd-check-text">FREE Customized Color Consultations</span></div>
+      <div class="wwd-check"><span class="wwd-check-mark">✓</span><span class="wwd-check-text">Luxury Transformation</span></div>
+      <div class="wwd-check"><span class="wwd-check-mark">✓</span><span class="wwd-check-text">1-Year Warranty: Peace of mind with satisfaction guarantee</span></div>
+      <div class="wwd-check"><span class="wwd-check-mark">✓</span><span class="wwd-check-text">Stress-Free Experience</span></div>
+    </div>
+
+    <div class="wwd-body reveal">
+      <p>Transform your home into a beautiful and relaxing retreat that you'll never want to leave.</p>
+      <p>Don't let a dull or outdated exterior or interior hold you back — let us create a space you'll be proud to show off.</p>
+    </div>
+
+    <div class="wwd-gallery reveal">
+      <div class="wwd-gallery-img">🏡</div>
+      <div class="wwd-gallery-img">🎨</div>
+      <div class="wwd-gallery-img">🛋</div>
+      <div class="wwd-gallery-img">🏠</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 9: TESTIMONIALS ══════════════════════════ -->
+<section class="section-testimonials">
+  <div class="container">
+    <p class="overline reveal" style="display:block;text-align:center;margin-bottom:.6rem">Testimonials</p>
+    <h2 class="display-m reveal" style="text-align:center;margin-bottom:2rem">
+      What Our Clients Are <em class="serif-italic" style="color:var(--gold)">Saying About Us</em>
+    </h2>
+
+    <div class="test-card reveal">
+      <div class="test-meta">
+        <div style="flex:1">
+          <div class="test-name">Linda Quarry</div>
+          <div class="test-date">May 24, 2024 · <span class="test-google">Google</span></div>
+        </div>
+        <div class="test-stars">★★★★★</div>
+      </div>
+      <p class="test-quote">"I chose VIP painting services for my interior painting job after generating a few estimates, the pricing was competitive. I felt confident that they would complete the job to my satisfaction and I..."</p>
+    </div>
+
+    <div class="test-card reveal">
+      <div class="test-meta">
+        <div style="flex:1">
+          <div class="test-name">Carol Brown</div>
+          <div class="test-date">July 31, 2023 · <span class="test-google">Google</span></div>
+        </div>
+        <div class="test-stars">★★★★★</div>
+      </div>
+      <p class="test-quote">"VIP painting services did an excellent job painting the interior of our home. Fabian went above and beyond our expectations. Fair pricing, professional, and easy to communicate with. We will definitely..."</p>
+    </div>
+
+    <div class="test-card reveal">
+      <div class="test-meta">
+        <div style="flex:1">
+          <div class="test-name">Miguel Morales</div>
+          <div class="test-date">March 30, 2023 · <span class="test-google">Google</span></div>
+        </div>
+        <div class="test-stars">★★★★★</div>
+      </div>
+      <p class="test-quote">"Great communication. Worked with us and still asked if anything else he can do to make sure we are happy."</p>
+    </div>
+
+    <div class="test-card reveal">
+      <div class="test-meta">
+        <div style="flex:1">
+          <div class="test-name">Tony Minardi</div>
+          <div class="test-date">March 7, 2023 · <span class="test-google">Google</span></div>
+        </div>
+        <div class="test-stars">★★★★★</div>
+      </div>
+      <p class="test-quote">"VIP Painting Services recently painted the exterior of our house. They did an amazing job! They took the time to make sure the colors were exactly what we wanted. They took time to properly pre..."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 10: STATS ════════════════════════════════ -->
+<section class="section-stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-icon">★</div>
+        <span class="stat-num">5.0</span>
+        <span class="stat-label">Star Reviews</span>
+        <p class="stat-desc">We take pride in making sure every client is happy with the end result. Don't take our word for it, see what our satisfied clients have to say.</p>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-icon">👍</div>
+        <span class="stat-num">100<span style="font-size:.6em">%</span></span>
+        <span class="stat-label">Client Satisfied</span>
+        <p class="stat-desc">Our team of skilled painters have the expertise and experience to make your home stunning.</p>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-icon">🏠</div>
+        <span class="stat-num">120<span style="font-size:.6em">+</span></span>
+        <span class="stat-label">Projects Done</span>
+        <p class="stat-desc">With over 120 successful projects under our belt, you can trust us to get the job done right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 11: SERVICES ═════════════════════════════ -->
+<section class="section-services">
+  <div class="container">
+    <p class="overline reveal" style="display:block;margin-bottom:.6rem">Our Inland Empire Home Painting Services</p>
+    <h2 class="display-l reveal" style="margin-bottom:.3rem">
+      We Paint <em class="serif-italic" style="color:var(--gold)">Exceptional Living Spaces</em>
+    </h2>
+    <a href="#services" class="service-btn-top reveal">All Home Painting Services →</a>
+
+    <div class="service-block reveal">
+      <div class="service-img">🏡</div>
+      <h3 class="service-h3">Home Exterior Painting Services</h3>
+      <p class="service-desc">Are you tired of feeling embarrassed by the outdated look of your home's exterior? Do you want to stand out from the neighbors and make a bold statement with your property? With our expertise and attention to detail, we can transform your home into a jaw-dropping masterpiece that will make your neighbors green with envy. Revamp your home's exterior with VIP Home Painting. Professional Exterior Services.</p>
+      <a href="#exterior" class="service-link">Learn More →</a>
+    </div>
+
+    <div class="service-block reveal">
+      <div class="service-img">🛋</div>
+      <h3 class="service-h3">Home Interior Painting</h3>
+      <p class="service-desc">Transform your dull and lifeless interior into vibrant and welcoming space with our professional Inland Empire Interior Painting Services.</p>
+      <a href="#interior" class="service-link">Learn More →</a>
+    </div>
+
+    <div class="service-block reveal">
+      <div class="service-img">🗄</div>
+      <h3 class="service-h3">Kitchen Cabinet Painting</h3>
+      <p class="service-desc">Transform your outdated and dull kitchen into a stunning and modern space with Inland Empire VIP Kitchen Cabinet Painting Services.</p>
+      <a href="#cabinets" class="service-link">Learn More →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 12: PROJECT SCOPE ════════════════════════ -->
+<section class="section-scope">
+  <div class="container">
+    <p class="overline reveal" style="display:block;margin-bottom:.6rem">Home Painting Project Scope</p>
+    <h2 class="display-l reveal" style="margin-bottom:1.5rem">
+      Providing The Best Specialty <em class="serif-italic" style="color:var(--gold)">Inland Empire Home Painting Services</em>
+    </h2>
+
+    <button class="btn-cta reveal" onclick="openForm('Scope Section')">
+      CLAIM FREE COLOR CONSULT
+      <span class="btn-cta-sub">+ Irresistible Painting Estimates Included</span>
+    </button>
+
+    <div class="scope-body reveal" style="margin-top:2rem">
+      <p>Transform your painting project with our FREE Color Consultation and specialty painting services.</p>
+      <p>Don't settle for mediocre results and wasted time — trust our experienced team and an insane 1 Year Warranty for a stress-free and stunning painting service.</p>
+    </div>
+
+    <div style="margin-top:2rem">
+      <div class="progress-row reveal">
+        <div class="progress-label">
+          <span>Residential Home Painting Projects</span>
+          <span class="progress-pct">80%</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill" data-pct="80" style="width:0"></div></div>
+      </div>
+      <div class="progress-row reveal">
+        <div class="progress-label">
+          <span>Commercial Building Painting Projects</span>
+          <span class="progress-pct">65%</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill" data-pct="65" style="width:0"></div></div>
+      </div>
+      <div class="progress-row reveal">
+        <div class="progress-label">
+          <span>Government Painting Projects</span>
+          <span class="progress-pct">50%</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill" data-pct="50" style="width:0"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══════════════════════════════════════════ -->
+<footer class="vip-footer">
+  <div class="brand">
+    <svg class="brand-crown" viewBox="0 0 32 40" fill="none">
+      <polygon points="8,14 10,4 12,10" fill="#FF8210"/>
+      <polygon points="12,12 14,2 16,8" fill="#FFA84A"/>
+      <polygon points="16,12 18,2 20,8" fill="#FFA84A"/>
+      <polygon points="20,12 22,4 24,10" fill="#FF8210"/>
+      <rect x="7" y="13" width="18" height="12" rx="2" fill="#FF8210"/>
+      <rect x="13" y="25" width="6" height="14" rx="3" fill="#FF8210"/>
+    </svg>
+    <div>
+      <div class="brand-name">VIP HOME PAINTING</div>
+      <span class="brand-sub">Visualize · See · Paint</span>
+    </div>
+  </div>
+  <p class="footer-tagline">"Transforming Inland Empire homes, one brushstroke at a time."</p>
+  <address class="footer-nap">
+    <a href="tel:9093125400">(909) 312-5400</a><br>
+    <a href="mailto:Contact@VIPHomePainting.com">Contact@VIPHomePainting.com</a><br>
+    <span>Serving Fontana, Rancho Cucamonga &amp; the Inland Empire</span>
+  </address>
+  <p class="footer-copy">Copyright © 2026 VIP Home Painting · All Rights Reserved</p>
+</footer>
+
+<!-- ═══ POPUP FORM MODAL ═════════════════════════════════ -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeForm()">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeForm()" aria-label="Close">✕</button>
+      <div class="modal-overline">Free Color Consultation</div>
+      <h3 class="modal-h">See Your Home <em>Transformed</em></h3>
+      <p class="modal-sub">Our design team creates your custom color palette within 24 hours</p>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <form id="vipForm" onsubmit="submitForm(event)">
+        <input type="hidden" id="formTrigger" name="trigger" value="">
+        <input class="form-field" type="text" name="name" placeholder="Your Full Name" required autocomplete="name">
+        <input class="form-field" type="tel" name="phone" placeholder="Phone Number" required autocomplete="tel">
+        <input class="form-field" type="email" name="email" placeholder="Email Address" required autocomplete="email">
+        <input class="form-field" type="text" name="address" placeholder="Your Home Address" required>
+
+        <div class="upload-zone" id="uploadZone"
+             onclick="document.getElementById('photoInput').click()"
+             ondragover="event.preventDefault();this.classList.add('drag-over')"
+             ondragleave="this.classList.remove('drag-over')"
+             ondrop="handleDrop(event)">
+          <div class="upload-icon">↑</div>
+          <div class="upload-text">📸 Upload photo of your home</div>
+          <div class="upload-sub" id="uploadSub">Tap to select · JPG, PNG · Max 10MB</div>
+          <input type="file" id="photoInput" name="photo" accept="image/*" style="display:none" onchange="handleFile(this)">
+        </div>
+
+        <div class="photo-preview" id="photoPreview">
+          <img id="previewImg" alt="Your home preview">
+          <div class="photo-preview-label">✓ Photo Ready For Visualization</div>
+        </div>
+
+        <button type="submit" class="form-submit" id="submitBtn">
+          GET MY FREE VISUALIZATION →
+        </button>
+        <p class="form-privacy">No obligation. We respect your privacy.<br>Our design team responds within 24 hours.</p>
+      </form>
+
+      <div class="success-msg" id="successMsg">
+        <div class="success-icon">✓</div>
+        <h3 class="success-h">Request Received!</h3>
+        <p class="success-body">Our design team is creating your custom color visualization now. Expect an email or text from us within <strong>24 hours</strong> with your personalized schemes.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════
+// POPUP FORM
+// ═══════════════════════════════════════════════════════════
+function openForm(trigger) {
+  document.getElementById('formTrigger').value = trigger || '';
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeForm() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+  setTimeout(() => {
+    document.getElementById('vipForm').reset();
+    document.getElementById('vipForm').style.display = 'block';
+    document.getElementById('successMsg').classList.remove('show');
+    document.getElementById('photoPreview').style.display = 'none';
+    document.getElementById('uploadZone').classList.remove('has-file');
+    document.getElementById('uploadSub').textContent = 'Tap to select · JPG, PNG · Max 10MB';
+  }, 400);
+}
+
+// File Upload
+function handleFile(input) {
+  const file = input.files[0];
+  if (!file) return;
+  if (file.size > 10 * 1024 * 1024) { alert('File too large. Max 10MB.'); return; }
+  document.getElementById('uploadSub').textContent = '✓ ' + file.name;
+  document.getElementById('uploadZone').classList.add('has-file');
+  const reader = new FileReader();
+  reader.onload = e => {
+    document.getElementById('previewImg').src = e.target.result;
+    document.getElementById('photoPreview').style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+}
+
+function handleDrop(e) {
+  e.preventDefault();
+  document.getElementById('uploadZone').classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (!file || !file.type.startsWith('image/')) return;
+  const input = document.getElementById('photoInput');
+  try {
+    const dt = new DataTransfer();
+    dt.items.add(file);
+    input.files = dt.files;
+    handleFile(input);
+  } catch(err) { handleFile({files:[file]}); }
+}
+
+// Submit Form
+function submitForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = 'SENDING...';
+  btn.disabled = true;
+
+  const form = e.target;
+  const data = {
+    name:     form.name.value,
+    phone:    form.phone.value,
+    email:    form.email.value,
+    address:  form.address.value,
+    trigger:  form.trigger.value,
+    utm:      JSON.parse(sessionStorage.getItem('vip_utm') || '{}'),
+    page_url: location.href,
+    time:     new Date().toISOString()
+  };
+
+  fetch('/wp-json/vip/v1/lead', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({source:'form', ...data})
+  }).catch(() => {});
+
+  setTimeout(() => {
+    form.style.display = 'none';
+    document.getElementById('successMsg').classList.add('show');
+  }, 800);
+}
+
+// ═══════════════════════════════════════════════════════════
+// YOUTUBE LAZY LOAD
+// ═══════════════════════════════════════════════════════════
+function loadYouTube(el, videoId) {
+  if (!videoId || videoId.startsWith('YOUTUBE_ID')) {
+    alert('Replace YOUTUBE_ID placeholder with a real video ID in the HTML.');
+    return;
+  }
+  const iframe = document.createElement('iframe');
+  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+  iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope');
+  iframe.setAttribute('allowfullscreen', '');
+  el.parentElement.innerHTML = '';
+  el.parentElement.appendChild(iframe);
+}
+
+// ═══════════════════════════════════════════════════════════
+// SCROLL REVEAL
+// ═══════════════════════════════════════════════════════════
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        if (e.target.querySelector('.progress-fill')) {
+          const fill = e.target.querySelector('.progress-fill');
+          fill.style.width = fill.dataset.pct + '%';
+        }
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+  document.querySelectorAll('.progress-fill').forEach(fill => fill.style.width = fill.dataset.pct + '%');
+}
+
+// ═══════════════════════════════════════════════════════════
+// UTM CAPTURE
+// ═══════════════════════════════════════════════════════════
+const params = new URLSearchParams(location.search);
+const utm = {
+  source:   params.get('utm_source') || '',
+  medium:   params.get('utm_medium') || '',
+  campaign: params.get('utm_campaign') || '',
+  content:  params.get('utm_content') || ''
+};
+if (utm.source || utm.campaign) sessionStorage.setItem('vip_utm', JSON.stringify(utm));
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) { e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}); }
+  });
+});
+</script>
+</body>
+</html>

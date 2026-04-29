@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Premier — Sales Page Launch SOP</title>
+<style>
+  :root {
+    --orange: #E8660A;
+    --gold: #C8960C;
+    --navy: #1a1f4e;
+    --white: #ffffff;
+    --gray: #f5f5f5;
+    --gray2: #e0e0e0;
+    --text: #222;
+    --text-light: #555;
+    --green: #27ae60;
+    --red: #e74c3c;
+    --blue: #2980b9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #efefef; color: var(--text); }
+
+  .header { background: var(--navy); padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; }
+  .header-logo { color: #fff; font-size: 1.2rem; font-weight: 800; }
+  .header-logo span { color: var(--orange); }
+  .header-title { color: rgba(255,255,255,0.7); font-size: 0.85rem; }
+
+  .hero { background: linear-gradient(135deg, var(--orange), #c44d06); color: white; padding: 48px 60px; }
+  .hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero p { font-size: 1.05rem; opacity: 0.9; max-width: 680px; line-height: 1.6; }
+  .hero-meta { display: flex; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+  .hero-meta-item { background: rgba(0,0,0,0.2); padding: 8px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; }
+
+  .container { max-width: 880px; margin: 0 auto; padding: 48px 40px; }
+
+  /* PHASE CARDS */
+  .phase { background: white; border-radius: 14px; margin-bottom: 36px; box-shadow: 0 3px 16px rgba(0,0,0,0.09); overflow: hidden; }
+  .phase-header { padding: 22px 32px; display: flex; align-items: center; gap: 20px; }
+  .phase-header.orange { background: linear-gradient(90deg, var(--orange), #c44d06); }
+  .phase-header.navy { background: var(--navy); }
+  .phase-header.gold { background: linear-gradient(90deg, var(--gold), #a07808); }
+  .phase-header.green { background: linear-gradient(90deg, #27ae60, #1e8449); }
+  .phase-header.blue { background: linear-gradient(90deg, var(--blue), #1a6390); }
+  .phase-num { background: rgba(255,255,255,0.2); color: white; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; flex-shrink: 0; }
+  .phase-title { color: white; font-size: 1.2rem; font-weight: 800; }
+  .phase-subtitle { color: rgba(255,255,255,0.75); font-size: 0.82rem; margin-top: 2px; }
+  .phase-time { margin-left: auto; background: rgba(255,255,255,0.15); color: white; font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; white-space: nowrap; }
+  .phase-body { padding: 32px; }
+
+  /* STEPS */
+  .step { display: flex; gap: 20px; margin-bottom: 28px; align-items: flex-start; }
+  .step:last-child { margin-bottom: 0; }
+  .step-circle { width: 36px; height: 36px; border-radius: 50%; background: var(--orange); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0; margin-top: 2px; }
+  .step-circle.done { background: var(--green); }
+  .step-circle.gold { background: var(--gold); }
+  .step-circle.navy { background: var(--navy); }
+  .step-body h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .step-body p { font-size: 0.88rem; color: var(--text-light); line-height: 1.65; }
+  .step-body p + p { margin-top: 8px; }
+
+  /* CODE */
+  .code { background: #1e1e2e; color: #cdd6f4; font-family: 'Courier New', monospace; font-size: 0.8rem; padding: 16px; border-radius: 8px; margin: 12px 0; line-height: 1.6; overflow-x: auto; }
+  .code .c { color: #6c7086; }
+  .code .h { color: #fab387; font-weight: 700; }
+
+  /* TIP/WARN/INFO */
+  .tip { background: #fff8e8; border-left: 4px solid var(--gold); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; font-size: 0.84rem; color: #5a4000; }
+  .tip strong { color: var(--gold); }
+  .warn { background: #fff0f0; border-left: 4px solid var(--red); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; font-size: 0.84rem; color: #600; }
+  .info { background: #e8f4ff; border-left: 4px solid var(--blue); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; font-size: 0.84rem; color: #003366; }
+
+  /* TABLE */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.84rem; }
+  th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); }
+  tr:hover td { background: var(--gray); }
+  .val { font-family: monospace; font-size: 0.78rem; background: #f0f4ff; color: var(--navy); padding: 2px 6px; border-radius: 4px; }
+
+  /* DIVIDER */
+  hr { border: none; border-top: 2px solid var(--gray2); margin: 36px 0; }
+
+  /* CHECKLIST */
+  .checklist { list-style: none; }
+  .checklist li { padding: 9px 0; border-bottom: 1px solid var(--gray2); font-size: 0.88rem; display: flex; align-items: flex-start; gap: 10px; }
+  .cb { width: 18px; height: 18px; border: 2px solid var(--gray2); border-radius: 4px; flex-shrink: 0; margin-top: 1px; }
+
+  /* SCHEDULE TABLE */
+  .schedule-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin: 16px 0; }
+  .schedule-card { background: var(--gray); border-radius: 10px; padding: 16px; border-left: 4px solid var(--orange); }
+  .schedule-card .time { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--orange); margin-bottom: 6px; }
+  .schedule-card .task { font-size: 0.9rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .schedule-card .desc { font-size: 0.78rem; color: var(--text-light); }
+
+  /* COMMUNITY LIST */
+  .community-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }
+  .community-item { background: white; border-radius: 10px; padding: 14px; border: 1px solid var(--gray2); }
+  .community-item .tier { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 2px 8px; border-radius: 20px; display: inline-block; margin-bottom: 6px; }
+  .community-item .tier.t1 { background: #ffe8d8; color: var(--orange); }
+  .community-item .tier.t2 { background: #fff3d8; color: var(--gold); }
+  .community-item .tier.t3 { background: #d8e8ff; color: var(--navy); }
+  .community-item .name { font-size: 0.88rem; font-weight: 700; color: var(--navy); }
+  .community-item .sub { font-size: 0.75rem; color: var(--text-light); }
+
+  /* FINAL */
+  .final { background: linear-gradient(135deg, var(--navy), #252b6b); color: white; border-radius: 14px; padding: 40px; text-align: center; margin-top: 40px; }
+  .final h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 12px; }
+  .final p { color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 24px; }
+  .btn { display: inline-block; padding: 14px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.95rem; margin: 0 8px 10px; }
+  .btn-orange { background: var(--orange); color: white; }
+  .btn-outline { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
+
+  @media (max-width: 600px) {
+    .hero { padding: 32px 24px; }
+    .container { padding: 28px 20px; }
+    .community-list { grid-template-columns: 1fr 1fr; }
+    .phase-body { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">VIP <span>PREMIER</span> PAINTING</div>
+  <div class="header-title">Sales Page Launch SOP v1.0</div>
+</div>
+
+<div class="hero">
+  <h1>🗺️ Step-by-Step Launch SOP</h1>
+  <p>Your complete operating procedure for building, customizing, and publishing a new city sales page — from first WordPress login to live indexed page. Follow this once and you'll be able to repeat it in under 30 minutes per city.</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">📋 4 Phases</div>
+    <div class="hero-meta-item">🏙️ 9 Cities</div>
+    <div class="hero-meta-item">⏱ First time: ~3-4 hrs total</div>
+    <div class="hero-meta-item">⚡ Per city (after template): ~30 min</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ==================== PHASE 1: ONE-TIME SETUP ==================== -->
+  <div class="phase">
+    <div class="phase-header navy">
+      <div class="phase-num">1</div>
+      <div>
+        <div class="phase-title">Phase 1 — One-Time WordPress Setup</div>
+        <div class="phase-subtitle">Do this once. Never again.</div>
+      </div>
+      <div class="phase-time">⏱ ~45 min</div>
+    </div>
+    <div class="phase-body">
+
+      <div class="step">
+        <div class="step-circle done">✓</div>
+        <div class="step-body">
+          <h3>Install Elementor Free</h3>
+          <p>WordPress Admin → Plugins → Add New → search "Elementor Website Builder" → Install &amp; Activate. No account required for Elementor Free.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle">2</div>
+        <div class="step-body">
+          <h3>Install "Duplicate Page" Plugin</h3>
+          <p>Plugins → Add New → search "Duplicate Page" (by mndpsingh287, 5M+ installs) → Install &amp; Activate. This lets you clone any page with all its Elementor content in one click — critical for the city page workflow.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle">3</div>
+        <div class="step-body">
+          <h3>Install "Better Search Replace" Plugin</h3>
+          <p>Plugins → Add New → search "Better Search Replace" (by Delicious Brains) → Install &amp; Activate. This searches all Elementor widget content database-wide and replaces tokens like <code>{{CITY}}</code> with actual city names — in one operation across every widget on the page.</p>
+          <div class="tip"><strong>💡 Why this matters:</strong> Elementor stores content in the WordPress database, not in plain text files. Normal "find and replace" won't reach widget content. Better Search Replace does.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle">4</div>
+        <div class="step-body">
+          <h3>Install WPForms Lite (Lead Capture)</h3>
+          <p>Plugins → Add New → search "WPForms Lite" → Install &amp; Activate. Create your contact form:</p>
+          <ol style="margin:10px 0 0 20px;font-size:0.87rem;line-height:2;color:var(--text-light);">
+            <li>WPForms → Add New → "Simple Contact Form" template</li>
+            <li>Add fields: Name, Phone, Email, Service Interest (dropdown), Project Description (textarea)</li>
+            <li>Settings → Notifications → Set email to realdealmarketing18@gmail.com</li>
+            <li>Save. Copy the shortcode: <code>[wpforms id="X"]</code> — you'll use this in Elementor</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle">5</div>
+        <div class="step-body">
+          <h3>Set Elementor Global Colors</h3>
+          <p>Elementor → Site Settings → Global Colors. Add these 4 colors with these exact names:</p>
+          <table>
+            <tr><th>Name</th><th>Hex Code</th><th>Use</th></tr>
+            <tr><td>VIP Orange</td><td><span class="val">#E8660A</span></td><td>Buttons, accents, highlights</td></tr>
+            <tr><td>VIP Gold</td><td><span class="val">#C8960C</span></td><td>Secondary accents, borders</td></tr>
+            <tr><td>VIP Navy</td><td><span class="val">#1a1f4e</span></td><td>Backgrounds, headings</td></tr>
+            <tr><td>VIP Dark Text</td><td><span class="val">#222222</span></td><td>Body text</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle">6</div>
+        <div class="step-body">
+          <h3>Set Elementor Global Fonts</h3>
+          <p>Elementor → Site Settings → Global Fonts:</p>
+          <ul style="margin:10px 0 0 20px;font-size:0.87rem;line-height:2.2;color:var(--text-light);">
+            <li><strong>Primary Font</strong>: Montserrat (for headings) — Weight: 800</li>
+            <li><strong>Secondary Font</strong>: Open Sans (for body text) — Weight: 400</li>
+            <li><strong>Text Font</strong>: Open Sans 400 (body paragraphs)</li>
+            <li><strong>Accent Font</strong>: Montserrat 700 (buttons, labels)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle">7</div>
+        <div class="step-body">
+          <h3>Install SEO Plugin (Rank Math Free or Yoast)</h3>
+          <p>Plugins → Add New → "Rank Math SEO" (recommended, more features free) → Install &amp; Activate. This adds a meta title, meta description, and keywords field to every page — critical for each city page's SEO. You'll fill these in per city using the token values from your automation output.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle">8</div>
+        <div class="step-body">
+          <h3>Install Node.js on Your Computer (for automation)</h3>
+          <p>Visit <strong>nodejs.org</strong> → click the big green LTS button → download and install. Once done, open a Command Prompt (Windows) and type <code>node --version</code> — if you see a version number, you're good to go.</p>
+          <div class="info"><strong>ℹ️ What Node.js does:</strong> It lets the city automation script (VIP_CityPage_Generator.js) run on your computer and generate pre-filled city HTML files automatically each morning.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== PHASE 2: BUILD MASTER TEMPLATE ==================== -->
+  <div class="phase">
+    <div class="phase-header orange">
+      <div class="phase-num">2</div>
+      <div>
+        <div class="phase-title">Phase 2 — Build the Master Template in Elementor</div>
+        <div class="phase-subtitle">Build this once. Clone it 9 times.</div>
+      </div>
+      <div class="phase-time">⏱ ~3 hours (once)</div>
+    </div>
+    <div class="phase-body">
+
+      <div class="step">
+        <div class="step-circle">1</div>
+        <div class="step-body">
+          <h3>Create the Master Template Page</h3>
+          <p>WordPress Admin → Pages → Add New. Title: <code>VIP Sales Page — MASTER TEMPLATE</code>. Set Status to <strong>Draft</strong> (never publish this one). Set Page Layout to <strong>Elementor Full Width</strong> or <strong>Canvas</strong> (removes header/footer for full design control). Click "Edit with Elementor".</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle">2</div>
+        <div class="step-body">
+          <h3>Open the VIP_SalesPage_Master_Template.html as Reference</h3>
+          <p>Open the master HTML file in your browser (double-click the file). This is your visual guide for exactly how each section should look. Keep it open on a second monitor or in another browser window while building in Elementor.</p>
+          <div class="tip"><strong>💡 Best approach:</strong> Open the HTML template and the Elementor editor side by side. The HTML file shows you exactly what to build — copy text directly from it into Elementor's widget fields.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle">3</div>
+        <div class="step-body">
+          <h3>Build All 12 Sections</h3>
+          <p>Follow the <strong>VIP_Elementor_Build_Guide.html</strong> (your widget-by-widget instruction manual) to build each section. Work in order from Section 1 (Hero) to Section 12 (Project Scope + Final CTA). Use token placeholders everywhere — <code>{{CITY}}</code>, <code>{{HOMEOWNER_1_NAME}}</code>, etc. — in the actual text of your widgets.</p>
+          <div class="tip"><strong>💡 HTML Widget shortcut:</strong> For complex sections (the process steps grid, testimonial cards, comparison table, service cards), just use Elementor's HTML widget and paste the styled HTML code directly from the master template file. It's faster than rebuilding with individual widgets and looks identical.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle">4</div>
+        <div class="step-body">
+          <h3>Set Up Mobile Responsiveness</h3>
+          <p>Click the tablet/phone icon at the bottom of the Elementor panel to switch to tablet/mobile view. Adjust font sizes and paddings for mobile breakpoints (anything that looks too large). Elementor Free's auto-stacking handles most of the work — focus on font sizes and padding on mobile.</p>
+          <table>
+            <tr><th>Element</th><th>Desktop</th><th>Mobile</th></tr>
+            <tr><td>H1 Hero</td><td><span class="val">52px</span></td><td><span class="val">32px</span></td></tr>
+            <tr><td>H2 Section</td><td><span class="val">38px</span></td><td><span class="val">26px</span></td></tr>
+            <tr><td>Body Text</td><td><span class="val">17px</span></td><td><span class="val">15px</span></td></tr>
+            <tr><td>Section Padding (v)</td><td><span class="val">80px</span></td><td><span class="val">48px</span></td></tr>
+            <tr><td>Section Padding (h)</td><td><span class="val">40px</span></td><td><span class="val">16px</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle">5</div>
+        <div class="step-body">
+          <h3>Preview &amp; Fix</h3>
+          <p>Elementor → Preview Changes → open on desktop and mobile. Check: all sections visible, buttons work, text tokens are visible (e.g. {{CITY}} shows as literal text — good). Save the page. Keep it in Draft — this is your master, never publish it directly.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== PHASE 3: DAILY CITY LAUNCH ==================== -->
+  <div class="phase">
+    <div class="phase-header gold">
+      <div class="phase-num">3</div>
+      <div>
+        <div class="phase-title">Phase 3 — Daily City Page Launch Workflow</div>
+        <div class="phase-subtitle">Repeat this for each of the 9 communities</div>
+      </div>
+      <div class="phase-time">⏱ ~30 min per city</div>
+    </div>
+    <div class="phase-body">
+
+      <div class="step">
+        <div class="step-circle gold">1</div>
+        <div class="step-body">
+          <h3>Check the Morning Automation Output</h3>
+          <p>Claude's scheduled task runs at 7:00 AM M-F and generates a city HTML file. Find it in your outputs folder:</p>
+          <div class="code"><span class="c">// Location on your computer:</span>
+C:\Users\Owner\Documents\Claude\Scheduled\
+<span class="c">// File name example:</span>
+VIP_Rancho_Cucamonga_SalesPage_20260421.html</div>
+          <p>Open this file in your browser. It has all the city-specific text already filled in — review it quickly to confirm it looks right.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle gold">2</div>
+        <div class="step-body">
+          <h3>Clone the Master Template in WordPress</h3>
+          <p>WordPress Admin → Pages → hover over "VIP Sales Page — MASTER TEMPLATE" → click <strong>"Duplicate This"</strong> (from the Duplicate Page plugin). A new draft page appears at the top of your Pages list titled "Copy of VIP Sales Page — MASTER TEMPLATE".</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle gold">3</div>
+        <div class="step-body">
+          <h3>Rename &amp; Set the URL Slug</h3>
+          <p>Click the cloned page → Quick Edit → change the title to:<br>
+          <strong>"House Painting [City], CA | Free Color Visualization | VIP Premier"</strong><br>
+          Set the URL slug:</p>
+          <table>
+            <tr><th>City</th><th>URL Slug</th></tr>
+            <tr><td>Rancho Cucamonga</td><td><span class="val">/house-painting-rancho-cucamonga-ca/</span></td></tr>
+            <tr><td>Ladera Ranch</td><td><span class="val">/exterior-painting-ladera-ranch-ca/</span></td></tr>
+            <tr><td>Corona</td><td><span class="val">/painting-contractor-corona-ca/</span></td></tr>
+            <tr><td>Irvine</td><td><span class="val">/house-painting-irvine-ca/</span></td></tr>
+            <tr><td>Coto de Caza</td><td><span class="val">/painting-coto-de-caza-ca/</span></td></tr>
+            <tr><td>Alta Loma</td><td><span class="val">/exterior-painters-alta-loma-ca/</span></td></tr>
+            <tr><td>Newport Coast</td><td><span class="val">/painting-newport-coast-ca/</span></td></tr>
+            <tr><td>Newport Beach</td><td><span class="val">/house-painters-newport-beach-ca/</span></td></tr>
+            <tr><td>Hidden Hills</td><td><span class="val">/house-painting-hidden-hills-ca/</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle gold">4</div>
+        <div class="step-body">
+          <h3>Replace All Tokens (Better Search Replace)</h3>
+          <p>WordPress Admin → Tools → <strong>Better Search Replace</strong>. For each token, run a replacement:</p>
+          <table>
+            <tr><th>Search For</th><th>Replace With (example: Rancho Cucamonga)</th></tr>
+            <tr><td><span class="val">{{CITY}}</span></td><td>Rancho Cucamonga</td></tr>
+            <tr><td><span class="val">{{STATE}}</span></td><td>CA</td></tr>
+            <tr><td><span class="val">{{REGION}}</span></td><td>Inland Empire</td></tr>
+            <tr><td><span class="val">{{ZIP}}</span></td><td>91730</td></tr>
+            <tr><td><span class="val">{{HOMEOWNER_1_NAME}}</span></td><td>The Martinez Family</td></tr>
+            <tr><td><span class="val">{{HOMEOWNER_1_AREA}}</span></td><td>The Bridges</td></tr>
+            <tr><td><span class="val">{{HOMEOWNER_2_NAME}}</span></td><td>The Johnson Residence</td></tr>
+            <tr><td><span class="val">{{HOMEOWNER_2_AREA}}</span></td><td>Eagle Glen</td></tr>
+          </table>
+          <div class="warn"><strong>⚠️ Important:</strong> In Better Search Replace, make sure "Run as dry run?" is <strong>unchecked</strong> before clicking Run. Also select the correct tables — at minimum select <code>wp_postmeta</code> and <code>wp_posts</code>.</div>
+          <div class="tip"><strong>💡 Faster method:</strong> The automation output file includes all the token values pre-filled for each city. Just copy/paste them directly from the file into Better Search Replace.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle gold">5</div>
+        <div class="step-body">
+          <h3>Add SEO Copy (Open Elementor → Section 12)</h3>
+          <p>Open the cloned page in Elementor. Scroll to Section 12 (Project Scope / SEO block at the bottom). Click the SEO Text Editor widget. Paste the SEO_INTRO and SEO_BODY text from your morning automation output file. Save.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle gold">6</div>
+        <div class="step-body">
+          <h3>Set Meta Title, Description &amp; Keywords (Rank Math)</h3>
+          <p>Scroll down on the page edit screen — you'll see the Rank Math SEO block below the editor. Fill in:</p>
+          <ul style="margin:10px 0 0 20px;font-size:0.87rem;line-height:2.2;color:var(--text-light);">
+            <li><strong>SEO Title:</strong> House Painting Rancho Cucamonga, CA | Free Color Visualization | VIP Premier</li>
+            <li><strong>Meta Description:</strong> (145 chars max) VIP Premier Painting serves Rancho Cucamonga with premium exterior &amp; interior painting. Free custom color visualization. Licensed &amp; insured. (909) 312-5400.</li>
+            <li><strong>Focus Keyword:</strong> painting contractor rancho cucamonga</li>
+          </ul>
+          <div class="tip"><strong>💡</strong> Your automation script pre-generates all three of these for each city. Just copy from the output file — no writing needed.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle gold">7</div>
+        <div class="step-body">
+          <h3>Publish the Page</h3>
+          <p>Change Status from Draft → Published. Click Update/Publish. Your city page is now live at <code>https://viphomepainting.com/house-painting-rancho-cucamonga-ca/</code></p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle gold">8</div>
+        <div class="step-body">
+          <h3>Submit to Google Search Console</h3>
+          <p>If you have Google Search Console set up for viphomepainting.com: GSC → URL Inspection → paste your new page URL → "Request Indexing". Google will typically crawl it within 24-48 hours.</p>
+          <div class="info"><strong>ℹ️ Don't have Search Console yet?</strong> Go to search.google.com/search-console → Add Property → enter viphomepainting.com → verify via DNS or meta tag. It takes 5 minutes and is critical for SEO tracking.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== PHASE 4: VIDEO ACTIVATION ==================== -->
+  <div class="phase">
+    <div class="phase-header green">
+      <div class="phase-num">4</div>
+      <div>
+        <div class="phase-title">Phase 4 — Activate YouTube Videos</div>
+        <div class="phase-subtitle">Do this once per video when you upload to YouTube</div>
+      </div>
+      <div class="phase-time">⏱ ~5 min per video</div>
+    </div>
+    <div class="phase-body">
+
+      <div class="step">
+        <div class="step-circle">1</div>
+        <div class="step-body">
+          <h3>Upload your video to YouTube</h3>
+          <p>Go to youtube.com → click your profile → YouTube Studio → Create → Upload Video. Upload your video file. Set title, description, thumbnail. Publish as Public or Unlisted.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle">2</div>
+        <div class="step-body">
+          <h3>Copy the Video ID</h3>
+          <p>On the video page, look at the URL: <code>youtube.com/watch?v=<strong>dQw4w9WgXcQ</strong></code> — the bold part after <code>?v=</code> is your Video ID. Copy it.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-circle">3</div>
+        <div class="step-body">
+          <h3>Update Each City Page in Elementor</h3>
+          <p>For each published city page: Pages → Edit with Elementor → find the Video widget for that slot → Content → change URL from the placeholder to <code>https://www.youtube.com/watch?v=YOUR_VIDEO_ID</code> → Save.</p>
+          <div class="tip"><strong>💡 Use Better Search Replace:</strong> Once you have a video ID, you can use Better Search Replace to update <code>VIDEO_1_PENDING</code> → <code>dQw4w9WgXcQ</code> across ALL 9 city pages at once — one operation, all pages updated.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== MORNING AUTOMATION SCHEDULE ==================== -->
+  <hr>
+  <h2 style="color:var(--navy);font-size:1.3rem;margin-bottom:8px;">⏰ Your Automated Morning Schedule</h2>
+  <p style="font-size:0.88rem;color:var(--text-light);margin-bottom:20px;">These tasks run automatically Monday–Friday while you're at work. Claude handles the research, copy generation, and city page prep.</p>
+
+  <div class="schedule-grid">
+    <div class="schedule-card">
+      <div class="time">5:30 AM — M-F</div>
+      <div class="task">Lead Gen Agent</div>
+      <div class="desc">Apify pulls new Zillow data. Scores leads. Queues top prospects for color visualization outreach.</div>
+    </div>
+    <div class="schedule-card">
+      <div class="time">6:00 AM — M-F</div>
+      <div class="task">City Research Agent</div>
+      <div class="desc">Researches today's city. Collects homeowner data, HOA info, local pricing, neighborhood pain points.</div>
+    </div>
+    <div class="schedule-card">
+      <div class="time">7:00 AM — M-F</div>
+      <div class="task">City Page Builder</div>
+      <div class="desc">Generates pre-filled city HTML using the automation script. File waiting for you when you start work.</div>
+    </div>
+    <div class="schedule-card">
+      <div class="time">7:30 AM — M-F</div>
+      <div class="task">Video Script Queue</div>
+      <div class="desc">Generates 3 video scripts aligned with current city research (TOFU / MOFU / BOFU funnel).</div>
+    </div>
+    <div class="schedule-card">
+      <div class="time">8:00 AM — M-F</div>
+      <div class="task">Morning Report</div>
+      <div class="desc">COO Agent summary: hot leads, pages published, videos needed, pipeline status. Your daily dashboard.</div>
+    </div>
+    <div class="schedule-card" style="border-left-color:var(--gold);">
+      <div class="time" style="color:var(--gold);">7:00 AM — Monday</div>
+      <div class="task">Weekly Pipeline Report</div>
+      <div class="desc">Full weekly summary: pages live, leads in pipeline, video content status, next week's city schedule.</div>
+    </div>
+  </div>
+
+  <!-- ==================== COMMUNITY LAUNCH ORDER ==================== -->
+  <hr>
+  <h2 style="color:var(--navy);font-size:1.3rem;margin-bottom:8px;">🏙️ City Launch Order</h2>
+  <p style="font-size:0.88rem;color:var(--text-light);margin-bottom:16px;">Launch Tier 1 first — highest-value, most likely to convert. Tier 2 week 2. Tier 3 week 3.</p>
+
+  <div class="community-list">
+    <div class="community-item">
+      <div class="tier t1">Tier 1</div>
+      <div class="name">The Bridges</div>
+      <div class="sub">Rancho Cucamonga, 91730</div>
+    </div>
+    <div class="community-item">
+      <div class="tier t1">Tier 1</div>
+      <div class="name">Covenant Hills</div>
+      <div class="sub">Ladera Ranch, 92694</div>
+    </div>
+    <div class="community-item">
+      <div class="tier t1">Tier 1</div>
+      <div class="name">Eagle Glen</div>
+      <div class="sub">Corona, 92883</div>
+    </div>
+    <div class="community-item">
+      <div class="tier t2">Tier 2</div>
+      <div class="name">Shady Canyon</div>
+      <div class="sub">Irvine, 92618</div>
+    </div>
+    <div class="community-item">
+      <div class="tier t2">Tier 2</div>
+      <div class="name">Coto de Caza</div>
+      <div class="sub">OC, 92679</div>
+    </div>
+    <div class="community-item">
+      <div class="tier t2">Tier 2</div>
+      <div class="name">The Summit</div>
+      <div class="sub">Alta Loma, 91701</div>
+    </div>
+    <div class="community-item">
+      <div class="tier t3">Tier 3</div>
+      <div class="name">Crystal Cove</div>
+      <div class="sub">Newport Coast, 92657</div>
+    </div>
+    <div class="community-item">
+      <div class="tier t3">Tier 3</div>
+      <div class="name">Pelican Hill</div>
+      <div class="sub">Newport Beach, 92657</div>
+    </div>
+    <div class="community-item">
+      <div class="tier t3">Tier 3</div>
+      <div class="name">Hidden Hills</div>
+      <div class="sub">LA County, 91302</div>
+    </div>
+  </div>
+
+  <!-- ==================== DAILY CHECKLIST ==================== -->
+  <hr>
+  <div class="phase" style="margin-bottom:0;">
+    <div class="phase-header blue">
+      <div class="phase-num">📋</div>
+      <div>
+        <div class="phase-title">Daily City Page Checklist</div>
+        <div class="phase-subtitle">Print this out. Check each box. One city per day.</div>
+      </div>
+      <div class="phase-time">⏱ ~30 min</div>
+    </div>
+    <div class="phase-body">
+      <ul class="checklist">
+        <li><div class="cb"></div><strong>Check automation output folder</strong> — find today's city HTML file</li>
+        <li><div class="cb"></div><strong>Review the generated content</strong> — skim the city page in browser (30 sec)</li>
+        <li><div class="cb"></div><strong>WordPress → Duplicate master template</strong></li>
+        <li><div class="cb"></div><strong>Rename page</strong> — city name + brand formula</li>
+        <li><div class="cb"></div><strong>Set URL slug</strong> — house-painting-[city]-ca</li>
+        <li><div class="cb"></div><strong>Better Search Replace</strong> — swap all {{CITY}} tokens</li>
+        <li><div class="cb"></div><strong>Swap remaining tokens</strong> — homeowner names, region, zip</li>
+        <li><div class="cb"></div><strong>Add SEO copy</strong> — paste into Section 12 SEO block</li>
+        <li><div class="cb"></div><strong>Set Rank Math meta</strong> — title, description, focus keyword</li>
+        <li><div class="cb"></div><strong>Preview page</strong> — desktop + mobile check</li>
+        <li><div class="cb"></div><strong>Publish page</strong></li>
+        <li><div class="cb"></div><strong>Submit to Google Search Console</strong> → URL Inspection → Request Indexing</li>
+        <li><div class="cb"></div><strong>Share to Instagram/Facebook</strong> with city-specific caption</li>
+        <li><div class="cb"></div><strong>Log city as done</strong> in your pipeline tracker</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FINAL -->
+  <div class="final">
+    <h2>You Have Everything You Need 🚀</h2>
+    <p>Master template → Elementor build guide → city automation script → this SOP. Build the template once this weekend, then spend 30 minutes per day launching one city page. In 9 business days, all communities are live.</p>
+    <a href="#" class="btn btn-orange">View Elementor Build Guide</a>
+    <a href="#" class="btn btn-outline">Open City Automation Script</a>
+  </div>
+
+</div>
+</body>
+</html>
