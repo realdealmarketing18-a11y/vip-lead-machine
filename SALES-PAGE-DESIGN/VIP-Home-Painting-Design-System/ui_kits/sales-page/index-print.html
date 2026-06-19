@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<!-- @dsCard group="UI Kit — Sales Page" name="VIP Sales Page · Desktop" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VIP Home Painting · Desktop Sales Page</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #FFFFFF; font-family: var(--font-sans); color: #1A1F4E; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+
+  :root {
+    --cream:        #F5EFE2;
+    --cream-deep:   #EDE4D2;
+    --navy:         #1A1F4E;
+    --navy-deep:    #141838;
+    --gold:         #C9A961;
+    --gold-bright:  #E0C078;
+    --gold-deep:    #A88A47;
+    --gold-shine:   linear-gradient(180deg, #E8CC85 0%, #C9A961 50%, #A88A47 100%);
+    --gold-shine-b: linear-gradient(180deg, #F1D998 0%, #D4AF6A 50%, #B5904F 100%);
+    --orange:       #E8833A;
+  }
+
+  /* ============ PAGE SHELL ============ */
+  .page { max-width: 1440px; margin: 0 auto; background: #fff; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 56px; }
+
+  /* ============ TOP BAR ============ */
+  .topbar {
+    position: sticky; top: 0; z-index: 30;
+    background: rgba(255,255,255,0.96); backdrop-filter: blur(10px);
+    padding: 16px 56px;
+    display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 40px;
+    border-bottom: 1px solid rgba(26,31,78,0.06);
+  }
+  .top-logo { display: flex; align-items: center; gap: 10px; }
+  .top-logo .crown { width: 40px; height: 40px; border-radius: 8px; background: #FFFFFF; overflow: hidden; box-shadow: 0 4px 12px rgba(26,31,78,0.20), inset 0 0 0 1px rgba(26,31,78,0.06); }
+  .top-logo .crown img { width: 100%; height: 100%; object-fit: cover; }
+  .top-logo .wm { line-height: 1; }
+  .top-logo .wm .vip { font-family: var(--font-serif); font-weight: 700; font-size: 22px; color: var(--navy); letter-spacing: 0.04em; }
+  .top-logo .wm .sub { font-family: var(--font-sans); font-weight: 600; font-size: 9px; letter-spacing: 0.32em; color: var(--navy); opacity: 0.7; margin-top: 4px; }
+
+  .top-nav { display: flex; justify-content: center; gap: 36px; }
+  .top-nav a { font-family: var(--font-sans); font-weight: 600; font-size: 11.5px; letter-spacing: 0.20em; text-transform: uppercase; color: var(--navy); text-decoration: none; padding: 6px 0; position: relative; transition: color 220ms; }
+  .top-nav a:hover { color: var(--gold-deep); }
+  .top-nav a::after { content: ''; position: absolute; left: 0; bottom: -2px; height: 2px; width: 0; background: var(--gold); transition: width 280ms cubic-bezier(.22,1,.36,1); }
+  .top-nav a:hover::after { width: 100%; }
+
+  .top-phone { display: inline-flex; align-items: center; gap: 6px; color: var(--navy); text-decoration: none; font-family: var(--font-sans); font-weight: 700; font-size: 13px; letter-spacing: 0.04em; }
+  .top-phone svg { width: 16px; height: 16px; color: var(--gold-deep); }
+
+  /* ============ SHARED ============ */
+  .btn-gold {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 16px 28px; border-radius: 4px; border: 1px solid rgba(168,138,71,0.40); cursor: pointer;
+    background: var(--gold-shine); color: #fff;
+    font-family: var(--font-sans); font-weight: 700; font-size: 12px; letter-spacing: 0.20em; text-transform: uppercase;
+    box-shadow: 0 8px 22px rgba(168,138,71,0.30), inset 0 1px 0 rgba(255,255,255,0.25);
+    text-decoration: none;
+    transition: transform 220ms cubic-bezier(.22,1,.36,1), box-shadow 220ms;
+  }
+  .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(168,138,71,0.40); }
+  .btn-gold svg { width: 14px; height: 14px; }
+  .btn-gold.full { width: 100%; }
+  .btn-gold .col-2 { display: flex; flex-direction: column; gap: 2px; line-height: 1.1; }
+  .btn-gold .col-2 .sub { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; opacity: 0.92; font-style: italic; text-transform: none; }
+
+  section { padding: 72px 56px; }
+  section.cream { background: var(--cream); }
+  section.cream-deep { background: var(--cream-deep); }
+  section.navy { background: var(--navy); color: #fff; }
+  section.navy-deep { background: var(--navy-deep); color: #fff; }
+
+  .eyebrow { font-family: var(--font-sans); font-weight: 700; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 14px; }
+  section.navy .eyebrow, section.navy-deep .eyebrow { color: var(--gold-bright); }
+  .ttl { font-family: var(--font-serif); font-weight: 600; font-size: 48px; line-height: 1.06; letter-spacing: -0.02em; color: var(--navy); margin: 0 0 18px; text-wrap: balance; }
+  .ttl .accent { font-style: italic; font-weight: 500; color: var(--gold-deep); }
+  section.navy .ttl, section.navy-deep .ttl { color: #fff; }
+  section.navy .ttl .accent, section.navy-deep .ttl .accent { color: var(--gold-bright); }
+  .sub { font-family: var(--font-serif); font-style: italic; font-size: 22px; color: var(--navy); margin: 0 0 18px; line-height: 1.35; }
+  section.navy .sub, section.navy-deep .sub { color: rgba(255,255,255,0.92); }
+  .body { font-family: var(--font-sans); font-size: 16px; line-height: 1.65; color: #4A4F70; margin: 0 0 22px; max-width: 720px; }
+  section.navy .body, section.navy-deep .body { color: rgba(255,255,255,0.85); }
+
+  /* ============ 1. HERO (white, template order, wider centered) ============ */
+  .hero { padding: 56px 56px 72px; }
+  .hero .inner { max-width: 980px; margin: 0 auto; text-align: center; }
+  .hero .eyebrow { text-align: center; }
+  .hero .ttl-hero {
+    font-family: var(--font-serif); font-weight: 600; font-size: 48px; line-height: 1.12;
+    letter-spacing: -0.02em; color: var(--navy); margin: 0 0 28px;
+    text-align: center; text-wrap: balance;
+    max-width: 920px; margin-left: auto; margin-right: auto;
+  }
+  .hero .ttl-hero .gold {
+    color: var(--gold-deep); font-style: italic; font-weight: 500;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'><path d='M2 8 Q 50 1 100 6 T 198 5' stroke='%23C9A961' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat; background-position: 0 100%; background-size: 100% 7px; padding-bottom: 4px;
+  }
+
+  /* avatar pill */
+  .pill-wrap { display: flex; justify-content: center; gap: 14px; margin-bottom: 28px; flex-wrap: wrap; }
+  .avatar-pill { display: inline-flex; align-items: center; gap: 12px; background: #fff; border: 1px solid rgba(168,138,71,0.30); border-radius: 999px; padding: 6px 22px 6px 6px; box-shadow: 0 4px 14px rgba(26,31,78,0.06); }
+  .avatar-pill .ph { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #3a4070, var(--navy)); border: 2px solid var(--gold); color: #fff; font-family: var(--font-serif); font-weight: 600; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .avatar-pill .name { font-family: var(--font-serif); font-weight: 600; font-size: 15px; color: var(--navy); line-height: 1.1; }
+  .avatar-pill .sub-line { font-family: var(--font-serif); font-style: italic; font-size: 12px; color: var(--gold-deep); margin-top: 2px; }
+
+  /* B/A frame */
+  .ba-frame {
+    position: relative; aspect-ratio: 16/9; border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 28px 70px rgba(26,31,78,0.30);
+    background: var(--navy);
+    margin: 0 auto;
+  }
+  .ba-frame::before {
+    content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 6;
+    border: 3px solid transparent;
+    background: var(--gold-shine-b) border-box;
+    -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+  }
+  .ba-img { position: absolute; inset: 0; background-size: cover; background-position: center; }
+  .ba-img.before { z-index: 1; }
+  .ba-img.after  { z-index: 2; clip-path: inset(0 0 0 50%); transition: clip-path 60ms linear; }
+  /* color tint overlay — multiplies the after image when a scheme is selected */
+  .ba-img.after.tinted::before {
+    content: ''; position: absolute; inset: 0;
+    background: var(--tint, transparent);
+    mix-blend-mode: multiply; opacity: 0.72;
+  }
+  .ba-img.after.tinted::after {
+    content: ''; position: absolute; inset: 0;
+    background: var(--tint, transparent);
+    mix-blend-mode: soft-light; opacity: 0.6;
+  }
+  .ba-rail { position: absolute; inset: 0; z-index: 5; cursor: ew-resize; touch-action: none; }
+  .ba-handle { position: absolute; top: 0; bottom: 0; width: 2px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.9); box-shadow: 0 0 18px rgba(0,0,0,0.4); pointer-events: none; }
+  .ba-handle .knob { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 72px; height: 72px; border-radius: 50%; background: var(--gold-shine-b); box-shadow: 0 0 0 6px rgba(201,169,97,0.18), 0 14px 36px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.4); display: flex; align-items: center; justify-content: center; }
+  .ba-handle .knob svg { width: 28px; height: 28px; color: #fff; }
+  .ba-handle .pin { position: absolute; left: 50%; transform: translateX(-50%); width: 14px; height: 14px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 0 3px rgba(255,255,255,0.85); }
+  .ba-handle .pin.top { top: -4px; }
+  .ba-handle .pin.bot { bottom: -4px; }
+  .ba-label { position: absolute; top: 18px; z-index: 7; background: rgba(26,31,78,0.85); backdrop-filter: blur(8px); color: #fff; font-family: var(--font-sans); font-weight: 700; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; padding: 8px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.18); }
+  .ba-label.l { left: 18px; }
+  .ba-label.r { right: 18px; }
+  .ba-cap { position: absolute; top: 18px; left: 50%; transform: translateX(-50%); z-index: 7; background: rgba(20,24,56,0.72); color: #fff; padding: 7px 14px; font-size: 12px; border-radius: 6px; font-family: var(--font-sans); font-weight: 500; backdrop-filter: blur(4px); }
+
+  /* hero body block */
+  .hero-body {
+    font-family: var(--font-sans); font-weight: 700; color: var(--navy);
+    font-size: 16px; line-height: 1.55; text-align: center; margin: 32px auto 22px;
+    letter-spacing: 0.04em; max-width: 760px;
+  }
+  .hero-body em { color: var(--gold-deep); font-style: italic; font-weight: 600; letter-spacing: 0; }
+
+  .hero-cta-wrap { display: flex; justify-content: center; margin-bottom: 32px; }
+  .hero-cta-wrap .btn-gold { min-width: 380px; padding: 20px 32px; font-size: 13px; }
+
+  /* hero trust badges */
+  .trust-tiles { display: flex; justify-content: center; gap: 32px; max-width: 520px; margin: 0 auto; }
+  .trust-tiles .tile { width: 150px; height: 150px; transition: transform 360ms cubic-bezier(.22,1,.36,1); }
+  .trust-tiles .tile:hover { transform: translateY(-4px) scale(1.04); }
+  .trust-tiles .tile img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 14px 28px rgba(168,138,71,0.30)); }
+
+  /* ============ 2. COLOR VISUALIZATION SHOWCASE (cream) — the visualization narrative ============ */
+  .viz {
+    background:
+      radial-gradient(60% 80% at 50% 0%, rgba(201,169,97,0.10) 0%, rgba(201,169,97,0) 60%),
+      var(--cream);
+    position: relative;
+  }
+  .viz .head { text-align: center; max-width: 760px; margin: 0 auto 40px; }
+  .viz .head .ttl { margin-bottom: 12px; font-size: 44px; }
+
+  .viz-grid {
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center;
+    max-width: 1180px; margin: 0 auto;
+  }
+  .viz-preview {
+    position: relative; aspect-ratio: 4/3; border-radius: 18px; overflow: hidden;
+    box-shadow: 0 28px 70px rgba(26,31,78,0.28);
+    background-size: cover; background-position: center;
+  }
+  .viz-preview::before {
+    content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 5;
+    border: 3px solid transparent;
+    background: var(--gold-shine-b) border-box;
+    -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+  }
+  .viz-preview .tint {
+    position: absolute; inset: 0; z-index: 2;
+    background: var(--tint, transparent);
+    mix-blend-mode: multiply; opacity: 0.74;
+    transition: background 540ms cubic-bezier(.22,1,.36,1), opacity 540ms;
+  }
+  .viz-preview .tint-soft {
+    position: absolute; inset: 0; z-index: 3;
+    background: var(--tint, transparent);
+    mix-blend-mode: soft-light; opacity: 0.55;
+    transition: background 540ms cubic-bezier(.22,1,.36,1);
+  }
+  .viz-preview .stamp {
+    position: absolute; left: 24px; bottom: 24px; z-index: 6;
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(26,31,78,0.85); color: #fff;
+    padding: 10px 18px; border-radius: 999px;
+    font-family: var(--font-sans); font-weight: 700; font-size: 11px; letter-spacing: 0.20em; text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.18); backdrop-filter: blur(6px);
+  }
+  .viz-preview .stamp em { font-family: var(--font-serif); font-style: italic; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; text-transform: none; color: var(--gold-bright); }
+  .viz-preview .stamp .swatch-mini {
+    width: 18px; height: 18px; border-radius: 50%; background: var(--tint, #fff);
+    box-shadow: inset -3px -3px 6px rgba(0,0,0,0.30), inset 2px 2px 4px rgba(255,255,255,0.30), 0 2px 6px rgba(0,0,0,0.30);
+  }
+
+  .viz-side .label-row { font-family: var(--font-sans); font-weight: 700; font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 14px; }
+  .viz-side h3 { font-family: var(--font-serif); font-weight: 600; font-size: 30px; line-height: 1.15; color: var(--navy); margin: 0 0 14px; text-wrap: balance; }
+  .viz-side h3 em { font-style: italic; color: var(--gold-deep); font-weight: 500; }
+  .viz-side .lead { font-family: var(--font-sans); font-size: 15.5px; line-height: 1.65; color: #4A4F70; margin: 0 0 24px; max-width: 480px; }
+
+  /* MEDAL-COIN SCHEME CARDS */
+  .scheme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .scheme {
+    position: relative;
+    padding: 20px 18px 18px;
+    border-radius: 14px;
+    background: #FFFFFF;
+    border: 1.5px solid rgba(168,138,71,0.30);
+    cursor: pointer;
+    transition: transform 320ms cubic-bezier(.22,1,.36,1), box-shadow 320ms, border-color 320ms;
+    box-shadow: 0 8px 22px rgba(26,31,78,0.08);
+  }
+  .scheme:hover { transform: translateY(-3px); box-shadow: 0 20px 44px rgba(26,31,78,0.16); }
+  .scheme.active {
+    border-color: transparent;
+    background:
+      linear-gradient(#fff, #fff) padding-box,
+      var(--gold-shine-b) border-box;
+    box-shadow: 0 0 0 1px rgba(168,138,71,0.30), 0 20px 44px rgba(168,138,71,0.30);
+  }
+  .scheme.active::after {
+    content: '✓'; position: absolute; top: 12px; right: 14px;
+    width: 22px; height: 22px; border-radius: 50%; background: var(--gold-shine);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; box-shadow: 0 4px 10px rgba(168,138,71,0.40);
+  }
+  .scheme .name { font-family: var(--font-serif); font-weight: 600; font-style: italic; font-size: 17px; color: var(--navy); margin-bottom: 4px; line-height: 1.2; }
+  .scheme .sw { font-family: var(--font-sans); font-size: 10px; color: var(--gold-deep); letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; margin-bottom: 14px; }
+  .scheme .dots { display: flex; gap: 10px; }
+  .scheme .dot {
+    width: 38px; height: 38px; border-radius: 50%;
+    position: relative;
+    box-shadow:
+      inset -5px -6px 11px rgba(0,0,0,0.22),
+      inset 4px 5px 9px rgba(255,255,255,0.40),
+      0 4px 12px rgba(26,31,78,0.18),
+      0 1px 0 rgba(0,0,0,0.10);
+  }
+  .scheme .dot::after {
+    content: ''; position: absolute;
+    top: 12%; left: 18%; width: 36%; height: 28%;
+    border-radius: 50%; background: rgba(255,255,255,0.55);
+    filter: blur(3px);
+  }
+
+  /* ============ 3. WHY FREE CONSULT (cream-deep) ============ */
+  .why-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; max-width: 1180px; margin: 0 auto; }
+  .q-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--gold-shine); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-weight: 700; font-size: 32px; box-shadow: 0 10px 24px rgba(168,138,71,0.30); border: 1px solid rgba(168,138,71,0.40); margin-bottom: 16px; }
+  .checks { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px; }
+  .checks li { display: flex; gap: 14px; align-items: flex-start; font-family: var(--font-sans); font-size: 14.5px; color: #4A4F70; line-height: 1.55; }
+  .checks li b { font-family: var(--font-serif); font-style: italic; font-weight: 600; color: var(--navy); display: block; margin-bottom: 3px; font-size: 16px; }
+  .checks li::before { content: ''; flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--navy) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E0C078' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") no-repeat center/60% 60%; margin-top: 2px; }
+
+  /* ============ 4. PROCESS (white) ============ */
+  .process-head { text-align: center; max-width: 760px; margin: 0 auto 56px; }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1180px; margin: 0 auto; }
+  .step { text-align: center; padding: 0 14px; }
+  .step-num {
+    width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 22px;
+    position: relative;
+    background:
+      radial-gradient(120% 120% at 80% 95%, rgba(94,64,0,0.55) 0%, rgba(94,64,0,0) 50%),
+      radial-gradient(120% 120% at 25% 18%, #FFF6CF 0%, #F8D979 22%, #E6BB48 46%, #C9A961 68%, #8A6D2E 100%);
+    box-shadow:
+      0 0 0 1px #5E4310,
+      0 0 0 2.5px #F2D896,
+      0 0 0 3.5px #4A380F,
+      0 18px 32px rgba(168,138,71,0.50),
+      0 6px 14px rgba(168,138,71,0.40),
+      0 3px 6px rgba(0,0,0,0.28),
+      inset 0 3px 4px rgba(255,255,255,0.65),
+      inset 0 -3px 6px rgba(94,64,0,0.55),
+      inset 2px 0 4px rgba(255,236,160,0.30),
+      inset -2px 0 4px rgba(94,64,0,0.35);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 320ms cubic-bezier(.22,1,.36,1);
+  }
+  .step:hover .step-num { transform: translateY(-3px) scale(1.04); }
+  .step-num::before { content: ''; position: absolute; top: 10%; left: 16%; right: 16%; height: 38%; border-radius: 50%; background: radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.85), rgba(255,255,255,0) 70%); filter: blur(2px); pointer-events: none; }
+  .step-num span {
+    font-family: var(--font-serif); font-weight: 700; font-style: italic;
+    font-size: 36px; color: #5E4310; line-height: 1;
+    text-shadow: 0 1px 0 rgba(255,243,200,0.65), 0 -1px 0 rgba(60,40,0,0.55);
+  }
+  .step-title { font-family: var(--font-serif); font-weight: 600; font-size: 22px; color: var(--navy); margin: 0 0 10px; line-height: 1.2; }
+  .step-desc { font-family: var(--font-sans); font-size: 14.5px; color: #4A4F70; line-height: 1.6; }
+
+  /* ============ 5/6. CASE STUDIES (navy + navy-deep) ============ */
+  .cases-head { text-align: center; max-width: 820px; margin: 0 auto 48px; }
+  .cases-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 1280px; margin: 0 auto; }
+  .case-card { background: #fff; color: var(--navy); border-radius: 20px; padding: 28px; box-shadow: 0 24px 60px rgba(0,0,0,0.30); border: 1px solid rgba(168,138,71,0.20); }
+  .case-card .pill-wrap { margin-bottom: 14px; }
+  .case-tag { display: inline-flex; align-items: center; padding: 8px 18px; border: 1px solid var(--gold); border-radius: 4px; font-family: var(--font-sans); font-weight: 700; font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-deep); margin: 0 auto 14px; }
+  .case-head { text-align: center; font-family: var(--font-serif); font-weight: 600; font-size: 20px; color: var(--navy); line-height: 1.25; margin: 0 0 18px; }
+  .case-card .ba-frame { margin: 0 0 22px; aspect-ratio: 4/3; }
+  .case-card .ba-handle .knob { width: 58px; height: 58px; }
+  .case-card .ba-handle .knob svg { width: 22px; height: 22px; }
+  .drop { font-family: var(--font-serif); font-size: 15px; line-height: 1.65; color: #4A4F70; margin: 0 0 18px; }
+  .drop::first-letter { font-family: var(--font-serif); font-weight: 700; font-size: 4.2em; line-height: 0.85; float: left; padding: 0.05em 0.12em 0 0; color: var(--gold-deep); }
+  .case-detail-list { list-style: none; padding: 0; margin: 0 0 22px; }
+  .case-detail-list li { padding: 12px 0; border-top: 1px solid rgba(26,31,78,0.10); display: grid; grid-template-columns: 100px 1fr; gap: 10px; }
+  .case-detail-list li:last-child { border-bottom: 1px solid rgba(26,31,78,0.10); }
+  .case-detail-list .lbl { font-family: var(--font-sans); font-weight: 700; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: var(--gold-deep); padding-top: 2px; }
+  .case-detail-list .val { font-family: var(--font-serif); font-style: italic; font-size: 13.5px; color: var(--navy); line-height: 1.5; }
+
+  /* ============ 7. WARRANTY (white) ============ */
+  .warranty-section { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; max-width: 1080px; margin: 0 auto; }
+  .warranty-seal { display: flex; justify-content: center; }
+  .warranty-seal img { width: 320px; height: 320px; object-fit: contain; filter: drop-shadow(0 18px 36px rgba(168,138,71,0.30)); transition: transform 540ms cubic-bezier(.22,1,.36,1); }
+  .warranty-seal img:hover { transform: scale(1.05) rotate(-2deg); }
+
+  /* ============ 8. PILLARS (cream-deep) ============ */
+  .pillars-head { text-align: center; max-width: 760px; margin: 0 auto 48px; }
+  .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 1180px; margin: 0 auto; }
+  .pillar { background: #fff; border: 1px solid rgba(168,138,71,0.25); border-radius: 16px; padding: 28px; display: flex; gap: 20px; align-items: flex-start; box-shadow: 0 10px 26px rgba(26,31,78,0.08); transition: transform 240ms cubic-bezier(.22,1,.36,1), box-shadow 240ms; }
+  .pillar:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(26,31,78,0.14); }
+  .pillar .num { width: 52px; height: 52px; border-radius: 50%; background: var(--navy); color: var(--gold-bright); font-family: var(--font-serif); font-weight: 600; font-style: italic; font-size: 22px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .pillar h4 { font-family: var(--font-serif); font-weight: 600; font-size: 22px; color: var(--navy); margin: 4px 0 8px; line-height: 1.2; }
+  .pillar p { font-family: var(--font-sans); font-size: 14.5px; color: #4A4F70; margin: 0; line-height: 1.6; }
+
+  /* ============ 9. WHAT WE DO (white) ============ */
+  .wwd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; max-width: 1180px; margin: 0 auto; }
+  .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .photo-grid div { aspect-ratio: 1/1; border-radius: 16px; background-size: cover; background-position: center; box-shadow: 0 14px 32px rgba(26,31,78,0.18); transition: transform 320ms cubic-bezier(.22,1,.36,1); }
+  .photo-grid div:hover { transform: scale(1.02); }
+  .checks-row { list-style: none; padding: 0; margin: 0 0 22px; display: flex; flex-direction: column; gap: 12px; }
+  .checks-row li { display: flex; gap: 13px; align-items: flex-start; font-family: var(--font-serif); font-style: italic; font-size: 15.5px; color: var(--navy); line-height: 1.4; }
+  .checks-row li::before { content: ''; flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--navy) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E0C078' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") no-repeat center/60% 60%; margin-top: 1px; }
+
+  /* ============ 10. TESTIMONIALS (cream) ============ */
+  .testi-head { text-align: center; max-width: 760px; margin: 0 auto 48px; }
+  .testi-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; max-width: 1280px; margin: 0 auto; }
+  .testi {
+    position: relative; background: #fff; border-radius: 14px; padding: 28px;
+    border: 1.5px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(180deg, #3A4078 0%, #1A1F4E 55%, #0C1130 100%) border-box;
+    box-shadow: 0 0 0 1px rgba(12,17,48,0.18), 0 18px 40px rgba(26,31,78,0.18), inset 0 1px 0 rgba(255,255,255,0.65);
+    transition: transform 320ms cubic-bezier(.22,1,.36,1), box-shadow 320ms;
+  }
+  .testi:hover { transform: translateY(-3px); box-shadow: 0 0 0 1px rgba(12,17,48,0.25), 0 28px 56px rgba(26,31,78,0.28), inset 0 1px 0 rgba(255,255,255,0.65); }
+  .testi::before { content: ''; position: absolute; top: -1px; left: 24px; width: 50px; height: 3px; background: var(--gold-shine); border-radius: 0 0 4px 4px; }
+  .testi-head-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; gap: 10px; padding-bottom: 14px; border-bottom: 1px solid rgba(26,31,78,0.10); }
+  .testi-name { font-family: var(--font-serif); font-weight: 600; font-size: 16px; color: var(--navy); }
+  .testi-meta { font-family: var(--font-serif); font-style: italic; font-size: 12px; color: #8a8aa3; margin-top: 2px; }
+  .stars { color: var(--gold); letter-spacing: 2px; font-size: 14px; }
+  .g-badge { display: inline-flex; align-items: center; gap: 5px; font-family: var(--font-sans); font-size: 10.5px; color: #8a8aa3; margin-top: 4px; font-weight: 600; }
+  .g-badge .g { width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(135deg,#4285F4,#EA4335); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; }
+  .testi-quote { font-family: var(--font-serif); font-style: italic; font-size: 14.5px; line-height: 1.7; color: var(--vip-navy, #1A1F4E); margin: 0; position: relative; padding-left: 28px; }
+  .testi-quote::before { content: '“'; position: absolute; left: 0; top: -8px; font-size: 44px; color: var(--gold); font-family: var(--font-serif); line-height: 0.8; }
+
+  /* ============ 11. STATS (white) ============ */
+  .stats-head { text-align: center; margin-bottom: 36px; }
+  .nums-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; max-width: 1180px; margin: 0 auto; }
+  .num-card {
+    position: relative; padding: 32px 18px 26px; border-radius: 14px; text-align: center;
+    border: 1.5px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(180deg, #3A4078 0%, #1A1F4E 55%, #0C1130 100%) border-box;
+    box-shadow: 0 0 0 1px rgba(12,17,48,0.18), 0 22px 44px rgba(26,31,78,0.20), inset 0 1px 0 rgba(255,255,255,0.65);
+    transition: transform 320ms cubic-bezier(.22,1,.36,1);
+  }
+  .num-card:hover { transform: translateY(-3px); }
+  .num-card::before { content: ''; position: absolute; top: -1px; left: 22px; width: 48px; height: 3px; background: var(--gold-shine); border-radius: 0 0 4px 4px; }
+  .num-big { font-family: var(--font-serif); font-weight: 700; font-size: 60px; color: var(--navy); line-height: 1; letter-spacing: -0.02em; margin-top: 6px; }
+  .num-big em { font-style: italic; font-weight: 500; color: var(--gold-deep); }
+  .num-lbl { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(26,31,78,0.10); font-family: var(--font-serif); font-style: italic; font-size: 14px; color: var(--gold-deep); }
+  .num-lbl b { display: block; font-style: normal; font-family: var(--font-serif); font-weight: 600; color: var(--navy); font-size: 15px; margin-bottom: 2px; }
+
+  /* ============ 12. SERVICES (cream-deep) ============ */
+  .services-head { text-align: center; max-width: 760px; margin: 0 auto 48px; }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 1180px; margin: 0 auto; }
+  .service { background: #fff; border-radius: 16px; box-shadow: 0 14px 32px rgba(26,31,78,0.14); overflow: hidden; border: 1px solid rgba(168,138,71,0.20); transition: transform 320ms cubic-bezier(.22,1,.36,1), box-shadow 320ms; }
+  .service:hover { transform: translateY(-4px); box-shadow: 0 24px 50px rgba(26,31,78,0.22); }
+  .service-img { aspect-ratio: 16/10; background-size: cover; background-position: center; }
+  .service-body { padding: 26px; }
+  .service-body h4 { font-family: var(--font-serif); font-weight: 600; font-size: 22px; color: var(--gold-deep); margin: 0 0 10px; line-height: 1.2; font-style: italic; }
+  .service-body p { font-family: var(--font-sans); font-size: 14.5px; color: #4A4F70; line-height: 1.6; margin: 0 0 16px; }
+  .svc-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-sans); font-weight: 700; color: var(--gold-deep); font-size: 11.5px; letter-spacing: 0.20em; text-transform: uppercase; text-decoration: none; }
+  .svc-link::after { content: '→'; }
+
+  /* ============ 13. OFFERS + SCOPE + FINAL CTA (white) ============ */
+  .closer-head { text-align: center; max-width: 820px; margin: 0 auto 32px; }
+  .offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 980px; margin: 0 auto 14px; }
+  .offer-card {
+    position: relative; padding: 28px 18px 22px; border-radius: 12px; text-align: center; overflow: visible;
+    background:
+      radial-gradient(130% 130% at 82% 96%, rgba(94,64,0,0.45) 0%, rgba(94,64,0,0) 50%),
+      radial-gradient(140% 140% at 22% 16%, #FFF6CF 0%, #F8D979 18%, #E6BB48 40%, #C9A961 64%, #8A6D2E 100%);
+    box-shadow:
+      0 0 0 1px #5E4310,
+      0 0 0 2.5px #F2D896,
+      0 0 0 3.5px #4A380F,
+      0 22px 40px rgba(168,138,71,0.50),
+      0 8px 18px rgba(168,138,71,0.36),
+      0 3px 6px rgba(0,0,0,0.28),
+      inset 0 3px 4px rgba(255,255,255,0.65),
+      inset 0 -3px 6px rgba(94,64,0,0.55),
+      inset 2px 0 4px rgba(255,236,160,0.30),
+      inset -2px 0 4px rgba(94,64,0,0.35);
+    transition: transform 360ms cubic-bezier(.22,1,.36,1);
+  }
+  .offer-card:hover { transform: translateY(-4px) scale(1.03); }
+  .offer-card::before { content: ''; position: absolute; top: 6%; left: 12%; right: 12%; height: 38%; border-radius: 50%; background: radial-gradient(ellipse at 50% 28%, rgba(255,255,255,0.65), rgba(255,255,255,0) 70%); filter: blur(2.5px); pointer-events: none; z-index: 2; }
+  .offer-amt {
+    position: relative; z-index: 3; font-family: var(--font-serif); font-weight: 700; font-style: italic;
+    font-size: 40px; color: #5E4310; line-height: 1; letter-spacing: -0.03em;
+    text-shadow: 0 1px 0 rgba(255,243,200,0.75), 0 -1px 0 rgba(60,40,0,0.55);
+  }
+  .offer-amt span { display: inline-block; font-size: 13px; font-style: normal; font-family: var(--font-sans); font-weight: 800; letter-spacing: 0.18em; vertical-align: 8px; color: #5E4310; margin-left: 5px; text-shadow: 0 1px 0 rgba(255,243,200,0.65); }
+  .offer-amt.word { font-size: 30px; }
+  .offer-desc {
+    position: relative; z-index: 3; font-family: var(--font-serif); font-style: italic;
+    font-size: 13.5px; color: #3A2A08; line-height: 1.4; margin-top: 12px;
+    text-shadow: 0 1px 0 rgba(255,243,200,0.55);
+  }
+  .offer-val { display: block; margin-top: 4px; font-family: var(--font-sans); font-style: normal; font-weight: 700; font-size: 11px; color: #5E4310; letter-spacing: 0.10em; opacity: 0.82; }
+  .offer-footnote { text-align: center; font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.18em; color: var(--gold-deep); margin: 18px 0 56px; font-weight: 600; text-transform: uppercase; }
+
+  .scope-block { max-width: 980px; margin: 0 auto 56px; }
+  .scope-block .eyebrow { text-align: center; }
+  .scope-block .ttl { text-align: center; font-size: 32px; }
+  .scope-list { list-style: none; padding: 0; margin: 22px 0 0; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px 32px; }
+  .scope-list li { font-family: var(--font-serif); font-style: italic; font-size: 15px; color: var(--navy); padding: 6px 0; display: flex; gap: 10px; align-items: center; }
+  .scope-list li::before { content: '✓'; color: var(--gold-deep); font-weight: 700; font-style: normal; font-family: var(--font-sans); font-size: 16px; }
+
+  .final-cta { text-align: center; max-width: 760px; margin: 0 auto; }
+  .final-cta .ck { font-family: var(--font-sans); font-weight: 700; font-size: 11px; letter-spacing: 0.32em; color: var(--gold-deep); margin-bottom: 14px; }
+  .final-cta .ttl { font-family: var(--font-serif); font-weight: 600; font-size: 44px; color: var(--navy); line-height: 1.1; margin: 0 0 28px; }
+  .final-cta .ttl em { font-style: italic; color: var(--gold-deep); }
+  .final-cta .btn-gold { min-width: 380px; padding: 20px 32px; font-size: 13px; }
+
+  /* ============ FOOTER ============ */
+  footer { background: var(--navy-deep); color: rgba(255,255,255,0.85); padding: 48px 56px 36px; }
+  .footer-grid { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; gap: 36px; }
+  .f-logo { display: flex; align-items: center; gap: 12px; }
+  .f-logo .crown { width: 44px; height: 44px; border-radius: 8px; background: #FFFFFF; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.20); }
+  .f-logo .crown img { width: 100%; height: 100%; object-fit: cover; }
+  .f-logo .wm { text-align: left; line-height: 1; }
+  .f-logo .wm .vip { font-family: var(--font-serif); font-weight: 700; font-size: 22px; letter-spacing: 0.04em; color: #fff; }
+  .f-logo .wm .sub { font-family: var(--font-sans); font-weight: 600; font-size: 9px; letter-spacing: 0.30em; color: rgba(255,255,255,0.6); margin-top: 3px; }
+  .f-nap { text-align: center; }
+  .f-nap .l { font-family: var(--font-serif); font-weight: 700; font-size: 20px; color: var(--gold-bright); letter-spacing: 0.04em; }
+  .f-nap .s { font-family: var(--font-serif); font-style: italic; font-size: 13px; color: rgba(255,255,255,0.85); margin-top: 4px; }
+  .f-nap .t { font-family: var(--font-serif); font-style: italic; font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+  .f-right { text-align: right; }
+  .f-tag { font-family: var(--font-serif); font-style: italic; font-size: 15px; color: var(--gold-bright); line-height: 1.4; }
+  .f-tag b { font-style: normal; font-weight: 600; color: #fff; }
+  .f-social { display: inline-flex; gap: 12px; margin-top: 14px; }
+  .f-social a { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.10); display: inline-flex; align-items: center; justify-content: center; color: #fff; transition: background 220ms; }
+  .f-social a:hover { background: var(--gold-deep); }
+  .f-social svg { width: 14px; height: 14px; }
+  .f-copy { font-family: var(--font-sans); font-size: 10.5px; color: rgba(255,255,255,0.45); margin-top: 24px; text-align: center; letter-spacing: 0.04em; max-width: 1180px; margin-left: auto; margin-right: auto; }
+
+  /* ============ PRINT ============ */
+  @media print {
+    @page { size: A4 portrait; margin: 12mm 10mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    *, *::before, *::after {
+      animation-delay: -99s !important; animation-duration: .001s !important;
+      animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+      animation-play-state: running !important; transition-duration: 0s !important;
+    }
+    html, body { background: #fff !important; }
+    .page { max-width: none !important; box-shadow: none !important; }
+
+    /* sticky → static so it doesn't repeat */
+    .topbar { position: static !important; backdrop-filter: none !important; box-shadow: none !important; border-bottom: 1px solid rgba(26,31,78,0.12) !important; }
+
+    /* tighten section padding for paper */
+    section { padding: 30px 40px !important; }
+    .hero { padding: 24px 40px 30px !important; }
+
+    /* avoid awkward splits */
+    section { break-inside: avoid-page; }
+    .ba-frame, .case-card, .scheme, .pillar, .service, .testi, .num-card, .offer-card, .step, .viz-preview, .warranty-seal { break-inside: avoid; }
+    .cases-grid, .pillars, .services-grid, .testi-grid, .nums-grid, .scheme-grid, .steps, .offer-grid, .photo-grid { break-inside: avoid; }
+    .viz-grid, .why-grid, .wwd-grid, .warranty-section { break-inside: avoid; }
+
+    /* fresh page before the major dark bands so the gold reads on a clean sheet */
+    #work { break-before: page; }
+    #services { break-before: page; }
+
+    /* freeze every B/A reveal at a clean 50/50 split, hide the drag knob */
+    .ba-img.after { clip-path: inset(0 0 0 50%) !important; }
+    .ba-handle .knob { box-shadow: 0 0 0 4px rgba(201,169,97,0.18) !important; }
+
+    /* drop hover-only transforms */
+    .scheme:hover, .pillar:hover, .service:hover, .testi:hover, .num-card:hover,
+    .offer-card:hover, .trust-tiles .tile:hover, .photo-grid div:hover { transform: none !important; }
+
+    a { text-decoration: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="page" data-screen-label="VIP Sales Page · Desktop">
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar">
+    <div class="top-logo">
+      <div class="crown"><img src="../../assets/logos/vip-mark-icon-white.png" alt="VIP"/></div>
+      <div class="wm"><div class="vip">VIP</div><div class="sub">HOME PAINTING</div></div>
+    </div>
+    <nav class="top-nav">
+      <a href="#viz">Visualize</a>
+      <a href="#process">Process</a>
+      <a href="#work">Our Work</a>
+      <a href="#services">Services</a>
+      <a href="#quote">Free Quote</a>
+    </nav>
+    <a href="tel:9093125400" class="top-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (909) 312-5400
+    </a>
+  </header>
+
+  <!-- ============ 1. HERO ============ -->
+  <section class="hero">
+    <div class="inner">
+      <div class="eyebrow">Inland Empire Customized Home Painting Services</div>
+      <h1 class="ttl-hero">Discover How VIP Home Painting <span class="gold">Transformed Miguel &amp; Karla's Home</span> In Just 4 Days With Custom Color Consultation</h1>
+
+      <div class="pill-wrap">
+        <div class="avatar-pill"><div class="ph">M&amp;K</div><div><div class="name">Miguel &amp; Karla</div><div class="sub-line">Fontana Homeowner</div></div></div>
+      </div>
+
+      <div class="ba-frame" style="max-width: 980px;">
+        <div class="ba-cap">From Drab to Fab in 4 Days</div>
+        <div class="ba-img before" style="background-image: url('https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=1400&auto=format&fit=crop&q=80')"></div>
+        <div class="ba-img after" id="heroAfter"  style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1400&auto=format&fit=crop&q=80')"></div>
+        <div class="ba-rail">
+          <div class="ba-handle"><span class="pin top"></span><span class="pin bot"></span>
+            <div class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(12 0)"/></svg></div>
+          </div>
+        </div>
+        <div class="ba-label l">Before</div>
+        <div class="ba-label r">After</div>
+      </div>
+
+      <p class="hero-body">CLAIM YOUR FREE 30-MINUTE CUSTOMIZED HOME COLOR CONSULTATION AND <em>save $1,000's on expensive consultants and avoid common home painting mistakes.</em></p>
+
+      <div class="hero-cta-wrap">
+        <a href="#quote" class="btn-gold">
+          <span class="col-2">
+            <span>Claim Free Color Consultation</span>
+            <span class="sub">Irresistible Painting Estimates Included</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="trust-tiles">
+        <div class="tile"><img src="../../assets/badges/vip-custom-color-schemes.png" alt="Custom Color Schemes"/></div>
+        <div class="tile"><img src="../../assets/badges/vip-warranty-laurel.png" alt="Insane 1-Year Warranty"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. COLOR VISUALIZATION SHOWCASE ============ -->
+  <section class="viz" id="viz">
+    <div class="head">
+      <div class="eyebrow">Custom Visualization Service</div>
+      <h2 class="ttl">See Your Home In <span class="accent">Every Color</span> Before A Single Brushstroke</h2>
+      <p class="sub" style="text-align:center; font-size: 18px; max-width: 620px; margin: 0 auto;">Click any palette. Watch your home transform in real time. This is exactly what we deliver in our 30-minute consultation.</p>
+    </div>
+
+    <div class="viz-grid">
+      <div class="viz-preview" id="vizPreview" style="background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1400&auto=format&fit=crop&q=80');">
+        <div class="tint"></div>
+        <div class="tint-soft"></div>
+        <div class="stamp"><span class="swatch-mini"></span><span>Now Showing</span><em id="vizName">Greige Estate</em></div>
+      </div>
+      <div class="viz-side">
+        <div class="label-row">Choose A Scheme</div>
+        <h3>Eight curated schemes — <em>infinite possibility.</em></h3>
+        <p class="lead">Each palette is hand-paired with Sherwin-Williams &amp; Benjamin Moore colors. We render your exact home in 30 minutes — so you commit with certainty, never guesswork.</p>
+        <div class="scheme-grid" id="schemeGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. WHY FREE CONSULT (cream-deep) ============ -->
+  <section class="cream-deep">
+    <div class="why-grid">
+      <div>
+        <div class="q-icon">?</div>
+        <div class="eyebrow">Why Get A FREE Custom Color Consultation</div>
+        <h2 class="ttl">Avoid Costly <span class="accent">Mistakes</span>—Our Free Consultation Ensures Your Home Stands Out For The Right Reasons</h2>
+        <ul class="checks">
+          <li><div><b>Unlock $1,000 Value in 30 Minutes</b>Discover how our free consultation can save you thousands in costly repainting by getting it right the first time.</div></li>
+          <li><div><b>Fast-Track Your Home Transformation</b>Get expert color advice in just 30 minutes, designed to fit your busy schedule.</div></li>
+          <li><div><b>Why Waste Money on Guesswork?</b>Our free color consultation ensures you avoid expensive mistakes and achieve a timeless look.</div></li>
+        </ul>
+      </div>
+      <div class="ba-frame" style="aspect-ratio: 4/3;">
+        <div class="ba-cap">Home Painting Project · 1:21</div>
+        <div class="ba-img before" style="background-image: linear-gradient(135deg, #2a2f5a, #1A1F4E), url('https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=900&auto=format&fit=crop&q=80'); background-blend-mode: overlay; background-size: cover; background-position: center;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. PROCESS (white) ============ -->
+  <section id="process">
+    <div class="process-head">
+      <div class="eyebrow">Here's a Taste of What to Expect</div>
+      <h2 class="ttl">When You Go Through Our <span class="accent">Color Consult</span> And Painting Service</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num"><span>1</span></div><div class="step-title">Personalized Color Consultation</div><div class="step-desc">We start by understanding your vision — discussing the colors, mood, and look you want for your home.</div></div>
+      <div class="step"><div class="step-num"><span>2</span></div><div class="step-title">Customized Visualizations In 30 Minutes</div><div class="step-desc">We create detailed visualizations showing how different color schemes will transform your home — within minutes.</div></div>
+      <div class="step"><div class="step-num"><span>3</span></div><div class="step-title">Irresistible Estimate</div><div class="step-desc">Receive a competitive estimate tailored to bring your dream home to life — without compromising on quality.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ 5. CASE STUDIES (navy band — 2 col) ============ -->
+  <section class="navy" id="work">
+    <div class="cases-head">
+      <div class="eyebrow">Inland Empire Home Painting Projects</div>
+      <h2 class="ttl">Transforming Homes With <span class="accent">Precision &amp; Care</span></h2>
+    </div>
+    <div class="cases-grid">
+      <!-- Case 1: Douglas & Sheri -->
+      <article class="case-card">
+        <div class="pill-wrap"><div class="avatar-pill"><div class="ph">D&amp;S</div><div><div class="name">Douglas &amp; Sheri</div><div class="sub-line">Sierra Lakes, Fontana</div></div></div></div>
+        <div style="text-align:center;"><div class="case-tag">Home Exterior Painting</div></div>
+        <h3 class="case-head">Douglas &amp; Sheri's Personalized Transformation In Fontana, Inland Empire</h3>
+        <div class="ba-frame">
+          <div class="ba-cap">Stunning Sierra Lakes</div>
+          <div class="ba-img before" style="background-image: url('https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=1000&auto=format&fit=crop&q=80')"></div>
+          <div class="ba-img after"  style="background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1000&auto=format&fit=crop&q=80')"></div>
+          <div class="ba-rail"><div class="ba-handle"><span class="pin top"></span><span class="pin bot"></span><div class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(12 0)"/></svg></div></div></div>
+          <div class="ba-label l">Before</div>
+          <div class="ba-label r">After</div>
+        </div>
+        <p class="drop">Douglas and Sheri, longtime residents of Fontana, wanted to make their Sierra Lakes home truly their own. With our expert guidance and a FREE 30-Minute Personalized Color Consultation, we helped them choose a sophisticated palette that reflected their unique style.</p>
+        <ul class="case-detail-list">
+          <li><div class="lbl">Reason</div><div class="val">Stand out in Sierra Lakes with a sophisticated, elegant look.</div></li>
+          <li><div class="lbl">Strategy</div><div class="val">A FREE 30-Minute Color Consultation guided their palette.</div></li>
+          <li><div class="lbl">Mood</div><div class="val">A unique masterpiece — quiet authority &amp; sophistication.</div></li>
+        </ul>
+        <a href="#quote" class="btn-gold full"><span class="col-2"><span>Claim Free Color Consult</span><span class="sub">Irresistible Estimates Included</span></span></a>
+      </article>
+
+      <!-- Case 2: Ceasar & Julie -->
+      <article class="case-card">
+        <div class="pill-wrap"><div class="avatar-pill"><div class="ph">C&amp;J</div><div><div class="name">Ceasar &amp; Julie</div><div class="sub-line">Rancho Cucamonga</div></div></div></div>
+        <div style="text-align:center;"><div class="case-tag">Home Exterior Painting</div></div>
+        <h3 class="case-head">Ceasar &amp; Julie's Personalized Transformation In Rancho Cucamonga, CA</h3>
+        <div class="ba-frame">
+          <div class="ba-cap">Unbelievable 4-Day Paint</div>
+          <div class="ba-img before" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1000&auto=format&fit=crop&q=80')"></div>
+          <div class="ba-img after"  style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000&auto=format&fit=crop&q=80')"></div>
+          <div class="ba-rail"><div class="ba-handle"><span class="pin top"></span><span class="pin bot"></span><div class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(12 0)"/></svg></div></div></div>
+          <div class="ba-label l">Before</div>
+          <div class="ba-label r">After</div>
+        </div>
+        <p class="drop">Ceasar and Julie wanted a fresh look for their Rancho Cucamonga home after living there for 10 years. We helped them select a harmonious blend of colors that injected life and personality into every detail of their facade.</p>
+        <ul class="case-detail-list">
+          <li><div class="lbl">Reason</div><div class="val">Inject life &amp; personality into their 10-year home.</div></li>
+          <li><div class="lbl">Strategy</div><div class="val">A FREE 30-Minute Consultation guided a harmonious blend.</div></li>
+          <li><div class="lbl">Mood</div><div class="val">Harmonious &amp; distinctive — joy and uniqueness.</div></li>
+        </ul>
+        <a href="#quote" class="btn-gold full"><span class="col-2"><span>Claim Free Color Consult</span><span class="sub">Irresistible Estimates Included</span></span></a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 6. WARRANTY (white) ============ -->
+  <section>
+    <div class="warranty-section">
+      <div>
+        <div class="eyebrow">Why Choose Us</div>
+        <h2 class="ttl">Our Work Is Backed By A <span class="accent">Solid 1-Year Warranty</span></h2>
+        <p class="body">When You Use VIP Home Painting, You Can Invest With Confidence Because You'll Be Backed By A 1-Year Warranty.</p>
+        <p class="sub" style="font-weight:600;">No Questions Asked.</p>
+        <ul class="checks-row" style="margin-top: 20px;">
+          <li>1-Year Warranty on Labor &amp; Materials</li>
+          <li>Licensed, Bonded &amp; Insured</li>
+          <li>100% Satisfaction Guaranteed</li>
+        </ul>
+      </div>
+      <div class="warranty-seal"><img src="../../assets/badges/vip-warranty-laurel.png" alt="Insane 1-Year Warranty"/></div>
+    </div>
+  </section>
+
+  <!-- ============ 7. PILLARS (cream-deep) ============ -->
+  <section class="cream-deep">
+    <div class="pillars-head">
+      <div class="eyebrow">What We Offer</div>
+      <h2 class="ttl">Our Custom Home Painting Company Offers</h2>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><div class="num">1</div><div><h4>FREE Custom Color Consultation</h4><p>Choosing the right colors can be overwhelming. Our free consultation lets you visualize and decide in 30 minutes.</p></div></div>
+      <div class="pillar"><div class="num">2</div><div><h4>Insane 1-Year Warranty</h4><p>We stand behind our work. Every client gets our Insane 1-Year Warranty — if anything goes wrong, we'll fix it.</p></div></div>
+      <div class="pillar"><div class="num">3</div><div><h4>Affordable Prices, Top Quality</h4><p>Everyone deserves a beautiful home. Reasonable prices, top-quality workmanship — never a compromise.</p></div></div>
+      <div class="pillar"><div class="num">4</div><div><h4>Experienced &amp; Professional</h4><p>Our team has the skills to tackle any project, big or small. We take pride in our work and exceed expectations.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ============ 8. WHAT WE DO (white) ============ -->
+  <section>
+    <div class="wwd-grid">
+      <div>
+        <div class="eyebrow">What We Do</div>
+        <h2 class="ttl">We Paint To <span class="accent">Transform Lives</span></h2>
+        <ul class="checks-row">
+          <li>Detail-Oriented Craftsmanship</li>
+          <li>High-Quality Materials</li>
+          <li>FREE Customized Color Consultations</li>
+          <li>Luxury Transformation</li>
+          <li>1-Year Warranty &amp; Stress-Free Experience</li>
+        </ul>
+        <p class="body">Transform your home into a beautiful and relaxing retreat that you'll never want to leave. Don't let a dull or outdated exterior or interior hold you back.</p>
+      </div>
+      <div class="photo-grid">
+        <div style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&auto=format&fit=crop&q=80')"></div>
+        <div style="background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&auto=format&fit=crop&q=80')"></div>
+        <div style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&auto=format&fit=crop&q=80')"></div>
+        <div style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&auto=format&fit=crop&q=80')"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9. TESTIMONIALS (cream) ============ -->
+  <section class="cream">
+    <div class="testi-head">
+      <div class="eyebrow">Testimonials</div>
+      <h2 class="ttl">What Our <span class="accent">Clients</span> Are Saying</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="testi-head-row">
+          <div><div class="testi-name">Linda Quarry</div><div class="testi-meta">May 24, 2024</div></div>
+          <div style="text-align:right"><div class="stars">★★★★★</div><div class="g-badge"><span class="g">G</span>Google</div></div>
+        </div>
+        <p class="testi-quote">"I chose VIP painting services for my interior painting job after generating a few estimates — the pricing was competitive. I felt confident they would complete the job to my satisfaction…"</p>
+      </div>
+      <div class="testi">
+        <div class="testi-head-row">
+          <div><div class="testi-name">Carol Brown</div><div class="testi-meta">July 31, 2023</div></div>
+          <div style="text-align:right"><div class="stars">★★★★★</div><div class="g-badge"><span class="g">G</span>Google</div></div>
+        </div>
+        <p class="testi-quote">"VIP painting services did an excellent job painting the interior of our home. Fabian went above and beyond. Fair pricing, professional, and easy to communicate with…"</p>
+      </div>
+      <div class="testi">
+        <div class="testi-head-row">
+          <div><div class="testi-name">Tony Minardi</div><div class="testi-meta">March 7, 2023</div></div>
+          <div style="text-align:right"><div class="stars">★★★★★</div><div class="g-badge"><span class="g">G</span>Google</div></div>
+        </div>
+        <p class="testi-quote">"VIP Painting Services recently painted the exterior of our house. They did an amazing job! They took the time to make sure the colors were exactly what we wanted…"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10. STATS (white) ============ -->
+  <section>
+    <div class="stats-head">
+      <div class="eyebrow">By the Numbers</div>
+      <h2 class="ttl">The <span class="accent">Trust</span> We've Earned</h2>
+    </div>
+    <div class="nums-grid">
+      <div class="num-card"><div class="num-big">5<em>★</em></div><div class="num-lbl"><b>Star Reviews</b>Every client, every project</div></div>
+      <div class="num-card"><div class="num-big">100%</div><div class="num-lbl"><b>Clients Satisfied</b>No exceptions</div></div>
+      <div class="num-card"><div class="num-big">120+</div><div class="num-lbl"><b>Projects Done</b>Across SoCal estates</div></div>
+      <div class="num-card"><div class="num-big">1<em>yr</em></div><div class="num-lbl"><b>Insane Warranty</b>No questions asked</div></div>
+    </div>
+  </section>
+
+  <!-- ============ 11. SERVICES (cream-deep) ============ -->
+  <section class="cream-deep" id="services">
+    <div class="services-head">
+      <div class="eyebrow">Our Inland Empire Home Painting Service</div>
+      <h2 class="ttl">We Paint <span class="accent">Exceptional</span> Living Spaces</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service">
+        <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="service-body"><h4>Home Exterior Painting</h4><p>Tired of an outdated exterior? With our expertise and attention to detail, we transform your home into a jaw-dropping masterpiece — and your neighbors will notice.</p><a class="svc-link" href="#">Learn More</a></div>
+      </div>
+      <div class="service">
+        <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="service-body"><h4>Home Interior Painting</h4><p>Transform your dull interior into a vibrant, welcoming space with our professional Inland Empire interior painting services.</p><a class="svc-link" href="#">Learn More</a></div>
+      </div>
+      <div class="service">
+        <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&auto=format&fit=crop&q=80')"></div>
+        <div class="service-body"><h4>Kitchen Cabinet Painting</h4><p>Transform your outdated kitchen into a stunning, modern space with VIP Kitchen Cabinet Painting Services.</p><a class="svc-link" href="#">Learn More</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 12. OFFERS + SCOPE + FINAL CTA ============ -->
+  <section id="quote">
+    <div class="closer-head">
+      <div class="eyebrow">Exclusive Offers</div>
+      <h2 class="ttl">Limited-Time <span class="accent">Investment Incentives</span></h2>
+    </div>
+    <div class="offer-grid">
+      <div class="offer-card"><div class="offer-amt">$750<span>OFF</span></div><div class="offer-desc">Any Full Exterior Paint Job</div></div>
+      <div class="offer-card"><div class="offer-amt word">FREE</div><div class="offer-desc">Color Consultation<span class="offer-val">$250 Value</span></div></div>
+      <div class="offer-card"><div class="offer-amt word">FREE</div><div class="offer-desc">Pressure Wash<span class="offer-val">$300 Value</span></div></div>
+    </div>
+    <div class="offer-footnote">Limited Time Only · Limited Spots Available</div>
+
+    <div class="scope-block">
+      <div class="eyebrow">Our Complete Scope of Work</div>
+      <h3 class="ttl">Every Service. <span class="accent">One Team.</span></h3>
+      <ul class="scope-list">
+        <li>Full Exterior Painting</li>
+        <li>Stucco Repair</li>
+        <li>Surface Preparation</li>
+        <li>Interior Walls</li>
+        <li>Wood Trim Replacement</li>
+        <li>Premium Paints Only</li>
+        <li>Cabinet Refinishing</li>
+        <li>Color Consultation</li>
+        <li>Clean Worksites</li>
+        <li>Garage Floor Coatings</li>
+        <li>Pressure Washing</li>
+        <li>Final Inspection</li>
+      </ul>
+    </div>
+
+    <div class="final-cta">
+      <div class="ck">Ready To Transform Your Home?</div>
+      <h2 class="ttl">Let's Make Your Home the <em>Envy of the Neighborhood</em></h2>
+      <a href="#" class="btn-gold"><span class="col-2"><span>Get My Free Quote Now</span><span class="sub">No Pressure · No Obligation · 100% Free</span></span></a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="f-logo">
+        <div class="crown"><img src="../../assets/logos/vip-mark-icon-white.png" alt="VIP"/></div>
+        <div class="wm"><div class="vip">VIP</div><div class="sub">HOME PAINTING</div></div>
+      </div>
+      <div class="f-nap">
+        <div class="l">NAP</div>
+        <div class="s">Proudly Serving the Inland Empire</div>
+        <div class="t">Licensed · Bonded · Insured</div>
+      </div>
+      <div class="f-right">
+        <div class="f-tag"><b>We don't just paint homes,</b><br/>we transform lives.</div>
+        <div class="f-social">
+          <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.351C0 23.41.59 24 1.325 24H12.82V14.706h-3.13v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.66-4.788 1.325 0 2.464.099 2.796.143v3.24h-1.918c-1.504 0-1.796.715-1.796 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.41 24 24 23.41 24 22.676V1.325C24 .59 23.41 0 22.675 0z"/></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"/></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="f-copy">© 2026 VIP Home Painting · CA Licensed &amp; Bonded · Inland Empire · Orange County · LA</div>
+  </footer>
+
+</div>
+
+<script>
+/* ============ B/A SLIDER ============ */
+function initBA(frameEl) {
+  const after = frameEl.querySelector('.ba-img.after');
+  if (!after) return;
+  const handle = frameEl.querySelector('.ba-handle');
+  const rail = frameEl.querySelector('.ba-rail');
+  if (!handle || !rail) return;
+  let pos = 50, dragging = false;
+  const setPos = (p) => {
+    pos = Math.max(2, Math.min(98, p));
+    after.style.clipPath = `inset(0 0 0 ${pos}%)`;
+    handle.style.left = pos + '%';
+  };
+  const move = (clientX) => { const r = frameEl.getBoundingClientRect(); setPos(((clientX - r.left) / r.width) * 100); };
+  rail.addEventListener('mousedown', e => { dragging = true; move(e.clientX); });
+  window.addEventListener('mousemove', e => { if (dragging) move(e.clientX); });
+  window.addEventListener('mouseup', () => dragging = false);
+  rail.addEventListener('touchstart', e => { dragging = true; move(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('touchmove', e => { if (dragging) move(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('touchend', () => dragging = false);
+  setPos(50);
+  setTimeout(() => { let seq = [50, 38, 62, 50], i = 0; const tick = () => { if (i >= seq.length) return; setPos(seq[i++]); setTimeout(tick, 360); }; tick(); }, 600);
+}
+document.querySelectorAll('.ba-frame').forEach(initBA);
+
+/* ============ COLOR VISUALIZATION SCHEMES ============ */
+const SCHEMES = [
+  { id: 'greige',   name: 'Greige Estate',    sw: 'SW Accessible Beige',  main: '#C7B89F', trim: '#F2EDE5', accent: '#3A4A6B' },
+  { id: 'sage',     name: 'Sierra Sage',      sw: 'BM Sea Salt',          main: '#A8B19E', trim: '#EFEDE6', accent: '#1F3D33' },
+  { id: 'sand',     name: 'Coastal Sand',     sw: 'SW Natural Linen',     main: '#D9C5A0', trim: '#FFFFFF', accent: '#2A4456' },
+  { id: 'fog',      name: 'Newport Fog',      sw: 'SW Repose Gray',       main: '#B6B7B0', trim: '#ECEAE2', accent: '#1A1840' },
+  { id: 'bronze',   name: 'Bronze Manor',     sw: 'BM Wenge',             main: '#7E6A55', trim: '#E8DFD0', accent: '#E8833A' },
+  { id: 'shadow',   name: 'Shadow Slate',     sw: 'SW Iron Ore',          main: '#3D4045', trim: '#D9D5CC', accent: '#FFB200' },
+  { id: 'cashmere', name: 'Cashmere Cream',   sw: 'BM White Dove',        main: '#EAE3D2', trim: '#FFFFFF', accent: '#3D3B5F' },
+  { id: 'navy',     name: 'Estate Navy',      sw: 'SW Naval',             main: '#2B3A55', trim: '#E8DFD0', accent: '#FFB200' }
+];
+
+const $grid = document.getElementById('schemeGrid');
+const $preview = document.getElementById('vizPreview');
+const $name = document.getElementById('vizName');
+const $heroAfter = document.getElementById('heroAfter');
+
+let active = SCHEMES[0].id;
+
+function renderSchemes() {
+  $grid.innerHTML = '';
+  SCHEMES.forEach(s => {
+    const el = document.createElement('div');
+    el.className = 'scheme' + (s.id === active ? ' active' : '');
+    el.innerHTML = `
+      <div class="name">${s.name}</div>
+      <div class="sw">${s.sw}</div>
+      <div class="dots">
+        <div class="dot" style="background:${s.main}"></div>
+        <div class="dot" style="background:${s.trim}"></div>
+        <div class="dot" style="background:${s.accent}"></div>
+      </div>
+    `;
+    el.addEventListener('click', () => { active = s.id; apply(s); renderSchemes(); });
+    $grid.appendChild(el);
+  });
+}
+
+function apply(s) {
+  // Tint the viz preview and hero after-image with the main color
+  $preview.style.setProperty('--tint', s.main);
+  $name.textContent = `${s.name} · ${s.sw}`;
+  const stamp = $preview.querySelector('.swatch-mini');
+  if (stamp) stamp.style.background = s.main;
+  // Also softly tint the hero after image to reinforce the visualization story
+  if ($heroAfter) {
+    $heroAfter.classList.add('tinted');
+    $heroAfter.style.setProperty('--tint', s.main);
+  }
+}
+
+renderSchemes();
+apply(SCHEMES[0]);
+
+/* Auto-cycle through schemes on first load as a teaser */
+setTimeout(() => {
+  let i = 1;
+  const cycle = setInterval(() => {
+    if (i >= 4) { clearInterval(cycle); return; }
+    active = SCHEMES[i].id;
+    apply(SCHEMES[i]);
+    renderSchemes();
+    i++;
+  }, 1400);
+}, 1200);
+
+/* ============ AUTO-PRINT ============ */
+window.addEventListener('load', () => {
+  // settle the chosen scheme on the default (no auto-cycle for print)
+  active = SCHEMES[0].id; apply(SCHEMES[0]); renderSchemes();
+  const go = () => setTimeout(() => window.print(), 500);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(go);
+  } else {
+    go();
+  }
+});
+</script>
+</body>
+</html>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>VIP Home Painting — Custom Color Visualization for Inland Empire Homes</title>
 <meta name="description" content="Transforming Inland Empire homes with custom color visualization. See your home transformed before we paint. Free 30-minute color consultation. 1-year warranty. Call (909) 312-5400.">
-<meta name="theme-color" content="#262362">
+<meta name="theme-color" content="#1A1F4E">
 
 <!-- SEO -->
 <link rel="canonical" href="https://viphomepainting.com/">
@@ -25,10 +25,10 @@
    ═══════════════════════════════════════════════════════════ */
 
 :root {
-  --gold:        #FF8210;
+  --gold:        #C9A961;
   --gold-d:      #e06f08;
   --gold-l:      #ffa84a;
-  --navy:        #262362;
+  --navy:        #1A1F4E;
   --navy-d:      #1a1645;
   --navy-l:      #3a3680;
   --beige:       #BAAEA1;
@@ -42,9 +42,9 @@
   --f-body:      'Poppins', -apple-system, sans-serif;
   --f-btn:       'Montserrat', sans-serif;
 
-  --shadow-card: 0 20px 60px -10px rgba(38,35,98,.18), 0 8px 24px -8px rgba(38,35,98,.12);
-  --shadow-gold: 0 12px 40px -8px rgba(255,130,16,.35), 0 4px 16px -4px rgba(255,130,16,.2);
-  --shadow-3d:   0 4px 6px -1px rgba(38,35,98,.1), 0 10px 30px -5px rgba(38,35,98,.15), 0 20px 60px -10px rgba(38,35,98,.1);
+  --shadow-card: 0 20px 60px -10px rgba(26,31,78,.18), 0 8px 24px -8px rgba(26,31,78,.12);
+  --shadow-gold: 0 12px 40px -8px rgba(201,169,97,.35), 0 4px 16px -4px rgba(201,169,97,.2);
+  --shadow-3d:   0 4px 6px -1px rgba(26,31,78,.1), 0 10px 30px -5px rgba(26,31,78,.15), 0 20px 60px -10px rgba(26,31,78,.1);
 
   --mw:          520px;
   --tr:          0.35s cubic-bezier(.4,.0,.2,1);
@@ -83,12 +83,12 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
    ═══════════════════════════════════════════════════════════ */
 .vip-nav {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(38,35,98,.98);
+  background: rgba(26,31,78,.98);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   padding: .9rem 1.4rem;
   display: flex; align-items: center; justify-content: space-between;
-  border-bottom: 1px solid rgba(255,130,16,.15);
+  border-bottom: 1px solid rgba(201,169,97,.15);
 }
 .brand { display: flex; align-items: center; gap: .7rem; }
 .brand-crown {
@@ -109,11 +109,11 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
 .nav-phone {
   color: var(--gold); font-family: var(--f-btn);
   font-size: .65rem; font-weight: 600; letter-spacing: 1px;
-  border: 1px solid rgba(255,130,16,.4);
+  border: 1px solid rgba(201,169,97,.4);
   padding: .5rem .85rem; border-radius: 50px;
   transition: all var(--tr);
 }
-.nav-phone:hover { background: rgba(255,130,16,.12); border-color: var(--gold); }
+.nav-phone:hover { background: rgba(201,169,97,.12); border-color: var(--gold); }
 
 /* ═══════════════════════════════════════════════════════════
    FLOATING COLOR BUBBLES (decorative)
@@ -128,11 +128,11 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   box-shadow:
     inset -8px -8px 18px rgba(0,0,0,.2),
     inset 6px 6px 14px rgba(255,255,255,.25),
-    0 12px 30px rgba(38,35,98,.25);
+    0 12px 30px rgba(26,31,78,.25);
   animation: float-bubble 8s ease-in-out infinite;
 }
-.bubble.b1 { width:70px; height:70px; background: radial-gradient(circle at 30% 30%, #FF8210, #c75a00); top:10%; right:-15px; animation-delay:0s; opacity:.6; }
-.bubble.b2 { width:45px; height:45px; background: radial-gradient(circle at 30% 30%, #262362, #1a1645); top:45%; right:15%; animation-delay:2s; opacity:.4; }
+.bubble.b1 { width:70px; height:70px; background: radial-gradient(circle at 30% 30%, #C9A961, #c75a00); top:10%; right:-15px; animation-delay:0s; opacity:.6; }
+.bubble.b2 { width:45px; height:45px; background: radial-gradient(circle at 30% 30%, #1A1F4E, #1a1645); top:45%; right:15%; animation-delay:2s; opacity:.4; }
 .bubble.b3 { width:55px; height:55px; background: radial-gradient(circle at 30% 30%, #BAAEA1, #8c8270); top:75%; left:-20px; animation-delay:4s; opacity:.5; }
 @keyframes float-bubble {
   0%,100% { transform: translateY(0) rotate(0deg); }
@@ -183,7 +183,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   content: ''; position: absolute;
   left: 0; right: 0; bottom: 2px;
   height: 6px;
-  background: linear-gradient(90deg, rgba(255,130,16,.3), rgba(255,130,16,.1));
+  background: linear-gradient(90deg, rgba(201,169,97,.3), rgba(201,169,97,.1));
   z-index: -1;
   border-radius: 3px;
 }
@@ -196,7 +196,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   border-radius: 50px;
   padding: .25rem .75rem .25rem .3rem;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(38,35,98,.08);
+  box-shadow: 0 4px 12px rgba(26,31,78,.08);
   text-align: left;
 }
 .avatar-photo {
@@ -228,8 +228,8 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   margin-bottom: 1.6rem;
   border: 3px solid var(--gold);
   box-shadow:
-    0 24px 60px -12px rgba(38,35,98,.3),
-    0 10px 24px -8px rgba(255,130,16,.25);
+    0 24px 60px -12px rgba(26,31,78,.3),
+    0 10px 24px -8px rgba(201,169,97,.25);
   aspect-ratio: 16/9;
 }
 .video-frame iframe {
@@ -245,7 +245,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
 .video-placeholder::before {
   content: ''; position: absolute; inset: 0;
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(255,130,16,.12), transparent 40%),
+    radial-gradient(circle at 20% 20%, rgba(201,169,97,.12), transparent 40%),
     radial-gradient(circle at 80% 80%, rgba(186,174,161,.08), transparent 40%);
 }
 .play-btn {
@@ -254,26 +254,26 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   background: var(--gold);
   display: flex; align-items: center; justify-content: center;
   color: var(--white); font-size: 1.6rem;
-  box-shadow: 0 8px 24px rgba(255,130,16,.45);
+  box-shadow: 0 8px 24px rgba(201,169,97,.45);
   animation: pulse-ring 2.5s infinite;
 }
 @keyframes pulse-ring {
-  0%,100% { box-shadow: 0 8px 24px rgba(255,130,16,.45), 0 0 0 0 rgba(255,130,16,.5); }
-  50%     { box-shadow: 0 8px 24px rgba(255,130,16,.45), 0 0 0 16px rgba(255,130,16,0); }
+  0%,100% { box-shadow: 0 8px 24px rgba(201,169,97,.45), 0 0 0 0 rgba(201,169,97,.5); }
+  50%     { box-shadow: 0 8px 24px rgba(201,169,97,.45), 0 0 0 16px rgba(201,169,97,0); }
 }
 .before-after-overlay {
   position: absolute; top: .8rem; left: .8rem;
   display: flex; gap: .4rem; z-index: 2;
 }
 .ba-badge {
-  background: rgba(38,35,98,.85);
+  background: rgba(26,31,78,.85);
   backdrop-filter: blur(8px);
   color: var(--white);
   font-family: var(--f-btn);
   font-size: .58rem; font-weight: 700;
   letter-spacing: 2px; text-transform: uppercase;
   padding: .35rem .75rem; border-radius: 4px;
-  border: 1px solid rgba(255,130,16,.3);
+  border: 1px solid rgba(201,169,97,.3);
 }
 
 .hero-body-hook {
@@ -288,7 +288,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   color: var(--navy); font-weight: 400;
 }
 .hero-body-hook mark {
-  background: linear-gradient(120deg, rgba(255,130,16,.25), rgba(255,168,74,.15));
+  background: linear-gradient(120deg, rgba(201,169,97,.25), rgba(255,168,74,.15));
   padding: 2px 4px; border-radius: 2px;
   color: var(--navy); font-weight: 600;
 }
@@ -314,7 +314,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
   transition: left .6s ease;
 }
-.btn-cta:hover { transform: translateY(-2px); box-shadow: 0 18px 48px -8px rgba(255,130,16,.5); }
+.btn-cta:hover { transform: translateY(-2px); box-shadow: 0 18px 48px -8px rgba(201,169,97,.5); }
 .btn-cta:hover::before { left: 100%; }
 .btn-cta-sub {
   display: block; font-size: .56rem; font-weight: 400;
@@ -342,7 +342,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
     0 5px 0 #9A6E00,
     0 7px 0 rgba(120,80,0,.35),
     0 10px 28px rgba(200,150,12,.28),
-    0 20px 50px rgba(38,35,98,.15);
+    0 20px 50px rgba(26,31,78,.15);
   transform: perspective(500px) rotateX(1.5deg);
   transition: transform .2s ease, box-shadow .2s ease;
   border: 1.5px solid #D4A017;
@@ -355,7 +355,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
     0 5px 0 #9A6E00,
     0 7px 0 rgba(120,80,0,.35),
     0 16px 40px rgba(200,150,12,.38),
-    0 28px 60px rgba(38,35,98,.18);
+    0 28px 60px rgba(26,31,78,.18);
 }
 .trust-badge::before {
   content: '';
@@ -372,7 +372,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   gap: .1rem; z-index: 2;
   padding-bottom: .6rem;
 }
-.badge-icon-main { font-size: 1rem; line-height: 1; filter: drop-shadow(0 1px 2px rgba(38,35,98,.3)); }
+.badge-icon-main { font-size: 1rem; line-height: 1; filter: drop-shadow(0 1px 2px rgba(26,31,78,.3)); }
 .badge-lbl-top {
   font-family: var(--f-btn); font-size: .4rem; font-weight: 700;
   letter-spacing: 1.8px; text-transform: uppercase; color: var(--navy); line-height: 1.3;
@@ -410,12 +410,12 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   background: linear-gradient(135deg, var(--beige-soft), var(--off-white));
   border-radius: 14px;
   border-left: 3px solid var(--gold);
-  box-shadow: 0 4px 12px rgba(38,35,98,.06);
+  box-shadow: 0 4px 12px rgba(26,31,78,.06);
   transition: transform var(--tr), box-shadow var(--tr);
 }
 .check-item:hover {
   transform: translateX(4px);
-  box-shadow: 0 8px 20px rgba(38,35,98,.1);
+  box-shadow: 0 8px 20px rgba(26,31,78,.1);
 }
 .check-mark {
   width: 28px; height: 28px; border-radius: 50%;
@@ -424,7 +424,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   display: flex; align-items: center; justify-content: center;
   font-size: .8rem; font-weight: 700;
   flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(255,130,16,.35);
+  box-shadow: 0 4px 10px rgba(201,169,97,.35);
 }
 .check-text {
   font-size: .84rem; line-height: 1.72;
@@ -451,7 +451,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
 .section-process::before {
   content: ''; position: absolute; inset: 0;
   background-image:
-    radial-gradient(circle at 20% 10%, rgba(255,130,16,.08), transparent 40%),
+    radial-gradient(circle at 20% 10%, rgba(201,169,97,.08), transparent 40%),
     radial-gradient(circle at 80% 90%, rgba(186,174,161,.05), transparent 40%);
 }
 .section-process .container { position: relative; z-index: 1; }
@@ -488,7 +488,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   font-size: 1.3rem; font-weight: 600;
   display: flex; align-items: center; justify-content: center;
   box-shadow:
-    0 8px 24px rgba(255,130,16,.45),
+    0 8px 24px rgba(201,169,97,.45),
     inset 0 2px 4px rgba(255,255,255,.25),
     inset 0 -2px 4px rgba(0,0,0,.15);
   border: 2px solid var(--navy);
@@ -594,7 +594,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   padding: 1.5rem 1.3rem;
   margin: 1.5rem 0;
   box-shadow: var(--shadow-3d);
-  border: 1px solid rgba(255,130,16,.2);
+  border: 1px solid rgba(201,169,97,.2);
 }
 .case-detail-row {
   margin-bottom: 1rem;
@@ -627,7 +627,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
 .section-warranty::before {
   content: ''; position: absolute;
   width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(255,130,16,.08), transparent 70%);
+  background: radial-gradient(circle, rgba(201,169,97,.08), transparent 70%);
   top: -100px; right: -150px;
   pointer-events: none;
 }
@@ -664,7 +664,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   padding: 2rem 2.5rem;
   box-shadow:
     var(--shadow-3d),
-    inset 0 0 0 1px rgba(255,130,16,.1);
+    inset 0 0 0 1px rgba(201,169,97,.1);
   position: relative;
 }
 .warranty-laurel {
@@ -716,7 +716,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
 }
 .offer-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 24px 60px -12px rgba(38,35,98,.22);
+  box-shadow: 0 24px 60px -12px rgba(26,31,78,.22);
 }
 .offer-card:hover::before { transform: scaleX(1); }
 .offer-num {
@@ -727,7 +727,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   font-size: 1.4rem; font-weight: 600;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(38,35,98,.25);
+  box-shadow: 0 4px 12px rgba(26,31,78,.25);
   border: 2px solid var(--gold);
 }
 .offer-body {
@@ -762,7 +762,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   background: var(--white);
   padding: .85rem 1rem;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(38,35,98,.05);
+  box-shadow: 0 3px 10px rgba(26,31,78,.05);
   border-left: 3px solid var(--gold);
 }
 .wwd-check-mark {
@@ -796,13 +796,13 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   display: flex; align-items: center; justify-content: center;
   font-size: 2.4rem;
   color: var(--navy);
-  box-shadow: 0 6px 16px rgba(38,35,98,.1);
+  box-shadow: 0 6px 16px rgba(26,31,78,.1);
   overflow: hidden;
   position: relative;
 }
 .wwd-gallery-img::after {
   content: ''; position: absolute; inset: 0;
-  background: linear-gradient(135deg, transparent, rgba(38,35,98,.1));
+  background: linear-gradient(135deg, transparent, rgba(26,31,78,.1));
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -967,7 +967,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
 }
 .service-img::after {
   content: ''; position: absolute; inset: 0;
-  background: radial-gradient(circle at 70% 30%, rgba(255,130,16,.15), transparent 60%);
+  background: radial-gradient(circle at 70% 30%, rgba(201,169,97,.15), transparent 60%);
 }
 .service-h3 {
   font-family: var(--f-display);
@@ -1032,13 +1032,13 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   border-radius: 50px;
   overflow: hidden;
   position: relative;
-  box-shadow: inset 0 2px 4px rgba(38,35,98,.08);
+  box-shadow: inset 0 2px 4px rgba(26,31,78,.08);
 }
 .progress-fill {
   height: 100%;
   background: linear-gradient(90deg, var(--gold), var(--gold-l));
   border-radius: 50px;
-  box-shadow: 0 2px 8px rgba(255,130,16,.4);
+  box-shadow: 0 2px 8px rgba(201,169,97,.4);
   transition: width 1.5s cubic-bezier(.4,0,.2,1);
   position: relative;
 }
@@ -1110,7 +1110,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   max-height: 92vh;
   overflow-y: auto;
   animation: slideUp .4s cubic-bezier(.4,0,.2,1);
-  box-shadow: 0 -20px 60px rgba(38,35,98,.4);
+  box-shadow: 0 -20px 60px rgba(26,31,78,.4);
   position: relative;
 }
 @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
@@ -1171,7 +1171,7 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
 }
 .form-field:focus {
   border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(255,130,16,.15);
+  box-shadow: 0 0 0 3px rgba(201,169,97,.15);
 }
 .form-field::placeholder { color: #999; }
 
@@ -1181,12 +1181,12 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
   padding: 1.6rem 1rem;
   text-align: center;
   cursor: pointer;
-  background: rgba(255,130,16,.03);
+  background: rgba(201,169,97,.03);
   margin-bottom: .8rem;
   transition: all var(--tr);
 }
 .upload-zone:hover, .upload-zone.drag-over {
-  background: rgba(255,130,16,.08);
+  background: rgba(201,169,97,.08);
   border-color: var(--gold-d);
 }
 .upload-zone.has-file {
@@ -1299,15 +1299,15 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
 <nav class="vip-nav">
   <div class="brand">
     <svg class="brand-crown" viewBox="0 0 32 40" fill="none">
-      <polygon points="8,14 10,4 12,10" fill="#FF8210"/>
+      <polygon points="8,14 10,4 12,10" fill="#C9A961"/>
       <polygon points="12,12 14,2 16,8" fill="#FFA84A"/>
       <polygon points="16,12 18,2 20,8" fill="#FFA84A"/>
-      <polygon points="20,12 22,4 24,10" fill="#FF8210"/>
-      <rect x="7" y="13" width="18" height="12" rx="2" fill="#FF8210"/>
-      <circle cx="11" cy="20" r="1.2" fill="#262362"/>
-      <circle cx="16" cy="20" r="1.2" fill="#262362"/>
-      <circle cx="21" cy="20" r="1.2" fill="#262362"/>
-      <rect x="13" y="25" width="6" height="14" rx="3" fill="#FF8210"/>
+      <polygon points="20,12 22,4 24,10" fill="#C9A961"/>
+      <rect x="7" y="13" width="18" height="12" rx="2" fill="#C9A961"/>
+      <circle cx="11" cy="20" r="1.2" fill="#1A1F4E"/>
+      <circle cx="16" cy="20" r="1.2" fill="#1A1F4E"/>
+      <circle cx="21" cy="20" r="1.2" fill="#1A1F4E"/>
+      <rect x="13" y="25" width="6" height="14" rx="3" fill="#C9A961"/>
     </svg>
     <div>
       <div class="brand-name">VIP HOME PAINTING</div>
@@ -1923,12 +1923,12 @@ em.italic, .serif-italic { font-family: var(--f-display); font-style: italic; fo
 <footer class="vip-footer">
   <div class="brand">
     <svg class="brand-crown" viewBox="0 0 32 40" fill="none">
-      <polygon points="8,14 10,4 12,10" fill="#FF8210"/>
+      <polygon points="8,14 10,4 12,10" fill="#C9A961"/>
       <polygon points="12,12 14,2 16,8" fill="#FFA84A"/>
       <polygon points="16,12 18,2 20,8" fill="#FFA84A"/>
-      <polygon points="20,12 22,4 24,10" fill="#FF8210"/>
-      <rect x="7" y="13" width="18" height="12" rx="2" fill="#FF8210"/>
-      <rect x="13" y="25" width="6" height="14" rx="3" fill="#FF8210"/>
+      <polygon points="20,12 22,4 24,10" fill="#C9A961"/>
+      <rect x="7" y="13" width="18" height="12" rx="2" fill="#C9A961"/>
+      <rect x="13" y="25" width="6" height="14" rx="3" fill="#C9A961"/>
     </svg>
     <div>
       <div class="brand-name">VIP HOME PAINTING</div>

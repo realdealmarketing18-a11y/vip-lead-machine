@@ -12,10 +12,14 @@ import WhatWeDoSection from './components/WhatWeDoSection'
 import WhyChooseUsSection from './components/WhyChooseUsSection'
 import TestimonialsSection from './components/TestimonialsSection'
 import ServicesSection from './components/ServicesSection'
+import CommunityLinksSection from './components/CommunityLinksSection'
 import FAQSection from './components/FAQSection'
 import CTASection from './components/CTASection'
 import ContactModal from './components/ContactModal'
 import Footer from './components/Footer'
+import AdminDashboard from './components/AdminDashboard'
+import CityPage from './components/CityPage'
+
 
 /* ── Sticky Nav ── */
 function Nav({ onBookClick }) {
@@ -82,7 +86,7 @@ const scrollTopStyles = {
   right: '32px',
   width: '44px',
   height: '44px',
-  background: '#e8833a',
+  background: '#C9A961',
   border: 'none',
   color: '#FFFFFF',
   display: 'flex',
@@ -97,9 +101,25 @@ const scrollTopStyles = {
 /* ── App ── */
 export default function App() {
   const [modalOpen, setModalOpen] = useState(false)
+  const [path, setPath] = useState(window.location.pathname)
+
+  useEffect(() => {
+    const onLocationChange = () => setPath(window.location.pathname)
+    window.addEventListener('popstate', onLocationChange)
+    return () => window.removeEventListener('popstate', onLocationChange)
+  }, [])
 
   const openModal  = () => setModalOpen(true)
   const closeModal = () => setModalOpen(false)
+
+  if (path === '/admin') {
+    return <AdminDashboard />
+  }
+
+  if (path !== '/' && path !== '') {
+    const slug = path.substring(1).replace('painting/', '')
+    return <CityPage slug={slug} />
+  }
 
   return (
     <>
@@ -139,7 +159,10 @@ export default function App() {
         {/* 11 — Services (Exterior / Interior / Cabinets) */}
         <ServicesSection onBookClick={openModal} />
 
-        {/* 12 — FAQ */}
+        {/* 12 — Community Area Links */}
+        <CommunityLinksSection />
+
+        {/* 13 — FAQ */}
         <FAQSection />
 
         {/* 13 — CTA */}

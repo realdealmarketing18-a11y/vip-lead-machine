@@ -86,7 +86,7 @@ Write a briefing summary at the top of `log.md` with:
 NEVER SAY: AI, automated, algorithm, cheap, affordable, discount, budget, save money
 ALWAYS SAY: Custom Visualization Service, VIP Concierge, estate, investment, prestige, architectural integrity
 
-Colors: Orange #e8833a | Navy #1a1f4e
+Colors: Orange #E8833A | Navy #1A1F4E | Gold #C9A961
 Phone: (909) 312-5400
 Tagline: "See It. Love It. Paint It."
 Avatar: Claire — 42-55, HNW female, fear = wrong contractor, embarrassing result

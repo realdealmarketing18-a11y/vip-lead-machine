@@ -20,15 +20,15 @@ export default function Hero({ onBookClick }) {
           
           {/* 1. Story Headline (Smaller to fit screen) */}
           <motion.div {...fadeUp(0.1)} style={styles.headlineWrapper}>
-            <p className="overline" style={{ color: '#e8833a', marginBottom: '8px' }}>VIP Premier Experience</p>
+            <p className="overline" style={{ color: '#C9A961', marginBottom: '8px' }}>Luxury Residential Painting Orange County</p>
             <h1 className="headline" style={styles.headlineText}>
-              The Bridges homeowners Douglas & Sheri saved $1,000's by <em className="headline-accent">previewing their colors</em>.
+              Discover how Pelican Hill homeowners The Gallagher Family transformed their Newport Beach estate in just 5 days with our <em className="headline-accent">Custom Visualization Service</em>.
             </h1>
             <div style={{...styles.profileBox, margin: '24px auto 0 auto', width: 'fit-content'}}>
-              <img src={COUPLE_AVATAR} alt="Douglas and Sheri" style={styles.avatarImg} />
+              <img src={COUPLE_AVATAR} alt="The Gallagher Family" style={styles.avatarImg} />
               <div style={styles.profileText}>
-                <span style={styles.profileName}>Douglas & Sheri</span>
-                <span style={styles.profileLocation}>Rancho Cucamonga Homeowners</span>
+                <span style={styles.profileName}>The Gallagher Family</span>
+                <span style={styles.profileLocation}>Pelican Hill, Newport Beach Homeowners</span>
               </div>
             </div>
           </motion.div>
@@ -36,7 +36,7 @@ export default function Hero({ onBookClick }) {
           {/* 2. Story-telling Video Below (Constrained max height to fit viewport) */}
           <motion.div {...fadeUp(0.2)} style={styles.videoWrapper}>
             <div style={styles.videoCard}>
-              <img src={HERO_VIDEO_THUMBNAIL} alt="Douglas & Sheri transformation story" style={styles.videoThumbnail} />
+              <img src={HERO_VIDEO_THUMBNAIL} alt="The Gallagher Family transformation story" style={styles.videoThumbnail} />
               <div style={styles.videoOverlay} />
               <button style={styles.playBtn} onClick={() => setVideoOpen(true)}>
                 <div style={styles.playCircle}>
@@ -51,7 +51,7 @@ export default function Hero({ onBookClick }) {
           {/* 3. Underneath Sub Headline */}
           <motion.div {...fadeUp(0.3)} style={styles.subHeadlineWrapper}>
             <h2 className="headline" style={styles.subheadlineText}>
-              "We saw the finished room before a single can was opened."
+              "We saw the finished estate before a single brush touched the surface."
             </h2>
           </motion.div>
 
@@ -66,7 +66,7 @@ export default function Hero({ onBookClick }) {
           <motion.div {...fadeUp(0.5)} style={styles.bannerWrapper}>
             <div style={styles.bannerItem}>
               <div style={styles.prestigeIconBox}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
               </div>
               <div style={styles.bannerTextCol}>
                 <strong style={styles.bannerBold}>Custom Color Scheme</strong>
@@ -78,7 +78,7 @@ export default function Hero({ onBookClick }) {
 
             <div style={styles.bannerItem}>
               <div style={styles.prestigeIconBox}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
               </div>
               <div style={styles.bannerTextCol}>
                 <strong style={styles.bannerBold}>1-Year Warranty</strong>
@@ -180,12 +180,12 @@ const styles = {
     width: '64px',
     height: '64px',
     borderRadius: '50%',
-    background: '#e8833a',
+    background: '#C9A961',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     paddingLeft: '4px',
-    boxShadow: '0 4px 16px rgba(232,131,58,0.4)',
+    boxShadow: '0 4px 16px rgba(201, 169, 97,0.4)',
   },
   subHeadlineWrapper: {
     display: 'flex',
@@ -260,7 +260,7 @@ const styles = {
     width: '40px',
     height: '40px',
     borderRadius: '50%',
-    background: 'rgba(232,131,58,0.08)',
+    background: 'rgba(201, 169, 97,0.08)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

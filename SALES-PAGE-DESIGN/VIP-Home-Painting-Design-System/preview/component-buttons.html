@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="CTA Buttons" subtitle="Primary gold pill + outline + link" viewport="700x220" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Buttons · VIP Home Painting</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; font-family: var(--font-sans); }
+  .card { padding: 32px; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; max-width: 520px; }
+  .btn-gold { display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; border-radius: 4px; border: 1px solid rgba(168,138,71,0.40); background: var(--vip-gold-shine); color: #fff; font-family: var(--font-sans); font-weight: 700; font-size: 12px; letter-spacing: 0.20em; text-transform: uppercase; box-shadow: var(--shadow-gold); cursor: pointer; }
+  .btn-gold svg { width: 14px; height: 14px; }
+  .btn-gold.lg { padding: 18px 32px; font-size: 13px; }
+  .btn-outline { display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; border-radius: 4px; border: 1.5px solid var(--vip-navy); color: var(--vip-navy); background: transparent; font-family: var(--font-sans); font-weight: 700; font-size: 11.5px; letter-spacing: 0.20em; text-transform: uppercase; cursor: pointer; }
+  .btn-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-sans); font-weight: 700; color: var(--vip-gold-deep); font-size: 11.5px; letter-spacing: 0.20em; text-transform: uppercase; text-decoration: none; }
+  .lbl { font-family: var(--font-serif); font-style: italic; font-size: 12px; color: var(--fg-muted); margin-top: -8px; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="lbl">Primary CTA</div>
+  <button class="btn-gold lg">Get My Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+  <div class="lbl">Standard gold</div>
+  <button class="btn-gold">Watch Their Story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+  <div class="lbl">Secondary · Outline</div>
+  <button class="btn-outline">See All Services</button>
+  <div class="lbl">Tertiary · Text Link</div>
+  <a class="btn-link">Learn More →</a>
+</div>
+</body>
+</html>

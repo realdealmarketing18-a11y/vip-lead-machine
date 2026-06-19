@@ -3,28 +3,28 @@ import { motion, AnimatePresence, useInView } from 'framer-motion';
 
 const FAQS = [
   {
-    q: 'How much does exterior painting cost in The Bridges?',
-    a: 'Exterior painting for homes in The Bridges, Rancho Cucamonga typically ranges from $8,000 to $25,000 depending on home size, surface condition, and color complexity. We provide free detailed estimates after your color consultation.'
+    q: 'How much does exterior painting cost in Orange County?',
+    a: 'Exterior painting for luxury estates in Orange County typically ranges from $15,000 to $45,000 depending on home size, surface condition, and color complexity. For Newport Beach estates, our pricing starts at $5.50/sqft for exterior and $4.50/sqft for interior, while Irvine estates average $4.75/sqft for exterior and $3.95/sqft for interior. We provide custom color visualizations and precise investment estimates prior to commencing work.'
   },
   {
-    q: 'Do you offer the visualization service for every home?',
-    a: 'Yes — that\'s our signature service. Our custom visualization process shows your exact home in 3 premium color schemes before we touch a single brush.'
+    q: 'Do you offer the Custom Visualization Service for every estate?',
+    a: 'Yes — this is our signature service. Our Custom Visualization Service shows your exact home in three premium color schemes before we touch a single brush, ensuring flawless execution and absolute confidence in your color selection.'
   },
   {
-    q: 'How long does a project take?',
-    a: 'Most projects in The Bridges complete in 3–5 days. We work Monday through Saturday to minimize disruption.'
+    q: 'How long does a typical residential painting project take?',
+    a: 'Most luxury residential projects in Orange County are completed in 3 to 5 days. Our design team and professional crews work Monday through Saturday to minimize disruption and maintain the architectural integrity of your property.'
   },
   {
-    q: 'Do you know the HOA requirements for The Bridges?',
-    a: 'The Bridges in Rancho Cucamonga is one of our primary service areas. We understand the Tuscan, Mediterranean, Spanish Colonial architectural styles and HOA requirements that The Bridges homeowners expect.'
+    q: 'Do you understand the specific HOA requirements for Orange County luxury communities?',
+    a: 'Absolutely. We routinely work within prestigious Orange County communities, including Pelican Hill, Crystal Cove, Shady Canyon, Ladera Ranch, and Coto de Caza. We understand the specific Tuscan, Mediterranean, and Spanish Colonial architectural styles and the rigorous HOA guidelines required for these estates.'
   },
   {
-    q: 'Have you painted homes near us in Rancho Cucamonga?',
-    a: 'We\'ve transformed homes throughout The Bridges, including on Tournament Lane, Greenfield Drive and near Victoria Gardens.'
+    q: 'Have you painted homes near us in Orange County?',
+    a: 'Yes, we have transformed luxury properties throughout Orange County, including estates in Pelican Hill and Dover Shores in Newport Beach, Crystal Cove in Newport Coast, and Shady Canyon in Irvine.'
   },
   {
-    q: 'What quality of paint do you use?',
-    a: 'We exclusively use Sherwin-Williams Duration and Emerald — the gold standard for luxury homes. Every job includes our 1-Year Satisfaction Warranty.'
+    q: 'What brand of paint and materials do you use?',
+    a: 'We exclusively use Sherwin-Williams premium lines, including Emerald and Duration — the gold standard for luxury exterior protection. Every project represents a high-prestige investment, backed by our VIP concierge support and warranty.'
   }
 ];
 
@@ -44,7 +44,7 @@ export default function FAQSection() {
           style={styles.colLeft}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-            <div style={{ width: '40px', height: '2px', background: '#e8833a' }} />
+            <div style={{ width: '40px', height: '2px', background: '#C9A961' }} />
             <span className="overline">Knowledge Base</span>
           </div>
           <h2 className="headline headline-lg" style={{ color: '#1a1f4e', marginBottom: '24px' }}>
@@ -52,7 +52,7 @@ export default function FAQSection() {
             <em className="headline-accent">Questions</em>
           </h2>
           <p className="headline headline-sm" style={{ color: '#595959', fontStyle: 'italic', maxWidth: '400px' }}>
-            — The Bridges Painting
+            — Orange County Painting
           </p>
         </motion.div>
 
@@ -70,11 +70,11 @@ export default function FAQSection() {
                   style={styles.faqButton} 
                   onClick={() => setOpenIndex(isOpen ? -1 : i)}
                 >
-                  <span className="headline headline-sm" style={{ ...styles.qText, color: isOpen ? '#e8833a' : '#1a1f4e' }}>
+                  <span className="headline headline-sm" style={{ ...styles.qText, color: isOpen ? '#C9A961' : '#1a1f4e' }}>
                     {faq.q}
                   </span>
-                  <div style={{ ...styles.iconWrap, background: isOpen ? '#e8833a' : '#F8F7F4' }}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={isOpen ? "#FFF" : "#e8833a"} strokeWidth="2">
+                  <div style={{ ...styles.iconWrap, background: isOpen ? '#C9A961' : '#F8F7F4' }}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={isOpen ? "#FFF" : "#C9A961"} strokeWidth="2">
                       {isOpen ? <path d="M5 12h14" /> : <> <path d="M12 5v14" /> <path d="M5 12h14" /> </>}
                     </svg>
                   </div>

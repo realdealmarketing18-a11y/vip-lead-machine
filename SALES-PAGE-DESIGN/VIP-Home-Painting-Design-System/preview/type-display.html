@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Type" name="Display Type" subtitle="Fraunces SemiBold hero specimen" viewport="700x220" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Display Type · VIP Home Painting</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; font-family: var(--font-sans); }
+  .card { padding: 36px 32px; }
+  .h1 { font-family: var(--font-serif); font-weight: 600; font-size: 60px; line-height: 1.02; letter-spacing: -0.02em; color: var(--vip-navy); margin: 0; }
+  .h1 .accent { display: block; font-style: italic; font-weight: 500; color: var(--vip-gold-deep); position: relative; padding-bottom: 8px; }
+  .h1 .accent::after {
+    content: ''; display: block; width: 60%; height: 6px; margin-top: 4px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'><path d='M2 8 Q 50 1 100 6 T 198 5' stroke='%23C9A961' stroke-width='3' fill='none' stroke-linecap='round'/></svg>") no-repeat center/100% 100%;
+  }
+  .meta { display: flex; gap: 18px; margin-top: 22px; font-size: 11px; color: var(--fg-muted); font-family: ui-monospace, Menlo, monospace; }
+  .meta strong { color: var(--vip-navy); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1 class="h1">Transformed<span class="accent">Miguel &amp; Karla's</span>Home</h1>
+  <div class="meta">
+    <span><strong>Fraunces</strong></span>
+    <span><strong>SemiBold + Italic</strong></span>
+    <span><strong>60 / 61</strong></span>
+    <span><strong>brush underline</strong></span>
+  </div>
+</div>
+</body>
+</html>

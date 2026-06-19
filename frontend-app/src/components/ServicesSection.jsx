@@ -15,9 +15,9 @@ const SERVICES = [
       '1-Year warranty included',
     ],
     videoTitle: 'Home Exterior Painting Transformation',
-    videoSub: 'Inland Empire, Southern California',
+    videoSub: 'Newport Beach, Orange County',
     thumb: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop',
-    accent: '#e8833a',
+    accent: '#C9A961',
   },
   {
     id: 'interior',
@@ -32,7 +32,7 @@ const SERVICES = [
       'Post-project deep clean',
     ],
     videoTitle: 'Interior Painting Transformation',
-    videoSub: 'Luxury Home Interior — Inland Empire',
+    videoSub: 'Luxury Home Interior — Pelican Hill',
     thumb: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop',
     accent: '#1a1f4e',
   },
@@ -49,9 +49,9 @@ const SERVICES = [
       'Durable, washable finish',
     ],
     videoTitle: 'Kitchen Cabinet Transformation',
-    videoSub: 'Inland Empire Kitchen Refresh',
+    videoSub: 'Irvine Estate Kitchen Refresh',
     thumb: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1200&auto=format&fit=crop',
-    accent: '#e8833a',
+    accent: '#C9A961',
   },
 ]
 
@@ -96,7 +96,7 @@ export default function ServicesSection({ onBookClick }) {
           </div>
           <h2 className="headline headline-lg" style={styles.headline}>
             Premium Painting Services<br />
-            <em style={{ color: '#e8833a', fontStyle: 'italic' }}>Built For Discerning Homeowners</em>
+            <em style={{ color: '#C9A961', fontStyle: 'italic' }}>Built For Discerning Homeowners</em>
           </h2>
           <p className="body-text" style={styles.sub}>
             Every service backed by our 1-Year Warranty and Sherwin-Williams premium materials
@@ -129,7 +129,7 @@ export default function ServicesSection({ onBookClick }) {
                 <ul style={styles.featureList}>
                   {svc.features.map((f) => (
                     <li key={f} style={styles.featureItem}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="2.5">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="2.5">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
                       <span style={styles.featureText}>{f}</span>
@@ -186,15 +186,15 @@ const vStyles = {
     width: '60px',
     height: '60px',
     borderRadius: '50%',
-    background: '#e8833a',
+    background: '#C9A961',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     paddingLeft: '3px',
-    boxShadow: '0 6px 24px rgba(232,131,58,0.45)',
+    boxShadow: '0 6px 24px rgba(201, 169, 97,0.45)',
   },
   watchLabel: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.52rem',
     fontWeight: 700,
     letterSpacing: '0.2em',
@@ -208,14 +208,14 @@ const vStyles = {
     zIndex: 5,
   },
   badgeTitle: {
-    fontFamily: "'Cormorant Garamond', serif",
+    fontFamily: "'Fraunces', serif",
     fontSize: '0.95rem',
     color: '#FFFFFF',
     margin: '0 0 3px',
     fontWeight: 500,
   },
   badgeSub: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.5rem',
     letterSpacing: '0.15em',
     color: 'rgba(255,255,255,0.5)',
@@ -228,7 +228,7 @@ const styles = {
   section: { background: '#F8F7F4' },
   header: { marginBottom: '64px', maxWidth: '700px' },
   labelRow: { display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px' },
-  labelLine: { width: '32px', height: '2px', background: '#e8833a' },
+  labelLine: { width: '32px', height: '2px', background: '#C9A961' },
   headline: { color: '#1a1f4e', marginBottom: '16px' },
   sub: { fontSize: '1rem' },
   servicesCol: { display: 'flex', flexDirection: 'column', gap: '80px' },
@@ -246,14 +246,14 @@ const styles = {
     gap: '16px',
   },
   serviceNum: {
-    fontFamily: "'Cormorant Garamond', serif",
+    fontFamily: "'Fraunces', serif",
     fontSize: '4rem',
     fontWeight: 300,
     lineHeight: 1,
     margin: 0,
   },
   serviceSub: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.6rem',
     fontWeight: 700,
     letterSpacing: '0.18em',
@@ -277,7 +277,7 @@ const styles = {
     gap: '10px',
   },
   featureText: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.82rem',
     color: '#4a4a4a',
     fontWeight: 400,

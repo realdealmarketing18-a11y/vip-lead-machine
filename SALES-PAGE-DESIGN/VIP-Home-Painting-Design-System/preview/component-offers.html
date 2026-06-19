@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Offer Cards" subtitle="$750 OFF · FREE Consult · FREE Pressure Wash" viewport="700x200" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Offer Cards · VIP Home Painting</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; font-family: var(--font-sans); }
+  .card { padding: 38px 32px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+
+  /* ============ MINTED GOLD-PLATED OFFER TILE ============ */
+  .offer {
+    position: relative;
+    padding: 26px 16px 22px;
+    border-radius: 12px;
+    overflow: visible;
+    text-align: center;
+    transition: transform 360ms cubic-bezier(.22,1,.36,1);
+
+    /* Layered radial base — light from upper-left through mid-gold to deep antique bottom-right */
+    background:
+      /* dim reflection at bottom-right corner */
+      radial-gradient(130% 130% at 82% 96%, rgba(94,64,0,0.45) 0%, rgba(94,64,0,0) 50%),
+      /* primary gold gradient with cream highlight upper-left */
+      radial-gradient(140% 140% at 22% 16%, #FFF6CF 0%, #F8D979 18%, #E6BB48 40%, #C9A961 64%, #8A6D2E 100%);
+
+    /* Triple ring edge + glow + contact + inner bevel — same recipe as the step coins */
+    box-shadow:
+      /* hard engraved edge */
+      0 0 0 1px #5E4310,
+      /* bright bevel ring just outside */
+      0 0 0 2.5px #F2D896,
+      /* outer dark seat */
+      0 0 0 3.5px #4A380F,
+      /* warm gold radiating glow */
+      0 22px 40px rgba(168,138,71,0.50),
+      0 8px 18px rgba(168,138,71,0.36),
+      /* tight contact shadow */
+      0 3px 6px rgba(0,0,0,0.28),
+      /* inner top highlight (bevel catching light) */
+      inset 0 3px 4px rgba(255,255,255,0.65),
+      /* inner bottom shadow (bevel in shade) */
+      inset 0 -3px 6px rgba(94,64,0,0.55),
+      /* inner left/right edge gloss */
+      inset 2px 0 4px rgba(255,236,160,0.30),
+      inset -2px 0 4px rgba(94,64,0,0.35);
+  }
+  .offer:hover { transform: translateY(-4px) scale(1.04); }
+
+  /* Specular cap — soft white reflection floats on top third */
+  .offer::before {
+    content: '';
+    position: absolute;
+    top: 6%; left: 10%; right: 10%; height: 38%;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at 50% 28%, rgba(255,255,255,0.65), rgba(255,255,255,0) 70%);
+    pointer-events: none;
+    filter: blur(2.5px);
+    z-index: 2;
+  }
+  /* Conic micro-glints — overlay-blend ring inside the tile for polished sheen */
+  .offer::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 8px;
+    background:
+      conic-gradient(
+        from 215deg at 50% 50%,
+        rgba(94,64,0,0.28)   0deg,
+        rgba(255,255,255,0)  30deg,
+        rgba(94,64,0,0)      60deg,
+        rgba(255,255,255,0.30) 90deg,
+        rgba(94,64,0,0)      130deg,
+        rgba(255,255,255,0)  180deg,
+        rgba(94,64,0,0.28)   240deg,
+        rgba(94,64,0,0)      300deg,
+        rgba(255,255,255,0.18) 330deg,
+        rgba(94,64,0,0.20)   360deg
+      );
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ============ ENGRAVED CONTENT ============ */
+  .offer .amt {
+    position: relative; z-index: 3;
+    font-family: var(--font-serif); font-weight: 700; font-style: italic;
+    font-size: 36px; color: #5E4310; line-height: 1; letter-spacing: -0.03em;
+    text-shadow:
+      0 1px 0 rgba(255,243,200,0.75),
+      0 -1px 0 rgba(60,40,0,0.55);
+  }
+  .offer .amt span {
+    display: inline-block;
+    font-size: 12px; font-style: normal; font-family: var(--font-sans);
+    font-weight: 800; letter-spacing: 0.18em; vertical-align: 6px;
+    color: #5E4310; margin-left: 5px;
+    text-shadow:
+      0 1px 0 rgba(255,243,200,0.65),
+      0 -1px 0 rgba(60,40,0,0.45);
+  }
+  .offer .amt.word { font-size: 26px; }
+
+  .offer .desc {
+    position: relative; z-index: 3;
+    font-family: var(--font-serif); font-style: italic;
+    font-size: 12px; color: #3A2A08; line-height: 1.4;
+    margin-top: 12px;
+    text-shadow: 0 1px 0 rgba(255,243,200,0.55);
+  }
+  .offer .val {
+    display: block; margin-top: 4px;
+    font-family: var(--font-sans); font-style: normal; font-weight: 700;
+    font-size: 10px; color: #5E4310; letter-spacing: 0.10em;
+    opacity: 0.82;
+    text-shadow: 0 1px 0 rgba(255,243,200,0.50);
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="offer">
+    <div class="amt">$750<span>OFF</span></div>
+    <div class="desc">Any Full Exterior Paint Job</div>
+  </div>
+  <div class="offer">
+    <div class="amt word">FREE</div>
+    <div class="desc">Color Consultation<span class="val">$250 Value</span></div>
+  </div>
+  <div class="offer">
+    <div class="amt word">FREE</div>
+    <div class="desc">Pressure Wash<span class="val">$300 Value</span></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Color & Type" subtitle="Brand palette + Fraunces/Inter scale" viewport="1280x1600" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VIP — Color & Type</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 48px 40px; background: #FFFFFF; font-family: var(--font-sans); color: var(--vip-navy); }
+  .grid { display: grid; gap: 16px; }
+  .swatch { border-radius: var(--radius-md); padding: 28px 24px; box-shadow: var(--shadow-sm); border: var(--border-hairline); display: flex; flex-direction: column; gap: 6px; min-height: 130px; }
+  .swatch-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+  .swatch-row.row-2 { grid-template-columns: repeat(3, 1fr); }
+  .swatch .name { font-weight: 700; font-size: 14px; letter-spacing: 0.02em; }
+  .swatch .hex { font-family: ui-monospace, monospace; font-size: 12px; opacity: 0.78; margin-top: auto; }
+  .swatch .role { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.7; }
+  .light .name, .light .hex, .light .role { color: #FFFFFF; }
+  .section-title { font-family: var(--font-serif); font-size: 32px; font-weight: 600; letter-spacing: -0.02em; margin: 48px 0 8px; }
+  .section-sub { color: var(--fg-muted); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 24px; }
+  .type-row { display: flex; align-items: baseline; gap: 24px; padding: 18px 0; border-bottom: var(--border-hairline); }
+  .type-meta { width: 180px; font-family: ui-monospace, monospace; font-size: 11px; color: var(--fg-muted); flex-shrink: 0; }
+  .type-meta strong { color: var(--vip-navy); display: block; font-family: var(--font-sans); font-size: 13px; margin-bottom: 2px; }
+  h1.eb { margin: 0; }
+  .eyebrow-demo { color: var(--vip-gold); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="section-sub">Brand Palette</div>
+<div class="section-title">Color</div>
+
+<div class="swatch-row">
+  <div class="swatch light" style="background: var(--vip-gold);">
+    <span class="role">Primary CTA</span>
+    <span class="name">VIP Gold</span>
+    <span class="hex">#C9A961</span>
+  </div>
+  <div class="swatch light" style="background: var(--vip-gold-bright);">
+    <span class="role">Premium / Stars</span>
+    <span class="name">Bright Gold</span>
+    <span class="hex">#FFB200</span>
+  </div>
+  <div class="swatch light" style="background: var(--vip-navy);">
+    <span class="role">Headlines / Dark</span>
+    <span class="name">VIP Navy</span>
+    <span class="hex">#1A1F4E</span>
+  </div>
+  <div class="swatch light" style="background: var(--vip-navy-deep);">
+    <span class="role">Footer / Deepest</span>
+    <span class="name">Navy Deep</span>
+    <span class="hex">#1A1840</span>
+  </div>
+</div>
+
+<div class="swatch-row row-2">
+  <div class="swatch" style="background: var(--vip-cream);">
+    <span class="role">Section Surface</span>
+    <span class="name">Cream</span>
+    <span class="hex">#F8F7F4</span>
+  </div>
+  <div class="swatch" style="background: var(--vip-beige-soft);">
+    <span class="role">Tertiary Surface</span>
+    <span class="name">Beige Soft</span>
+    <span class="hex">#E8E0D6</span>
+  </div>
+  <div class="swatch" style="background: var(--vip-white); border: 2px solid #EEE;">
+    <span class="role">Default Surface</span>
+    <span class="name">White</span>
+    <span class="hex">#FFFFFF</span>
+  </div>
+</div>
+
+<div class="section-sub">Editorial Stack — Fraunces & Inter</div>
+<div class="section-title">Typography</div>
+
+<div class="type-row">
+  <div class="type-meta"><strong>Display</strong>Fraunces 600 / 60px</div>
+  <div style="font-family: var(--font-serif); font-size: 60px; font-weight: 600; line-height: 1.05; letter-spacing: -0.02em; color: var(--vip-navy);">Transformed In <span style="color: var(--vip-gold);">4 Days</span></div>
+</div>
+<div class="type-row">
+  <div class="type-meta"><strong>H1</strong>Fraunces 600 / 48px</div>
+  <div style="font-family: var(--font-serif); font-size: 48px; font-weight: 600; line-height: 1.1; letter-spacing: -0.02em;">Discover the VIP Difference</div>
+</div>
+<div class="type-row">
+  <div class="type-meta"><strong>H2</strong>Fraunces 600 / 40px</div>
+  <div style="font-family: var(--font-serif); font-size: 40px; font-weight: 600; line-height: 1.1; letter-spacing: -0.02em;">Avoid Costly Mistakes</div>
+</div>
+<div class="type-row">
+  <div class="type-meta"><strong>H3</strong>Fraunces 600 / 32px</div>
+  <div style="font-family: var(--font-serif); font-size: 32px; font-weight: 600; line-height: 1.25;">Personalized Color Consultation</div>
+</div>
+<div class="type-row">
+  <div class="type-meta"><strong>H4</strong>Fraunces 600 / 26px</div>
+  <div style="font-family: var(--font-serif); font-size: 26px; font-weight: 600;">Customized Visualizations In 30 Minutes</div>
+</div>
+<div class="type-row">
+  <div class="type-meta"><strong>H5</strong>Inter 700 / 22px</div>
+  <div style="font-family: var(--font-sans); font-size: 22px; font-weight: 700; letter-spacing: -0.01em;">Unlock $1,000 Value in 30 Minutes</div>
+</div>
+<div class="type-row">
+  <div class="type-meta"><strong>Overline</strong>Inter 600 / 12px / 0.18em</div>
+  <div class="eyebrow-demo">Inland Empire Customized Home Painting</div>
+</div>
+<div class="type-row">
+  <div class="type-meta"><strong>Body Large</strong>Inter 400 / 18px / 1.65</div>
+  <div style="font-family: var(--font-sans); font-size: 18px; line-height: 1.65; max-width: 540px; color: var(--fg-primary);">Douglas and Sheri, longtime residents of Fontana, wanted to make their Sierra Lakes home truly their own.</div>
+</div>
+<div class="type-row">
+  <div class="type-meta"><strong>Body</strong>Inter 400 / 16px / 1.65</div>
+  <div style="font-family: var(--font-sans); font-size: 16px; line-height: 1.65; max-width: 520px; color: var(--fg-secondary);">Through a FREE 30-Minute Personalized Color Consultation, we helped them choose a sophisticated color scheme that reflected their unique style.</div>
+</div>
+<div class="type-row">
+  <div class="type-meta"><strong>Caption</strong>Inter 400 / 13px / 0.06em</div>
+  <div style="font-family: var(--font-sans); font-size: 13px; color: var(--fg-muted); letter-spacing: 0.06em;">★★★★★ &nbsp; May 24, 2024 · Google Review</div>
+</div>
+
+<div class="section-sub" style="margin-top: 64px;">Drop Cap</div>
+<div class="section-title">Editorial Drop Cap</div>
+<p class="vip-dropcap" style="font-family: var(--font-sans); font-size: 18px; line-height: 1.65; max-width: 540px; color: var(--fg-primary); margin-top: 0;">Douglas and Sheri, longtime residents of Fontana, wanted to make their Sierra Lakes home truly their own. With our expert guidance and a FREE 30-Minute Personalized Color Consultation, we helped them choose a sophisticated color scheme that reflected their unique style.</p>
+
+</body>
+</html>

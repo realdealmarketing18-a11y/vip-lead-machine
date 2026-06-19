@@ -6,10 +6,10 @@ const SCOPES = [
     num: '01',
     category: 'Residential',
     title: 'Luxury Home Exterior & Interior Painting',
-    body: 'We specialize in transforming single-family homes, estates, and luxury residences throughout the Inland Empire. From curb appeal upgrades to complete interior overhauls — delivered with white-glove precision.',
-    tags: ['Single Family Homes', 'Estates', 'HOA Communities', 'New Construction'],
+    body: 'We specialize in transforming single-family homes, estates, and luxury residences throughout Orange County. From curb appeal upgrades to complete interior overhauls — delivered with white-glove precision.',
+    tags: ['Single Family Estates', 'Gated Communities', 'HOA Compliance', 'New Construction'],
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.6">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.6">
         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
         <polyline points="9 22 9 12 15 12 15 22" />
       </svg>
@@ -19,10 +19,10 @@ const SCOPES = [
     num: '02',
     category: 'Commercial',
     title: 'Commercial & Multi-Family Painting',
-    body: 'Professional painting services for commercial properties, office buildings, retail spaces, and multi-family complexes. Minimal disruption. Exceptional results. Always on schedule.',
-    tags: ['Office Buildings', 'Retail Spaces', 'Apartment Complexes', 'Shopping Centers'],
+    body: 'Professional painting services for commercial properties, custom office suites, retail spaces, and multi-family complexes in Newport Beach and Irvine. Minimal disruption. Exceptional results.',
+    tags: ['Office Suites', 'Retail Boutiques', 'Apartment Complexes', 'Private Clubs'],
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.6">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.6">
         <rect x="2" y="3" width="20" height="18" rx="1" />
         <line x1="8" y1="21" x2="8" y2="3" />
         <line x1="16" y1="21" x2="16" y2="3" />
@@ -35,10 +35,10 @@ const SCOPES = [
     num: '03',
     category: 'Government',
     title: 'Government & Municipal Contracts',
-    body: 'Licensed and bonded for government contracts. We deliver the same premium craftsmanship to municipal buildings, public facilities, and government-owned properties with full compliance and documentation.',
+    body: 'Licensed and bonded for government contracts. We deliver premium craftsmanship to municipal buildings, public facilities, and government properties across Orange County with full compliance.',
     tags: ['Municipal Buildings', 'Public Facilities', 'Schools', 'Government Contracts'],
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.6">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.6">
         <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
         <polyline points="17 6 23 6 23 12" />
       </svg>
@@ -68,7 +68,7 @@ export default function ProjectScopeSection() {
             Home Painting Project Scope
           </h2>
           <p style={styles.sub}>
-            Providing The Best Specialty Inland Empire Home Painting Services
+            Providing The Best Specialty Orange County Residential Painting Services
           </p>
         </motion.div>
 
@@ -106,7 +106,7 @@ export default function ProjectScopeSection() {
         >
           {['Licensed & Insured', 'State of California', 'Bonded & Compliant', 'Free Estimates'].map((item) => (
             <div key={item} style={styles.trustItem}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="2">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
               <span style={styles.trustLabel}>{item}</span>
@@ -123,10 +123,10 @@ const styles = {
   section: { background: '#1a1f4e' },
   header: { marginBottom: '56px', maxWidth: '720px' },
   labelRow: { display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px' },
-  labelLine: { width: '32px', height: '2px', background: '#e8833a' },
+  labelLine: { width: '32px', height: '2px', background: '#C9A961' },
   headline: { color: '#FFFFFF', marginBottom: '12px' },
   sub: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '1rem',
     color: 'rgba(255,255,255,0.5)',
     fontWeight: 300,
@@ -157,27 +157,27 @@ const styles = {
   iconBox: {
     width: '56px',
     height: '56px',
-    background: 'rgba(232,131,58,0.1)',
-    border: '1px solid rgba(232,131,58,0.25)',
+    background: 'rgba(201,169,97,0.1)',
+    border: '1px solid rgba(201,169,97,0.25)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     flexShrink: 0,
   },
   num: {
-    fontFamily: "'Cormorant Garamond', serif",
+    fontFamily: "'Fraunces', serif",
     fontSize: '3.5rem',
     fontWeight: 300,
     color: 'rgba(255,255,255,0.06)',
     lineHeight: 1,
   },
   category: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.55rem',
     fontWeight: 700,
     letterSpacing: '0.2em',
     textTransform: 'uppercase',
-    color: '#e8833a',
+    color: '#C9A961',
     margin: 0,
   },
   title: {
@@ -186,7 +186,7 @@ const styles = {
     margin: 0,
   },
   body: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.85rem',
     color: 'rgba(255,255,255,0.5)',
     fontWeight: 300,
@@ -201,7 +201,7 @@ const styles = {
     marginTop: '4px',
   },
   tag: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.5rem',
     fontWeight: 600,
     letterSpacing: '0.1em',
@@ -211,7 +211,7 @@ const styles = {
     border: '1px solid rgba(255,255,255,0.1)',
     padding: '4px 10px',
   },
-  accentBar: { width: '32px', height: '2px', background: '#e8833a', marginTop: '4px' },
+  accentBar: { width: '32px', height: '2px', background: '#C9A961', marginTop: '4px' },
   trustRow: {
     display: 'flex',
     gap: '40px',
@@ -225,7 +225,7 @@ const styles = {
     gap: '8px',
   },
   trustLabel: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.62rem',
     fontWeight: 600,
     letterSpacing: '0.1em',

@@ -6,7 +6,7 @@ const FEATURES = [
     title: 'Detail-Oriented Craftsmanship',
     body: 'Every edge, corner, and surface is treated with precision. We never cut corners — your home deserves perfection.',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.8">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.8">
         <circle cx="12" cy="12" r="3" /><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
       </svg>
     ),
@@ -15,7 +15,7 @@ const FEATURES = [
     title: 'High-Quality Materials',
     body: 'We exclusively use Sherwin-Williams Duration and Emerald products — the gold standard for lasting, beautiful results.',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.8">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.8">
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
       </svg>
     ),
@@ -24,7 +24,7 @@ const FEATURES = [
     title: 'FREE Customized Color Consultations',
     body: 'Our signature 30-minute consultation shows you exactly how your home looks in your chosen colors — before we paint.',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.8">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.8">
         <circle cx="12" cy="12" r="3" /><line x1="18" y1="2" x2="18" y2="8" /><line x1="21" y1="5" x2="15" y2="5" />
       </svg>
     ),
@@ -33,7 +33,7 @@ const FEATURES = [
     title: 'Luxury Transformation',
     body: 'We transform your home into a beautiful, relaxing retreat that reflects your personality and elevates your neighborhood.',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.8">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.8">
         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" />
       </svg>
     ),
@@ -42,7 +42,7 @@ const FEATURES = [
     title: '1-Year Warranty — Peace of Mind',
     body: 'Every project is backed by our insane 1-Year Satisfaction Warranty. If anything goes wrong, we fix it. No questions asked.',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.8">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.8">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" />
       </svg>
     ),
@@ -51,7 +51,7 @@ const FEATURES = [
     title: 'Stress-Free Experience',
     body: 'From first consultation to final walkthrough, we handle everything. You enjoy the transformation, we handle the details.',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.8">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.8">
         <circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" y1="9" x2="9.01" y2="9" /><line x1="15" y1="9" x2="15.01" y2="9" />
       </svg>
     ),
@@ -77,7 +77,7 @@ export default function WhatWeDoSection() {
           </div>
           <h2 className="headline headline-lg" style={styles.headline}>
             We Paint To<br />
-            <em style={{ color: '#e8833a', fontStyle: 'italic' }}>Transform Lives</em>
+            <em style={{ color: '#C9A961', fontStyle: 'italic' }}>Transform Lives</em>
           </h2>
           <p className="body-text" style={styles.sub}>
             Transform your home into a beautiful and relaxing retreat that you will never want to leave. Don&apos;t let a dull or outdated exterior hold you back.
@@ -109,7 +109,7 @@ const styles = {
   section: { background: '#FFFFFF' },
   header: { marginBottom: '64px', maxWidth: '680px' },
   labelRow: { display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px' },
-  labelLine: { width: '32px', height: '2px', background: '#e8833a' },
+  labelLine: { width: '32px', height: '2px', background: '#C9A961' },
   headline: { color: '#1a1f4e', marginBottom: '16px' },
   sub: { maxWidth: '560px' },
   grid: {
@@ -128,13 +128,13 @@ const styles = {
   iconBox: {
     width: '52px',
     height: '52px',
-    background: 'rgba(232,131,58,0.08)',
-    border: '1px solid rgba(232,131,58,0.2)',
+    background: 'rgba(201, 169, 97,0.08)',
+    border: '1px solid rgba(201, 169, 97,0.2)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
   cardTitle: { color: '#1a1f4e', fontSize: '1.25rem', lineHeight: 1.25 },
   cardBody: { flex: 1, fontSize: '0.88rem', lineHeight: 1.75 },
-  accent: { width: '32px', height: '2px', background: '#e8833a', marginTop: '8px' },
+  accent: { width: '32px', height: '2px', background: '#C9A961', marginTop: '8px' },
 }

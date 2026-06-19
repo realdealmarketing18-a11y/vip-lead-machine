@@ -13,7 +13,7 @@
 ---
 
 **HOOK (first 3 seconds):**
-*[TEXT ON SCREEN — bold white Montserrat on dark overlay]*
+*[TEXT ON SCREEN — bold white Inter on dark overlay]*
 "She painted her Newport Coast home without seeing it first."
 
 ---
@@ -208,9 +208,9 @@ Cut to: design team working on visualization, then the rendering appearing on sc
 - Neighbor stopping to admire (the status moment)
 
 **On-Screen Text Overlays**
-- All text: Montserrat, white or orange (#e8833a) on dark overlay
-- Stats: Cormorant Garamond for numbers, Montserrat for labels
-- Phone number: Montserrat Bold, large
+- All text: Inter, white or gold (#C9A961) on dark overlay
+- Stats: Fraunces for numbers, Inter for labels
+- Phone number: Inter Bold, large
 
 **Music Direction**
 - Awareness: Sparse piano intro → builds to aspirational strings at reveal

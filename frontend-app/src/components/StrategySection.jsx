@@ -38,7 +38,7 @@ export default function StrategySection() {
               </div>
             </div>
             <div style={{ position: 'absolute', bottom: '24px', left: '24px', zIndex: 10, textAlign: 'left' }}>
-              <span className="headline headline-sm" style={{ color: '#FFFFFF', display: 'block', marginBottom: '8px' }}>The Bridges Homeowner Story</span>
+              <span className="headline headline-sm" style={{ color: '#FFFFFF', display: 'block', marginBottom: '8px' }}>Newport Beach Homeowner Story</span>
               <span className="overline" style={{ color: 'rgba(255,255,255,0.8)' }}>Before & After Transformation Video</span>
             </div>
           </div>
@@ -78,10 +78,10 @@ const styles = {
   line: {
     width: '32px',
     height: '2px',
-    background: '#e8833a',
+    background: '#C9A961',
   },
   overline: {
-    color: '#e8833a',
+    color: '#C9A961',
     fontSize: '0.85rem',
   },
   headlineText: {
@@ -128,11 +128,11 @@ const styles = {
     width: '64px',
     height: '64px',
     borderRadius: '50%',
-    background: '#e8833a',
+    background: '#C9A961',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     paddingLeft: '4px',
-    boxShadow: '0 4px 16px rgba(232,131,58,0.4)',
+    boxShadow: '0 4px 16px rgba(201, 169, 97,0.4)',
   },
 };

@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "59b7e2013678a4b7",
+        "id": "418a6396c4bc0d68",
         "type": "tabs",
         "children": [
           {
-            "id": "2b595b78de56d07e",
+            "id": "5cbcb0071ff6b210",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03-Episodes/DS-001-Douglas-Sheri/render-queue.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "render-queue"
+              "title": "New tab"
             }
           }
         ]
@@ -74,7 +70,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -164,13 +161,23 @@
               "icon": "lucide-list",
               "title": "Outline of render-queue"
             }
+          },
+          {
+            "id": "adf93c541f30fcba",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,11 +187,17 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2b595b78de56d07e",
+  "active": "5cbcb0071ff6b210",
   "lastOpenFiles": [
+    "Untitled.base",
+    "2026-06-18.md",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "03-Episodes/DS-001-Douglas-Sheri/render-queue.md",
     "test-apis.js",
     "02-The-Wiki/sales/Claire-Robertson-Avatar.md",
     "03-Episodes/DS-001-Douglas-Sheri/notes.md",
@@ -192,7 +205,6 @@
     "03-Episodes/DS-001-Douglas-Sheri/action-plan.md",
     "02-The-Wiki/marketing/3-Step-Funnel-Framework.md",
     "log.md",
-    "03-Episodes/DS-001-Douglas-Sheri/render-queue.md",
     "02-The-Wiki/sales/Doctor-Diagnosis-Script.md",
     "02-The-Wiki/production/Higgsfield-Prompt-Templates.md",
     "index.md",

@@ -1,0 +1,179 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HousePainter",
+      "@id": "https://viphomepainting.com/#localbusiness",
+      "name": "VIP Premier Painting",
+      "url": "https://viphomepainting.com",
+      "logo": "https://viphomepainting.com/assets/logos/logo.png",
+      "image": "https://viphomepainting.com/assets/luxury_estate_front.png",
+      "telephone": "+1-909-312-5400",
+      "email": "Contact@VIPHomePainting.com",
+      "priceRange": "$$$$",
+      "description": "VIP Premier Painting is a luxury residential painting contractor serving coastal Orange County and prestigious Southern California communities. We specialize in custom exterior and interior painting with concierge-level service.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Newport Beach",
+        "addressRegion": "CA",
+        "postalCode": "92660",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.6189,
+        "longitude": -117.9298
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Orange County",
+          "@id": "https://en.wikipedia.org/wiki/Orange_County,_California"
+        },
+        {
+          "@type": "Place",
+          "name": "Newport Beach",
+          "sameAs": "https://en.wikipedia.org/wiki/Newport_Beach,_California"
+        },
+        {
+          "@type": "Place",
+          "name": "Pelican Hill",
+          "description": "Exclusive enclave in Newport Beach, CA"
+        },
+        {
+          "@type": "Place",
+          "name": "Crystal Cove",
+          "sameAs": "https://en.wikipedia.org/wiki/Crystal_Cove_Historic_District"
+        },
+        {
+          "@type": "Place",
+          "name": "Newport Coast",
+          "sameAs": "https://en.wikipedia.org/wiki/Newport_Coast,_Newport_Beach,_California"
+        },
+        {
+          "@type": "Place",
+          "name": "Irvine",
+          "sameAs": "https://en.wikipedia.org/wiki/Irvine,_California"
+        },
+        {
+          "@type": "Place",
+          "name": "Shady Canyon",
+          "description": "Luxury gated community in Irvine, CA"
+        },
+        {
+          "@type": "Place",
+          "name": "Ladera Ranch",
+          "sameAs": "https://en.wikipedia.org/wiki/Ladera_Ranch,_California"
+        },
+        {
+          "@type": "Place",
+          "name": "Coto de Caza",
+          "sameAs": "https://en.wikipedia.org/wiki/Coto_de_Caza,_California"
+        },
+        {
+          "@type": "GeoShape",
+          "circle": "33.6189,-117.9298 25000",
+          "description": "25km radius encompassing major coastal and gated communities in Orange County, CA"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-909-312-5400",
+        "contactType": "customer service",
+        "email": "Contact@VIPHomePainting.com",
+        "areaServed": "US",
+        "availableLanguage": "en"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://viphomepainting.com/#paintingservice",
+      "name": "Custom Residential Painting & Color Visualization",
+      "serviceType": "House Painting",
+      "provider": {
+        "@id": "https://viphomepainting.com/#localbusiness"
+      },
+      "description": "Concierge-level exterior and interior residential painting services for luxury estates. Includes our custom color visualization process to view color schemes on your actual home before we begin.",
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "description": "Custom estate estimates based on architectural scale. Newport Beach estates: $5.50/sqft exterior, $4.50/sqft interior. Irvine estates: $4.75/sqft exterior, $3.95/sqft interior. Typical residential estate scale: 4,500 to 8,000+ square feet.",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://viphomepainting.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does exterior painting cost in Orange County?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Exterior painting for luxury estates in Orange County typically ranges from $15,000 to $45,000 depending on home size, surface condition, and color complexity. For Newport Beach estates, our pricing starts at $5.50/sqft for exterior and $4.50/sqft for interior, while Irvine estates average $4.75/sqft for exterior and $3.95/sqft for interior. We provide custom color visualizations and precise investment estimates prior to commencing work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer the Custom Visualization Service for every estate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — this is our signature service. Our Custom Visualization Service shows your exact home in three premium color schemes before we touch a single brush, ensuring flawless execution and absolute confidence in your color selection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a typical residential painting project take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most luxury residential projects in Orange County are completed in 3 to 5 days. Our design team and professional crews work Monday through Saturday to minimize disruption and maintain the architectural integrity of your property."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you understand the specific HOA requirements for Orange County luxury communities?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We routinely work within prestigious Orange County communities, including Pelican Hill, Crystal Cove, Shady Canyon, Ladera Ranch, and Coto de Caza. We understand the specific Tuscan, Mediterranean, and Spanish Colonial architectural styles and the rigorous HOA guidelines required for these estates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Have you painted homes near us in Orange County?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we have transformed luxury properties throughout Orange County, including estates in Pelican Hill and Dover Shores in Newport Beach, Crystal Cove in Newport Coast, and Shady Canyon in Irvine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What brand of paint and materials do you use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We exclusively use Sherwin-Williams premium lines, including Emerald and Duration — the gold standard for luxury exterior protection. Every project represents a high-prestige investment, backed by our VIP concierge support and warranty."
+          }
+        }
+      ]
+    }
+  ]
+}

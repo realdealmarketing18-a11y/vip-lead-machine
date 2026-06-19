@@ -4,17 +4,17 @@ import { motion, useInView } from 'framer-motion';
 const REVIEWS = [
   { 
     text: '"Eliminates the anxiety completely. They created a digital twin of our home and we got to explore colors over the weekend. The actual finish is spectacular."', 
-    author: 'David Chen', location: 'Rancho Cucamonga', rating: 5,
+    author: 'David Chen', location: 'Newport Coast', rating: 5,
     videoImg: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop'
   },
   { 
     text: '"They completely transformed our geometric modern exterior. The charcoal paint is incredibly crisp and the architectural details pop exactly like the 3D render showed."', 
-    author: 'M. Thompson', location: 'The Bridges', rating: 5,
+    author: 'M. Thompson', location: 'Pelican Hill', rating: 5,
     videoImg: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop'
   },
   { 
     text: '"We saw the finished room before a single can was opened. Seeing the visualization gave us confidence to approve a sophisticated scheme we never would have chosen from a paper swatch."', 
-    author: 'Sarah Jenkins', location: 'Rancho Cucamonga', rating: 5,
+    author: 'Sarah Jenkins', location: 'Shady Canyon', rating: 5,
     videoImg: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop'
   },
 ];
@@ -23,7 +23,7 @@ function StarRating({ count }) {
   return (
     <div style={{ display: 'flex', gap: '4px', marginBottom: '16px' }}>
       {[...Array(count)].map((_, i) => (
-        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#e8833a" stroke="#e8833a" strokeWidth="2">
+        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#C9A961" stroke="#C9A961" strokeWidth="2">
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
         </svg>
       ))}
@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
           style={styles.header}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-            <div style={{ width: '40px', height: '2px', background: '#e8833a' }} />
+            <div style={{ width: '40px', height: '2px', background: '#C9A961' }} />
             <span className="overline">Client Outcomes</span>
           </div>
           <h2 className="headline headline-lg" style={{ marginBottom: '24px', color: '#1a1f4e' }}>
@@ -54,11 +54,11 @@ export default function TestimonialsSection() {
             <em className="headline-accent">Discerning Homeowners.</em>
           </h2>
           <p className="body-text" style={{ maxWidth: '600px', marginBottom: '16px' }}>
-            We take pride in making sure every The Bridges client is happy. Backed by our insane warranty. 
+            We take pride in making sure every Orange County client is happy. Backed by our insane warranty. 
             Our skilled painters have the expertise to make your home stunning.
           </p>
           <p className="body-text" style={{ maxWidth: '600px' }}>
-            Trusted by homeowners throughout Rancho Cucamonga and surrounding communities.
+            Trusted by homeowners throughout Newport Beach, Irvine, and surrounding communities.
           </p>
         </motion.div>
 
@@ -166,12 +166,12 @@ const styles = {
     width: '56px',
     height: '56px',
     borderRadius: '50%',
-    background: '#e8833a',
+    background: '#C9A961',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     paddingLeft: '4px',
-    boxShadow: '0 4px 16px rgba(232,131,58,0.4)',
+    boxShadow: '0 4px 16px rgba(201, 169, 97,0.4)',
     zIndex: 2,
     transition: 'transform 200ms',
   },

@@ -56,8 +56,8 @@ Save output as: video-scripts-[city-slug].md
 
 TASK 4 — WORDPRESS PUBLISH (start after Task 2)
 Convert the sales page copy into HTML using:
-- Brand colors: #e8833a orange CTAs, #1a1f4e navy headings, #F8F7F4 cream backgrounds
-- Fonts: Cormorant Garamond (headlines), Montserrat (buttons), Poppins (body)
+- Brand colors: #C9A961 gold CTAs, #1A1F4E navy headings, #F5EFE2 cream backgrounds, #E8833A orange secondary accents
+- Fonts: Fraunces (headlines), Inter (body/buttons)
 - Sharp corners on all buttons (no border-radius)
 - 8 sections: Hero, Problem, Solution, Process, Testimonials, Pricing, FAQ, CTA
 Publish via: POST https://viphomepainting.com/wp-json/vip/v1/page

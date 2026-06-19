@@ -13,8 +13,8 @@ export default function Footer({ onBookClick }) {
             <p style={styles.tagline}>See It. Love It. Paint It.</p>
             <p style={styles.brandDesc}>
               Southern California's foremost luxury exterior painting specialist.
-              Serving estates from $2M to $20M across the Inland Empire,
-              Orange County, and greater Los Angeles.
+              Serving estates from $2M to $20M across coastal Orange County,
+              Los Angeles, and premier gated communities.
             </p>
             <div style={styles.socialRow}>
               {['Houzz', 'Yelp', 'Google'].map((platform) => (
@@ -43,13 +43,13 @@ export default function Footer({ onBookClick }) {
             <p style={styles.colHeader}>Communities</p>
             {[
               'Newport Beach',
+              'Newport Coast',
               'Irvine',
-              'Rancho Cucamonga',
-              'Corona',
-              'Riverside',
-              'Fontana',
+              'Coto de Caza',
+              'Ladera Ranch',
+              'Hidden Hills',
             ].map((city) => (
-              <a key={city} href={`/painting/${city.toLowerCase().replace(' ', '-')}`} style={styles.link}>{city}</a>
+              <a key={city} href={`/${city.toLowerCase().replace(' ', '-')}`} style={styles.link}>{city}</a>
             ))}
           </div>
 
@@ -105,7 +105,7 @@ const styles = {
     gap: '16px',
   },
   logo: {
-    fontFamily: "'Cormorant Garamond', serif",
+    fontFamily: "'Fraunces', serif",
     fontSize: '1.3rem',
     fontWeight: '500',
     color: '#FFFFFF',
@@ -113,18 +113,18 @@ const styles = {
     letterSpacing: '0.05em',
   },
   logoAccent: {
-    color: '#e8833a',
+    color: '#C9A961',
   },
   tagline: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.65rem',
     fontWeight: '600',
     letterSpacing: '0.2em',
     textTransform: 'uppercase',
-    color: '#e8833a',
+    color: '#C9A961',
   },
   brandDesc: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.8rem',
     color: 'rgba(255,255,255,0.45)',
     fontWeight: '300',
@@ -137,7 +137,7 @@ const styles = {
     marginTop: '8px',
   },
   socialChip: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.55rem',
     fontWeight: '600',
     letterSpacing: '0.15em',
@@ -152,7 +152,7 @@ const styles = {
     gap: '12px',
   },
   colHeader: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.62rem',
     fontWeight: '600',
     letterSpacing: '0.2em',
@@ -161,7 +161,7 @@ const styles = {
     marginBottom: '4px',
   },
   link: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.82rem',
     color: 'rgba(255,255,255,0.45)',
     textDecoration: 'none',
@@ -175,15 +175,15 @@ const styles = {
     gap: '12px',
   },
   contactPhone: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '1rem',
     fontWeight: '600',
-    color: '#e8833a',
+    color: '#C9A961',
     textDecoration: 'none',
     letterSpacing: '0.05em',
   },
   contactEmail: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.78rem',
     color: 'rgba(255,255,255,0.45)',
     textDecoration: 'none',
@@ -192,7 +192,7 @@ const styles = {
     wordBreak: 'break-all',
   },
   contactWeb: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.78rem',
     color: 'rgba(255,255,255,0.45)',
     textDecoration: 'none',
@@ -213,7 +213,7 @@ const styles = {
     paddingTop: '32px',
   },
   copyright: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.7rem',
     color: 'rgba(255,255,255,0.25)',
     fontWeight: '300',
@@ -223,7 +223,7 @@ const styles = {
     gap: '24px',
   },
   bottomLink: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.7rem',
     color: 'rgba(255,255,255,0.25)',
     textDecoration: 'none',

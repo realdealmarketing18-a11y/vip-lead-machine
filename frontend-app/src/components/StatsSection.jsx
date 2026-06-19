@@ -5,9 +5,9 @@ const STATS = [
   {
     value: '5★',
     label: 'Star Reviews',
-    body: 'We take pride in making sure every client is happy with the end result.',
+    body: 'Every Orange County client leaves thrilled with their transformed home.',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="#e8833a" stroke="none">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="#C9A961" stroke="none">
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
       </svg>
     ),
@@ -15,9 +15,9 @@ const STATS = [
   {
     value: '100%',
     label: 'Client Satisfied',
-    body: 'Our team of skilled painters have the expertise and experience to make your home stunning.',
+    body: 'Luxury results every time — from Pelican Hill to Shady Canyon.',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.8">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.8">
         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
         <polyline points="22 4 12 14.01 9 11.01" />
       </svg>
@@ -26,9 +26,9 @@ const STATS = [
   {
     value: '120+',
     label: 'Projects Done',
-    body: 'With over 120 successful projects under our belt, you can trust us to get the job done right.',
+    body: 'Trusted across Newport Beach, Irvine, and coastal Orange County.',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.8">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.8">
         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
         <polyline points="9 22 9 12 15 12 15 22" />
       </svg>
@@ -55,8 +55,8 @@ export default function StatsSection() {
               <span className="overline" style={{ color: 'rgba(255,255,255,0.6)' }}>Our Track Record</span>
             </div>
             <h2 className="headline headline-lg" style={styles.headline}>
-              Our Inland Empire<br />
-              <em style={{ color: '#e8833a', fontStyle: 'italic' }}>Home Painting Service</em>
+              Our Orange County<br />
+              <em style={{ color: '#C9A961', fontStyle: 'italic' }}>Estate Painting Service</em>
             </h2>
             <p style={styles.sub}>We Paint Exceptional Living Spaces — All Home Painting Services</p>
           </motion.div>
@@ -96,10 +96,10 @@ const styles = {
   },
   labelCol: {},
   labelRow: { display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' },
-  labelLine: { width: '32px', height: '2px', background: '#e8833a' },
+  labelLine: { width: '32px', height: '2px', background: '#C9A961' },
   headline: { color: '#FFFFFF', marginBottom: '16px' },
   sub: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.9rem',
     color: 'rgba(255,255,255,0.5)',
     fontWeight: 300,
@@ -123,22 +123,22 @@ const styles = {
   iconBox: {
     width: '52px',
     height: '52px',
-    background: 'rgba(232,131,58,0.1)',
-    border: '1px solid rgba(232,131,58,0.2)',
+    background: 'rgba(201,169,97,0.1)',
+    border: '1px solid rgba(201,169,97,0.2)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: '8px',
   },
   statValue: {
-    fontFamily: "'Cormorant Garamond', serif",
+    fontFamily: "'Fraunces', serif",
     fontSize: '2.8rem',
     fontWeight: 400,
-    color: '#e8833a',
+    color: '#C9A961',
     lineHeight: 1,
   },
   statLabel: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.6rem',
     fontWeight: 700,
     letterSpacing: '0.18em',
@@ -146,7 +146,7 @@ const styles = {
     color: '#FFFFFF',
   },
   statBody: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.78rem',
     color: 'rgba(255,255,255,0.45)',
     fontWeight: 300,

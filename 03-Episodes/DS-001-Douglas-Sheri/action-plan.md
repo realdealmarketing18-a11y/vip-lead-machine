@@ -1,7 +1,8 @@
 # DS-001 — Douglas & Sheri | Action Plan
 
-> **Episode ID**: DS-001
-> **Last Updated**: 2026-04-12
+> **Episode ID**: DS-001  
+> **Status**: 🟢 Production (Active Episode)  
+> **Last Updated**: 2026-06-16
 
 ---
 
@@ -9,13 +10,18 @@
 
 | Task | Owner | Deadline | Status |
 |------|-------|----------|--------|
-| Conduct initial qualifying call to gauge budget | User | TBD | Not Started |
-| Fill out `brief.md` with call findings | Agent | TBD | Not Started |
-| Score the lead based on VIP Matrix | Agent | TBD | Not Started |
+| Conduct initial qualifying call to gauge budget | User | 2026-04-12 | [x] Completed |
+| Fill out `brief.md` with call findings | Agent | 2026-06-16 | [x] Completed |
+| Score the lead based on VIP Matrix | Agent | 2026-06-16 | [x] Completed |
+| Generate production-ready script and storyboard | Agent | 2026-06-16 | [x] Completed |
+
+---
 
 ## Long-Term Actions
 
 | Task | Owner | Deadline | Status |
 |------|-------|----------|--------|
-| Draft contract based on agreed terms | Agent | TBD | Not Started |
-| Log signed contract and commission in VIP CMS | User | TBD | Not Started |
+| Generate Renders C, D, E, G, K in Higgsfield Canvas | User / Design Team | TBD | In Progress |
+| Build Swatch Cards (Render F) in Canva | User | TBD | Not Started |
+| Edit and assemble final commercial in CapCut | User | TBD | Not Started |
+| Launch commercial and track inbound Orange County leads | User / Campaign Mgr | TBD | Not Started |

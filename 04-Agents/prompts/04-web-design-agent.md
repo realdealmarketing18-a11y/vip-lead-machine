@@ -17,22 +17,24 @@ You are VIP Premier Painting's web publishing agent. You take finalized sales pa
 
 ```
 Colors:
-  Primary Orange:  #e8833a  ← all CTAs, accents, highlights
-  Navy:            #1a1f4e  ← headings, authority elements
-  Cream BG:        #F8F7F4  ← page background
+  Primary Gold:    #C9A961  ← all primary CTAs, buttons, active states
+  Deep Gold:       #A88A47  ← CTA hover states, serif italic emphasis
+  Secondary Orange:#E8833A  ← secondary accents, highlights only (never primary CTAs)
+  Navy:            #1A1F4E  ← headings, authority elements, text on light backgrounds
+  Cream BG:        #F5EFE2  ← page background
   White:           #FFFFFF  ← card backgrounds
   Warm Gray:       #BAAEA1  ← secondary text
 
 Typography:
-  Headlines:   Cormorant Garamond (Google Font)
-  Buttons:     Montserrat, 700 weight, 0.15em letter-spacing, UPPERCASE
-  Body:        Poppins, 300 weight
+  Headlines:   Fraunces (Google Font)
+  Buttons:     Inter, 700 weight, 0.15em letter-spacing, UPPERCASE
+  Body:        Inter, 300 weight
 
 Button Style:
   - No border-radius (sharp corners)
-  - Orange background #e8833a
+  - Gold background #C9A961
   - White text
-  - Hover: #d4722e (darker orange)
+  - Hover: #A88A47 (deep gold)
   - Padding: 16px 36px
 
 Section Spacing:
@@ -214,6 +216,6 @@ Run through this list:
 - [ ] "Custom Visualization Service" capitalized and appears 5+ times
 - [ ] City name in H1, meta title, meta description, and first paragraph
 - [ ] No mention of "cheap," "affordable," "discount," "AI," "automated"
-- [ ] Orange CTAs (#e8833a) — no gold (#FFB200) on CTAs
+- [ ] Gold CTAs (#C9A961) — orange (#E8833A) used for secondary accents/highlights only
 - [ ] All links functional (tel:, mailto:, anchor links)
 - [ ] Schema markup included

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Review Card" subtitle="Google review · gold stars" viewport="700x240" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Review Card · VIP Home Painting</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--vip-cream); font-family: var(--font-sans); }
+  .card { padding: 36px 28px; }
+
+  .testi {
+    position: relative;
+    padding: 28px 28px 24px;
+    border-radius: 14px;
+    background: #FFFFFF;
+    /* Elegant navy gradient border + tinted glow */
+    border: 1.5px solid transparent;
+    background:
+      linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(180deg, #3A4078 0%, #1A1F4E 55%, #0C1130 100%) border-box;
+    box-shadow:
+      /* hard navy seat ring */
+      0 0 0 1px rgba(12,17,48,0.20),
+      /* soft navy radiating glow */
+      0 22px 44px rgba(26,31,78,0.22),
+      0 6px 14px rgba(26,31,78,0.14),
+      /* inner top highlight */
+      inset 0 1px 0 rgba(255,255,255,0.65);
+    transition: transform 320ms cubic-bezier(.22,1,.36,1);
+  }
+  .testi:hover { transform: translateY(-3px); box-shadow:
+      0 0 0 1px rgba(12,17,48,0.25),
+      0 28px 56px rgba(26,31,78,0.28),
+      0 8px 18px rgba(26,31,78,0.18),
+      inset 0 1px 0 rgba(255,255,255,0.65);
+  }
+
+  /* gold corner accent — refined detail */
+  .testi::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 28px; width: 56px; height: 3px;
+    background: var(--vip-gold-shine);
+    border-radius: 0 0 4px 4px;
+  }
+
+  .testi-quote {
+    font-family: var(--font-serif); font-style: italic;
+    font-size: 16px; line-height: 1.7;
+    color: var(--vip-navy);
+    position: relative;
+    padding-left: 28px; margin: 4px 0 18px;
+  }
+  .testi-quote::before {
+    content: '“';
+    position: absolute; left: -2px; top: -10px;
+    font-size: 52px; color: var(--vip-gold);
+    font-family: var(--font-serif); line-height: 0.8; font-weight: 500;
+  }
+
+  .meta-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 16px; border-top: 1px solid rgba(26,31,78,0.10);
+  }
+  .name { font-family: var(--font-serif); font-weight: 600; font-size: 15px; color: var(--vip-navy); }
+  .meta-row .stars { color: var(--vip-gold); letter-spacing: 2px; font-size: 14px; }
+  .meta-row .verified { font-family: var(--font-serif); font-style: italic; font-size: 12px; color: var(--vip-gold-deep); display: block; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="testi">
+    <p class="testi-quote">VIP Home Painting transformed our home beyond our wildest dreams. The attention to detail, communication, and final results were absolutely incredible. We get compliments every single day!</p>
+    <div class="meta-row">
+      <div class="name">— Sarah &amp; Mike R.</div>
+      <div style="text-align:right">
+        <div class="stars">★★★★★</div>
+        <div class="verified">Verified Customer</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Sticky CTA Bar" subtitle="Mobile bottom-fixed conversion bar" viewport="700x160" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sticky CTA Bar · VIP Home Painting</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--vip-cream); font-family: var(--font-sans); }
+  .card { padding: 64px 24px 28px; }
+
+  .bar {
+    position: relative;
+    padding: 14px 14px;
+    border-radius: 14px;
+    color: #fff;
+    /* Elegant orange gradient border + tinted glow */
+    border: 1.5px solid transparent;
+    background:
+      linear-gradient(var(--vip-navy), var(--vip-navy)) padding-box,
+      linear-gradient(180deg, #FFA968 0%, #E8833A 55%, #B86220 100%) border-box;
+    box-shadow:
+      /* hard orange seat ring */
+      0 0 0 1px rgba(184,98,32,0.30),
+      /* warm orange radiating glow */
+      0 22px 44px rgba(232,131,58,0.32),
+      0 6px 14px rgba(184,98,32,0.22),
+      /* inner top highlight on the navy surface */
+      inset 0 1px 0 rgba(255,255,255,0.18);
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    transition: transform 320ms cubic-bezier(.22,1,.36,1), box-shadow 320ms;
+  }
+  .bar:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 0 0 1px rgba(184,98,32,0.36),
+      0 28px 56px rgba(232,131,58,0.42),
+      0 8px 18px rgba(184,98,32,0.28),
+      inset 0 1px 0 rgba(255,255,255,0.20);
+  }
+
+  /* Gold tab — top-left luxury accent */
+  .bar::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 22px; width: 48px; height: 3px;
+    background: var(--vip-gold-shine);
+    border-radius: 0 0 4px 4px;
+    z-index: 2;
+  }
+
+  .lbl {
+    font-family: var(--font-serif); font-weight: 600;
+    font-size: 14px; line-height: 1.2;
+    padding-left: 2px;
+  }
+  .lbl small {
+    display: block;
+    font-family: var(--font-sans); font-weight: 500;
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(255,255,255,0.65); margin-top: 3px;
+  }
+
+  .cta {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--vip-gold-shine); color: #fff; text-decoration: none;
+    font-family: var(--font-sans); font-weight: 700;
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    padding: 11px 14px; border-radius: 6px;
+    box-shadow:
+      0 8px 22px rgba(168,138,71,0.45),
+      inset 0 1px 0 rgba(255,255,255,0.30);
+    border: 1px solid rgba(168,138,71,0.55);
+    white-space: nowrap;
+  }
+  .cta svg { width: 12px; height: 12px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="bar">
+    <div class="lbl">Free Color Consult<small>30 Min · No Obligation</small></div>
+    <a class="cta">Claim Free <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </div>
+</div>
+</body>
+</html>

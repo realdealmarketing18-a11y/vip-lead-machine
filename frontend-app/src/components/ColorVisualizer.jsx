@@ -40,7 +40,7 @@ const SCHEMES = [
   {
     id: 'desert-modern',
     name: 'Desert Modern',
-    tagline: 'Warm Inland Empire sand and earth tones',
+    tagline: 'Warm coastal sand and earth tones',
     body:   { name: 'Accessible Beige', sw: 'SW 7036', hex: '#C9B99A', g: sphere('#DED0BA','#C9B99A','#9E8B6E') },
     trim:   { name: 'Cardboard',        sw: 'SW 6119', hex: '#C19A6B', g: sphere('#D9B888','#C19A6B','#8C6B44') },
     accent: { name: 'Creamy',           sw: 'SW 7012', hex: '#F0E6C8', g: sphere('#FFF6E0','#F0E6C8','#D0C298') },
@@ -80,7 +80,7 @@ function Bubble({ scheme, part, size = 52, ring = false }) {
           borderRadius: '50%',
           background: color.g,
           boxShadow: ring
-            ? `inset -5px -5px 10px rgba(0,0,0,0.22), inset 3px 3px 7px rgba(255,255,255,0.32), 0 0 0 3px #e8833a, 0 10px 28px ${color.hex}60`
+            ? `inset -5px -5px 10px rgba(0,0,0,0.22), inset 3px 3px 7px rgba(255,255,255,0.32), 0 0 0 3px #C9A961, 0 10px 28px ${color.hex}60`
             : `inset -5px -5px 10px rgba(0,0,0,0.22), inset 3px 3px 7px rgba(255,255,255,0.32), 0 8px 22px ${color.hex}50`,
           cursor: 'default',
           flexShrink: 0,
@@ -104,9 +104,9 @@ function SchemeCard({ scheme, active, onClick }) {
       transition={{ duration: 0.25 }}
       style={{
         ...cardBase,
-        borderColor: active ? '#e8833a' : 'rgba(26,31,78,0.08)',
+        borderColor: active ? '#C9A961' : 'rgba(26,31,78,0.08)',
         boxShadow: active
-          ? '0 0 0 1px #e8833a, 0 8px 28px rgba(232,131,58,0.15)'
+          ? '0 0 0 1px #C9A961, 0 8px 28px rgba(201, 169, 97,0.15)'
           : '0 2px 12px rgba(26,31,78,0.04)',
         background: active ? '#FFFAF7' : '#FFFFFF',
       }}
@@ -136,10 +136,10 @@ function SchemeCard({ scheme, active, onClick }) {
             layoutId="active-chip"
             style={{
               marginLeft: 'auto',
-              background: '#e8833a',
+              background: '#C9A961',
               borderRadius: '2px',
               padding: '3px 8px',
-              fontFamily: "'Montserrat', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontSize: '0.5rem',
               fontWeight: 700,
               letterSpacing: '0.15em',
@@ -179,12 +179,12 @@ export default function ColorVisualizer({ onBookClick }) {
         {/* Header */}
         <div style={styles.header}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px' }}>
-            <div style={{ width: '32px', height: '2px', background: '#e8833a' }} />
+            <div style={{ width: '32px', height: '2px', background: '#C9A961' }} />
             <span className="overline">Step 2 — Live Color Visualizer</span>
           </div>
           <h2 className="headline headline-lg" style={{ color: '#1a1f4e', maxWidth: '680px' }}>
             See Your Estate&rsquo;s New Identity<br />
-            <em style={{ color: '#e8833a', fontStyle: 'italic' }}>Before We Touch a Wall.</em>
+            <em style={{ color: '#C9A961', fontStyle: 'italic' }}>Before We Touch a Wall.</em>
           </h2>
         </div>
 
@@ -225,7 +225,7 @@ export default function ColorVisualizer({ onBookClick }) {
                   style={beforeToggleBtn}
                   aria-label="Toggle before/after"
                 >
-                  <span style={{ ...badgeText, color: showBefore ? '#e8833a' : '#1a1f4e' }}>
+                  <span style={{ ...badgeText, color: showBefore ? '#C9A961' : '#1a1f4e' }}>
                     {showBefore ? 'BEFORE' : 'AFTER'}
                   </span>
                   <span style={toggleDivider}>|</span>
@@ -311,7 +311,7 @@ export default function ColorVisualizer({ onBookClick }) {
                   aria-label={s.name}
                   style={{
                     ...dot,
-                    background: i === activeIndex ? '#e8833a' : 'rgba(26,31,78,0.15)',
+                    background: i === activeIndex ? '#C9A961' : 'rgba(26,31,78,0.15)',
                     width: i === activeIndex ? '24px' : '8px',
                   }}
                 />
@@ -442,7 +442,7 @@ const styles = {
     background: 'rgba(10,14,38,0.75)',
     backdropFilter: 'blur(8px)',
     padding: '14px 18px',
-    border: '1px solid rgba(232,131,58,0.3)',
+    border: '1px solid rgba(201, 169, 97,0.3)',
     maxWidth: '260px',
   },
 
@@ -505,14 +505,14 @@ const styles = {
 
 /* ── Inline text styles ── */
 const badgeText = {
-  fontFamily: "'Montserrat', sans-serif",
+  fontFamily: "'Inter', sans-serif",
   fontSize: '0.55rem',
   fontWeight: 700,
   letterSpacing: '0.2em',
   color: '#1a1f4e',
 }
 const schemeNameText = {
-  fontFamily: "'Cormorant Garamond', serif",
+  fontFamily: "'Fraunces', serif",
   fontSize: '1rem',
   fontWeight: 500,
   color: '#FFFFFF',
@@ -520,7 +520,7 @@ const schemeNameText = {
   margin: 0,
 }
 const schemeTaglineText = {
-  fontFamily: "'Poppins', sans-serif",
+  fontFamily: "'Inter', sans-serif",
   fontSize: '0.65rem',
   fontWeight: 300,
   color: 'rgba(255,255,255,0.6)',
@@ -537,7 +537,7 @@ const cardBase = {
   transition: 'border-color 200ms, box-shadow 200ms, background 200ms',
 }
 const cardName = {
-  fontFamily: "'Cormorant Garamond', serif",
+  fontFamily: "'Fraunces', serif",
   fontSize: '1rem',
   fontWeight: 500,
   color: '#1a1f4e',
@@ -545,7 +545,7 @@ const cardName = {
   lineHeight: 1.2,
 }
 const cardTagline = {
-  fontFamily: "'Poppins', sans-serif",
+  fontFamily: "'Inter', sans-serif",
   fontSize: '0.65rem',
   fontWeight: 300,
   color: '#9a9a9a',
@@ -553,7 +553,7 @@ const cardTagline = {
   lineHeight: 1.4,
 }
 const bubbleLabel = {
-  fontFamily: "'Poppins', sans-serif",
+  fontFamily: "'Inter', sans-serif",
   fontSize: '0.6rem',
   fontWeight: 500,
   color: '#1a1f4e',
@@ -565,25 +565,25 @@ const bubbleLabel = {
   textOverflow: 'ellipsis',
 }
 const bubbleSW = {
-  fontFamily: "'Montserrat', sans-serif",
+  fontFamily: "'Inter', sans-serif",
   fontSize: '0.52rem',
   fontWeight: 600,
-  color: '#e8833a',
+  color: '#C9A961',
   margin: 0,
   textAlign: 'center',
   letterSpacing: '0.05em',
 }
 const detailLabel = {
-  fontFamily: "'Montserrat', sans-serif",
+  fontFamily: "'Inter', sans-serif",
   fontSize: '0.58rem',
   fontWeight: 600,
   letterSpacing: '0.2em',
   textTransform: 'uppercase',
-  color: '#e8833a',
+  color: '#C9A961',
   margin: '0 0 16px',
 }
 const roleLabel = {
-  fontFamily: "'Montserrat', sans-serif",
+  fontFamily: "'Inter', sans-serif",
   fontSize: '0.5rem',
   fontWeight: 700,
   letterSpacing: '0.18em',
@@ -592,7 +592,7 @@ const roleLabel = {
   margin: '0 0 4px',
 }
 const ctaDisclaimer = {
-  fontFamily: "'Poppins', sans-serif",
+  fontFamily: "'Inter', sans-serif",
   fontSize: '0.65rem',
   fontWeight: 300,
   color: '#9a9a9a',
@@ -600,14 +600,14 @@ const ctaDisclaimer = {
   textAlign: 'center',
 }
 const infoValue = {
-  fontFamily: "'Cormorant Garamond', serif",
+  fontFamily: "'Fraunces', serif",
   fontSize: '2rem',
   fontWeight: 400,
-  color: '#e8833a',
+  color: '#C9A961',
   lineHeight: 1,
 }
 const infoItemLabel = {
-  fontFamily: "'Montserrat', sans-serif",
+  fontFamily: "'Inter', sans-serif",
   fontSize: '0.58rem',
   fontWeight: 600,
   letterSpacing: '0.12em',
@@ -639,7 +639,7 @@ const beforeToggleBtn = {
   gap: '6px',
 }
 const toggleDivider = {
-  fontFamily: "'Montserrat', sans-serif",
+  fontFamily: "'Inter', sans-serif",
   fontSize: '0.55rem',
   color: 'rgba(26,31,78,0.2)',
   fontWeight: 400,

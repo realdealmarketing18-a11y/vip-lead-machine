@@ -44,7 +44,7 @@ export default function TimelineSection() {
             title="Personalized Color Consultation" 
             tag="Phase 01" 
             fromLeft={true}
-            body="We start by understanding your vision — the colors, mood, and look you want for your The Bridges home."
+            body="We start by understanding your vision — the colors, mood, and look you want for your Newport Beach estate."
           />
 
           <div style={styles.gap} />
@@ -91,7 +91,7 @@ const styles = {
     top: '0',
     bottom: '0',
     width: '2px',
-    background: 'linear-gradient(to bottom, rgba(232,131,58,0.8), rgba(232,131,58,0.1))',
+    background: 'linear-gradient(to bottom, rgba(201, 169, 97,0.8), rgba(201, 169, 97,0.1))',
   },
   card: {
     background: '#FFFFFF',
@@ -110,7 +110,7 @@ const styles = {
     fontFamily: "var(--font-headline)",
     fontSize: '4.5rem',
     fontWeight: '300',
-    color: 'rgba(232,131,58,0.15)',
+    color: 'rgba(201, 169, 97,0.15)',
     lineHeight: 0.85,
     marginTop: '8px',
   },

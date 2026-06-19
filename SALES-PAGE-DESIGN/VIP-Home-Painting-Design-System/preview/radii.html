@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Spacing" name="Radii" subtitle="xs · sm · md · lg · xl · pill" viewport="700x160" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Radii · VIP Home Painting</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; font-family: var(--font-sans); }
+  .card { padding: 28px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+  .item { text-align: center; }
+  .box { width: 88px; height: 60px; margin: 0 auto 10px; background: var(--vip-cream); border: 1px solid rgba(26,31,78,0.12); box-shadow: var(--shadow-sm); }
+  .label { font-size: 11px; font-family: ui-monospace, Menlo, monospace; color: var(--vip-navy); font-weight: 600; }
+  .px { font-size: 10px; color: var(--fg-muted); margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="item"><div class="box" style="border-radius:4px"></div><div class="label">--radius-xs</div><div class="px">4px</div></div>
+  <div class="item"><div class="box" style="border-radius:8px"></div><div class="label">--radius-sm</div><div class="px">8px</div></div>
+  <div class="item"><div class="box" style="border-radius:14px"></div><div class="label">--radius-md</div><div class="px">14px</div></div>
+  <div class="item"><div class="box" style="border-radius:20px"></div><div class="label">--radius-lg</div><div class="px">20px · cards</div></div>
+  <div class="item"><div class="box" style="border-radius:28px"></div><div class="label">--radius-xl</div><div class="px">28px · modals</div></div>
+  <div class="item"><div class="box" style="border-radius:999px"></div><div class="label">--radius-pill</div><div class="px">CTA pill</div></div>
+</div>
+</body>
+</html>

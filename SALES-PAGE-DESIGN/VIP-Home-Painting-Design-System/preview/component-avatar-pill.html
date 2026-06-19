@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Avatar Pill & Case Tag" subtitle="Homeowner identity + gold case tag" viewport="700x220" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Avatar Pill & Case Tag · VIP Home Painting</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; font-family: var(--font-sans); }
+  .card { padding: 32px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+  .pill { display: inline-flex; align-items: center; gap: 12px; background: #fff; border: 1px solid rgba(168,138,71,0.30); border-radius: 999px; padding: 6px 22px 6px 6px; box-shadow: var(--shadow-xs); }
+  .pill .ph { width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(135deg, #3a4070, var(--vip-navy)); border: 2px solid var(--vip-gold); color: #fff; font-family: var(--font-serif); font-weight: 600; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .name { font-family: var(--font-serif); font-weight: 600; font-size: 15px; color: var(--vip-navy); line-height: 1.1; }
+  .sub { font-family: var(--font-serif); font-style: italic; font-size: 12px; color: var(--vip-gold-deep); margin-top: 2px; }
+
+  .case-tag { display: inline-flex; align-items: center; gap: 8px; padding: 9px 18px; background: transparent; border: 1px solid var(--vip-gold); border-radius: 4px; }
+  .case-tag span { font-family: var(--font-sans); font-weight: 700; font-size: 10.5px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--vip-gold-deep); }
+
+  .verified-pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 6px; background: #fff; border: 1px solid rgba(168,138,71,0.30); border-radius: 999px; }
+  .verified-pill .v { width: 22px; height: 22px; border-radius: 50%; background: var(--vip-gold-shine); display: flex; align-items: center; justify-content: center; color: #fff; }
+  .verified-pill .v svg { width: 12px; height: 12px; }
+  .verified-pill em { font-family: var(--font-serif); font-style: italic; font-size: 12.5px; color: var(--vip-navy); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="pill"><div class="ph">M&amp;K</div><div><div class="name">Miguel &amp; Karla</div><div class="sub">Fontana Homeowner</div></div></div>
+  <div class="pill"><div class="ph">D&amp;S</div><div><div class="name">Douglas &amp; Sheri</div><div class="sub">Sierra Lakes, Fontana</div></div></div>
+  <div class="case-tag"><span>Home Exterior Painting Project</span></div>
+  <div class="verified-pill"><div class="v"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><em>Verified Customer</em></div>
+</div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* ============================================================
    VIP PREMIER PAINTING — BRAND CORRECTION GLOBAL DESIGN SYSTEM
@@ -13,8 +13,8 @@
 
 :root {
   /* Brand Colors */
-  --orange:       #e8833a;
-  --orange-dark:  #ca6721;
+  --orange:       #C9A961;
+  --orange-dark:  #A88A47;
   --navy:         #1a1f4e;
   --navy-dark:    #0d0f1a;
   --cream:        #F8F7F4;
@@ -29,10 +29,10 @@
 
   /* Borders & Spacing */
   --border-light:   rgba(26, 31, 78, 0.1);
-  --border-orange:  rgba(232, 131, 58, 0.3);
+  --border-orange:  rgba(201, 169, 97, 0.3);
 
   /* Typography */
-  --font-headline: 'Cormorant Garamond', Georgia, serif;
+  --font-headline: 'Fraunces', Georgia, serif;
   --font-body:     'Inter', -apple-system, sans-serif;
 
   /* Spacing Tokens */
@@ -263,7 +263,7 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
   border-color: var(--orange) !important;
   outline: none;
-  box-shadow: 0 0 0 4px rgba(232,131,58,0.1);
+  box-shadow: 0 0 0 4px rgba(201, 169, 97,0.1);
 }
 
 @media (max-width: 900px) {
@@ -288,7 +288,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* ── Headline accent ── */
-.headline-accent { color: #e8833a; font-style: italic; }
+.headline-accent { color: #C9A961; font-style: italic; }
 
 /* ── Hide carousel scrollbar ── */
 [style*="overflowX: auto"]::-webkit-scrollbar { display: none; }

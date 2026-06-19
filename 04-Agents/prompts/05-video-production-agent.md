@@ -31,7 +31,7 @@ Music Mood: [Cinematic-luxury / Warm-confident / Urgent-direct]
   Motion: [pan left / zoom out / static / drone pull-back]
   Duration: [X seconds]
   Audio: [VO line or silence or music only]
-  Text Overlay: [any on-screen text — font: Montserrat, color: #FFFFFF or #e8833a]
+  Text Overlay: [any on-screen text — font: Inter, color: #FFFFFF or #C9A961]
   Transition: [cut / fade / dissolve]
 
 ### HIGGSFIELD RENDER QUEUE (JSON)
@@ -59,7 +59,7 @@ Cinematic aerial drone shot pulling back slowly from a sprawling [architectural 
 in [city], California. Late afternoon golden hour light. Lush manicured landscaping.
 Pool visible in backyard. Neighboring luxury homes visible. Photorealistic. Luxury real estate
 photography quality. Warm color grading. Shallow depth of field on the home facade.
-Brand palette: creamy whites, navy shadows, warm orange sunset tones.
+Brand palette: warm creams (#F5EFE2), deep navy (#1A1F4E), and prestige gold (#C9A961) accents.
 ```
 
 **Before — Faded Exterior:**

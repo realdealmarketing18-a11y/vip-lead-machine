@@ -4,33 +4,33 @@ import { motion, useInView } from 'framer-motion'
 const BULLETS = [
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.8">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.8">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
         <polyline points="9 12 11 14 15 10" />
       </svg>
     ),
     headline: 'Unlock $1,000 Value in 30 Minutes',
-    body: 'Discover how our free consultation saves you thousands in costly repainting by getting it right the first time — no guesswork, no regret.',
+    body: 'Discover how our free consultation saves you thousands in costly repainting by getting it right the first time on your Newport Beach or Irvine estate.',
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.8">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.8">
         <circle cx="12" cy="12" r="10" />
         <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
     headline: 'Fast-Track Your Home Transformation',
-    body: 'Get expert color advice in just 30 minutes, designed to fit your busy schedule and elevate your home\'s curb appeal instantly.',
+    body: 'Get expert color advice in just 30 minutes, designed to fit your busy schedule and elevate your coastal Orange County home\'s curb appeal instantly.',
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.8">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.8">
         <circle cx="12" cy="12" r="3" />
         <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
       </svg>
     ),
     headline: 'Why Waste Money on Guesswork?',
-    body: 'Our free color consultation ensures you avoid expensive mistakes and achieve a timeless look that increases your home\'s value — all at no cost to you.',
+    body: 'Our free color consultation ensures you avoid expensive mistakes and achieve a timeless look that increases your estate\'s value — all at no cost to you.',
   },
 ]
 
@@ -55,10 +55,10 @@ export default function WhyConsultSection({ onBookClick }) {
           </div>
           <h2 className="headline headline-lg" style={styles.headline}>
             Why Get A FREE Custom<br />
-            <em style={{ color: '#e8833a', fontStyle: 'italic' }}>Color Consultation?</em>
+            <em style={{ color: '#C9A961', fontStyle: 'italic' }}>Color Consultation?</em>
           </h2>
           <p className="body-text" style={styles.subheadline}>
-            Avoid Costly Mistakes — Our Free Consultation Ensures Your Home Stands Out For The Right Reasons
+            Avoid Costly Mistakes — Our Free Consultation Ensures Your Orange County Estate Stands Out For The Right Reasons
           </p>
         </motion.div>
 
@@ -101,7 +101,7 @@ export default function WhyConsultSection({ onBookClick }) {
           {/* Right — video */}
           <motion.div
             initial={{ opacity: 0, x: 32 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             style={styles.videoCol}
           >
@@ -130,13 +130,13 @@ export default function WhyConsultSection({ onBookClick }) {
             <div style={styles.trustCard}>
               <div style={styles.trustStar}>
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="#e8833a" stroke="none">
+                  <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="#C9A961" stroke="none">
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                   </svg>
                 ))}
               </div>
               <p style={styles.trustQuote}>"I was completely satisfied — they got it right the first time."</p>
-              <p style={styles.trustAuthor}>— Linda Q., Rancho Cucamonga</p>
+              <p style={styles.trustAuthor}>— Linda Q., Pelican Hill</p>
             </div>
           </motion.div>
         </div>
@@ -149,7 +149,7 @@ const styles = {
   section: { background: '#F8F7F4' },
   header: { marginBottom: '64px', maxWidth: '700px' },
   labelRow: { display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px' },
-  labelLine: { width: '32px', height: '2px', background: '#e8833a' },
+  labelLine: { width: '32px', height: '2px', background: '#C9A961' },
   headline: { marginBottom: '16px' },
   subheadline: { fontSize: '1.05rem', color: '#6b6b6b' },
   grid: {
@@ -170,8 +170,8 @@ const styles = {
   iconBox: {
     width: '48px',
     height: '48px',
-    background: 'rgba(232,131,58,0.08)',
-    border: '1px solid rgba(232,131,58,0.2)',
+    background: 'rgba(201,169,97,0.08)',
+    border: '1px solid rgba(201,169,97,0.2)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -181,7 +181,7 @@ const styles = {
   bulletBody: { fontSize: '0.9rem', lineHeight: '1.7' },
   cta: { fontSize: '0.7rem', padding: '16px 32px' },
   ctaNote: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.58rem',
     fontWeight: 600,
     letterSpacing: '0.15em',
@@ -219,15 +219,15 @@ const styles = {
     width: '72px',
     height: '72px',
     borderRadius: '50%',
-    background: '#e8833a',
+    background: '#C9A961',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     paddingLeft: '4px',
-    boxShadow: '0 8px 28px rgba(232,131,58,0.45)',
+    boxShadow: '0 8px 28px rgba(201,169,97,0.45)',
   },
   playLabel: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.58rem',
     fontWeight: 700,
     letterSpacing: '0.2em',
@@ -241,14 +241,14 @@ const styles = {
     zIndex: 5,
   },
   videoBadgeTitle: {
-    fontFamily: "'Cormorant Garamond', serif",
+    fontFamily: "'Fraunces', serif",
     fontSize: '1rem',
     color: '#FFFFFF',
     margin: '0 0 4px',
     fontWeight: 500,
   },
   videoBadgeSub: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.55rem',
     letterSpacing: '0.18em',
     color: 'rgba(255,255,255,0.6)',
@@ -258,12 +258,12 @@ const styles = {
   trustCard: {
     background: '#FFFFFF',
     border: '1px solid rgba(26,31,78,0.08)',
-    borderTop: '3px solid #e8833a',
+    borderTop: '3px solid #C9A961',
     padding: '24px 28px',
   },
   trustStar: { display: 'flex', gap: '3px', marginBottom: '10px' },
   trustQuote: {
-    fontFamily: "'Cormorant Garamond', serif",
+    fontFamily: "'Fraunces', serif",
     fontSize: '1.05rem',
     fontStyle: 'italic',
     color: '#1a1f4e',
@@ -271,7 +271,7 @@ const styles = {
     lineHeight: 1.5,
   },
   trustAuthor: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.6rem',
     fontWeight: 600,
     letterSpacing: '0.1em',

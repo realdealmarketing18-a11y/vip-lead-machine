@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Components" subtitle="Full UI kit — CTA, video, steps, reviews, stats" viewport="800x3200" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VIP — Components</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../components.css">
+<style>
+  body { margin: 0; padding: 48px 40px; background: var(--vip-cream); font-family: var(--font-sans); color: var(--vip-navy); }
+  .group-title { font-family: var(--font-serif); font-size: 26px; font-weight: 600; letter-spacing: -0.02em; margin: 48px 0 6px; color: var(--vip-navy); }
+  .group-sub { color: var(--fg-muted); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 22px; font-weight: 600; }
+  .group { padding: 28px; background: #FFFFFF; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); margin-bottom: 28px; }
+  .row { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+  .stack { display: flex; flex-direction: column; gap: 16px; max-width: 520px; }
+  .frame { width: 480px; max-width: 100%; }
+</style>
+</head>
+<body>
+
+<!-- BUTTONS -->
+<div class="group">
+  <div class="group-sub">CTA</div>
+  <div class="group-title">Primary Buttons</div>
+  <div class="stack">
+    <button class="vip-cta">
+      <span class="vip-cta__primary">Claim Free Color Consultation</span>
+      <span class="vip-cta__sub">Irresistible Painting Estimates Included</span>
+    </button>
+    <button class="vip-cta vip-cta--single">
+      <span class="vip-cta__primary">Schedule Your VIP Consultation</span>
+    </button>
+    <a class="vip-link-btn">All Home Painting Services <span aria-hidden="true">→</span></a>
+  </div>
+</div>
+
+<!-- AVATAR PILL -->
+<div class="group">
+  <div class="group-sub">Identity</div>
+  <div class="group-title">Avatar Pill</div>
+  <div class="row">
+    <div class="vip-avatar-pill">
+      <div class="vip-avatar-pill__photo" style="background: linear-gradient(135deg, #C9B59A, #8B7355);"></div>
+      <div class="vip-avatar-pill__meta">
+        <div class="vip-avatar-pill__name">Miguel &amp; Karla</div>
+        <div class="vip-avatar-pill__role">Fontana Homeowner</div>
+      </div>
+    </div>
+    <div class="vip-avatar-pill">
+      <div class="vip-avatar-pill__photo" style="background: linear-gradient(135deg, #B5C2D6, #4A5D7E);"></div>
+      <div class="vip-avatar-pill__meta">
+        <div class="vip-avatar-pill__name">Douglas &amp; Sheri</div>
+        <div class="vip-avatar-pill__role">Homeowner</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEO FRAME -->
+<div class="group">
+  <div class="group-sub">Media</div>
+  <div class="group-title">Before / After Video Frame</div>
+  <div class="frame">
+    <div class="vip-video">
+      <div class="vip-video__before"></div>
+      <div class="vip-video__after"></div>
+      <div class="vip-video__split"></div>
+      <div class="vip-video__label vip-video__label--before">BEFORE</div>
+      <div class="vip-video__label vip-video__label--after">AFTER</div>
+      <button class="vip-video__play" aria-label="Play video">
+        <svg viewBox="0 0 24 24" width="28" height="28"><path fill="#FFFFFF" d="M8 5v14l11-7z"/></svg>
+      </button>
+      <div class="vip-video__caption">From Drab to Fab in 4 Days: M…</div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST BADGES -->
+<div class="group">
+  <div class="group-sub">Trust</div>
+  <div class="group-title">Badge Pair</div>
+  <div class="row vip-badge-pair">
+    <img src="../assets/badges/vip-custom-color-schemes.png" alt="Custom Color Schemes" class="vip-badge">
+    <img src="../assets/badges/vip-warranty-laurel.png" alt="Insane 1-Year Warranty" class="vip-badge">
+  </div>
+</div>
+
+<!-- NUMBERED STEP -->
+<div class="group">
+  <div class="group-sub">Process</div>
+  <div class="group-title">Numbered Step</div>
+  <div class="stack">
+    <div class="vip-step">
+      <div class="vip-step__num">1.</div>
+      <h4 class="vip-step__title">Personalized Color Consultation</h4>
+      <p class="vip-step__body">We start by understanding your vision, discussing the colors, mood, and look you want for your home.</p>
+    </div>
+    <div class="vip-step">
+      <div class="vip-step__num">2.</div>
+      <h4 class="vip-step__title">Customized Visualizations In 30 Minutes</h4>
+      <p class="vip-step__body">We create detailed visualizations showing how different color schemes will transform your home within minutes.</p>
+    </div>
+    <div class="vip-step">
+      <div class="vip-step__num">3.</div>
+      <h4 class="vip-step__title">Irresistible Estimate</h4>
+      <p class="vip-step__body">Receive a competitive estimate tailored to bring your dream home to life without compromising on quality.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKMARK BULLET -->
+<div class="group">
+  <div class="group-sub">Benefits</div>
+  <div class="group-title">Checkmark Bullets</div>
+  <div class="stack">
+    <div class="vip-check">
+      <div class="vip-check__icon">
+        <svg viewBox="0 0 24 24" width="14" height="14"><path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5 9-11"/></svg>
+      </div>
+      <div class="vip-check__body"><strong>Unlock $1,000 Value in 30 Minutes:</strong> Discover how our free consultation can save you thousands in costly repainting by getting it right the first time.</div>
+    </div>
+    <div class="vip-check">
+      <div class="vip-check__icon">
+        <svg viewBox="0 0 24 24" width="14" height="14"><path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5 9-11"/></svg>
+      </div>
+      <div class="vip-check__body"><strong>Fast-Track Your Home Transformation:</strong> Get expert color advice in just 30 minutes, designed to fit your busy schedule and elevate your home's curb appeal instantly.</div>
+    </div>
+    <div class="vip-check">
+      <div class="vip-check__icon">
+        <svg viewBox="0 0 24 24" width="14" height="14"><path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5 9-11"/></svg>
+      </div>
+      <div class="vip-check__body"><strong>Why Waste Money on Guesswork?</strong> Our free color consultation ensures you avoid expensive mistakes and achieve a timeless look, all at no cost to you.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION HEADER LOCKUP -->
+<div class="group">
+  <div class="group-sub">Section</div>
+  <div class="group-title">Eyebrow + Headline Lockup</div>
+  <div class="stack" style="text-align: center; align-items: center;">
+    <div class="vip-overline">Inland Empire Customized Home Painting Services</div>
+    <h1 class="vip-h1" style="margin: 0;">Discover How VIP Home Painting <span class="vip-accent">Transformed Miguel &amp; Karla's Home</span> In Just 4 Days With Custom Color Consultation</h1>
+  </div>
+</div>
+
+<!-- QUESTION CIRCLE -->
+<div class="group">
+  <div class="group-sub">Section Opener</div>
+  <div class="group-title">Question Badge</div>
+  <div class="stack" style="text-align: center; align-items: center;">
+    <div class="vip-question-badge">?</div>
+    <div class="vip-overline" style="margin-top: 4px;">Why Get A FREE Custom Color Consultation</div>
+    <h2 class="vip-h2" style="margin: 0;">Avoid Costly Mistakes—Our Free Consultation Ensures Your Home <span class="vip-accent">Stands Out For The Right Reasons</span></h2>
+  </div>
+</div>
+
+<!-- TESTIMONIAL CARD -->
+<div class="group">
+  <div class="group-sub">Social Proof</div>
+  <div class="group-title">Google Review Card</div>
+  <div class="stack">
+    <div class="vip-review">
+      <div class="vip-review__head">
+        <div class="vip-review__avatar" style="background: linear-gradient(135deg, #E8B888, #B07A4A);">L</div>
+        <div class="vip-review__meta">
+          <div class="vip-review__name">linda quarry</div>
+          <div class="vip-review__date">May 24, 2024</div>
+        </div>
+        <div class="vip-review__source">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1A6.6 6.6 0 0 1 5.5 12c0-.73.13-1.44.34-2.1V7.06H2.18A10.99 10.99 0 0 0 1 12c0 1.77.43 3.45 1.18 4.94l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
+          <span>Google</span>
+        </div>
+      </div>
+      <div class="vip-review__stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <p class="vip-review__body">"I chose VIP painting services for my interior painting job after generating a few estimates, the pricing was competitive. I felt confident that they would complete the job to my satisfaction and I…"</p>
+    </div>
+
+    <div class="vip-review">
+      <div class="vip-review__head">
+        <div class="vip-review__avatar" style="background: linear-gradient(135deg, #C2A1D6, #6B4A85);">C</div>
+        <div class="vip-review__meta">
+          <div class="vip-review__name">Carol Brown</div>
+          <div class="vip-review__date">July 31, 2023</div>
+        </div>
+        <div class="vip-review__source">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1A6.6 6.6 0 0 1 5.5 12c0-.73.13-1.44.34-2.1V7.06H2.18A10.99 10.99 0 0 0 1 12c0 1.77.43 3.45 1.18 4.94l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
+          <span>Google</span>
+        </div>
+      </div>
+      <div class="vip-review__stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <p class="vip-review__body">"VIP painting services did an excellent job painting the interior of our home. Fabian went above and beyond our expectations. Fair pricing, professional, and easy to communicate with…"</p>
+    </div>
+  </div>
+</div>
+
+<!-- STAT CARD -->
+<div class="group">
+  <div class="group-sub">Numbers</div>
+  <div class="group-title">Stat Cards</div>
+  <div class="stack">
+    <div class="vip-stat">
+      <div class="vip-stat__icon">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#FFB200" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div class="vip-stat__num">5</div>
+      <div class="vip-stat__label">Star Reviews</div>
+      <p class="vip-stat__body">We take pride in making sure every client is happy with the end result. Don't take our word for it — see what our satisfied clients have to say.</p>
+    </div>
+    <div class="vip-stat">
+      <div class="vip-stat__icon">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="#C9A961" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5 9-11"/></svg>
+      </div>
+      <div class="vip-stat__num">100<span style="font-size: 0.55em;">%</span></div>
+      <div class="vip-stat__label">Client Satisfied</div>
+      <p class="vip-stat__body">Our team of skilled painters has the expertise and experience to make your home stunning.</p>
+    </div>
+    <div class="vip-stat">
+      <div class="vip-stat__icon">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="#C9A961" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 21V9l9-6 9 6v12M9 21v-7h6v7"/></svg>
+      </div>
+      <div class="vip-stat__num">120</div>
+      <div class="vip-stat__label">Projects Done</div>
+      <p class="vip-stat__body">With over 120 successful projects under our belt, you can trust us to get the job done right.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRESS BARS -->
+<div class="group">
+  <div class="group-sub">Capability</div>
+  <div class="group-title">Progress Bars</div>
+  <div class="stack">
+    <div class="vip-progress">
+      <div class="vip-progress__head">
+        <span class="vip-progress__label">Residential Home Painting Projects</span>
+        <span class="vip-progress__pct">80%</span>
+      </div>
+      <div class="vip-progress__track"><div class="vip-progress__fill" style="width: 80%;"></div></div>
+    </div>
+    <div class="vip-progress">
+      <div class="vip-progress__head">
+        <span class="vip-progress__label">Commercial Building Painting Projects</span>
+        <span class="vip-progress__pct">65%</span>
+      </div>
+      <div class="vip-progress__track"><div class="vip-progress__fill" style="width: 65%;"></div></div>
+    </div>
+    <div class="vip-progress">
+      <div class="vip-progress__head">
+        <span class="vip-progress__label">Government Painting Projects</span>
+        <span class="vip-progress__pct">50%</span>
+      </div>
+      <div class="vip-progress__track"><div class="vip-progress__fill" style="width: 50%;"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE BLOCK -->
+<div class="group">
+  <div class="group-sub">Services</div>
+  <div class="group-title">Service Block</div>
+  <div class="stack">
+    <article class="vip-service">
+      <div class="vip-service__img" style="background: linear-gradient(135deg, #C9B59A 0%, #8B7355 50%, #5C4A38 100%);"></div>
+      <h3 class="vip-service__title">Home Exterior Painting Services</h3>
+      <p class="vip-service__body">Are you tired of feeling embarrassed by the outdated look of your home's exterior? With our expertise and attention to detail, we transform your home into a jaw-dropping masterpiece.</p>
+      <a class="vip-link-btn vip-link-btn--inline">Learn More <span aria-hidden="true">→</span></a>
+    </article>
+  </div>
+</div>
+
+<!-- DROP-CAP PARAGRAPH -->
+<div class="group">
+  <div class="group-sub">Editorial</div>
+  <div class="group-title">Drop-Cap Paragraph</div>
+  <div class="frame">
+    <p class="vip-dropcap" style="font-family: var(--font-sans); font-size: 18px; line-height: 1.65; color: var(--fg-primary); margin: 0;">Douglas and Sheri, longtime residents of Fontana, wanted to make their Sierra Lakes home truly their own. With our expert guidance and a FREE 30-Minute Personalized Color Consultation, we helped them choose a sophisticated color scheme that reflected their unique style.</p>
+  </div>
+</div>
+
+</body>
+</html>

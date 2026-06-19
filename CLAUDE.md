@@ -15,8 +15,8 @@ ALWAYS SAY: "Custom Visualization Service", "our design team", "VIP Concierge",
             "Sherwin-Williams premium", "investment", "estate", "prestige",
             "architectural integrity", "flawless execution"
 
-COLORS: Orange #e8833a | Navy #1a1f4e | Gold #FFB200 | Warm Gray #BAAEA1
-FONTS:  Cormorant Garamond (headlines) | Montserrat (buttons) | Poppins (body)
+COLORS: Orange #E8833A | Navy #1A1F4E | Gold #C9A961 | Warm Gray #BAAEA1
+FONTS:  Fraunces (headlines) | Inter (body/UI)
 PHONE:  (909) 312-5400
 EMAIL:  Contact@VIPHomePainting.com
 WEB:    viphomepainting.com

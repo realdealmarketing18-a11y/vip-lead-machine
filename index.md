@@ -44,12 +44,19 @@ VIP-Lead-Machine/
 │
 ├── 02-The-Wiki/        ← KNOWLEDGE BASE — distilled & verified
 │   ├── marketing/      ← ICP, messaging, channels, campaigns
+│   │   ├── [3-Step-Funnel-Framework.md](file:///c:/Users/Owner/VIP-Lead-Machine/02-The-Wiki/marketing/3-Step-Funnel-Framework.md) ← ICP messaging and ad mapping
+│   │   └── [Higgsfield-Commercial-Workflow.md](file:///c:/Users/Owner/VIP-Lead-Machine/02-The-Wiki/marketing/Higgsfield-Commercial-Workflow.md) [NEW] ← Proven cinematic video prompting and MCSLA formula
 │   ├── sales/          ← Scripts, objections, closing frameworks
 │   ├── production/     ← Crew capacity, pricing, timelines
 │   └── communities/    ← Networks, referrals, associations
 │
 ├── 03-Episodes/        ← ONE FOLDER PER LEAD
 │   └── DS-001-Douglas-Sheri/  ← First active episode
+│       ├── brief.md        ← Lead qualification brief
+│       ├── script.md       ← 8-scene storytelling commercial script
+│       ├── storyboard.md   ← Frame-by-frame storyboard with Soul ID prompts
+│       ├── render-queue.md ← Exact Higgsfield prompts and settings
+│       └── production-master.md [NEW] ← Consolidated commercial production plan
 │
 └── .agent/             ← AGENT BRAIN — rules, workflows, skills
     ├── rules/          ← Governance and compliance rules

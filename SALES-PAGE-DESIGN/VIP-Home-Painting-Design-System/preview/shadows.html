@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Spacing" name="Shadow System" subtitle="Navy-based elevation — never black" viewport="700x230" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shadow & Border System · VIP Home Painting</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--vip-cream); font-family: var(--font-sans); }
+  .card { padding: 40px 28px; }
+  .section-label { font-family: var(--font-sans); font-weight: 700; font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--vip-gold-deep); margin: 0 0 22px; }
+
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-bottom: 40px; }
+  .row:last-child { margin-bottom: 0; }
+  .item { text-align: center; }
+  .box { width: 100%; aspect-ratio: 4/3; border-radius: 14px; margin-bottom: 16px; position: relative; transition: transform 360ms cubic-bezier(.22,1,.36,1); }
+  .item:hover .box { transform: translateY(-5px) scale(1.025); }
+
+  .name { font-family: ui-monospace, Menlo, monospace; font-size: 11px; font-weight: 700; }
+  .role { font-family: var(--font-serif); font-style: italic; font-size: 11.5px; color: var(--vip-gold-deep); margin-top: 3px; }
+
+  /* ============ ULTRA-GLOSSY BORDERS (conic metallic + inner gloss) ============ */
+
+  /* ORANGE — molten copper enamel */
+  .glossy {
+    --border-w: 5px;
+    --c-base: #E8833A;
+    --c-hi-1: #FFD7B0;
+    --c-hi-2: #FFAA68;
+    --c-mid:  #E8833A;
+    --c-lo:   #A04F18;
+    --c-deep: #5A2A0A;
+    --inner-tint: rgba(232,131,58,0.10);
+    --glow: rgba(232,131,58,0.55);
+  }
+  .glossy.gold {
+    --c-base: #FFB200;
+    --c-hi-1: #FFF4C0;
+    --c-hi-2: #FFD75A;
+    --c-mid:  #FFB200;
+    --c-lo:   #C28800;
+    --c-deep: #5E4000;
+    --inner-tint: rgba(255,178,0,0.10);
+    --glow: rgba(255,178,0,0.55);
+  }
+  .glossy.navy {
+    --c-base: #1A1F4E;
+    --c-hi-1: #B0B7E0;
+    --c-hi-2: #4A5198;
+    --c-mid:  #1A1F4E;
+    --c-lo:   #0C1130;
+    --c-deep: #050720;
+    --inner-tint: rgba(26,31,78,0.10);
+    --glow: rgba(26,31,78,0.50);
+  }
+  .glossy.luxury {
+    --c-base: #C9A961;
+    --c-hi-1: #FFEDC0;
+    --c-hi-2: #E8CC85;
+    --c-mid:  #C9A961;
+    --c-lo:   #8A6D2E;
+    --c-deep: #4A380F;
+    --inner-tint: rgba(201,169,97,0.10);
+    --glow: rgba(201,169,97,0.55);
+  }
+
+  .glossy {
+    background:
+      /* inner light wash giving the surface dimension */
+      radial-gradient(120% 90% at 30% 18%, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.50) 28%, rgba(255,255,255,0.0) 60%),
+      /* faint color tint sitting on the white card */
+      linear-gradient(180deg, var(--inner-tint), rgba(255,255,255,0)),
+      #fff;
+    /* metallic conic-gradient border */
+    border: var(--border-w) solid transparent;
+    background-clip: padding-box, padding-box, padding-box;
+    box-shadow:
+      /* hard 1px outer ring to seat the metal */
+      0 0 0 1px var(--c-deep),
+      /* inner top highlight — light hitting the bevel */
+      inset 0 2px 0 rgba(255,255,255,0.55),
+      /* inner bottom shadow — dark side of bevel */
+      inset 0 -2px 0 rgba(0,0,0,0.18),
+      /* tinted soft glow — radiates color outward */
+      0 30px 60px var(--glow),
+      0 10px 22px var(--glow),
+      /* tight contact shadow */
+      0 2px 6px rgba(0,0,0,0.20);
+    position: relative;
+  }
+
+  /* Conic metal ring around the box, behind it */
+  .glossy::before {
+    content: '';
+    position: absolute;
+    inset: calc(var(--border-w) * -1);
+    border-radius: inherit;
+    padding: var(--border-w);
+    background:
+      conic-gradient(
+        from 215deg at 50% 50%,
+        var(--c-lo)   0deg,
+        var(--c-mid)  45deg,
+        var(--c-hi-1) 90deg,
+        var(--c-hi-2) 130deg,
+        var(--c-mid)  170deg,
+        var(--c-lo)   220deg,
+        var(--c-deep) 260deg,
+        var(--c-lo)   300deg,
+        var(--c-hi-2) 330deg,
+        var(--c-lo)   360deg
+      );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    z-index: -1;
+  }
+
+  /* Specular highlight sweep on the surface */
+  .glossy::after {
+    content: '';
+    position: absolute;
+    top: 6%; left: 8%; right: 8%; height: 30%;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.65), rgba(255,255,255,0) 70%);
+    pointer-events: none;
+    filter: blur(3px);
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="section-label">Shadow Elevation — Navy-tinted</div>
+  <div class="row">
+    <div class="item"><div class="box" style="background:#fff; box-shadow: var(--shadow-sm)"></div><div class="name" style="color:var(--vip-navy)">--shadow-sm</div><div class="role">Buttons at rest</div></div>
+    <div class="item"><div class="box" style="background:#fff; box-shadow: var(--shadow-md)"></div><div class="name" style="color:var(--vip-navy)">--shadow-md</div><div class="role">Cards at rest</div></div>
+    <div class="item"><div class="box" style="background:#fff; box-shadow: var(--shadow-lg)"></div><div class="name" style="color:var(--vip-navy)">--shadow-lg</div><div class="role">Modals · featured</div></div>
+    <div class="item"><div class="box" style="background:#fff; box-shadow: var(--shadow-pop)"></div><div class="name" style="color:var(--vip-navy)">--shadow-pop</div><div class="role">3D-pop tactile</div></div>
+  </div>
+
+  <div class="section-label">Brand Borders — Ultra-Glossy Metal</div>
+  <div class="row">
+    <div class="item"><div class="box glossy"></div><div class="name" style="color:#B86220">#E8833A</div><div class="role">Molten copper enamel</div></div>
+    <div class="item"><div class="box glossy gold"></div><div class="name" style="color:#A88A47">#FFB200</div><div class="role">Polished brass</div></div>
+    <div class="item"><div class="box glossy navy"></div><div class="name" style="color:#1A1F4E">#1A1F4E</div><div class="role">Lacquered sapphire</div></div>
+    <div class="item"><div class="box glossy luxury"></div><div class="name" style="color:#A88A47">Luxury Gold</div><div class="role">Laurel-grade gilt</div></div>
+  </div>
+
+</div>
+</body>
+</html>

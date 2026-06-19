@@ -45,18 +45,18 @@ export default function WhyChooseUsSection({ onBookClick }) {
               <span className="overline">Why Choose Us</span>
             </div>
             <h2 className="headline headline-lg" style={styles.headline}>
-              Our Home Painting Work Is Backed By A Solid
-              <em style={{ color: '#e8833a', fontStyle: 'italic' }}> 1 Year Warranty!</em>
+              Our Orange County Estate Painting Backed By A Solid
+              <em style={{ color: '#C9A961', fontStyle: 'italic' }}> 1-Year Warranty!</em>
             </h2>
             <p className="body-text" style={styles.sub}>
-              When you use VIP Home Painting, you can invest with confidence because you will be backed by a 1-Year Warranty. No questions asked.
+              When you use VIP Premier Painting, you can invest with confidence because your Orange County estate will be backed by our industry-leading 1-Year Warranty. No questions asked.
             </p>
 
             {/* Warranty badge */}
             <div style={styles.warrantyBadge}>
               <div style={styles.warrantyCircle}>
                 <div style={styles.warrantyInner}>
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e8833a" strokeWidth="1.5">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="1.5">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                     <polyline points="9 12 11 14 15 10" />
                   </svg>
@@ -113,7 +113,7 @@ const styles = {
   },
   leftCol: { position: 'sticky', top: '120px', display: 'flex', flexDirection: 'column', gap: '32px' },
   labelRow: { display: 'flex', alignItems: 'center', gap: '16px' },
-  labelLine: { width: '32px', height: '2px', background: '#e8833a' },
+  labelLine: { width: '32px', height: '2px', background: '#C9A961' },
   headline: { color: '#1a1f4e', lineHeight: 1.2 },
   sub: { fontSize: '0.95rem' },
   warrantyBadge: {
@@ -121,15 +121,15 @@ const styles = {
     alignItems: 'center',
     gap: '20px',
     background: '#FFFFFF',
-    border: '1px solid rgba(232,131,58,0.2)',
+    border: '1px solid rgba(201,169,97,0.2)',
     padding: '20px 24px',
   },
   warrantyCircle: {
     width: '80px',
     height: '80px',
     borderRadius: '50%',
-    background: 'rgba(232,131,58,0.08)',
-    border: '2px solid #e8833a',
+    background: 'rgba(201,169,97,0.08)',
+    border: '2px solid #C9A961',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -137,24 +137,24 @@ const styles = {
   },
   warrantyInner: { textAlign: 'center' },
   badgeNum: {
-    fontFamily: "'Cormorant Garamond', serif",
+    fontFamily: "'Fraunces', serif",
     fontSize: '1.6rem',
     fontWeight: 400,
-    color: '#e8833a',
+    color: '#C9A961',
     lineHeight: 1,
     margin: 0,
   },
   badgeWord: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.42rem',
     fontWeight: 700,
     letterSpacing: '0.15em',
-    color: '#e8833a',
+    color: '#C9A961',
     margin: 0,
     textTransform: 'uppercase',
   },
   badgeWord2: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.4rem',
     fontWeight: 700,
     letterSpacing: '0.12em',
@@ -163,14 +163,14 @@ const styles = {
     textTransform: 'uppercase',
   },
   badgeTagline: {
-    fontFamily: "'Cormorant Garamond', serif",
+    fontFamily: "'Fraunces', serif",
     fontSize: '1rem',
     color: '#1a1f4e',
     margin: '0 0 4px',
     fontWeight: 500,
   },
   badgeNote: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.65rem',
     color: '#9a9a9a',
     fontWeight: 300,
@@ -187,10 +187,10 @@ const styles = {
     transition: 'border-color 200ms',
   },
   pillarNum: {
-    fontFamily: "'Cormorant Garamond', serif",
+    fontFamily: "'Fraunces', serif",
     fontSize: '2.8rem',
     fontWeight: 300,
-    color: 'rgba(232,131,58,0.2)',
+    color: 'rgba(201,169,97,0.2)',
     lineHeight: 1,
     flexShrink: 0,
     minWidth: '48px',

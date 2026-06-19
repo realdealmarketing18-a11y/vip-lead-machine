@@ -119,7 +119,7 @@ export default function ContactModal({ isOpen, onClose }) {
                   style={styles.successState}
                 >
                   <div style={styles.successIcon}>
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFB200" strokeWidth="2">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A961" strokeWidth="2">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
                   </div>
@@ -144,9 +144,9 @@ export default function ContactModal({ isOpen, onClose }) {
                   <div style={styles.header}>
                     <div style={styles.headerTop}>
                       <div style={styles.stepIndicator}>
-                        <div style={{ ...styles.stepDot, background: '#FFB200' }} />
-                        <div style={{ ...styles.stepLine, background: step >= 2 ? '#FFB200' : 'rgba(255,255,255,0.1)' }} />
-                        <div style={{ ...styles.stepDot, background: step >= 2 ? '#FFB200' : 'rgba(255,255,255,0.1)' }} />
+                        <div style={{ ...styles.stepDot, background: '#C9A961' }} />
+                        <div style={{ ...styles.stepLine, background: step >= 2 ? '#C9A961' : 'rgba(255,255,255,0.1)' }} />
+                        <div style={{ ...styles.stepDot, background: step >= 2 ? '#C9A961' : 'rgba(255,255,255,0.1)' }} />
                       </div>
                       <span style={styles.stepLabel}>Step {step} of 2</span>
                     </div>
@@ -306,14 +306,14 @@ function Field({ label, required, children }) {
 const fieldStyles = {
   wrapper: { display: 'flex', flexDirection: 'column', gap: '6px' },
   label: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.62rem',
     fontWeight: '600',
     letterSpacing: '0.15em',
     textTransform: 'uppercase',
     color: '#888888',
   },
-  required: { color: '#FFB200' },
+  required: { color: '#C9A961' },
 }
 
 const styles = {
@@ -331,7 +331,7 @@ const styles = {
     transform: 'translate(-50%, -50%)',
     zIndex: 201,
     background: '#111111',
-    border: '1px solid rgba(255,178,0,0.2)',
+    border: '1px solid rgba(201, 169, 97,0.2)',
     width: '90vw',
     maxWidth: '520px',
     maxHeight: '90vh',
@@ -379,7 +379,7 @@ const styles = {
     transition: 'background 300ms',
   },
   stepLabel: {
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.6rem',
     fontWeight: '500',
     letterSpacing: '0.18em',
@@ -403,7 +403,7 @@ const styles = {
     border: '1px solid rgba(255,255,255,0.08)',
     borderRadius: 0,
     color: '#FFFFFF',
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.9rem',
     fontWeight: '300',
     padding: '12px 16px',
@@ -444,8 +444,8 @@ const styles = {
   successIcon: {
     width: '64px',
     height: '64px',
-    background: 'rgba(255,178,0,0.08)',
-    border: '1px solid rgba(255,178,0,0.25)',
+    background: 'rgba(201, 169, 97,0.08)',
+    border: '1px solid rgba(201, 169, 97,0.25)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -459,13 +459,13 @@ const styles = {
     lineHeight: '1.75',
   },
   successContact: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: '0.8rem',
     color: '#555555',
     fontWeight: '300',
   },
   successPhone: {
-    color: '#FFB200',
+    color: '#C9A961',
     textDecoration: 'none',
     fontWeight: '500',
   },

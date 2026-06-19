@@ -27,10 +27,10 @@ export default function CTASection({ onBookClick }) {
               <em className="headline-accent">With A Conversation.</em>
             </h2>
             <p className="body-text" style={{ maxWidth: '600px', marginBottom: '16px' }}>
-              Currently accepting The Bridges visualization slots — limited availability this month.
+              Currently accepting Orange County visualization slots — limited availability this month.
             </p>
             <p className="body-text" style={{ maxWidth: '600px', marginBottom: '48px' }}>
-              Elevating The Bridges, Rancho Cucamonga homes with professional craftsmanship and royal service standards.
+              Elevating Newport Beach, Irvine, and coastal Orange County estates with professional craftsmanship and flawless execution.
             </p>
             <div style={styles.actions}>
               <button className="btn-primary" onClick={onBookClick}>
