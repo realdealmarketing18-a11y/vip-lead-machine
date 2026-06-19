@@ -6,3 +6,9 @@ dist/
 *.log
 .DS_Store
 Thumbs.db
+
+# Obsidian — per-machine UI state (causes noisy commits/conflicts with auto-sync)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
