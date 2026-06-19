@@ -18,6 +18,12 @@
 
 ---
 
+## 🔗 Sync & Memory
+
+- **`SYNC-SETUP.md`** ← one-time setup to link your **local folder ⟷ GitHub ⟷ Obsidian** (auto-update both ways via Obsidian Git). Do this first to start the daily memory phase.
+
+---
+
 ## 🎯 Active Priorities
 
 1. **Publish Newport Beach page** — copy is ready in `04-Agents/outputs/sales-pages/newport-beach-page.md`
