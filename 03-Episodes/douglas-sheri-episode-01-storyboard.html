@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Premier — Visual Storyboard | Douglas & Sheri Episode 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --orange: #e8833a;
+  --navy: #1a1f4e;
+  --gold: #FFB200;
+  --gray: #BAAEA1;
+  --black: #05050d;
+  --card: #0e0e1c;
+  --white: #faf8f5;
+  --cream: #ede8df;
+  /* SW color codes */
+  --gw: #8C9098;
+  --tb: #2F2F30;
+  --ow: #E5E2DA;
+  --rr: #7A3B28;
+  --vt: #B5A47A;
+  --ga: #A4A8A6;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,178,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5,5,13,0.97);
+  backdrop-filter: blur(20px);
+  gap: 10px;
+}
+.h-l { display:flex; flex-direction:column; gap:3px; min-width:0;}
+.h-eye { font-family:'Montserrat',sans-serif; font-size:8px; font-weight:700; letter-spacing:3px; color:var(--gold); text-transform:uppercase; }
+.h-title { font-family:'Cormorant Garamond',serif; font-size:15px; font-weight:600; }
+.h-r { display:flex; gap:6px; flex-shrink:0;}
+.hb { font-family:'Montserrat',sans-serif; font-size:8px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:6px 9px; }
+.hb-o { background:var(--orange); color:white; }
+.hb-g { border:1px solid rgba(255,178,0,0.3); color:var(--gold); }
+
+/* INTRO */
+.intro {
+  padding: 36px 20px 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.intro-eye { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:4px; color:var(--orange); text-transform:uppercase; margin-bottom:12px; }
+.intro-h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,7vw,44px); font-weight:300; line-height:1.05; letter-spacing:-0.5px; margin-bottom:10px; }
+.intro-h1 em { font-style:italic; color:var(--gold); }
+.intro-sub { font-family:'Cormorant Garamond',serif; font-size:15px; font-style:italic; color:var(--gray); }
+
+/* LEGEND */
+.legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.015);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.leg { display:flex; align-items:center; gap:6px; font-family:'Poppins',sans-serif; font-size:10px; color:var(--gray); }
+.leg-dot { width:9px; height:9px; border-radius:2px; flex-shrink:0; }
+
+/* STORYBOARD */
+.storyboard { padding: 32px 20px; display:flex; flex-direction:column; gap:48px; }
+.scene-block { display:flex; flex-direction:column; gap:0; }
+
+.sb-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.sb-num {
+  font-family:'Cormorant Garamond',serif;
+  font-size:42px;
+  font-weight:300;
+  color:rgba(255,178,0,0.22);
+  line-height:1;
+  flex-shrink:0;
+  width:48px;
+  margin-top:-6px;
+}
+.sb-meta { flex:1; min-width:0;}
+.sb-title { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:600; margin-bottom:6px; line-height:1.2;}
+.sb-timing {
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  color:var(--orange);
+  display:inline-block;
+  border:1px solid rgba(232,131,58,0.3);
+  padding:2px 7px;
+  margin-right:6px;
+  margin-bottom:4px;
+}
+.sb-type { font-family:'Montserrat',sans-serif; font-size:8px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:3px 7px; border:1px solid; display:inline-block; }
+.type-hook { border-color:rgba(255,178,0,0.4); color:var(--gold); }
+.type-trust { border-color:rgba(232,131,58,0.4); color:var(--orange); }
+.type-pain { border-color:rgba(232,92,74,0.5); color:#e85c4a; }
+.type-solution { border-color:rgba(255,178,0,0.4); color:var(--gold); }
+.type-step { border-color:rgba(255,178,0,0.3); color:var(--gold); }
+.type-upsell { border-color:rgba(77,184,112,0.5); color:#4db870; }
+.type-reveal { border-color:rgba(232,131,58,0.4); color:var(--orange); }
+.type-cta { border-color:rgba(232,131,58,0.5); color:var(--orange); }
+
+/* VIDEO FRAME */
+.video-frame {
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16/9;
+  border: 2px solid rgba(255,255,255,0.10);
+  margin-bottom:14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+.bg-before { background: linear-gradient(160deg, #3a3228 0%, #4a3e30 40%, #5a4a38 100%); }
+.bg-pain { background: linear-gradient(160deg, #1a1210 0%, #2a1e18 100%); }
+.bg-discovery { background: linear-gradient(160deg, #0a0a1a 0%, #1a1f4e 100%); }
+.bg-step1 { background: linear-gradient(160deg, #0e0e1c 0%, #1a1530 100%); }
+.bg-palette { background: linear-gradient(160deg, #0e0e1c 0%, #141414 100%); }
+.bg-upsell { background: linear-gradient(160deg, #0a180e 0%, #1a3020 100%); }
+.bg-reveal { background: linear-gradient(90deg, #3a3228 50%, #6a7080 50%); }
+.bg-cta { background: linear-gradient(160deg, #4a5060 0%, #6a7080 60%, #7a8090 100%); }
+
+/* ANIMATION INDICATOR PILL — shows what's animated */
+.anim-pill {
+  position:absolute;
+  top:8px; right:8px;
+  background:rgba(0,0,0,0.7);
+  border:1px solid rgba(255,178,0,0.4);
+  border-radius:100px;
+  padding:4px 10px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:8px;
+  font-weight:500;
+  color:var(--gold);
+  letter-spacing:0.5px;
+  z-index:20;
+  display:flex;
+  align-items:center;
+  gap:5px;
+  backdrop-filter:blur(6px);
+}
+.anim-pill::before {
+  content:'';
+  width:5px; height:5px;
+  border-radius:50%;
+  background:var(--gold);
+  animation: blink 1.5s ease-in-out infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity:1; box-shadow:0 0 6px var(--gold);}
+  50% { opacity:0.3; box-shadow:none;}
+}
+
+/* TOP & BOTTOM BANNERS */
+.top-banner {
+  font-family:'Montserrat',sans-serif;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  background:rgba(26,31,78,0.85);
+  backdrop-filter:blur(4px);
+  color:var(--gold);
+  padding:6px 10px;
+  border-bottom:1px solid rgba(255,178,0,0.3);
+  position:absolute;
+  top:0; left:0; right:0;
+  text-align:center;
+  z-index:6;
+}
+.bottom-banner {
+  position:absolute;
+  bottom:0; left:0; right:0;
+  background:rgba(26,31,78,0.9);
+  backdrop-filter:blur(4px);
+  padding:6px 10px;
+  border-top:2px solid var(--orange);
+  font-family:'Montserrat',sans-serif;
+  font-size:8.5px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  color:var(--white);
+  text-transform:uppercase;
+  text-align:center;
+  z-index:6;
+}
+
+/* ╔═══ SCENE 01 — Animated split sweep ═══╗ */
+.scene01-wrap { position:absolute; inset:0; z-index:2;}
+.s01-before, .s01-after {
+  position:absolute;
+  top:0; bottom:0;
+  width:50%;
+}
+.s01-before {
+  left:0;
+  background:linear-gradient(160deg,#3a3228 0%,#4a3e30 100%);
+  animation: s01slideL 4s ease-out infinite;
+}
+.s01-after {
+  right:0;
+  background:linear-gradient(160deg,#6a7080 0%,#8C9098 100%);
+  animation: s01slideR 4s ease-out infinite;
+}
+@keyframes s01slideL {
+  0%, 100% { transform: translateX(0); }
+  40% { transform: translateX(-2px); }
+}
+@keyframes s01slideR {
+  0%, 100% { transform: translateX(0); }
+  40% { transform: translateX(2px); }
+}
+.s01-sweep {
+  position:absolute;
+  left:50%;
+  top:0; bottom:0;
+  width:4px;
+  background:var(--gold);
+  box-shadow: 0 0 20px var(--gold), 0 0 40px rgba(255,178,0,0.5);
+  transform:translateX(-50%);
+  z-index:5;
+  animation: s01sweep 4s ease-in-out infinite;
+}
+@keyframes s01sweep {
+  0% { left:0%; opacity:0; }
+  20% { opacity:1; }
+  50% { left:50%; opacity:1; }
+  80% { opacity:1; }
+  100% { left:100%; opacity:0; }
+}
+.s01-title {
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  z-index:8;
+  animation: s01title 4s ease-out infinite;
+}
+@keyframes s01title {
+  0%, 30% { opacity:0; transform:translate(-50%, -40%); }
+  50%, 100% { opacity:1; transform:translate(-50%, -50%); }
+}
+.s01-label { font-family:'Montserrat',sans-serif; font-size:8px; font-weight:700; letter-spacing:3px; color:var(--orange); text-transform:uppercase; margin-bottom:4px; text-shadow:0 2px 8px rgba(0,0,0,0.9);}
+.s01-name { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:700; color:white; text-shadow:0 2px 16px rgba(0,0,0,0.95); line-height:1.1;}
+.s01-sub { font-family:'Poppins',sans-serif; font-size:9px; color:rgba(255,255,255,0.85); margin-top:4px; text-shadow:0 1px 6px rgba(0,0,0,0.9);}
+.s01-before-badge, .s01-after-badge {
+  position:absolute;
+  bottom:34px;
+  font-family:'Montserrat',sans-serif;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  padding:3px 9px;
+  z-index:7;
+  animation: badgeFade 4s ease-out infinite;
+}
+.s01-before-badge { left:12px; background:var(--orange); color:white;}
+.s01-after-badge { right:12px; background:var(--gold); color:var(--navy);}
+@keyframes badgeFade {
+  0%, 60% { opacity:0; }
+  75%, 100% { opacity:1; }
+}
+
+/* ╔═══ SCENE 02 — Ken Burns + portrait pulse ═══╗ */
+.s02-house {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, transparent 0%, rgba(90,74,56,0.6) 40%, rgba(70,54,36,0.9) 100%),
+             linear-gradient(160deg,#3a3228 0%,#4a3e30 100%);
+  animation: kenBurns 8s ease-in-out infinite alternate;
+  z-index:1;
+}
+@keyframes kenBurns {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+.s02-portrait {
+  position:absolute;
+  top:36px; left:14px;
+  width:46px; height:46px;
+  border-radius:50%;
+  background:linear-gradient(135deg, #c8bca8, #a89880);
+  border:2px solid var(--gold);
+  z-index:5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  animation: portraitPulse 3s ease-in-out infinite;
+}
+@keyframes portraitPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,178,0,0.6); }
+  50% { box-shadow: 0 0 0 8px rgba(255,178,0,0); }
+}
+.s02-portrait-label {
+  position:absolute;
+  top:42px; left:68px;
+  z-index:5;
+}
+.s02-pl-name { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; color:white; text-shadow:0 1px 4px rgba(0,0,0,0.9); }
+.s02-pl-loc { font-family:'Poppins',sans-serif; font-size:8px; color:rgba(255,255,255,0.75); }
+.s02-stat-row {
+  position:absolute;
+  bottom:34px; left:12px; right:12px;
+  display:flex;
+  justify-content:center;
+  gap:6px;
+  z-index:5;
+}
+.s02-stat {
+  background:rgba(0,0,0,0.5);
+  border:1px solid rgba(255,178,0,0.4);
+  padding:4px 8px;
+  font-family:'Montserrat',sans-serif;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:1px;
+  color:var(--gold);
+  border-radius:2px;
+  backdrop-filter:blur(4px);
+  animation: s02stat 6s ease-out infinite;
+  opacity:0;
+}
+.s02-stat:nth-child(1) { animation-delay: 0.5s;}
+.s02-stat:nth-child(2) { animation-delay: 1.5s;}
+.s02-stat:nth-child(3) { animation-delay: 2.5s;}
+@keyframes s02stat {
+  0% { opacity:0; transform:translateY(8px);}
+  10%, 50% { opacity:1; transform:translateY(0);}
+  60%, 100% { opacity:0; transform:translateY(-4px);}
+}
+
+/* ╔═══ SCENE 03 — Pain panels stagger + X stamp ═══╗ */
+.s03-panels {
+  position:absolute;
+  inset:32px 8px 32px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:4px;
+  z-index:2;
+}
+.s03-panel {
+  border-radius:4px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  position:relative;
+  overflow:hidden;
+  animation: s03slide 6s ease-out infinite;
+  opacity:0;
+}
+.s03-panel:nth-child(1) { background:linear-gradient(135deg,#2a1a10,#3a2a18); animation-delay: 0s;}
+.s03-panel:nth-child(2) { background:linear-gradient(135deg,#1a1010,#2a1818); animation-delay: 0.6s;}
+.s03-panel:nth-child(3) { background:linear-gradient(135deg,#1a1212,#2a1a1a); animation-delay: 1.2s;}
+@keyframes s03slide {
+  0% { opacity:0; transform:translateY(12px);}
+  15%, 80% { opacity:1; transform:translateY(0);}
+  90%, 100% { opacity:0;}
+}
+.s03-label {
+  position:absolute;
+  bottom:6px; left:0; right:0;
+  text-align:center;
+  font-family:'Montserrat',sans-serif;
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:1px;
+  color:rgba(255,255,255,0.7);
+  text-transform:uppercase;
+}
+.s03-x {
+  position:absolute;
+  top:5px; right:7px;
+  color:#e85c4a;
+  font-size:16px;
+  font-weight:900;
+  animation: s03stamp 6s ease-out infinite;
+  opacity:0;
+}
+.s03-panel:nth-child(2) .s03-x { animation-delay: 1s;}
+.s03-panel:nth-child(3) .s03-x { animation-delay: 1.6s;}
+@keyframes s03stamp {
+  0%, 25% { opacity:0; transform:scale(2) rotate(-12deg);}
+  30%, 80% { opacity:1; transform:scale(1) rotate(0);}
+  90%, 100% { opacity:0;}
+}
+
+/* ╔═══ SCENE 04 — VIP crown pulse + thumb stagger ═══╗ */
+.s04-crown {
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-65%);
+  text-align:center;
+  z-index:4;
+}
+.s04-crown-icon {
+  font-size:38px;
+  display:block;
+  filter:drop-shadow(0 0 16px rgba(255,178,0,0.9));
+  animation: crownPulse 2s ease-in-out infinite;
+  margin-bottom:4px;
+}
+@keyframes crownPulse {
+  0%, 100% { filter:drop-shadow(0 0 12px rgba(255,178,0,0.6)); transform:scale(1);}
+  50% { filter:drop-shadow(0 0 24px rgba(255,178,0,1)); transform:scale(1.05);}
+}
+.s04-crown-text {
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;
+  font-weight:700;
+  color:var(--gold);
+  letter-spacing:5px;
+  text-shadow:0 0 20px rgba(255,178,0,0.5);
+}
+.s04-thumbs {
+  position:absolute;
+  bottom:38px; left:0; right:0;
+  display:flex;
+  gap:5px;
+  padding:0 14px;
+  z-index:5;
+}
+.s04-thumb {
+  flex:1;
+  height:42px;
+  border-radius:3px;
+  border:1px solid rgba(255,178,0,0.4);
+  position:relative;
+  animation: s04rise 6s ease-out infinite;
+  opacity:0;
+}
+.s04-thumb:nth-child(1) { background:linear-gradient(135deg,#6a7080,#8C9098); animation-delay: 0.4s;}
+.s04-thumb:nth-child(2) { background:linear-gradient(135deg,#5a2a18,#7A3B28); animation-delay: 0.8s;}
+.s04-thumb:nth-child(3) { background:linear-gradient(135deg,#7a7e7c,#A4A8A6); animation-delay: 1.2s;}
+@keyframes s04rise {
+  0% { opacity:0; transform:translateY(20px);}
+  15%, 85% { opacity:1; transform:translateY(0);}
+  100% { opacity:0;}
+}
+.s04-thumb span {
+  position:absolute;
+  bottom:3px; left:0; right:0;
+  text-align:center;
+  font-family:'Montserrat',sans-serif;
+  font-size:6.5px;
+  font-weight:700;
+  color:rgba(255,255,255,0.95);
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+}
+
+/* ╔═══ SCENE 05 — HOME CYCLES THROUGH 6 SW COLORS ═══╗ */
+.s05-stage {
+  position:absolute;
+  inset:32px 0 32px 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:2;
+}
+.s05-house {
+  width:62%;
+  aspect-ratio:1.5/1;
+  border-radius:4px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,0.5);
+  animation: s05colorCycle 12s steps(1) infinite;
+}
+@keyframes s05colorCycle {
+  0%, 16% { background: linear-gradient(160deg, #a0a4ac 0%, var(--gw) 60%, #6a6e76 100%); } /* Gateway Gray */
+  16.1%, 32% { background: linear-gradient(160deg, #4a4a4a 0%, var(--tb) 60%, #1a1a1a 100%); } /* Tricorn Black */
+  32.1%, 48% { background: linear-gradient(160deg, #f5f2ea 0%, var(--ow) 60%, #c8c5bc 100%); } /* Origami White */
+  48.1%, 64% { background: linear-gradient(160deg, #9a4a30 0%, var(--rr) 60%, #4a1f10 100%); } /* Rookwood Red */
+  64.1%, 80% { background: linear-gradient(160deg, #c0c4c2 0%, var(--ga) 60%, #6a6e6c 100%); } /* Gray Area */
+  80.1%, 100% { background: linear-gradient(160deg, #d4c298 0%, var(--vt) 60%, #856a44 100%); } /* Virtual Taupe */
+}
+.s05-house::before {
+  /* roof line */
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:30%;
+  background:linear-gradient(180deg, rgba(0,0,0,0.4) 0%, transparent 100%);
+}
+.s05-house::after {
+  /* shadow detail */
+  content:'';
+  position:absolute;
+  bottom:0; left:0; right:0;
+  height:35%;
+  background:linear-gradient(0deg, rgba(0,0,0,0.5) 0%, transparent 100%);
+}
+.s05-house-icon {
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  font-size:64px;
+  color:rgba(0,0,0,0.18);
+  z-index:1;
+}
+.s05-color-card {
+  position:absolute;
+  bottom:36px; left:50%;
+  transform:translateX(-50%);
+  background:rgba(0,0,0,0.85);
+  border:1px solid rgba(255,178,0,0.5);
+  padding:7px 14px;
+  border-radius:3px;
+  z-index:8;
+  backdrop-filter:blur(8px);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-width:180px;
+  justify-content:center;
+}
+.s05-card-chip {
+  width:14px;
+  height:14px;
+  border-radius:2px;
+  border:1px solid rgba(255,255,255,0.2);
+  flex-shrink:0;
+  animation: s05chipCycle 12s steps(1) infinite;
+}
+@keyframes s05chipCycle {
+  0%, 16% { background: var(--gw);}
+  16.1%, 32% { background: var(--tb);}
+  32.1%, 48% { background: var(--ow);}
+  48.1%, 64% { background: var(--rr);}
+  64.1%, 80% { background: var(--ga);}
+  80.1%, 100% { background: var(--vt);}
+}
+.s05-card-name {
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:13px;
+  font-weight:600;
+  color:var(--gold);
+  white-space:nowrap;
+  position:relative;
+  height:16px;
+  overflow:hidden;
+}
+.s05-card-name span {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  animation: s05nameCycle 12s steps(1) infinite;
+}
+@keyframes s05nameCycle {
+  0%, 16% { content:'Gateway Gray';}
+  16.1%, 32% { content:'Tricorn Black';}
+}
+/* fallback approach: use 6 stacked names */
+.s05-name-stack { position:relative; height:16px; min-width:110px;}
+.s05-n {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:13px;
+  font-weight:600;
+  color:var(--gold);
+  white-space:nowrap;
+  opacity:0;
+}
+.s05-n:nth-child(1) { animation: s05show 12s steps(1) infinite; animation-delay:0s;}
+.s05-n:nth-child(2) { animation: s05show 12s steps(1) infinite; animation-delay:2s;}
+.s05-n:nth-child(3) { animation: s05show 12s steps(1) infinite; animation-delay:4s;}
+.s05-n:nth-child(4) { animation: s05show 12s steps(1) infinite; animation-delay:6s;}
+.s05-n:nth-child(5) { animation: s05show 12s steps(1) infinite; animation-delay:8s;}
+.s05-n:nth-child(6) { animation: s05show 12s steps(1) infinite; animation-delay:10s;}
+@keyframes s05show {
+  0%, 16% { opacity:1;}
+  16.1%, 100% { opacity:0;}
+}
+.s05-counter {
+  position:absolute;
+  top:36px; right:14px;
+  background:rgba(232,131,58,0.9);
+  color:white;
+  padding:4px 8px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  font-weight:700;
+  border-radius:2px;
+  z-index:8;
+  letter-spacing:0.5px;
+}
+.s05-counter span {
+  display:inline-block;
+  width:8px;
+  text-align:center;
+}
+
+/* ╔═══ SCENE 06 — Carousel + Upsell additions cycle ═══╗ */
+.s06-carousel {
+  position:absolute;
+  inset:32px 8px 32px 8px;
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:6px;
+  z-index:2;
+}
+.s06-main {
+  border-radius:6px;
+  position:relative;
+  overflow:hidden;
+  animation: s06mainCycle 9s steps(1) infinite;
+}
+@keyframes s06mainCycle {
+  0%, 33% { background:linear-gradient(160deg, #6a6e76, var(--gw));}
+  33.1%, 66% { background:linear-gradient(160deg, #5a2a18, var(--rr));}
+  66.1%, 100% { background:linear-gradient(160deg, #7a7e7c, var(--ga));}
+}
+.s06-main-label {
+  position:absolute;
+  bottom:8px; left:8px;
+  background:rgba(0,0,0,0.5);
+  padding:3px 7px;
+  font-family:'Montserrat',sans-serif;
+  font-size:7px;
+  font-weight:800;
+  letter-spacing:1.2px;
+  color:white;
+  text-transform:uppercase;
+  border-radius:2px;
+  height:14px;
+  overflow:hidden;
+}
+.s06-mn { position:relative; height:14px; min-width:100px;}
+.s06-mn span {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  opacity:0;
+}
+.s06-mn span:nth-child(1) { animation: s06show 9s steps(1) infinite; animation-delay:0s;}
+.s06-mn span:nth-child(2) { animation: s06show 9s steps(1) infinite; animation-delay:3s;}
+.s06-mn span:nth-child(3) { animation: s06show 9s steps(1) infinite; animation-delay:6s;}
+@keyframes s06show {
+  0%, 33% { opacity:1;}
+  33.1%, 100% { opacity:0;}
+}
+.s06-alts {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.s06-alt {
+  flex:1;
+  border-radius:4px;
+  position:relative;
+}
+.s06-alt:nth-child(1) { background:linear-gradient(160deg,#5a2a18,var(--rr));}
+.s06-alt:nth-child(2) { background:linear-gradient(160deg,#7a7e7c,var(--ga));}
+
+/* SCENE 06B — Upsell additions stack */
+.s06b-stage {
+  position:absolute;
+  inset:32px 8px 32px 8px;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+.s06b-house {
+  flex:1;
+  border-radius:4px;
+  background:linear-gradient(160deg, #3a4050, #6a7080);
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.s06b-house-icon {
+  font-size:48px;
+  color:rgba(0,0,0,0.25);
+}
+/* upsell badges that appear on the house */
+.s06b-badge {
+  position:absolute;
+  background:rgba(0,0,0,0.75);
+  border:1px solid rgba(77,184,112,0.6);
+  color:#4db870;
+  padding:3px 7px;
+  font-family:'Montserrat',sans-serif;
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:0.8px;
+  text-transform:uppercase;
+  border-radius:2px;
+  backdrop-filter:blur(4px);
+  opacity:0;
+}
+.s06b-b1 {
+  top:14%; left:8%;
+  animation: s06bShow 9s ease-out infinite;
+  animation-delay: 0.5s;
+}
+.s06b-b2 {
+  top:34%; right:8%;
+  animation: s06bShow 9s ease-out infinite;
+  animation-delay: 3s;
+}
+.s06b-b3 {
+  bottom:18%; left:14%;
+  animation: s06bShow 9s ease-out infinite;
+  animation-delay: 5.5s;
+}
+@keyframes s06bShow {
+  0%, 5% { opacity:0; transform:scale(0.8);}
+  10%, 30% { opacity:1; transform:scale(1);}
+  35%, 100% { opacity:1; transform:scale(1);}
+}
+.s06b-b1::after, .s06b-b2::after, .s06b-b3::after {
+  content:'+';
+  position:absolute;
+  left:-3px; top:50%;
+  transform:translate(-100%, -50%);
+  color:#4db870;
+  font-weight:900;
+  font-size:14px;
+  text-shadow:0 0 8px rgba(77,184,112,0.6);
+}
+
+/* ╔═══ SCENE 07 — Gold wipe reveal ═══╗ */
+.s07-stage { position:absolute; inset:0; z-index:2;}
+.s07-before, .s07-after {
+  position:absolute;
+  top:0; bottom:0;
+  width:50%;
+}
+.s07-before {
+  left:0;
+  background:linear-gradient(160deg,#3a3228,#4a3e30);
+}
+.s07-after {
+  right:0;
+  background:linear-gradient(160deg,#6a7080,#8C9098);
+  animation: s07reveal 5s ease-in-out infinite;
+}
+@keyframes s07reveal {
+  0%, 30% { clip-path: inset(0 100% 0 0);}
+  60%, 100% { clip-path: inset(0 0 0 0);}
+}
+.s07-sweep {
+  position:absolute;
+  top:0; bottom:0;
+  width:6px;
+  background:linear-gradient(180deg, transparent 0%, var(--gold) 30%, var(--gold) 70%, transparent 100%);
+  box-shadow: 0 0 20px var(--gold), 0 0 40px rgba(255,178,0,0.6);
+  z-index:5;
+  animation: s07sweep 5s ease-in-out infinite;
+}
+@keyframes s07sweep {
+  0%, 30% { left:50%; opacity:0;}
+  35% { opacity:1;}
+  60% { left:100%; opacity:1;}
+  65%, 100% { opacity:0;}
+}
+.s07-side-label {
+  position:absolute;
+  bottom:38px;
+  font-family:'Montserrat',sans-serif;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:white;
+  text-shadow:0 1px 4px rgba(0,0,0,0.8);
+  z-index:6;
+}
+.s07-sl-before { left:14px;}
+.s07-sl-after { right:14px;}
+.s07-palette-card {
+  position:absolute;
+  bottom:38px; right:14px;
+  background:rgba(26,31,78,0.95);
+  border:1px solid rgba(255,178,0,0.5);
+  padding:8px 11px;
+  z-index:7;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  border-radius:3px;
+  animation: s07cardSlide 5s ease-in-out infinite;
+}
+@keyframes s07cardSlide {
+  0%, 50% { opacity:0; transform:translateY(20px);}
+  65%, 100% { opacity:1; transform:translateY(0);}
+}
+.s07-card-title { font-family:'Montserrat',sans-serif; font-size:7px; font-weight:700; letter-spacing:2px; color:var(--gold); text-transform:uppercase; margin-bottom:4px;}
+.s07-card-row { display:flex; align-items:center; gap:6px;}
+.s07-card-dot { width:11px; height:11px; border-radius:2px; flex-shrink:0;}
+.s07-card-name { font-family:'Poppins',sans-serif; font-size:7.5px; color:rgba(255,255,255,0.85);}
+
+/* ╔═══ SCENE 08 — Ken Burns + tagline + CTA pulse ═══╗ */
+.s08-house {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, transparent 0%, rgba(80,88,100,0.5) 40%, rgba(60,68,80,0.85) 100%),
+             linear-gradient(160deg, #4a5060 0%, #6a7080 60%, #7a8090 100%);
+  animation: kenBurnsPull 8s ease-in-out infinite alternate;
+  z-index:1;
+}
+@keyframes kenBurnsPull {
+  from { transform: scale(1.1);}
+  to { transform: scale(1);}
+}
+.s08-content {
+  position:absolute;
+  inset:0;
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:36px 14px 50px;
+  text-align:center;
+}
+.s08-tagline {
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;
+  font-style:italic;
+  font-weight:600;
+  color:white;
+  text-shadow:0 2px 14px rgba(0,0,0,0.95);
+  margin-bottom:10px;
+  animation: s08fade 4s ease-out infinite;
+}
+@keyframes s08fade {
+  0%, 20% { opacity:0; transform:translateY(8px);}
+  35%, 100% { opacity:1; transform:translateY(0);}
+}
+.s08-overline {
+  font-family:'Montserrat',sans-serif;
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:rgba(255,178,0,0.9);
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.s08-button {
+  font-family:'Montserrat',sans-serif;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  color:white;
+  background:var(--orange);
+  padding:9px 14px;
+  text-transform:uppercase;
+  border-radius:2px;
+  margin-top:4px;
+  animation: s08pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(232,131,58,0.7);
+}
+@keyframes s08pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232,131,58,0.7);}
+  50% { box-shadow: 0 0 0 8px rgba(232,131,58,0);}
+}
+.s08-phone {
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  color:var(--gold);
+  margin-top:8px;
+}
+
+/* CAPTION */
+.caption-col {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.cap-section {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+  border-radius: 5px;
+}
+.cap-label {
+  font-family:'Montserrat',sans-serif;
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  padding:8px 13px;
+  background:rgba(255,255,255,0.025);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.cl-gold { color:var(--gold); }
+.cl-orange { color:var(--orange); }
+.cl-green { color:#4db870; }
+.cl-blue { color:#7da3d8; }
+.cap-label::after { content:''; flex:1; height:1px; background:currentColor; opacity:0.15; }
+
+.cap-script {
+  padding:13px 14px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:13.5px;
+  font-style:italic;
+  color:var(--cream);
+  line-height:1.7;
+}
+.cap-script strong { font-style:normal; font-weight:600; color:var(--gold); }
+
+.cap-anim {
+  padding:12px 14px;
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+.anim-step {
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  font-family:'Poppins',sans-serif;
+  font-size:11px;
+  color:var(--gray);
+  line-height:1.5;
+}
+.anim-num {
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  font-weight:700;
+  color:var(--gold);
+  background:rgba(255,178,0,0.1);
+  border:1px solid rgba(255,178,0,0.3);
+  padding:1px 5px;
+  border-radius:2px;
+  flex-shrink:0;
+  margin-top:1px;
+}
+.anim-step hl { color:white; font-weight:500; font-style:normal;}
+
+.cap-assets {
+  padding:11px 14px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.asset-item {
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  font-family:'Poppins',sans-serif;
+  font-size:10.5px;
+  color:var(--gray);
+  line-height:1.5;
+}
+.asset-badge {
+  font-family:'Montserrat',sans-serif;
+  font-size:7px;
+  font-weight:800;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  padding:2px 6px;
+  flex-shrink:0;
+  margin-top:1px;
+  border-radius:2px;
+}
+.ab-render { background:rgba(26,31,78,0.6); border:1px solid rgba(255,178,0,0.3); color:var(--gold); }
+.ab-capcut { background:rgba(232,131,58,0.1); border:1px solid rgba(232,131,58,0.3); color:var(--orange); }
+.ab-canva { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.6); }
+.ab-music { background:rgba(77,184,112,0.1); border:1px solid rgba(77,184,112,0.4); color:#4db870; }
+.ab-real { background:rgba(232,92,74,0.1); border:1px solid rgba(232,92,74,0.4); color:#e85c4a; }
+
+/* CONNECTOR */
+.connector {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 0 0;
+  gap:8px;
+}
+.conn-line { flex:1; height:1px; background:linear-gradient(90deg, transparent, rgba(255,178,0,0.3), transparent); max-width:100px; }
+.conn-arrow { font-family:'Montserrat',sans-serif; font-size:11px; color:rgba(255,178,0,0.5); }
+.conn-label { font-family:'JetBrains Mono',monospace; font-size:9px; color:rgba(255,178,0,0.5); letter-spacing:2px;}
+
+/* FOOTER */
+.footer {
+  margin:32px 20px;
+  padding:24px;
+  background:linear-gradient(135deg,rgba(26,31,78,0.4),rgba(12,12,24,0.5));
+  border:1px solid rgba(26,31,78,0.5);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+  border-radius:6px;
+}
+.footer-brand { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:300;}
+.footer-brand strong { color:var(--gold); font-weight:600;}
+.footer-tag { font-family:'Poppins',sans-serif; font-size:10.5px; color:var(--gray); margin-top:3px;}
+.footer-cta { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:white; background:var(--orange); padding:13px 22px; text-decoration:none; border-radius:2px;}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="h-l">
+    <div class="h-eye">VIP Premier Painting · Storyboard</div>
+    <div class="h-title">Douglas &amp; Sheri — Episode 1</div>
+  </div>
+  <div class="h-r">
+    <span class="hb hb-g">8 Scenes</span>
+    <span class="hb hb-o">4–5 Min</span>
+  </div>
+</header>
+
+<div class="intro">
+  <div class="intro-eye">Visual Storyboard with Live Animations</div>
+  <h1 class="intro-h1">See the Video<br><em>Before You Shoot It</em></h1>
+  <p class="intro-sub">Every scene plays its actual animation — what you see is what gets shot.</p>
+</div>
+
+<div class="legend">
+  <div class="leg"><div class="leg-dot" style="background:var(--navy);border:1px solid rgba(255,178,0,0.3);"></div>RENDER</div>
+  <div class="leg"><div class="leg-dot" style="background:rgba(232,131,58,0.4);"></div>CAPCUT</div>
+  <div class="leg"><div class="leg-dot" style="background:rgba(255,255,255,0.15);"></div>CANVA</div>
+  <div class="leg"><div class="leg-dot" style="background:rgba(77,184,112,0.5);"></div>MUSIC</div>
+  <div class="leg"><div class="leg-dot" style="background:rgba(232,92,74,0.4);"></div>REAL</div>
+</div>
+
+<div class="storyboard">
+
+  <!-- ═════ SCENE 1 ═════ -->
+  <div class="scene-block">
+    <div class="sb-header">
+      <div class="sb-num">01</div>
+      <div class="sb-meta">
+        <div class="sb-title">The Hook — HGTV Cold Open</div>
+        <span class="sb-timing">0:00 – 0:30</span>
+        <span class="sb-type type-hook">Hook</span>
+      </div>
+    </div>
+
+    <div class="video-frame">
+      <div class="anim-pill">▶ GOLD SWEEP</div>
+      <div class="scene01-wrap">
+        <div class="s01-before"></div>
+        <div class="s01-after"></div>
+      </div>
+      <div class="s01-sweep"></div>
+      <div class="top-banner">✦ VIP HOME PAINTING ✦</div>
+      <div class="s01-title">
+        <div class="s01-label">Episode 1</div>
+        <div class="s01-name">Douglas &amp; Sheri</div>
+        <div class="s01-sub">Transforming Homes. Transforming Lives.</div>
+      </div>
+      <div class="s01-before-badge">BEFORE</div>
+      <div class="s01-after-badge">AFTER</div>
+      <div class="bottom-banner">20+ Custom Visualizations · FREE</div>
+    </div>
+
+    <div class="caption-col">
+      <div class="cap-section">
+        <div class="cap-label cl-gold">Script</div>
+        <div class="cap-script">"How did Douglas and Sheri visualize over <strong>20 custom color scheme variations instantly,</strong> empowering them to make confident decisions for their dream home painting project?"</div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Animation Steps</div>
+        <div class="cap-anim">
+          <div class="anim-step"><span class="anim-num">01</span><span><hl>Both sides</hl> appear simultaneously — Before (left) and After (right)</span></div>
+          <div class="anim-step"><span class="anim-num">02</span><span><hl>Gold sweep line</hl> wipes left → right with blur glow</span></div>
+          <div class="anim-step"><span class="anim-num">03</span><span><hl>Episode title</hl> rises from below, fades in</span></div>
+          <div class="anim-step"><span class="anim-num">04</span><span><hl>BEFORE/AFTER badges</hl> stamp in last (final beat)</span></div>
+        </div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Assets in This Frame</div>
+        <div class="cap-assets">
+          <div class="asset-item"><span class="asset-badge ab-real">REAL</span><span>Render A — BEFORE photo, left side</span></div>
+          <div class="asset-item"><span class="asset-badge ab-render">RENDER K</span><span>Final CTA Hero — right side, golden hour</span></div>
+          <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Gold split sweep line + title fade-in</span></div>
+          <div class="asset-item"><span class="asset-badge ab-music">MUSIC</span><span>Cinematic strings swell — HGTV reveal energy</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">CUT</div><div class="conn-line"></div></div>
+
+  <!-- ═════ SCENE 2 ═════ -->
+  <div class="scene-block">
+    <div class="sb-header">
+      <div class="sb-num">02</div>
+      <div class="sb-meta">
+        <div class="sb-title">Meet Douglas &amp; Sheri — The Promise</div>
+        <span class="sb-timing">0:30 – 1:00</span>
+        <span class="sb-type type-trust">Trust Build</span>
+      </div>
+    </div>
+
+    <div class="video-frame">
+      <div class="anim-pill">▶ KEN BURNS + PORTRAIT</div>
+      <div class="s02-house"></div>
+      <div class="top-banner" style="background:rgba(5,5,13,0.85);">Before · 8273 North Fontana, CA</div>
+      <div class="s02-portrait">👫</div>
+      <div class="s02-portrait-label">
+        <div class="s02-pl-name">Douglas &amp; Sheri</div>
+        <div class="s02-pl-loc">North Fontana Homeowners</div>
+      </div>
+      <div class="s02-stat-row">
+        <div class="s02-stat">SAVING $1,000</div>
+        <div class="s02-stat">3 SIMPLE STEPS</div>
+        <div class="s02-stat">FREE</div>
+      </div>
+      <div class="bottom-banner">Saving $1,000 · 3 Simple Steps · FREE Visualization</div>
+    </div>
+
+    <div class="caption-col">
+      <div class="cap-section">
+        <div class="cap-label cl-gold">Script</div>
+        <div class="cap-script">"They saw exactly how their home would look before even picking up a paintbrush — saving <strong>$1,000 on expensive consultants</strong> who take days to deliver generic, uninspired options.<br><br>Let me walk you through the <strong>3 simple steps</strong> that turned their frustration into confidence — with our FREE Custom Color Scheme Visualization.<br><br><strong>And the best part? You can do it too!"</strong></div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Animation Steps</div>
+        <div class="cap-anim">
+          <div class="anim-step"><span class="anim-num">01</span><span><hl>Slow Ken Burns zoom</hl> on BEFORE house — pulls viewer in</span></div>
+          <div class="anim-step"><span class="anim-num">02</span><span><hl>Portrait circle</hl> pops in with gold pulse glow</span></div>
+          <div class="anim-step"><span class="anim-num">03</span><span><hl>3 stat badges</hl> appear in sequence — "$1,000" → "3 STEPS" → "FREE"</span></div>
+          <div class="anim-step"><span class="anim-num">04</span><span><hl>Bottom banner</hl> locks in with all 3 callouts</span></div>
+        </div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Assets in This Frame</div>
+        <div class="cap-assets">
+          <div class="asset-item"><span class="asset-badge ab-real">REAL</span><span>Render A — BEFORE photo background, slow zoom</span></div>
+          <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Portrait circle + name card overlay</span></div>
+          <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>3 staggered stat badges, fade up + fade out</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">CUT</div><div class="conn-line"></div></div>
+
+  <!-- ═════ SCENE 3 ═════ -->
+  <div class="scene-block">
+    <div class="sb-header">
+      <div class="sb-num">03</div>
+      <div class="sb-meta">
+        <div class="sb-title">The Struggle — Weeks of Frustration</div>
+        <span class="sb-timing">1:00 – 1:45</span>
+        <span class="sb-type type-pain">Pain</span>
+      </div>
+    </div>
+
+    <div class="video-frame bg-pain">
+      <div class="anim-pill">▶ STAGGER + RED ✕ STAMP</div>
+      <div class="s03-panels">
+        <div class="s03-panel">🎨<div class="s03-label">Paint Swatches</div></div>
+        <div class="s03-panel">📌<span class="s03-x">✕</span><div class="s03-label">Pinterest</div></div>
+        <div class="s03-panel">💰<span class="s03-x">✕</span><div class="s03-label">$1,000 Consultant</div></div>
+      </div>
+      <div class="top-banner" style="background:rgba(30,10,10,0.9);color:#e85c4a;border-bottom-color:rgba(232,92,74,0.4);">Weeks of Searching. Zero Results.</div>
+      <div class="bottom-banner" style="border-top-color:#e85c4a;">Overwhelmed · Frustrated · Back to Square One</div>
+    </div>
+
+    <div class="caption-col">
+      <div class="cap-section">
+        <div class="cap-label cl-gold">Script</div>
+        <div class="cap-script">"Douglas and Sheri <strong>struggled for weeks.</strong><br><br>They flipped through endless paint swatches, scrolled Pinterest for hours, and even considered hiring an expensive <strong>$1,000 color consultant.</strong><br><br>But after waiting days for uninspired options, they were back to square one — <strong>overwhelmed and frustrated.</strong><br><br>That's when they discovered <strong>VIP Home Painting.</strong>"</div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Animation Steps</div>
+        <div class="cap-anim">
+          <div class="anim-step"><span class="anim-num">01</span><span><hl>Panel 1</hl> slides up — paint swatches</span></div>
+          <div class="anim-step"><span class="anim-num">02</span><span><hl>Panel 2</hl> slides up + <hl>red ✕ stamps</hl> on Pinterest</span></div>
+          <div class="anim-step"><span class="anim-num">03</span><span><hl>Panel 3</hl> slides up + <hl>red ✕ stamps</hl> on $1,000 Consultant</span></div>
+          <div class="anim-step"><span class="anim-num">04</span><span>Cuts faster than other scenes — matches the anxiety beat</span></div>
+        </div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Assets in This Frame</div>
+        <div class="cap-assets">
+          <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>3 pain panels with red ✕ stamps, fast cut rhythm</span></div>
+          <div class="asset-item"><span class="asset-badge ab-music">MUSIC</span><span>Tension builds — slower, heavier — resolves at "VIP Home Painting"</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">VIP REVEAL</div><div class="conn-line"></div></div>
+
+  <!-- ═════ SCENE 4 ═════ -->
+  <div class="scene-block">
+    <div class="sb-header">
+      <div class="sb-num">04</div>
+      <div class="sb-meta">
+        <div class="sb-title">The Discovery — VIP Changes Everything</div>
+        <span class="sb-timing">1:45 – 2:15</span>
+        <span class="sb-type type-solution">Solution</span>
+      </div>
+    </div>
+
+    <div class="video-frame bg-discovery">
+      <div class="anim-pill">▶ CROWN PULSE + STAGGER</div>
+      <div class="top-banner">Free Custom Color Scheme Visualization</div>
+      <div class="s04-crown">
+        <span class="s04-crown-icon">👑</span>
+        <div class="s04-crown-text">VIP</div>
+      </div>
+      <div class="s04-thumbs">
+        <div class="s04-thumb"><span>Gateway Gray</span></div>
+        <div class="s04-thumb"><span>Rookwood Red</span></div>
+        <div class="s04-thumb"><span>Gray Area</span></div>
+      </div>
+      <div class="bottom-banner">3 Easy Steps · Turning Frustration Into Confidence</div>
+    </div>
+
+    <div class="caption-col">
+      <div class="cap-section">
+        <div class="cap-label cl-gold">Script</div>
+        <div class="cap-script">"With our FREE Custom Color Scheme Visualization, we gave them instant, tailored options they could <strong>see on their home in real-time</strong> — turning frustration into excitement.<br><br>Douglas and Sheri couldn't believe how simple and exciting the process was. We guided them through <strong>3 easy steps</strong> to bring their vision to life."</div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Animation Steps</div>
+        <div class="cap-anim">
+          <div class="anim-step"><span class="anim-num">01</span><span><hl>VIP crown</hl> pulses with gold glow — music lift moment</span></div>
+          <div class="anim-step"><span class="anim-num">02</span><span><hl>3 render thumbnails</hl> rise from below in sequence (0.4s stagger)</span></div>
+          <div class="anim-step"><span class="anim-num">03</span><span>Each thumbnail labeled with its SW color name</span></div>
+        </div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Assets in This Frame</div>
+        <div class="cap-assets">
+          <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>VIP crown logo with gold glow pulse animation</span></div>
+          <div class="asset-item"><span class="asset-badge ab-render">RENDER C</span><span>Gateway Gray thumb (stagger 0.4s)</span></div>
+          <div class="asset-item"><span class="asset-badge ab-render">RENDER D</span><span>Rookwood Red thumb (stagger 0.8s)</span></div>
+          <div class="asset-item"><span class="asset-badge ab-render">RENDER E</span><span>Gray Area thumb (stagger 1.2s)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">STEP 1</div><div class="conn-line"></div></div>
+
+  <!-- ═════ SCENE 5 — THE VISUALIZATION SHOWCASE ═════ -->
+  <div class="scene-block">
+    <div class="sb-header">
+      <div class="sb-num">05</div>
+      <div class="sb-meta">
+        <div class="sb-title">Step 1 — Their Home in 6 SW Colors</div>
+        <span class="sb-timing">2:15 – 2:55</span>
+        <span class="sb-type type-step">Visualization</span>
+      </div>
+    </div>
+
+    <div class="video-frame bg-step1">
+      <div class="anim-pill">▶ HOME COLOR CYCLE · 6 SCHEMES</div>
+      <div class="top-banner">Step 1 — Discovering Their Vision</div>
+      <div class="s05-counter">SCHEME <span id="counter">1</span>/6</div>
+
+      <div class="s05-stage">
+        <div class="s05-house">
+          <div class="s05-house-icon">⌂</div>
+        </div>
+      </div>
+
+      <div class="s05-color-card">
+        <div class="s05-card-chip"></div>
+        <div class="s05-name-stack">
+          <div class="s05-n">Gateway Gray · SW 7644</div>
+          <div class="s05-n">Tricorn Black · SW 6258</div>
+          <div class="s05-n">Origami White · SW 7636</div>
+          <div class="s05-n">Rookwood Red · SW 2802</div>
+          <div class="s05-n">Gray Area · SW 7052</div>
+          <div class="s05-n">Virtual Taupe · SW 7039</div>
+        </div>
+      </div>
+
+      <div class="bottom-banner">Bold &amp; Modern · Timeless &amp; Elegant · Warm &amp; Rustic</div>
+    </div>
+
+    <div class="caption-col">
+      <div class="cap-section">
+        <div class="cap-label cl-gold">Script</div>
+        <div class="cap-script">"We began by asking Douglas and Sheri about the colors they had in mind.<br><br>They shared their favorites: <strong>Gateway Gray... Tricorn Black... Origami White... Rookwood Red... Gray Area... and Virtual Taupe.</strong><br><br>Each color reflected a different part of their vision — <strong>bold and modern, timeless and elegant, or warm and rustic.</strong><br><br>By visualizing their home in <strong>each color instantly</strong>, they got a real taste of what was possible."</div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-blue">★ The Visualization Demo</div>
+        <div class="cap-anim">
+          <div class="anim-step"><span class="anim-num">★</span><span><hl>Hero house auto-cycles through all 6 SW colors</hl> — 2 seconds per color</span></div>
+          <div class="anim-step"><span class="anim-num">01</span><span>Gateway Gray (cool stone) → 0:00–0:02</span></div>
+          <div class="anim-step"><span class="anim-num">02</span><span>Tricorn Black (dramatic) → 0:02–0:04</span></div>
+          <div class="anim-step"><span class="anim-num">03</span><span>Origami White (soft elegant) → 0:04–0:06</span></div>
+          <div class="anim-step"><span class="anim-num">04</span><span>Rookwood Red (bold warm) → 0:06–0:08</span></div>
+          <div class="anim-step"><span class="anim-num">05</span><span>Gray Area (modern neutral) → 0:08–0:10</span></div>
+          <div class="anim-step"><span class="anim-num">06</span><span>Virtual Taupe (warm rustic) → 0:10–0:12</span></div>
+          <div class="anim-step"><span class="anim-num">★</span><span><hl>Color card</hl> updates synchronized — name + SW code swap with each render</span></div>
+          <div class="anim-step"><span class="anim-num">★</span><span><hl>Counter top-right</hl> shows progress: 1/6 → 6/6</span></div>
+        </div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Why This Sells</div>
+        <div class="cap-script" style="font-size:12.5px;">This scene is <strong>the demo of the free service.</strong> The viewer literally watches their imagination happen on screen — "I could see my home this way too." That's the conversion moment.</div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Assets in This Frame</div>
+        <div class="cap-assets">
+          <div class="asset-item"><span class="asset-badge ab-render">RENDER F1–F6</span><span>6 Higgsfield renders of the house in each SW color</span></div>
+          <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Cross-fade transitions between renders (0.3s overlap)</span></div>
+          <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Color card name + SW code swap synced to each frame</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">STEP 2</div><div class="conn-line"></div></div>
+
+  <!-- ═════ SCENE 6A — Palette Exploration ═════ -->
+  <div class="scene-block">
+    <div class="sb-header">
+      <div class="sb-num">06</div>
+      <div class="sb-meta">
+        <div class="sb-title">Step 2A — Exploring Style Combinations</div>
+        <span class="sb-timing">2:55 – 3:20</span>
+        <span class="sb-type type-step">Step 2A</span>
+      </div>
+    </div>
+
+    <div class="video-frame bg-palette">
+      <div class="anim-pill">▶ PALETTE CAROUSEL · AUTO-CYCLE</div>
+      <div class="top-banner">Step 2 — Exploring Their Style Options</div>
+      <div class="s06-carousel">
+        <div class="s06-main">
+          <div class="s06-main-label">
+            <div class="s06-mn">
+              <span>Bold Modern</span>
+              <span>Warm Earthy</span>
+              <span>Subtle Elegant</span>
+            </div>
+          </div>
+        </div>
+        <div class="s06-alts">
+          <div class="s06-alt"></div>
+          <div class="s06-alt"></div>
+        </div>
+      </div>
+      <div class="bottom-banner">Gateway Gray · Rookwood Red · Gray Area</div>
+    </div>
+
+    <div class="caption-col">
+      <div class="cap-section">
+        <div class="cap-label cl-gold">Script</div>
+        <div class="cap-script">"<strong>Gateway Gray paired with Tricorn Black</strong> for a bold, modern look.<br><br><strong>Rookwood Red combined with Virtual Taupe</strong> for a warm, earthy aesthetic.<br><br><strong>Gray Area with Origami White</strong> for a subtle, elegant appeal."</div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Animation Steps</div>
+        <div class="cap-anim">
+          <div class="anim-step"><span class="anim-num">01</span><span>Hero panel <hl>auto-cycles</hl> through 3 palette combinations (3s each)</span></div>
+          <div class="anim-step"><span class="anim-num">02</span><span>Label updates with combo name as colors change</span></div>
+          <div class="anim-step"><span class="anim-num">03</span><span>Side panels show alternate options simultaneously</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">UPSELL ADDITIONS</div><div class="conn-line"></div></div>
+
+  <!-- ═════ SCENE 6B — Upsell Additions ═════ -->
+  <div class="scene-block">
+    <div class="sb-header">
+      <div class="sb-num">06b</div>
+      <div class="sb-meta">
+        <div class="sb-title">Step 2B — Luxury Upgrade Visualizations</div>
+        <span class="sb-timing">3:20 – 3:45</span>
+        <span class="sb-type type-upsell">Upsell</span>
+      </div>
+    </div>
+
+    <div class="video-frame bg-upsell">
+      <div class="anim-pill">▶ UPGRADES BUILD ON HOME</div>
+      <div class="top-banner" style="background:rgba(10,24,14,0.85);color:#4db870;border-bottom-color:rgba(77,184,112,0.4);">★ Luxury Upgrade Add-Ons — VIP Design</div>
+      <div class="s06b-stage">
+        <div class="s06b-house">
+          <div class="s06b-house-icon">⌂</div>
+          <div class="s06b-badge s06b-b1">Modern Lighting</div>
+          <div class="s06b-badge s06b-b2">Glass Garage Door</div>
+          <div class="s06b-badge s06b-b3">Natural Stone Siding</div>
+        </div>
+      </div>
+      <div class="bottom-banner" style="border-top-color:#4db870;">Each Add-On Visualized · Each Add-On Quoted</div>
+    </div>
+
+    <div class="caption-col">
+      <div class="cap-section">
+        <div class="cap-label cl-green">Script</div>
+        <div class="cap-script">"We didn't stop at color. We paired their palette with key design elements:<br><br><strong>Modern lighting fixtures.</strong> <strong>Glass panel garage doors.</strong> <strong>Natural stone siding</strong> for luxury depth and texture.<br><br>Every add-on visualized — and every add-on quoted in the estimate."</div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-green">Animation Steps</div>
+        <div class="cap-anim">
+          <div class="anim-step"><span class="anim-num">01</span><span><hl>Modern Lighting badge</hl> appears top-left with green + glow</span></div>
+          <div class="anim-step"><span class="anim-num">02</span><span><hl>Glass Garage Door badge</hl> appears mid-right</span></div>
+          <div class="anim-step"><span class="anim-num">03</span><span><hl>Natural Stone Siding badge</hl> appears bottom-left</span></div>
+          <div class="anim-step"><span class="anim-num">04</span><span>All 3 badges hold simultaneously — the upgraded home</span></div>
+        </div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Why This Sells</div>
+        <div class="cap-script" style="font-size:12.5px;">Visualizing each upgrade <strong>turns the upsell into a feature</strong>, not a sales pitch. Customer sees what they're paying for — every line item on the estimate has a corresponding render.</div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Assets in This Frame</div>
+        <div class="cap-assets">
+          <div class="asset-item"><span class="asset-badge ab-render">RENDER G1</span><span>House + modern lighting fixtures (Higgsfield)</span></div>
+          <div class="asset-item"><span class="asset-badge ab-render">RENDER G2</span><span>House + glass garage door</span></div>
+          <div class="asset-item"><span class="asset-badge ab-render">RENDER G3</span><span>House + natural stone siding accent</span></div>
+          <div class="asset-item"><span class="asset-badge ab-render">RENDER G4</span><span>House with ALL upgrades combined (final hero)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">STEP 3 REVEAL</div><div class="conn-line"></div></div>
+
+  <!-- ═════ SCENE 7 — Reveal ═════ -->
+  <div class="scene-block">
+    <div class="sb-header">
+      <div class="sb-num">07</div>
+      <div class="sb-meta">
+        <div class="sb-title">Step 3 — The Chosen Palette · Gold Wipe Reveal</div>
+        <span class="sb-timing">3:45 – 4:15</span>
+        <span class="sb-type type-reveal">Reveal</span>
+      </div>
+    </div>
+
+    <div class="video-frame">
+      <div class="anim-pill">▶ GOLD WIPE REVEAL</div>
+      <div class="s07-stage">
+        <div class="s07-before"></div>
+        <div class="s07-after"></div>
+      </div>
+      <div class="s07-sweep"></div>
+      <div class="top-banner">Step 3 — Choosing the Perfect Palette</div>
+      <div class="s07-side-label s07-sl-before">Before</div>
+      <div class="s07-side-label s07-sl-after">After</div>
+      <div class="s07-palette-card">
+        <div class="s07-card-title">The Chosen Palette</div>
+        <div class="s07-card-row"><div class="s07-card-dot" style="background:var(--gw);"></div><div class="s07-card-name">Gateway Gray · SW 7644</div></div>
+        <div class="s07-card-row"><div class="s07-card-dot" style="background:var(--tb);border:1px solid rgba(255,255,255,0.15);"></div><div class="s07-card-name">Tricorn Black · SW 6258</div></div>
+        <div class="s07-card-row"><div class="s07-card-dot" style="background:var(--ow);"></div><div class="s07-card-name">Origami White · SW 7636</div></div>
+      </div>
+      <div class="bottom-banner">CONFIDENT · EXCITED · READY</div>
+    </div>
+
+    <div class="caption-col">
+      <div class="cap-section">
+        <div class="cap-label cl-gold">Script</div>
+        <div class="cap-script">"In the end, they confidently chose their perfect palette:<br><br><strong>Gateway Gray</strong> for the main body — timeless yet modern.<br><strong>Tricorn Black</strong> for the shutters, garage door, and front door.<br><strong>Origami White</strong> for the trim and fascia — crisp, polished finish.<br><br>Seeing every option instantly gave them the <strong>confidence to move forward</strong> with a design they absolutely loved."</div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Animation Steps</div>
+        <div class="cap-anim">
+          <div class="anim-step"><span class="anim-num">01</span><span><hl>Before holds</hl> on left for 1 full second</span></div>
+          <div class="anim-step"><span class="anim-num">02</span><span><hl>Gold wipe sweeps</hl> left → right with bright glow</span></div>
+          <div class="anim-step"><span class="anim-num">03</span><span><hl>After reveal</hl> — the chosen Gateway Gray + Tricorn Black</span></div>
+          <div class="anim-step"><span class="anim-num">04</span><span><hl>Palette card</hl> slides up from below — 3 swatches with SW codes</span></div>
+        </div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Assets in This Frame</div>
+        <div class="cap-assets">
+          <div class="asset-item"><span class="asset-badge ab-real">REAL A</span><span>BEFORE — desaturated, left side</span></div>
+          <div class="asset-item"><span class="asset-badge ab-render">RENDER C</span><span>Gateway Gray + Tricorn Black hero — golden hour</span></div>
+          <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Gold wipe sweep — most cinematic moment</span></div>
+          <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Floating palette card with synced SW code reveal</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">FINAL CTA</div><div class="conn-line"></div></div>
+
+  <!-- ═════ SCENE 8 — CTA ═════ -->
+  <div class="scene-block">
+    <div class="sb-header">
+      <div class="sb-num">08</div>
+      <div class="sb-meta">
+        <div class="sb-title">The Result + CTA — Your Home Is Next</div>
+        <span class="sb-timing">4:15 – 5:00</span>
+        <span class="sb-type type-cta">CTA</span>
+      </div>
+    </div>
+
+    <div class="video-frame">
+      <div class="anim-pill">▶ KEN BURNS + CTA PULSE</div>
+      <div class="s08-house"></div>
+      <div class="top-banner">The Standout Home of the Neighborhood</div>
+      <div class="s08-content">
+        <div class="s08-tagline">"See It. Love It. Paint It."</div>
+        <div class="s08-overline">Your Home Is Next</div>
+        <div class="s08-button">📞 Book Your FREE Visualization</div>
+        <div class="s08-phone">(909) 312-5400</div>
+      </div>
+      <div class="bottom-banner" style="animation: s08pulse 2s infinite;">⚡ LIMITED SPOTS AVAILABLE THIS MONTH</div>
+    </div>
+
+    <div class="caption-col">
+      <div class="cap-section">
+        <div class="cap-label cl-gold">Script</div>
+        <div class="cap-script">"The result? A stunning transformation that turned their house into <strong>the standout home of the neighborhood.</strong><br><br>They saved time, money, and stress — and now they're proud to call this <strong>their dream home.</strong><br><br>Imagine walking up to your home and feeling that same <strong>pride and excitement</strong> every day.<br><br>That's what our <strong>FREE Custom Color Scheme Visualization</strong> can do for you!"</div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Animation Steps</div>
+        <div class="cap-anim">
+          <div class="anim-step"><span class="anim-num">01</span><span><hl>Slow Ken Burns pull-back</hl> on final hero render — 8 seconds</span></div>
+          <div class="anim-step"><span class="anim-num">02</span><span><hl>Tagline fades in</hl> — italic Cormorant Garamond</span></div>
+          <div class="anim-step"><span class="anim-num">03</span><span><hl>CTA button pulses</hl> with orange glow ring</span></div>
+          <div class="anim-step"><span class="anim-num">04</span><span><hl>Limited spots banner</hl> pulses for urgency</span></div>
+        </div>
+      </div>
+      <div class="cap-section">
+        <div class="cap-label cl-orange">Assets in This Frame</div>
+        <div class="cap-assets">
+          <div class="asset-item"><span class="asset-badge ab-render">RENDER K</span><span>Final CTA Hero — all upgrades visible, golden hour</span></div>
+          <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Tagline fade + CTA pulse animation</span></div>
+          <div class="asset-item"><span class="asset-badge ab-music">MUSIC</span><span>Full resolution — triumphant, warm</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div>
+    <div class="footer-brand">VIP <strong>Premier</strong> Painting</div>
+    <div class="footer-tag">Douglas &amp; Sheri · Episode 1 · 8273 N Fontana CA · (909) 312-5400</div>
+  </div>
+  <a href="tel:9093125400" class="footer-cta">Book Free Consult</a>
+</div>
+
+</body>
+</html>

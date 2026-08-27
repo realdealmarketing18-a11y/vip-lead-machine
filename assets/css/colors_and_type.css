@@ -6,37 +6,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* ---------- BRAND COLORS ---------- */
-  --vip-orange:      #E8833A;   /* VIP brand orange — secondary CTA / accent */
-  --vip-gold:        #C9A961;   /* Primary luxury gold */
-  --vip-gold-bright: #C9A961;   /* Primary luxury gold */
-  --vip-gold-deep:   #A88A47;   /* Hover / serif italic accent */
-  --vip-gold-shine:  linear-gradient(180deg, #E8CC85 0%, #C9A961 50%, #A88A47 100%);
-  --vip-gold-shine-b:linear-gradient(180deg, #F1D998 0%, #D4AF6A 50%, #B5904F 100%);
-  --vip-navy:        #1A1F4E;   /* Deep navy — text + dark sections */
-  --vip-navy-deep:   #141838;   /* Footer / deepest dark */
-  --vip-cream:       #F5EFE2;   /* Warm cream — primary secondary surface */
-  --vip-cream-deep:  #EDE4D2;   /* Slightly darker cream alternation */
-  --vip-white:       #FFFFFF;   /* Hero + clean white sections */
+  /* ---------- BRAND COLORS (LIVE SITE SPECS) ---------- */
+  --vip-navy:        #141838;   /* Primary navy — buttons, headings, solid brush */
+  --vip-navy-deep:   #1A1F4E;   /* Deeper navy variant */
+  --vip-gold:        #A88A47;   /* Antique gold — accents, ferrule, wordmark */
+  --vip-gold-deep:   #A88A47;   /* Antique gold deep */
+  --vip-gold-glow:   rgba(168, 138, 71, 0.30); /* Primary button gold glow */
+  --vip-cream:       #F5EFE2;   /* Cream secondary surface */
+  --vip-cream-light: #F7F4EE;   /* Soft champagne secondary surface */
+  --vip-border-gold: #DCD0B5;   /* Gold-champagne primary border */
+  --vip-border-soft: #E8E1CF;   /* Light champagne border */
+  --vip-slate:       #4A4F70;   /* Muted slate links and subtext */
+  --vip-white:       #FFFFFF;   /* Pure white background */
 
   /* ---------- SEMANTIC SURFACES ---------- */
   --bg-primary:    var(--vip-white);
   --bg-secondary:  var(--vip-cream);
-  --bg-tertiary:   var(--vip-cream-deep);
+  --bg-tertiary:   var(--vip-cream-light);
   --bg-dark:       var(--vip-navy);
   --bg-dark-deep:  var(--vip-navy-deep);
 
   /* ---------- TEXT ---------- */
   --fg-primary:   var(--vip-navy);
-  --fg-secondary: #4A4F70;
-  --fg-muted:     #8a8aa3;
+  --fg-secondary: var(--vip-slate);
+  --fg-muted:     var(--vip-slate);
   --fg-inverse:   #FFFFFF;
-  --fg-on-dark-2: rgba(255,255,255,0.85);
-  --fg-accent:    var(--vip-gold-deep);
-  --fg-link:      var(--vip-gold-deep);
+  --fg-accent:    var(--vip-gold);
+  --fg-link:      var(--vip-slate);
 
   /* ---------- TYPOGRAPHY ---------- */
   --font-serif:   'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  --font-logo:    'Fraunces', 'Cormorant Garamond', Georgia, serif;
   --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   --fs-overline:  0.6875rem;   /* 11px */

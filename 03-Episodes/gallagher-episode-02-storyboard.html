@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Premier — Visual Storyboard | Gallagher Family Episode 2</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --orange: #e8833a;
+  --navy: #1a1f4e;
+  --gold: #C9A961;
+  --gray: #BAAEA1;
+  --black: #05050d;
+  --card: #0e0e1c;
+  --white: #faf8f5;
+  --cream: #ede8df;
+  
+  /* SW color codes */
+  --sw-nf: #B6B7B0; /* Newport Fog */
+  --sw-cs: #CEC2AA; /* Coastal Sand / Accessible Beige */
+  --sw-en: #384B5F; /* Estate Navy */
+  --sw-ow: #E5E2DA; /* Origami White */
+  --sw-tb: #2F2F30; /* Tricorn Black */
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  padding: 32px 24px 80px;
+}
+.container { max-width: 980px; margin: 0 auto; }
+
+/* HEADER */
+.header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(201,169,97,0.15);
+  background: rgba(14,14,28,0.7);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(20px);
+}
+.h-l { display:flex; flex-direction:column; gap:4px; min-width:0;}
+.h-eye { font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:3px; color:var(--gold); text-transform:uppercase; }
+.h-title { font-family:'Fraunces',serif; font-size:18px; font-weight:600; color: var(--white); }
+.h-r { display:flex; gap:8px; flex-shrink:0;}
+.hb { font-family:'Inter',sans-serif; font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:6px 12px; border-radius:3px; }
+.hb-o { background:var(--orange); color:white; }
+.hb-g { border:1px solid rgba(201,169,97,0.3); color:var(--gold); }
+
+/* INTRO */
+.intro {
+  padding: 32px 20px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.intro-eye { font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:4px; color:var(--orange); text-transform:uppercase; margin-bottom:12px; }
+.intro-h1 { font-family:'Fraunces',serif; font-size:clamp(32px,5vw,46px); font-weight:300; line-height:1.1; letter-spacing:-0.5px; margin-bottom:12px; }
+.intro-h1 em { font-style:italic; color:var(--gold); }
+.intro-sub { font-family:'Fraunces',serif; font-size:16px; font-style:italic; color:var(--gray); }
+
+/* INSTRUCTIONS */
+.howto {
+  background: var(--card);
+  border: 1px solid rgba(201,169,97,0.15);
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--gray);
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+.howto-title { font-family:'Inter',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--gold); margin-bottom:6px; font-size:11px;}
+
+/* COLLAPSIBLE STYLE PREFIX */
+details.style-prefix {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 40px;
+}
+details.style-prefix summary {
+  cursor: pointer; font-weight: 600; font-size: 14px;
+  color: var(--gold); user-select: none;outline: none;
+  font-family: 'Fraunces', serif;
+}
+details.style-prefix pre {
+  margin: 14px 0 0; padding: 14px;
+  background: #08080f;
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+/* LEGEND */
+.legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.015);
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 6px;
+  margin-bottom: 32px;
+}
+.leg { display:flex; align-items:center; gap:8px; font-family:'Inter',sans-serif; font-size:11px; color:var(--gray); }
+.leg-dot { width:10px; height:10px; border-radius:2px; flex-shrink:0; }
+
+/* STORYBOARD */
+.storyboard { display:flex; flex-direction:column; gap:56px; }
+.scene-block { display:flex; flex-direction:column; gap:0; }
+
+.sb-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.sb-checkbox {
+  width: 24px; height: 24px;
+  accent-color: #4ade80; cursor: pointer;
+  flex-shrink: 0; margin-top: 4px;
+}
+.sb-num {
+  font-family:'Fraunces',serif;
+  font-size:48px;
+  font-weight:300;
+  color:rgba(201,169,97,0.22);
+  line-height:1;
+  flex-shrink:0;
+  width:56px;
+  margin-top:-6px;
+}
+.sb-meta { flex:1; min-width:0;}
+.sb-title { font-family:'Fraunces',serif; font-size:22px; font-weight:600; margin-bottom:6px; line-height:1.2;}
+.sb-timing {
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  color:var(--orange);
+  display:inline-block;
+  border:1px solid rgba(232,131,58,0.3);
+  padding:2px 8px;
+  margin-right:8px;
+  margin-bottom:6px;
+  border-radius: 3px;
+}
+.sb-type { font-family:'Inter',sans-serif; font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:3px 8px; border:1px solid; display:inline-block; border-radius:3px;}
+.type-hook { border-color:rgba(201,169,97,0.4); color:var(--gold); }
+.type-trust { border-color:rgba(232,131,58,0.4); color:var(--orange); }
+.type-pain { border-color:rgba(232,92,74,0.5); color:#e85c4a; }
+.type-solution { border-color:rgba(201,169,97,0.4); color:var(--gold); }
+.type-step { border-color:rgba(201,169,97,0.3); color:var(--gold); }
+.type-upsell { border-color:rgba(77,184,112,0.5); color:#4db870; }
+.type-reveal { border-color:rgba(232,131,58,0.4); color:var(--orange); }
+.type-cta { border-color:rgba(201,169,97,0.5); color:var(--gold); }
+
+.scene-block.done .sb-title { text-decoration: line-through; color: var(--gray); }
+
+/* VIDEO FRAME */
+.video-frame {
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16/9;
+  border: 2px solid rgba(255,255,255,0.08);
+  margin-bottom:18px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.6);
+}
+.bg-before { background: linear-gradient(160deg, #3a3630 0%, #4a4238 40%, #524a3e 100%); }
+.bg-pain { background: linear-gradient(160deg, #1f1a18 0%, #2e241f 100%); }
+.bg-discovery { background: linear-gradient(160deg, #0e0e1c 0%, #1a1f4e 100%); }
+.bg-step1 { background: linear-gradient(160deg, #0d0d1a 0%, #171526 100%); }
+.bg-palette { background: linear-gradient(160deg, #0e0e1c 0%, #141414 100%); }
+.bg-upsell { background: linear-gradient(160deg, #0e1a12 0%, #1a3022 100%); }
+.bg-reveal { background: linear-gradient(90deg, #3a3630 50%, #6d6e75 50%); }
+.bg-cta { background: linear-gradient(160deg, #4d5261 0%, #6d7280 60%, #7d8290 100%); }
+
+/* ANIMATION INDICATOR PILL */
+.anim-pill {
+  position:absolute;
+  top:8px; right:8px;
+  background:rgba(0,0,0,0.75);
+  border:1px solid rgba(201,169,97,0.4);
+  border-radius:100px;
+  padding:4px 10px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:8px;
+  font-weight:500;
+  color:var(--gold);
+  letter-spacing:0.5px;
+  z-index:20;
+  display:flex;
+  align-items:center;
+  gap:5px;
+  backdrop-filter:blur(6px);
+}
+.anim-pill::before {
+  content:'';
+  width:5px; height:5px;
+  border-radius:50%;
+  background:var(--gold);
+  animation: blink 1.5s ease-in-out infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity:1; box-shadow:0 0 6px var(--gold);}
+  50% { opacity:0.3; box-shadow:none;}
+}
+
+/* TOP & BOTTOM BANNERS */
+.top-banner {
+  font-family:'Inter',sans-serif;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  background:rgba(26,31,78,0.85);
+  backdrop-filter:blur(4px);
+  color:var(--gold);
+  padding:6px 10px;
+  border-bottom:1px solid rgba(201,169,97,0.3);
+  position:absolute;
+  top:0; left:0; right:0;
+  text-align:center;
+  z-index:6;
+}
+.bottom-banner {
+  position:absolute;
+  bottom:0; left:0; right:0;
+  background:rgba(26,31,78,0.9);
+  backdrop-filter:blur(4px);
+  padding:6px 10px;
+  border-top:2px solid var(--orange);
+  font-family:'Inter',sans-serif;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  color:var(--white);
+  text-transform:uppercase;
+  text-align:center;
+  z-index:6;
+}
+
+/* SCENE 01 — Split sweep animation */
+.scene01-wrap { position:absolute; inset:0; z-index:2;}
+.s01-before, .s01-after {
+  position:absolute;
+  top:0; bottom:0;
+  width:50%;
+}
+.s01-before {
+  left:0;
+  background:linear-gradient(160deg,#3a3630 0%,#4a4238 100%);
+  animation: s01slideL 4s ease-out infinite;
+}
+.s01-after {
+  right:0;
+  background:linear-gradient(160deg,#6d7280 0%,#888c94 100%);
+  animation: s01slideR 4s ease-out infinite;
+}
+@keyframes s01slideL {
+  0%, 100% { transform: translateX(0); }
+  40% { transform: translateX(-2px); }
+}
+@keyframes s01slideR {
+  0%, 100% { transform: translateX(0); }
+  40% { transform: translateX(2px); }
+}
+.s01-sweep {
+  position:absolute;
+  left:50%;
+  top:0; bottom:0;
+  width:4px;
+  background:var(--gold);
+  box-shadow: 0 0 20px var(--gold), 0 0 40px rgba(201,169,97,0.5);
+  transform:translateX(-50%);
+  z-index:5;
+  animation: s01sweep 4s ease-in-out infinite;
+}
+@keyframes s01sweep {
+  0% { left:0%; opacity:0; }
+  20% { opacity:1; }
+  50% { left:50%; opacity:1; }
+  80% { opacity:1; }
+  100% { left:100%; opacity:0; }
+}
+.s01-title {
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  z-index:4;
+  background:rgba(0,0,0,0.3);
+}
+.s01-label {
+  font-family:'Inter',sans-serif;
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:4px;
+  color:var(--orange);
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.s01-name {
+  font-family:'Fraunces',serif;
+  font-size:28px;
+  font-weight:400;
+  color:white;
+  text-shadow:0 2px 10px rgba(0,0,0,0.8);
+  margin-bottom:4px;
+}
+.s01-sub {
+  font-family:'Fraunces',serif;
+  font-size:11px;
+  font-style:italic;
+  color:var(--gray);
+  text-shadow:0 1px 6px rgba(0,0,0,0.8);
+}
+.s01-before-badge, .s01-after-badge {
+  position:absolute;
+  bottom:32px;
+  background:rgba(0,0,0,0.7);
+  padding:3px 7px;
+  font-family:'Inter',sans-serif;
+  font-size:7px;
+  font-weight:800;
+  letter-spacing:1px;
+  border-radius:2px;
+  z-index:6;
+}
+.s01-before-badge { left:14px; border:1px solid rgba(255,255,255,0.15);}
+.s01-after-badge { right:14px; border:1px solid rgba(201,169,97,0.3); color:var(--gold);}
+
+/* SCENE 02 — Ken Burns + portrait */
+.s02-house {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.7) 100%),
+             linear-gradient(160deg, #3a3630 0%, #4a4238 60%, #524a3e 100%);
+  animation: kenBurns 10s ease-in-out infinite alternate;
+  z-index:1;
+}
+@keyframes kenBurns {
+  from { transform: scale(1.02) translate(0, 0); }
+  to { transform: scale(1.1) translate(-1%, -1%); }
+}
+.s02-portrait {
+  position:absolute;
+  top:50%; left:20%;
+  transform:translate(-50%,-50%);
+  width:72px; height:72px;
+  border-radius:50%;
+  background:rgba(26,31,78,0.9);
+  border:2px solid var(--gold);
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  animation: s02pulse 2s infinite;
+}
+@keyframes s02pulse {
+  0% { box-shadow: 0 0 0 0 rgba(201,169,97,0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(201,169,97,0); }
+  100% { box-shadow: 0 0 0 0 rgba(201,169,97,0); }
+}
+.s02-portrait-label {
+  position:absolute;
+  top:50%; left:calc(20% + 46px);
+  transform:translateY(-50%);
+  z-index:3;
+  background:rgba(0,0,0,0.8);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:6px 12px;
+  border-radius:4px;
+  backdrop-filter:blur(6px);
+  min-width:140px;
+}
+.s02-pl-name { font-family:'Fraunces',serif; font-size:12px; font-weight:600; color:white;}
+.s02-pl-loc { font-family:'Inter',sans-serif; font-size:8px; color:var(--gray); text-transform:uppercase; letter-spacing:0.5px;}
+
+.s02-stat-row {
+  position:absolute;
+  bottom:34px; right:14px;
+  display:flex;
+  gap:6px;
+  z-index:3;
+}
+.s02-stat {
+  background:rgba(26,31,78,0.85);
+  border:1px solid rgba(201,169,97,0.3);
+  color:var(--gold);
+  font-family:'Inter',sans-serif;
+  font-size:8px; font-weight:700; letter-spacing:1px;
+  padding:4px 8px; border-radius:2px;
+  backdrop-filter:blur(4px);
+  animation: statFade 3s infinite;
+}
+.s02-stat:nth-child(2) { animation-delay:1s; }
+.s02-stat:nth-child(3) { animation-delay:2s; }
+@keyframes statFade {
+  0%, 100% { opacity: 0.6; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-2px); }
+}
+
+/* SCENE 03 — Pain panels list */
+.s03-panels {
+  position:absolute;
+  inset:38px 14px;
+  display:flex;
+  gap:12px;
+  z-index:2;
+}
+.s03-panel {
+  flex:1;
+  border-radius:6px;
+  background:rgba(26,31,78,0.3);
+  border:1px solid rgba(255,255,255,0.04);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  position:relative;
+  overflow:hidden;
+  animation: s03panelSlide 5s infinite;
+}
+.s03-panel:nth-child(2) { animation-delay: 1.5s; }
+.s03-panel:nth-child(3) { animation-delay: 3s; }
+@keyframes s03panelSlide {
+  0%, 100% { background:rgba(26,31,78,0.3); border-color:rgba(255,255,255,0.04); }
+  50% { background:rgba(232,92,74,0.1); border-color:rgba(232,92,74,0.25); }
+}
+.s03-label {
+  font-family:'Inter',sans-serif;
+  font-size:9px; font-weight:700; color:var(--gray);
+  text-transform:uppercase; letter-spacing:1px;
+  margin-top:8px; text-align:center;
+}
+.s03-x {
+  position:absolute;
+  font-size:64px;
+  font-weight:900;
+  color:rgba(232,92,74,0.85);
+  opacity:0;
+  transform:scale(2);
+  transition: all 0.3s ease;
+  animation: s03xStamp 5s infinite;
+  z-index:3;
+}
+.s03-panel:nth-child(2) .s03-x { animation-delay: 1.5s; }
+.s03-panel:nth-child(3) .s03-x { animation-delay: 3s; }
+@keyframes s03xStamp {
+  0%, 40% { opacity:0; transform:scale(2.5) rotate(-15deg); }
+  45%, 100% { opacity:1; transform:scale(1) rotate(-5deg); text-shadow:0 0 10px rgba(232,92,74,0.5); }
+}
+
+/* SCENE 04 — Discovery crown pulse */
+.s04-crown {
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-65%);
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+}
+.s04-crown-icon {
+  font-size:42px;
+  filter:drop-shadow(0 0 10px var(--gold));
+  animation: s04crownPulse 2s ease-in-out infinite alternate;
+}
+@keyframes s04crownPulse {
+  from { transform: scale(0.95) rotate(-5deg); filter:drop-shadow(0 0 6px var(--gold)); }
+  to { transform: scale(1.05) rotate(5deg); filter:drop-shadow(0 0 18px var(--gold)); }
+}
+.s04-crown-text {
+  font-family:'Montserrat',sans-serif;
+  font-size:12px; font-weight:900; color:var(--gold);
+  letter-spacing:3px; text-transform:uppercase;
+  margin-top:4px;
+}
+.s04-thumbs {
+  position:absolute;
+  bottom:36px; left:14px; right:14px;
+  display:flex;
+  gap:8px;
+  z-index:3;
+}
+.s04-thumb {
+  flex:1;
+  height:44px;
+  border-radius:4px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Fraunces',serif;
+  font-size:9px; font-style:italic;
+  color:var(--gray);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  opacity:0;
+  transform:translateY(10px);
+  animation: s04thumbRise 6s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
+}
+.s04-thumb:nth-child(1) { background:linear-gradient(160deg, #1f2229, var(--sw-nf)); animation-delay: 1s; }
+.s04-thumb:nth-child(2) { background:linear-gradient(160deg, #2a2520, var(--sw-cs)); animation-delay: 1.8s; }
+.s04-thumb:nth-child(3) { background:linear-gradient(160deg, #121822, var(--sw-en)); animation-delay: 2.6s; }
+@keyframes s04thumbRise {
+  0%, 15% { opacity:0; transform:translateY(10px); }
+  25%, 85% { opacity:1; transform:translateY(0); }
+  95%, 100% { opacity:0; transform:translateY(-10px); }
+}
+
+/* SCENE 05 — Visualization demo */
+.s05-stage { position:absolute; inset:0; z-index:2; }
+.s05-house {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation: s05houseCycle 12s steps(1) infinite;
+}
+@keyframes s05houseCycle {
+  0%, 16.6% { background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), var(--sw-nf); }
+  16.7%, 33.3% { background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), var(--sw-cs); }
+  33.4%, 50% { background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), var(--sw-en); }
+  50.1%, 66.6% { background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), #D4CFC5; } /* Accessible Beige */
+  66.7%, 83.3% { background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), var(--sw-ow); }
+  83.4%, 100% { background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), var(--sw-tb); }
+}
+.s05-house-icon {
+  font-size:64px;
+  color:rgba(0,0,0,0.18);
+  z-index:1;
+}
+.s05-color-card {
+  position:absolute;
+  bottom:36px; left:50%;
+  transform:translateX(-50%);
+  background:rgba(0,0,0,0.85);
+  border:1px solid rgba(201,169,97,0.5);
+  padding:7px 14px;
+  border-radius:3px;
+  z-index:8;
+  backdrop-filter:blur(8px);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-width:190px;
+  justify-content:center;
+}
+.s05-card-chip {
+  width:14px; height:14px;
+  border-radius:2px;
+  border:1px solid rgba(255,255,255,0.2);
+  flex-shrink:0;
+  animation: s05chipCycle 12s steps(1) infinite;
+}
+@keyframes s05chipCycle {
+  0%, 16.6% { background: var(--sw-nf);}
+  16.7%, 33.3% { background: var(--sw-cs);}
+  33.4%, 50% { background: var(--sw-en);}
+  50.1%, 66.6% { background: #D4CFC5;}
+  66.7%, 83.3% { background: var(--sw-ow);}
+  83.4%, 100% { background: var(--sw-tb);}
+}
+.s05-name-stack { position:relative; height:16px; min-width:130px;}
+.s05-n {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:12px;
+  font-weight:600;
+  color:var(--gold);
+  white-space:nowrap;
+  opacity:0;
+}
+.s05-n:nth-child(1) { animation: s05show 12s steps(1) infinite; animation-delay:0s;}
+.s05-n:nth-child(2) { animation: s05show 12s steps(1) infinite; animation-delay:2s;}
+.s05-n:nth-child(3) { animation: s05show 12s steps(1) infinite; animation-delay:4s;}
+.s05-n:nth-child(4) { animation: s05show 12s steps(1) infinite; animation-delay:6s;}
+.s05-n:nth-child(5) { animation: s05show 12s steps(1) infinite; animation-delay:8s;}
+.s05-n:nth-child(6) { animation: s05show 12s steps(1) infinite; animation-delay:10s;}
+@keyframes s05show {
+  0%, 16.6% { opacity:1;}
+  16.7%, 100% { opacity:0;}
+}
+.s05-counter {
+  position:absolute;
+  top:36px; right:14px;
+  background:rgba(232,131,58,0.9);
+  color:white;
+  padding:4px 8px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  font-weight:700;
+  border-radius:2px;
+  z-index:8;
+  letter-spacing:0.5px;
+}
+.s05-counter span {
+  display:inline-block;
+  width:8px;
+  text-align:center;
+  animation: s05count 12s steps(1) infinite;
+}
+@keyframes s05count {
+  0%, 16.6% { content:'1'; }
+  16.7%, 33.3% { content:'2'; }
+  33.4%, 50% { content:'3'; }
+  50.1%, 66.6% { content:'4'; }
+  66.7%, 83.3% { content:'5'; }
+  83.4%, 100% { content:'6'; }
+}
+
+/* SCENE 06A — Carousel */
+.s06-carousel {
+  position:absolute;
+  inset:32px 8px 32px 8px;
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:6px;
+  z-index:2;
+}
+.s06-main {
+  border-radius:6px;
+  position:relative;
+  overflow:hidden;
+  animation: s06mainCycle 9s steps(1) infinite;
+}
+@keyframes s06mainCycle {
+  0%, 33% { background:linear-gradient(160deg, #4f5259, var(--sw-nf));}
+  33.1%, 66% { background:linear-gradient(160deg, #4a3e30, var(--sw-cs));}
+  66.1%, 100% { background:linear-gradient(160deg, #171d2b, var(--sw-en));}
+}
+.s06-main-label {
+  position:absolute;
+  bottom:8px; left:8px;
+  background:rgba(0,0,0,0.6);
+  padding:3px 7px;
+  font-family:'Inter',sans-serif;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:1px;
+  color:white;
+  text-transform:uppercase;
+  border-radius:2px;
+  height:14px;
+  overflow:hidden;
+}
+.s06-mn { position:relative; height:14px; min-width:110px;}
+.s06-mn span {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  opacity:0;
+}
+.s06-mn span:nth-child(1) { animation: s06show 9s steps(1) infinite; animation-delay:0s;}
+.s06-mn span:nth-child(2) { animation: s06show 9s steps(1) infinite; animation-delay:3s;}
+.s06-mn span:nth-child(3) { animation: s06show 9s steps(1) infinite; animation-delay:6s;}
+@keyframes s06show {
+  0%, 33% { opacity:1;}
+  33.1%, 100% { opacity:0;}
+}
+.s06-alts { display:flex; flex-direction:column; gap:4px; }
+.s06-alt { flex:1; border-radius:4px; position:relative; }
+.s06-alt:nth-child(1) { background:linear-gradient(160deg,#4a3e30,var(--sw-cs));}
+.s06-alt:nth-child(2) { background:linear-gradient(160deg,#171d2b,var(--sw-en));}
+
+/* SCENE 06B — Upsell additions */
+.s06b-stage {
+  position:absolute;
+  inset:32px 8px 32px 8px;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+.s06b-house {
+  flex:1;
+  border-radius:4px;
+  background:linear-gradient(160deg, #4f5259, #6d7280);
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.s06b-house-icon { font-size:42px; color:rgba(0,0,0,0.15); }
+.s06b-badge {
+  position:absolute;
+  background:rgba(0,0,0,0.85);
+  border:1px solid rgba(77,184,112,0.4);
+  color:#4db870;
+  font-family:'Inter',sans-serif;
+  font-size:8px; font-weight:700; letter-spacing:0.5px;
+  padding:4px 8px; border-radius:2px;
+  text-transform:uppercase;
+  z-index:5;
+  opacity:0;
+  animation: s06bFade 6s ease-in-out infinite;
+}
+.s06b-b1 { top:10px; left:10px; animation-delay:1s; }
+.s06b-b2 { top:50%; right:10px; transform:translateY(-50%); animation-delay:2.5s; }
+.s06b-b3 { bottom:10px; left:10px; animation-delay:4s; }
+@keyframes s06bFade {
+  0%, 15% { opacity:0; transform: translateY(5px); }
+  25%, 85% { opacity:1; transform: translateY(0); }
+  95%, 100% { opacity:0; transform: translateY(-5px); }
+}
+
+/* SCENE 07 — Reveal */
+.s07-stage { position:absolute; inset:0; z-index:2;}
+.s07-before, .s07-after {
+  position:absolute;
+  top:0; bottom:0;
+  width:50%;
+}
+.s07-before {
+  left:0;
+  background:linear-gradient(160deg,#3a3630,#4a4238);
+}
+.s07-after {
+  right:0;
+  background:linear-gradient(160deg,#6d7280,#888c94);
+  animation: s07reveal 5s ease-in-out infinite;
+}
+@keyframes s07reveal {
+  0%, 30% { clip-path: inset(0 100% 0 0);}
+  60%, 100% { clip-path: inset(0 0 0 0);}
+}
+.s07-sweep {
+  position:absolute;
+  top:0; bottom:0;
+  width:6px;
+  background:linear-gradient(180deg, transparent 0%, var(--gold) 30%, var(--gold) 70%, transparent 100%);
+  box-shadow: 0 0 20px var(--gold), 0 0 40px rgba(201,169,97,0.6);
+  z-index:5;
+  animation: s07sweep 5s ease-in-out infinite;
+}
+@keyframes s07sweep {
+  0%, 30% { left:50%; opacity:0;}
+  35% { opacity:1;}
+  60% { left:100%; opacity:1;}
+  65%, 100% { opacity:0;}
+}
+.s07-side-label {
+  position:absolute;
+  bottom:38px;
+  font-family:'Inter',sans-serif;
+  font-size:9px; font-weight:800; letter-spacing:2px;
+  text-transform:uppercase; color:white;
+  text-shadow:0 1px 4px rgba(0,0,0,0.8);
+  z-index:6;
+}
+.s07-sl-before { left:14px;}
+.s07-sl-after { right:14px;}
+.s07-palette-card {
+  position:absolute;
+  bottom:38px; right:14px;
+  background:rgba(26,31,78,0.95);
+  border:1px solid rgba(201,169,97,0.5);
+  padding:8px 12px;
+  z-index:7;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  border-radius:3px;
+  animation: s07cardSlide 5s ease-in-out infinite;
+}
+@keyframes s07cardSlide {
+  0%, 50% { opacity:0; transform:translateY(20px);}
+  65%, 100% { opacity:1; transform:translateY(0);}
+}
+.s07-card-title { font-family:'Inter',sans-serif; font-size:7px; font-weight:700; letter-spacing:2px; color:var(--gold); text-transform:uppercase; margin-bottom:4px;}
+.s07-card-row { display:flex; align-items:center; gap:6px;}
+.s07-card-dot { width:11px; height:11px; border-radius:2px; flex-shrink:0;}
+.s07-card-name { font-family:'Inter',sans-serif; font-size:8px; color:rgba(255,255,255,0.85);}
+
+/* SCENE 08 — Result / CTA */
+.s08-house {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, transparent 0%, rgba(26,31,78,0.4) 40%, rgba(14,14,28,0.85) 100%),
+             linear-gradient(160deg, #4d5261 0%, #6d7280 60%, #7d8290 100%);
+  animation: kenBurnsPull 8s ease-in-out infinite alternate;
+  z-index:1;
+}
+@keyframes kenBurnsPull {
+  from { transform: scale(1.08);}
+  to { transform: scale(1);}
+}
+.s08-content {
+  position:absolute;
+  inset:0;
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:36px 14px 50px;
+  text-align:center;
+}
+.s08-tagline {
+  font-family:'Fraunces',serif;
+  font-size:22px;
+  font-style:italic;
+  font-weight:600;
+  color:white;
+  text-shadow:0 2px 14px rgba(0,0,0,0.95);
+  margin-bottom:8px;
+  animation: s08fade 4s ease-out infinite;
+}
+@keyframes s08fade {
+  0%, 20% { opacity:0; transform:translateY(8px);}
+  35%, 100% { opacity:1; transform:translateY(0);}
+}
+.s08-overline {
+  font-family:'Inter',sans-serif;
+  font-size:8px; font-weight:700; letter-spacing:3px;
+  color:rgba(201,169,97,0.9);
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.s08-button {
+  font-family:'Inter',sans-serif;
+  font-size:9px; font-weight:800; letter-spacing:1.5px;
+  color:white; background:var(--orange);
+  padding:10px 16px; text-transform:uppercase;
+  border-radius:2px; margin-top:4px;
+  animation: s08pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(232,131,58,0.7);
+}
+@keyframes s08pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232,131,58,0.7); transform: scale(1); }
+  50% { box-shadow: 0 0 0 8px rgba(232,131,58,0); transform: scale(1.02); }
+}
+.s08-phone {
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  color:var(--gold);
+  margin-top:8px;
+  font-weight: 500;
+}
+
+/* CONNECTOR */
+.connector {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px 0 0;
+  gap:12px;
+}
+.conn-line { flex:1; height:1px; background:linear-gradient(90deg, transparent, rgba(201,169,97,0.25), transparent); max-width:120px; }
+.conn-arrow { font-family:'Inter',sans-serif; font-size:11px; color:rgba(201,169,97,0.4); }
+.conn-label { font-family:'JetBrains Mono',monospace; font-size:9px; color:rgba(201,169,97,0.4); letter-spacing:2px; text-transform:uppercase;}
+
+/* CAPTIONS */
+.caption-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cap-section {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden;
+  border-radius: 6px;
+}
+.cap-label {
+  font-family:'Inter',sans-serif;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  padding:8px 14px;
+  background:rgba(255,255,255,0.02);
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.cl-gold { color:var(--gold); }
+.cl-orange { color:var(--orange); }
+.cl-green { color:#4db870; }
+.cl-blue { color:#7da3d8; }
+.cap-label::after { content:''; flex:1; height:1px; background:currentColor; opacity:0.15; }
+
+.cap-script {
+  padding:14px;
+  font-family:'Fraunces',serif;
+  font-size:14px;
+  font-style:italic;
+  color:var(--cream);
+  line-height:1.7;
+}
+.cap-script strong { font-style:normal; font-weight:600; color:var(--gold); }
+
+.cap-anim {
+  padding:12px 14px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.anim-step {
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  font-family:'Inter',sans-serif;
+  font-size:12px;
+  color:var(--gray);
+  line-height:1.5;
+}
+.anim-num {
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  font-weight:700;
+  color:var(--gold);
+  background:rgba(201,169,97,0.1);
+  border:1px solid rgba(201,169,97,0.3);
+  padding:1px 5px;
+  border-radius:2px;
+  flex-shrink:0;
+  margin-top:1px;
+}
+.anim-step hl { color:white; font-weight:500; font-style:normal;}
+
+.cap-assets {
+  padding:12px 14px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.asset-item {
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  color:var(--gray);
+  line-height:1.5;
+}
+.asset-badge {
+  font-family:'Inter',sans-serif;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  padding:2px 6px;
+  flex-shrink:0;
+  margin-top:1px;
+  border-radius:2px;
+}
+.ab-render { background:rgba(26,31,78,0.6); border:1px solid rgba(201,169,97,0.3); color:var(--gold); }
+.ab-capcut { background:rgba(232,131,58,0.1); border:1px solid rgba(232,131,58,0.3); color:var(--orange); }
+.ab-canva { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.6); }
+.ab-music { background:rgba(77,184,112,0.1); border:1px solid rgba(77,184,112,0.4); color:#4db870; }
+.ab-real { background:rgba(232,92,74,0.1); border:1px solid rgba(232,92,74,0.4); color:#e85c4a; }
+
+/* PROMPT COPY BLOCKS */
+.prompt-block {
+  background: #08080f;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding: 14px;
+  position: relative;
+}
+.prompt-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.prompt-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--gold);
+}
+.copy-btn {
+  background: transparent;
+  color: var(--orange);
+  border: 1px solid rgba(232,131,58,0.4);
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.copy-btn:hover {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange);
+}
+.copy-btn.copied {
+  background: #4ade80;
+  color: #05050d;
+  border-color: #4ade80;
+}
+pre.prompt-body {
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: #c9c9d4;
+  white-space: pre-wrap;
+  background: #04040a;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.02);
+  max-height: 250px;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 56px;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(26,31,78,0.4), rgba(14,14,28,0.5));
+  border: 1px solid rgba(26,31,78,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  border-radius: 8px;
+}
+.footer-brand { font-family:'Fraunces',serif; font-size:20px; font-weight:300;}
+.footer-brand strong { color:var(--gold); font-weight:600;}
+.footer-tag { font-family:'Inter',sans-serif; font-size:11px; color:var(--gray); margin-top:4px;}
+.footer-cta { font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:white; background:var(--orange); padding:13px 24px; text-decoration:none; border-radius:3px; transition: all 0.2s ease; }
+.footer-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(232,131,58,0.3); }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="header">
+    <div class="h-l">
+      <div class="h-eye">VIP Premier Painting · Storyboard Dashboard</div>
+      <div class="h-title">Richard &amp; Elizabeth — Episode 2</div>
+    </div>
+    <div class="h-r">
+      <span class="hb hb-g">8 Scenes</span>
+      <span class="hb hb-o">4–5 Min</span>
+    </div>
+  </header>
+
+  <div class="intro">
+    <div class="intro-eye">Visual Storyboard &amp; Cinematic Prompts</div>
+    <h1 class="intro-h1">See the Video<br><em>Before You Paint It</em></h1>
+    <p class="intro-sub">Interactive shotlist with live CSS transitions and standalone copy-ready Higgsfield prompts.</p>
+  </div>
+
+  <div class="howto">
+    <div class="howto-title">How to Use This Dashboard</div>
+    Tick scenes as you finish generating them — your progress will automatically save to your browser. Click the Copy button on any scene to grab the full, ready-to-paste Higgsfield prompt (complete with style prefix, character definitions, and scene shots).
+  </div>
+
+  <details class="style-prefix">
+    <summary>Global Style Prefix (applied to all video prompts)</summary>
+    <pre>Style: 8K IMAX commercial, 16:9 widescreen. Photorealistic — no 3D render, no game engine. Lighting: Natural light only — bright, genuinely sunny midday, strong direct sunlight from high and frontal, the sun in front of and above the characters and behind the camera, deep blue sky, crisp hard-edged shadows, vivid saturated color, low haze. Key light from the sky only; faces and bodies lit fully from the front. Color: 60:30:10 — dominant / secondary / accent. Camera: Physical cine lens. 180° shutter motion blur. Skin: Pore-level realism — vellus hair, asymmetric moles, capillary flush, pore-shadow matching on-set light. Acting: Hollywood — micro-pauses before reactions, precise eye-line, living eyes with catch-lights, chest rise from breathing. Characters never standing still, always reacting. Physics: Gravity and inertia respected — mass has real weight, correct contact shadows. Composition: Rule of thirds + golden ratio. Every person moving from frame one. Continuity: Characters, props, environment identical across every cut. No identity drift. Technical: 24fps smooth motion. 8K detail. No jitter. Audio: Diegetic dialogue and environmental SFX only. No music. No subtitles.</pre>
+  </details>
+
+  <div class="legend">
+    <div class="leg"><div class="leg-dot" style="background:var(--sw-nf);border:1px solid rgba(255,255,255,0.15);"></div>NEWPORT FOG</div>
+    <div class="leg"><div class="leg-dot" style="background:var(--sw-cs);border:1px solid rgba(255,255,255,0.15);"></div>COASTAL SAND</div>
+    <div class="leg"><div class="leg-dot" style="background:var(--sw-en);border:1px solid rgba(255,255,255,0.15);"></div>ESTATE NAVY</div>
+    <div class="leg"><div class="leg-dot" style="background:rgba(232,131,58,0.4);"></div>CAPCUT</div>
+    <div class="leg"><div class="leg-dot" style="background:rgba(255,255,255,0.15);"></div>CANVA</div>
+    <div class="leg"><div class="leg-dot" style="background:rgba(77,184,112,0.5);"></div>MUSIC</div>
+    <div class="leg"><div class="leg-dot" style="background:rgba(232,92,74,0.4);"></div>REAL</div>
+  </div>
+
+  <div class="storyboard">
+
+    <!-- ═════ SCENE 1 ═════ -->
+    <div class="scene-block" data-scene="1">
+      <div class="sb-header">
+        <input type="checkbox" class="sb-checkbox" data-scene="1">
+        <div class="sb-num">01</div>
+        <div class="sb-meta">
+          <div class="sb-title">The Hook — HGTV Cold Open</div>
+          <span class="sb-timing">0:00 – 0:30</span>
+          <span class="sb-type type-hook">Hook</span>
+        </div>
+      </div>
+
+      <div class="video-frame">
+        <div class="anim-pill">▶ GOLD SWEEP</div>
+        <div class="scene01-wrap">
+          <div class="s01-before"></div>
+          <div class="s01-after"></div>
+        </div>
+        <div class="s01-sweep"></div>
+        <div class="top-banner">✦ VIP PREMIER PAINTING ✦</div>
+        <div class="s01-title">
+          <div class="s01-label">Episode 2</div>
+          <div class="s01-name">The Gallagher Family</div>
+          <div class="s01-sub">Transforming Estates. Transforming Lives.</div>
+        </div>
+        <div class="s01-before-badge">BEFORE</div>
+        <div class="s01-after-badge">AFTER</div>
+        <div class="bottom-banner">Custom Color Visualization · Newport Beach</div>
+      </div>
+
+      <div class="caption-col">
+        <div class="cap-section">
+          <div class="cap-label cl-gold">Script</div>
+          <div class="cap-script">"How did Richard and Elizabeth visualize over <strong>20 custom color scheme variations instantly,</strong> empowering them to make confident decisions for their dream estate painting project?"</div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Animation Steps</div>
+          <div class="cap-anim">
+            <div class="anim-step"><span class="anim-num">01</span><span><hl>Both sides</hl> appear simultaneously — desaturated Before (left) and final golden hour After (right)</span></div>
+            <div class="anim-step"><span class="anim-num">02</span><span><hl>Gold sweep line</hl> wipes left → right across the screen with a blur glow</span></div>
+            <div class="anim-step"><span class="anim-num">03</span><span><hl>Episode title</hl> rises from below, fading in over the middle</span></div>
+            <div class="anim-step"><span class="anim-num">04</span><span><hl>BEFORE/AFTER badges</hl> stamp in at the bottom edges</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Assets in This Frame</div>
+          <div class="cap-assets">
+            <div class="asset-item"><span class="asset-badge ab-real">REAL A</span><span>BEFORE photo — faded, weathered Mediterranean villa</span></div>
+            <div class="asset-item"><span class="asset-badge ab-render">RENDER K</span><span>Final CTA Hero — Newport Fog body with premium upgrades</span></div>
+            <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Gold split sweep line + title fade-in overlay</span></div>
+            <div class="asset-item"><span class="asset-badge ab-music">MUSIC</span><span>Cinematic strings swell — high-end reveal energy</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">CUT</div><div class="conn-line"></div></div>
+
+    <!-- ═════ SCENE 2 ═════ -->
+    <div class="scene-block" data-scene="2">
+      <div class="sb-header">
+        <input type="checkbox" class="sb-checkbox" data-scene="2">
+        <div class="sb-num">02</div>
+        <div class="sb-meta">
+          <div class="sb-title">Meet Richard &amp; Elizabeth — The Promise</div>
+          <span class="sb-timing">0:30 – 1:00</span>
+          <span class="sb-type type-trust">Trust Build</span>
+        </div>
+      </div>
+
+      <div class="video-frame">
+        <div class="anim-pill">▶ KEN BURNS + PORTRAIT</div>
+        <div class="s02-house"></div>
+        <div class="top-banner" style="background:rgba(5,5,13,0.85);">Before · 14 Pelican Hill Rd, Newport Beach</div>
+        <div class="s02-portrait">👫</div>
+        <div class="s02-portrait-label">
+          <div class="s02-pl-name">Richard &amp; Elizabeth</div>
+          <div class="s02-pl-loc">Pelican Hill Estate Owners</div>
+        </div>
+        <div class="s02-stat-row">
+          <div class="s02-stat">BYPASSING $1,000 FEES</div>
+          <div class="s02-stat">3 SIMPLE STEPS</div>
+          <div class="s02-stat">COMPLIMENTARY</div>
+        </div>
+        <div class="bottom-banner">Bypassing $1,000 Fees · 3 Simple Steps · complimentary Visualization</div>
+      </div>
+
+      <div class="caption-col">
+        <div class="cap-section">
+          <div class="cap-label cl-gold">Script</div>
+          <div class="cap-script">"They saw exactly how their estate would look before even picking up a paintbrush — bypassing the typical <strong>$1,000 consultation fees</strong> of traditional design firms who take days to deliver generic, uninspired options with no visualizations.<br><br>Let me walk you through the <strong>3 simple steps</strong> that turned Richard and Elizabeth's frustration into confidence and excitement — with our complimentary Custom Color Scheme Visualization Service — giving them a clear, prestigious vision of their estate.<br><br><strong>And the best part? You can do it too!</strong>"</div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Animation Steps</div>
+          <div class="cap-anim">
+            <div class="anim-step"><span class="anim-num">01</span><span><hl>Slow Ken Burns zoom</hl> on desaturated BEFORE house — creates editorial scale</span></div>
+            <div class="anim-step"><span class="anim-num">02</span><span><hl>Homeowners portrait circle</hl> pops in with a soft gold pulse glow</span></div>
+            <div class="anim-step"><span class="anim-num">03</span><span><hl>3 stat badges</hl> rise in sequence — "BYPASSING FEES" → "3 STEPS" → "COMPLIMENTARY"</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Assets in This Frame</div>
+          <div class="cap-assets">
+            <div class="asset-item"><span class="asset-badge ab-real">REAL A</span><span>BEFORE photo background with slow Ken Burns pan</span></div>
+            <div class="asset-item"><span class="asset-badge ab-render">FABIAN</span><span>On-camera host video generated in Higgsfield</span></div>
+            <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Portrait circle overlay + staggered stat text overlays</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="prompt-title-row">
+            <span class="prompt-title">Higgsfield Seedance 2.0 Prompt</span>
+            <button class="copy-btn">Copy Prompt</button>
+          </div>
+          <pre class="prompt-body">Style: 8K IMAX commercial, 16:9 widescreen. Photorealistic — no 3D render, no game engine. Lighting: Natural light only — bright, genuinely sunny midday, strong direct sunlight from high and frontal, the sun in front of and above the characters and behind the camera, deep blue sky, crisp hard-edged shadows, vivid saturated color, low haze. Key light from the sky only; faces and bodies lit fully from the front. Color: 60:30:10 — dominant / secondary / accent. Camera: Physical cine lens. 180° shutter motion blur. Skin: Pore-level realism — vellus hair, asymmetric moles, capillary flush, pore-shadow matching on-set light. Acting: Hollywood — micro-pauses before reactions, precise eye-line, living eyes with catch-lights, chest rise from breathing. Characters never standing still, always reacting. Physics: Gravity and inertia respected — mass has real weight, correct contact shadows. Composition: Rule of thirds + golden ratio. Every person moving from frame one. Continuity: Characters, props, environment identical across every cut. No identity drift. Technical: 24fps smooth motion. 8K detail. No jitter. Audio: Diegetic dialogue and environmental SFX only. No music. No subtitles.
+
+Characters: HOST (@Fabian) — muscular bald Latin man in his late 30s/early 40s (matching @Image1), clean shaved head, short-cropped dark beard. Wearing a custom fitted white cotton polo shirt with a gold crown logo embroidered on the left chest, fitted white jeans, brown leather belt.
+
+Scene: Forecourt of a large, faded cream stucco Mediterranean Revival villa (@villa), midday. The stucco is faded and desaturated, window trims are a faded dark brown. Bright direct sunlight from high and frontal, cast short crisp shadows.
+
+CUT 1 — Medium close bust portrait, 50mm, slow follow push-in to chest: Host (@Fabian) fills the frame from mid-chest to the top of his head. He stands in the forecourt, looking directly at the camera with a warm, confident smile, talking and gesturing naturally with his hands. Behind him, the faded stucco Mediterranean villa is soft bokeh. He makes a micro-pause, eyes warm and living, chest rising as he speaks.</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">CUT</div><div class="conn-line"></div></div>
+
+    <!-- ═════ SCENE 3 ═════ -->
+    <div class="scene-block" data-scene="3">
+      <div class="sb-header">
+        <input type="checkbox" class="sb-checkbox" data-scene="3">
+        <div class="sb-num">03</div>
+        <div class="sb-meta">
+          <div class="sb-title">The Struggle — Weeks of Indecision</div>
+          <span class="sb-timing">1:00 – 1:45</span>
+          <span class="sb-type type-pain">Pain</span>
+        </div>
+      </div>
+
+      <div class="video-frame bg-pain">
+        <div class="anim-pill">▶ STAGGER + RED ✕ STAMP</div>
+        <div class="s03-panels">
+          <div class="s03-panel">🎨<div class="s03-label">Paint Swatches</div></div>
+          <div class="s03-panel">📌<span class="s03-x">✕</span><div class="s03-label">Pinterest Search</div></div>
+          <div class="s03-panel">💰<span class="s03-x">✕</span><div class="s03-label">$1,000 Consultant</div></div>
+        </div>
+        <div class="top-banner" style="background:rgba(30,10,10,0.9);color:#e85c4a;border-bottom-color:rgba(232,92,74,0.4);">Frozen in Indecision for 18 Months</div>
+        <div class="bottom-banner" style="border-top-color:#e85c4a;">Overwhelmed · Frustrated · Back to Square One</div>
+      </div>
+
+      <div class="caption-col">
+        <div class="cap-section">
+          <div class="cap-label cl-gold">Script</div>
+          <div class="cap-script">"We <strong>struggled for weeks.</strong> We flipped through endless paint swatches, scrolled online searches for hours, and even considered hiring an expensive <strong>$1,000 color consultant.</strong><br><br>But after waiting days for uninspired, generic options that didn't even include visualizations of our home, we were back to square one — <strong>overwhelmed and frustrated.</strong><br><br>That's when they discovered <strong>VIP Premier Painting.</strong>"</div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Animation Steps</div>
+          <div class="cap-anim">
+            <div class="anim-step"><span class="anim-num">01</span><span><hl>Panel 1</hl> slides up — paint swatches</span></div>
+            <div class="anim-step"><span class="anim-num">02</span><span><hl>Panel 2</hl> slides up + <hl>red ✕ stamps</hl> on Pinterest</span></div>
+            <div class="anim-step"><span class="anim-num">03</span><span><hl>Panel 3</hl> slides up + <hl>red ✕ stamps</hl> on $1,000 Consultant</span></div>
+            <div class="anim-step"><span class="anim-num">04</span><span>Fast cut edits to reflect anxiety, slowing down when the solution is named</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Assets in This Frame</div>
+          <div class="cap-assets">
+            <div class="asset-item"><span class="asset-badge ab-real">REAL B</span><span>Stucco Close-Up — peeling brown fascia detail</span></div>
+            <div class="asset-item"><span class="asset-badge ab-render">COUPLE</span><span>Homeowner interview video generated in Higgsfield</span></div>
+            <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>3 pain panels with animated red ✕ stamps</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="prompt-title-row">
+            <span class="prompt-title">Higgsfield Seedance 2.0 Prompt</span>
+            <button class="copy-btn">Copy Prompt</button>
+          </div>
+          <pre class="prompt-body">Style: 8K IMAX commercial, 16:9 widescreen. Photorealistic — no 3D render, no game engine. Lighting: Natural light only — soft, even morning daylight, gentle atmospheric haze throughout. Key light from sky and garden doors only. No contre-jour, no rim backlight, no forced shadow-side framing. No artificial lightning. Color: 60:30:10 — dominant / secondary / accent. Camera: Physical cine lens. 180° shutter motion blur. Skin: Pore-level realism — vellus hair, asymmetric moles, capillary flush, pore-shadow matching on-set light. Acting: Hollywood — micro-pauses before reactions, precise eye-line, living eyes with catch-lights, chest rise from breathing. Characters never standing still, always reacting. Physics: Gravity and inertia respected — mass has real weight, correct contact shadows. Composition: Rule of thirds + golden ratio. Every person moving from frame one. Continuity: Characters, props, environment identical across every cut. No identity drift. Technical: 24fps smooth motion. 8K detail. No jitter. Audio: Diegetic dialogue and environmental SFX only. No music. No subtitles.
+
+Characters: HUSBAND (@Richard) — distinguished gentleman in his 50s (matching @Image2), graying hair at temples, light blue linen button-down shirt, beige chinos. WIFE (@Elizabeth) — elegant woman in her 50s (matching @Image3), shoulder-length champagne-blonde hair, white silk blouse, gold accessories.
+
+Scene: A stone patio terrace (@patio) of a luxury villa. Two comfortable teak loungers face the camera. Soft morning daylight filters through the trees. The background shows desaturated faded stucco walls.
+
+CUT 1 — Medium two-shot, 35mm, slow tracking pan left to right: HUSBAND (@Richard) and WIFE (@Elizabeth) sit next to each other on the loungers, holding a paint fan deck. They look down at the swatches, talking to each other with worried, disappointed expressions. @Elizabeth shakes her head slightly, then looks up at the camera with a concerned sigh. @Richard sighs, runs a hand over his temple, looking worried.</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">VIP REVEAL</div><div class="conn-line"></div></div>
+
+    <!-- ═════ SCENE 4 ═════ -->
+    <div class="scene-block" data-scene="4">
+      <div class="sb-header">
+        <input type="checkbox" class="sb-checkbox" data-scene="4">
+        <div class="sb-num">04</div>
+        <div class="sb-meta">
+          <div class="sb-title">The Discovery — VIP Changes Everything</div>
+          <span class="sb-timing">1:45 – 2:15</span>
+          <span class="sb-type type-solution">Solution</span>
+        </div>
+      </div>
+
+      <div class="video-frame bg-discovery">
+        <div class="anim-pill">▶ CROWN PULSE + STAGGER</div>
+        <div class="top-banner">complimentary Custom Color Scheme Visualization</div>
+        <div class="s04-crown">
+          <span class="s04-crown-icon">👑</span>
+          <div class="s04-crown-text">VIP</div>
+        </div>
+        <div class="s04-thumbs">
+          <div class="s04-thumb"><span>Newport Fog</span></div>
+          <div class="s04-thumb"><span>Coastal Sand</span></div>
+          <div class="s04-thumb"><span>Estate Navy</span></div>
+        </div>
+        <div class="bottom-banner">3 Easy Steps · Turning Frustration Into Excitement</div>
+      </div>
+
+      <div class="caption-col">
+        <div class="cap-section">
+          <div class="cap-label cl-gold">Script</div>
+          <div class="cap-script">"With our complimentary Custom Color Scheme Visualization Service, we gave them instant, tailored options they could <strong>see on their home in real-time</strong> — turning frustration into excitement and empowering them to move forward with confidence.<br><br>We couldn't believe how simple and exciting the process was.<br><br>With our Custom Color Scheme Visualization, we guided them through <strong>3 easy steps</strong> to bring their vision to life."</div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Animation Steps</div>
+          <div class="cap-anim">
+            <div class="anim-step"><span class="anim-num">01</span><span><hl>VIP crown</hl> pulses with a rich gold glow on beat</span></div>
+            <div class="anim-step"><span class="anim-num">02</span><span><hl>3 design thumbnails</hl> rise sequentially from the bottom (0.4s stagger)</span></div>
+            <div class="anim-step"><span class="anim-num">03</span><span>Thumbnails show the house in Newport Fog, Coastal Sand, and Estate Navy</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Assets in This Frame</div>
+          <div class="cap-assets">
+            <div class="asset-item"><span class="asset-badge ab-render">MEETING</span><span>Fabian meeting couple courtyard video (Higgsfield)</span></div>
+            <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Gold pulsing crown logo overlay</span></div>
+            <div class="asset-item"><span class="asset-badge ab-render">RENDERS</span><span>C, D, E thumbnails fading up sequentially</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="prompt-title-row">
+            <span class="prompt-title">Higgsfield Seedance 2.0 Prompt</span>
+            <button class="copy-btn">Copy Prompt</button>
+          </div>
+          <pre class="prompt-body">Style: 8K IMAX commercial, 16:9 widescreen. Photorealistic — no 3D render, no game engine. Lighting: Natural light only — bright, genuinely sunny midday, strong direct sunlight from high and frontal, deep blue sky, crisp shadows. Color: 60:30:10 — dominant / secondary / accent. Camera: Physical cine lens. 180° shutter motion blur. Skin: Pore-level realism — vellus hair, asymmetric moles, capillary flush, pore-shadow matching on-set light. Acting: Hollywood — micro-pauses before reactions, precise eye-line, living eyes with catch-lights, chest rise from breathing. Characters never standing still, always reacting. Physics: Gravity and inertia respected — mass has real weight, correct contact shadows. Composition: Rule of thirds + golden ratio. Every person moving from frame one. Continuity: Characters, props, environment identical across every cut. No identity drift. Technical: 24fps smooth motion. 8K detail. No jitter. Audio: Diegetic dialogue and environmental SFX only. No music. No subtitles.
+
+Characters: HOST (@Fabian) — muscular bald Latin man (matching @Image1) in a fitted white cotton polo with a gold crown logo on the left chest, white jeans. HUSBAND (@Richard) — distinguished gentleman (matching @Image2) in a light blue linen shirt. WIFE (@Elizabeth) — elegant blonde woman (matching @Image3) in a white silk blouse. TABLET (@tablet) — silver design tablet.
+
+Scene: A stone-paved luxury villa courtyard (@courtyard), bright midday sun. The three stand together, forming a tight group.
+
+CUT 1 — Over-the-shoulder medium shot, 35mm, slow orbit pan behind @Fabian: Host (@Fabian) holds the silver tablet (@tablet) showing color schemes. He swipes the screen, gesturing warmly. HUSBAND (@Richard) and WIFE (@Elizabeth) lean in close to look at the screen. As they view the visuals, their worried expressions melt away, replaced by broad, excited smiles. @Elizabeth gasps slightly with a pleased look, pointing at the tablet.</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">STEP 1</div><div class="conn-line"></div></div>
+
+    <!-- ═════ SCENE 5 — THE VISUALIZATION DEMO ═════ -->
+    <div class="scene-block" data-scene="5">
+      <div class="sb-header">
+        <input type="checkbox" class="sb-checkbox" data-scene="5">
+        <div class="sb-num">05</div>
+        <div class="sb-meta">
+          <div class="sb-title">Step 1 — The SW Color Options</div>
+          <span class="sb-timing">2:15 – 2:55</span>
+          <span class="sb-type type-step">Visualization</span>
+        </div>
+      </div>
+
+      <div class="video-frame bg-step1">
+        <div class="anim-pill">▶ VILLA COLOR CYCLE · 6 SCHEMES</div>
+        <div class="top-banner">Step 1 — Discovering Their Vision</div>
+        <div class="s05-counter">SCHEME <span id="counter">1</span>/6</div>
+
+        <div class="s05-stage">
+          <div class="s05-house">
+            <div class="s05-house-icon">⌂</div>
+          </div>
+        </div>
+
+        <div class="s05-color-card">
+          <div class="s05-card-chip"></div>
+          <div class="s05-name-stack">
+            <div class="s05-n">Newport Fog · SW 7015</div>
+            <div class="s05-n">Coastal Sand · SW 7036</div>
+            <div class="s05-n">Estate Navy · SW 6244</div>
+            <div class="s05-n">Accessible Beige · SW 7036</div>
+            <div class="s05-n">Origami White · SW 7636</div>
+            <div class="s05-n">Tricorn Black · SW 6258</div>
+          </div>
+        </div>
+
+        <div class="bottom-banner">Bold &amp; Modern · Timeless &amp; Elegant · Warm &amp; Mediterranean</div>
+      </div>
+
+      <div class="caption-col">
+        <div class="cap-section">
+          <div class="cap-label cl-gold">Script</div>
+          <div class="cap-script">"We began by asking Richard and Elizabeth about the colors they had in mind.<br><br>They shared their favorite Sherwin-Williams options, including <strong>Newport Fog... Coastal Sand... Estate Navy... Accessible Beige... Origami White... and Tricorn Black.</strong><br><br>Each color reflected a different part of their vision — <strong>bold and modern, timeless and elegant, or warm and Mediterranean.</strong><br><br>By understanding their preferences, we were able to create tailored color palettes specifically for their home."</div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-blue">★ Color Cycling Demonstration</div>
+          <div class="cap-anim">
+            <div class="anim-step"><span class="anim-num">★</span><span><hl>Mediterranean Villa auto-cycles</hl> through all 6 SW colors — 2 seconds per color</span></div>
+            <div class="anim-step"><span class="anim-num">01</span><span>Newport Fog (coastal gray-beige) → 0:00–0:02</span></div>
+            <div class="anim-step"><span class="anim-num">02</span><span>Coastal Sand (warm earthy beige) → 0:02–0:04</span></div>
+            <div class="anim-step"><span class="anim-num">03</span><span>Estate Navy (deep maritime luxury) → 0:04–0:06</span></div>
+            <div class="anim-step"><span class="anim-num">04</span><span>Accessible Beige (neutral sandstone) → 0:06–0:08</span></div>
+            <div class="anim-step"><span class="anim-num">05</span><span>Origami White (crisp Mediterranean plaster) → 0:08–0:10</span></div>
+            <div class="anim-step"><span class="anim-num">06</span><span>Tricorn Black (rich graphic accent) → 0:10–0:12</span></div>
+            <div class="anim-step"><span class="anim-num">★</span><span><hl>Floating color card</hl> and chip dynamically update synced to color swaps</span></div>
+            <div class="anim-step"><span class="anim-num">★</span><span><hl>Counter</hl> increments 1/6 → 6/6</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Why This Sells</div>
+          <div class="cap-script" style="font-size:12px;">This is the <strong>proof-of-service block.</strong> It shows the home is a digital asset that can be restyled instantly. This visual ease is what sets VIP Premier Painting apart and bypasses competition.</div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Assets in This Frame</div>
+          <div class="cap-assets">
+            <div class="asset-item"><span class="asset-badge ab-canva">CANVA</span><span>Render F — Swatch Card Set (6 graphic layout card designs)</span></div>
+            <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Cross-fade transitions between colors (0.3s stagger)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">STEP 2</div><div class="conn-line"></div></div>
+
+    <!-- ═════ SCENE 6A — Carousel ═════ -->
+    <div class="scene-block" data-scene="6">
+      <div class="sb-header">
+        <input type="checkbox" class="sb-checkbox" data-scene="6">
+        <div class="sb-num">06</div>
+        <div class="sb-meta">
+          <div class="sb-title">Step 2A — Exploring Style Palettes</div>
+          <span class="sb-timing">2:55 – 3:20</span>
+          <span class="sb-type type-step">Step 2A</span>
+        </div>
+      </div>
+
+      <div class="video-frame bg-palette">
+        <div class="anim-pill">▶ PALETTE CAROUSEL · AUTO-CYCLE</div>
+        <div class="top-banner">Step 2 — Exploring Style Schemes</div>
+        <div class="s06-carousel">
+          <div class="s06-main">
+            <div class="s06-main-label">
+              <div class="s06-mn">
+                <span>Coastal Elegant</span>
+                <span>Warm Mediterranean</span>
+                <span>Maritime Luxury</span>
+              </div>
+            </div>
+          </div>
+          <div class="s06-alts">
+            <div class="s06-alt"></div>
+            <div class="s06-alt"></div>
+          </div>
+        </div>
+        <div class="bottom-banner">Newport Fog · Coastal Sand · Estate Navy</div>
+      </div>
+
+      <div class="caption-col">
+        <div class="cap-section">
+          <div class="cap-label cl-gold">Script</div>
+          <div class="cap-script">"Next, we guided Richard and Elizabeth through visualizing these colors in different styles:<br><br><strong>Newport Fog paired with Origami White</strong> for a clean, coastal look.<br><br><strong>Coastal Sand combined with Urbane Bronze</strong> for a warm, earthy aesthetic.<br><br><strong>Estate Navy with Tricorn Black</strong> for a bold, modern appeal."</div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Animation Steps</div>
+          <div class="cap-anim">
+            <div class="anim-step"><span class="anim-num">01</span><span>Hero panel <hl>auto-cycles</hl> through the 3 schemes (3 seconds each)</span></div>
+            <div class="anim-step"><span class="anim-num">02</span><span>Label updates with style name matching color change</span></div>
+            <div class="anim-step"><span class="anim-num">03</span><span>Side panels display alternative combinations simultaneously</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Assets in This Frame</div>
+          <div class="cap-assets">
+            <div class="asset-item"><span class="asset-badge ab-render">RENDER C</span><span>Newport Fog (Chosen Hero layout)</span></div>
+            <div class="asset-item"><span class="asset-badge ab-render">RENDER D</span><span>Coastal Sand (Alternate palette 1)</span></div>
+            <div class="asset-item"><span class="asset-badge ab-render">RENDER E</span><span>Estate Navy (Alternate palette 2)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">UPSELL</div><div class="conn-line"></div></div>
+
+    <!-- ═════ SCENE 6B — Upsell ═════ -->
+    <div class="scene-block" data-scene="6b">
+      <div class="sb-header">
+        <input type="checkbox" class="sb-checkbox" data-scene="6b">
+        <div class="sb-num">06b</div>
+        <div class="sb-meta">
+          <div class="sb-title">Step 2B — Prestige Architectural Upgrades</div>
+          <span class="sb-timing">3:20 – 3:45</span>
+          <span class="sb-type type-upsell">Upsell</span>
+        </div>
+      </div>
+
+      <div class="video-frame bg-upsell">
+        <div class="anim-pill">▶ UPGRADES BUILD ON VILLA</div>
+        <div class="top-banner" style="background:rgba(10,24,14,0.85);color:#4db870;border-bottom-color:rgba(77,184,112,0.4);">★ Prestige Architectural Upgrades — VIP Design</div>
+        <div class="s06b-stage">
+          <div class="s06b-house">
+            <div class="s06b-house-icon">⌂</div>
+            <div class="s06b-badge s06b-b1">LED Wall Sconces</div>
+            <div class="s06b-badge s06b-b2">Frosted Glass Garage</div>
+            <div class="s06b-badge s06b-b3">Limestone Column Veneer</div>
+          </div>
+        </div>
+        <div class="bottom-banner" style="border-top-color:#4db870;">Visualized in Real Time · Outlined in Estimate</div>
+      </div>
+
+      <div class="caption-col">
+        <div class="cap-section">
+          <div class="cap-label cl-green">Script</div>
+          <div class="cap-script">"We didn't stop there. We paired these colors with key design elements to elevate their home's curb appeal, including:<br><br><strong>Premium lighting fixtures.</strong> <strong>Modern glass panel garage doors.</strong> <strong>Natural stone siding</strong> for added luxury depth and texture."</div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-green">Animation Steps</div>
+          <div class="cap-anim">
+            <div class="anim-step"><span class="anim-num">01</span><span>Camera dollies in slowly toward the columns and garage facade</span></div>
+            <div class="anim-step"><span class="anim-num">02</span><span><hl>Glass panel garage door</hl> fades in, replacing the worn wood door</span></div>
+            <div class="anim-step"><span class="anim-num">03</span><span><hl>Charcoal limestone columns</hl> veneer slides in along the entry columns</span></div>
+            <div class="anim-step"><span class="anim-num">04</span><span><hl>Minimalist exterior sconces</hl> activate with a warm glowing amber color</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Assets in This Frame</div>
+          <div class="cap-assets">
+            <div class="asset-item"><span class="asset-badge ab-render">RENDER G</span><span>Shots 4K upgrade sequence showing materials transitioning</span></div>
+            <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Text labels and transition wipe timing</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="prompt-title-row">
+            <span class="prompt-title">Higgsfield Image-to-Video Prompt</span>
+            <button class="copy-btn">Copy Prompt</button>
+          </div>
+          <pre class="prompt-body">Style: 8K IMAX commercial, 16:9 widescreen. Photorealistic — no 3D render, no game engine. Lighting: Natural light only — bright, sunny golden hour, warm raking side-light from the left, long horizontal shadows. Color: 60:30:10 — dominant / secondary / accent. Camera: Physical cine lens. 180° shutter motion blur. Skin: Pore-level realism. Physics: Gravity and inertia respected — correct contact shadows. Continuity: identical environment. Technical: 24fps smooth motion. 8K detail. No jitter.
+
+Identity Block:
+The Mediterranean Revival villa from @Image1 painted with the Chosen Newport Fog (SW Repose Gray #B6B7B0) stucco body, Origami White (#E5E2DA) trim, and Iron Ore (#393830) shutters.
+
+Motion Block:
+The camera slowly dollies in towards the garage and columns. A sleek modern black steel arched carriage garage door with horizontal frosted glass panels fades in, replacing the old wood carriage door. Stacked light gray and charcoal limestone veneer slides in along the entry columns and garage wall base, showing rich texture depth in the raking light. Minimalist black LED sconces flanking the entry turn on with a warm, glowing amber light.
+Camera: slow Dolly-in. Golden hour lighting.</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">REVEAL</div><div class="conn-line"></div></div>
+
+    <!-- ═════ SCENE 7 — Reveal ═════ -->
+    <div class="scene-block" data-scene="7">
+      <div class="sb-header">
+        <input type="checkbox" class="sb-checkbox" data-scene="7">
+        <div class="sb-num">07</div>
+        <div class="sb-meta">
+          <div class="sb-title">Step 3 — Choosing the Perfect Palette</div>
+          <span class="sb-timing">3:45 – 4:15</span>
+          <span class="sb-type type-reveal">Reveal</span>
+        </div>
+      </div>
+
+      <div class="video-frame">
+        <div class="anim-pill">▶ GOLD WIPE REVEAL</div>
+        <div class="s07-stage">
+          <div class="s07-before"></div>
+          <div class="s07-after"></div>
+        </div>
+        <div class="s07-sweep"></div>
+        <div class="top-banner">Step 3 — Choosing the Perfect Palette</div>
+        <div class="s07-side-label s07-sl-before">Before</div>
+        <div class="s07-side-label s07-sl-after">After</div>
+        <div class="s07-palette-card">
+          <div class="s07-card-title">The Chosen Palette</div>
+          <div class="s07-card-row"><div class="s07-card-dot" style="background:var(--sw-nf);"></div><div class="s07-card-name">Newport Fog · SW 7015</div></div>
+          <div class="s07-card-row"><div class="s07-card-dot" style="background:var(--sw-tb);border:1px solid rgba(255,255,255,0.15);"></div><div class="s07-card-name">Tricorn Black · SW 6258</div></div>
+          <div class="s07-card-row"><div class="s07-card-dot" style="background:var(--sw-ow);"></div><div class="s07-card-name">Origami White · SW 7636</div></div>
+        </div>
+        <div class="bottom-banner">CONFIDENT · EXCITED · READY</div>
+      </div>
+
+      <div class="caption-col">
+        <div class="cap-section">
+          <div class="cap-label cl-gold">Script</div>
+          <div class="cap-script">"Finally, we brought everything together with real-time visualizations. Richard and Elizabeth were able to see all the color combinations applied to their actual home. They explored over 20 customized options, tweaking details like trim and accents during the session.<br><br>In the end, they confidently chose their perfect palette:<br><strong>Newport Fog</strong> for the main body — giving their home a timeless yet modern look.<br><strong>Tricorn Black</strong> for the shutters, garage door, and front door — to add bold, dramatic accents.<br><strong>Origami White</strong> for the trim and fascia — to tie the design together with a crisp, polished finish.<br><br>Seeing these options instantly gave Richard and Elizabeth the <strong>confidence to move forward</strong> with a design they absolutely loved."</div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Animation Steps</div>
+          <div class="cap-anim">
+            <div class="anim-step"><span class="anim-num">01</span><span><hl>Before desaturated view</hl> holds on left for 1 full second</span></div>
+            <div class="anim-step"><span class="anim-num">02</span><span><hl>Gold sweep line wipes</hl> left → right, leaving the colorized facade behind it</span></div>
+            <div class="anim-step"><span class="anim-num">03</span><span><hl>Palette card slides up</hl> from below, listing selected SW codes</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Assets in This Frame</div>
+          <div class="cap-assets">
+            <div class="asset-item"><span class="asset-badge ab-real">REAL A</span><span>BEFORE photo background (left side)</span></div>
+            <div class="asset-item"><span class="asset-badge ab-render">RENDER C</span><span>Newport Fog Chosen Palette (right side)</span></div>
+            <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Gold wipe transition + sliding palette graphic overlay</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector"><div class="conn-line"></div><div class="conn-arrow">↓</div><div class="conn-label">FINAL REVEAL</div><div class="conn-line"></div></div>
+
+    <!-- ═════ SCENE 8 — CTA ═════ -->
+    <div class="scene-block" data-scene="8">
+      <div class="sb-header">
+        <input type="checkbox" class="sb-checkbox" data-scene="8">
+        <div class="sb-num">08</div>
+        <div class="sb-meta">
+          <div class="sb-title">The Result + CTA — Your Home Is Next</div>
+          <span class="sb-timing">4:15 – 5:00</span>
+          <span class="sb-type type-cta">CTA</span>
+        </div>
+      </div>
+
+      <div class="video-frame">
+        <div class="anim-pill">▶ KEN BURNS + CTA PULSE</div>
+        <div class="s08-house"></div>
+        <div class="top-banner">The Standout Estate of the Neighborhood</div>
+        <div class="s08-content">
+          <div class="s08-tagline">"See It. Love It. Paint It."</div>
+          <div class="s08-overline">Your Estate Is Next</div>
+          <div class="s08-button">📞 Book Your complimentary Visualization</div>
+          <div class="s08-phone">(909) 312-5400</div>
+        </div>
+        <div class="bottom-banner" style="animation: s08pulse 2s infinite;">⚡ LIMITED APPOINTMENTS AVAILABLE THIS MONTH</div>
+      </div>
+
+      <div class="caption-col">
+        <div class="cap-section">
+          <div class="cap-label cl-gold">Script</div>
+          <div class="cap-script">"The result? A stunning transformation that turned their house into the standout home of the neighborhood. Richard and Elizabeth's bold yet timeless look perfectly reflected their style and personality.<br><br>They saved valuable time, avoided costly design errors, and eliminated all stress by partnering with VIP Premier Painting — and now they're proud to call this <strong>their dream home.</strong><br><br>Imagine walking up to your home and feeling that same <strong>pride and excitement</strong> every day.<br><br>That's what our complimentary Custom Color Scheme Visualization Service can do for you!"</div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Animation Steps</div>
+          <div class="cap-anim">
+            <div class="anim-step"><span class="anim-num">01</span><span><hl>Slow Ken Burns zoom</hl> on final hero render — 8 seconds</span></div>
+            <div class="anim-step"><span class="anim-num">02</span><span><hl>Tagline text fades in</hl> in italic Fraunces serif font</span></div>
+            <div class="anim-step"><span class="anim-num">03</span><span><hl>CTA button pulses</hl> with a soft glowing ring</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="cap-label cl-orange">Assets in This Frame</div>
+          <div class="cap-assets">
+            <div class="asset-item"><span class="asset-badge ab-render">RENDER K</span><span>Final Hero render — all upgrades &amp; Newport Fog golden hour</span></div>
+            <div class="asset-item"><span class="asset-badge ab-capcut">CAPCUT</span><span>Text fade-ins + pulsing button overlay</span></div>
+            <div class="asset-item"><span class="asset-badge ab-music">MUSIC</span><span>Triumphant acoustic orchestral resolution — rich, positive</span></div>
+          </div>
+        </div>
+        <div class="cap-section">
+          <div class="prompt-title-row">
+            <span class="prompt-title">Higgsfield Seedance 2.0 Prompt</span>
+            <button class="copy-btn">Copy Prompt</button>
+          </div>
+          <pre class="prompt-body">Style: 8K IMAX commercial, 16:9 widescreen. Photorealistic — no 3D render, no game engine. Lighting: Natural light only — warm sunset golden hour, warm orange glow on the facade, long soft shadows kissing the stucco. Color: 60:30:10 — dominant / secondary / accent. Camera: Physical cine lens. 180° shutter motion blur. Skin: Pore-level realism — vellus hair, asymmetric moles, capillary flush, pore-shadow matching. Acting: Hollywood — micro-pauses before reactions, precise eye-line, living eyes with catch-lights, chest rise from breathing. Characters never standing still, always reacting. Physics: Gravity respected — mass has weight, correct contact shadows. Composition: Rule of thirds. Continuity: Characters and environment identical. Technical: 24fps smooth motion. 8K detail. No jitter. Audio: Diegetic dialogue and environmental SFX only. No music. No subtitles.
+
+Characters: HOST (@Fabian) — muscular bald Latin man in his late 30s/early 40s (matching @Image1), wearing a custom fitted white cotton polo shirt with a gold crown logo embroidered on the left chest, fitted white jeans, brown leather belt. HUSBAND (@Richard) — distinguished gentleman in his 50s (matching @Image2), wearing a light blue linen button-down shirt and beige chinos. WIFE (@Elizabeth) — elegant woman in her 50s (matching @Image3), champagne-blonde hair, white silk blouse.
+
+Scene: The entrance of the beautifully painted Newport Fog Mediterranean Revival villa (@villa). The entry columns feature charcoal limestone veneer, the garage has black steel carriage doors with frosted glass, and the exterior sconces flanking the entry glow with amber light. High-end residential landscaping fills the background. Warm sunset golden hour lighting.
+
+CUT 1 — Medium three-shot, 35mm, slow Dolly-out from waist-up: Host (@Fabian) stands in the center-left, with HUSBAND (@Richard) and WIFE (@Elizabeth) standing side-by-side to his right. They all look directly at the camera. @Fabian has a confident, welcoming smile, gesturing outward with an open hand inviting the viewer. @Richard and @Elizabeth look at the home, smile warmly at each other, then look back at the camera with proud, happy smiles. @Elizabeth raises her hand slightly to touch her gold necklace, reacting happily.</pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="footer-brand">VIP <strong>Premier</strong> Painting</div>
+      <div class="footer-tag">Newport Beach Campaign · Episode 2 · Pelican Hill Villa · (909) 312-5400</div>
+    </div>
+    <a href="tel:9093125400" class="footer-cta">Book Free Consult</a>
+  </div>
+
+</div>
+
+<script>
+  // Persist checkboxes to localStorage
+  document.querySelectorAll('.sb-checkbox').forEach(cb => {
+    const key = 'shotlist-scene-' + cb.dataset.scene + '-done';
+    
+    // Load state
+    if (localStorage.getItem(key) === '1') {
+      cb.checked = true;
+      cb.closest('.scene-block').classList.add('done');
+    }
+    
+    // Save state on change
+    cb.addEventListener('change', () => {
+      localStorage.setItem(key, cb.checked ? '1' : '0');
+      cb.closest('.scene-block').classList.toggle('done', cb.checked);
+    });
+  });
+
+  // Handle color cycling animation details dynamically
+  let counter = 1;
+  const countSpan = document.getElementById('counter');
+  setInterval(() => {
+    counter = counter % 6 + 1;
+    if (countSpan) countSpan.textContent = counter;
+  }, 2000);
+
+  // Copy buttons
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const container = btn.closest('.cap-section');
+      const pre = container.querySelector('pre.prompt-body');
+      
+      navigator.clipboard.writeText(pre.textContent).then(() => {
+        btn.classList.add('copied');
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.textContent = originalText;
+        }, 1500);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

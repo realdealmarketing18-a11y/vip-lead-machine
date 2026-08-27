@@ -1,0 +1,12 @@
+# Decisions
+*One line each. Date · what · why. Long-form reasoning stays inline here if it doesn't fit one line.*
+
+- `2026-08-26` — Adopted the two-layer memory split: `02-The-Wiki/` holds shared domain knowledge (avatar, scripts, pricing, prompt templates — read by every agent), `memory/` holds project state (this file, current strategy, next actions, session summaries, bugs/risks) — because the two were getting mixed together and duplicated (see superseded note below), and domain knowledge needs to compound in one place, not fork per-agent.
+- `2026-08-26` — Agents do NOT get their own private wiki. Per-agent state lives in `04-Agents/outputs/{agent}/` (scratch/output only). Shared knowledge always goes in `02-The-Wiki/`. Reason: the whole point of the wiki pattern is compounding synthesis — siloing it per agent would recreate the fragmented-RAG problem the pattern exists to avoid, and multiple agents (Lead Gen, Outreach, Response Handler, Video Creation) all depend on the same avatar/script/pricing knowledge.
+- `2026-08-26` — Removed `memory/findings.md` (deprecated). Its content (Claire Robertson demographics, target communities, pricing) duplicated — and was less complete than — `02-The-Wiki/sales/Claire-Robertson-Avatar.md` and the PRICING BY CITY table in CLAUDE.md. Domain knowledge belongs only in the wiki now.
+- `2026-08-26` — Removed `memory/progress.md` and `memory/task_plan.md` (deprecated, folded below). They tracked an "A.N.T. 3-layer" / "B.L.A.S.T." framework (`/architecture/`, `/execution/` folders) that was never actually built — no such folders exist in this repo. Superseded by the structure actually in use: `01-Raw-Sources/` → `02-The-Wiki/` → `03-Episodes/` → `04-Agents/`, governed by CLAUDE.md's INGEST/LINT/EPISODE protocols.
+
+---
+
+## Superseded (kept for history, not current)
+- `2026-04-xx` — "A.N.T. 3-Layer Build" (Architecture/Navigation/Tools) and the "B.L.A.S.T." 90-day execution framework were proposed. Never implemented — the repo evolved in a different direction (the raw-sources/wiki/episodes/agents structure documented in `index.md`). If either framework is revived, update this file with a real dated decision, don't just resurrect the old files.
