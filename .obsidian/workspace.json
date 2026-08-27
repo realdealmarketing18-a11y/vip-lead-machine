@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "00e1707ba5ccb0ae",
+        "id": "c6cc03f89e04e75c",
         "type": "tabs",
         "children": [
           {
-            "id": "2f78b4e7cc064acb",
+            "id": "65bc38e2a0a225c7",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -190,8 +190,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2f78b4e7cc064acb",
+  "active": "65bc38e2a0a225c7",
   "lastOpenFiles": [
+    "open-design/skills/html-ppt/SKILL.md",
     "Untitled 1.base",
     "index.md.tmp.19408.90b02802b286",
     "2026-08-26.md",
