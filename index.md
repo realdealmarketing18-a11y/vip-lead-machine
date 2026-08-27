@@ -41,11 +41,11 @@ VIP-Lead-Machine/
 ├── log.md              ← Activity log — what happened, what's next
 │
 ├── memory/             ← PROJECT STATE — decisions, strategy, punch list, risks
-│   ├── decisions.md          ← Dated decisions + why (includes what's been superseded)
-│   ├── current-strategy.md   ← The "now" state — updated weekly
-│   ├── next-actions.md       ← THE canonical punch list
-│   ├── bugs-and-risks.md     ← Open issues and watch-outs
-│   └── session-summaries.md  ← Dated wrap-ups (written only on explicit request)
+│   ├── [[decisions]]          ← Dated decisions + why (includes what's been superseded)
+│   ├── [[current-strategy]]   ← The "now" state — updated weekly
+│   ├── [[next-actions]]       ← THE canonical punch list
+│   ├── [[bugs-and-risks]]     ← Open issues and watch-outs
+│   └── [[session-summaries]]  ← Dated wrap-ups (written only on explicit request)
 │
 ├── 01-Raw-Sources/     ← DROP ZONE — unprocessed inputs only
 │   ├── web-clips/      ← Scraped pages, screenshots, web research

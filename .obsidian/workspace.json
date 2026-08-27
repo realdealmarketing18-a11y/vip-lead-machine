@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "418a6396c4bc0d68",
+        "id": "00e1707ba5ccb0ae",
         "type": "tabs",
         "children": [
           {
-            "id": "5cbcb0071ff6b210",
+            "id": "2f78b4e7cc064acb",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -70,8 +70,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -191,8 +190,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5cbcb0071ff6b210",
+  "active": "2f78b4e7cc064acb",
   "lastOpenFiles": [
+    "Untitled 1.base",
+    "index.md.tmp.19408.90b02802b286",
+    "2026-08-26.md",
+    "memory/session-summaries.md.tmp.19408.f3a7d6a99706",
+    "Untitled 2.canvas",
+    "memory/bugs-and-risks.md.tmp.19408.a9a69ae1e739",
+    "memory/next-actions.md.tmp.19408.f1a98ba8a4af",
     "Untitled.base",
     "2026-06-18.md",
     "Untitled 1.canvas",

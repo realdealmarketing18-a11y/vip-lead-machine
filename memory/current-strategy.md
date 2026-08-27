@@ -19,4 +19,4 @@ Get Newport Beach published end-to-end (unblocks the WordPress pipeline for all 
 
 ## Not doing right now
 - Not building out `02-The-Wiki/communities/` until there's an actual referral/HOA source to ingest — no fabricated pages.
-- Not touching the abandoned "A.N.T./B.L.A.S.T." framework — see `decisions.md`.
+- Not touching the abandoned "A.N.T./B.L.A.S.T." framework — see [[decisions]].
