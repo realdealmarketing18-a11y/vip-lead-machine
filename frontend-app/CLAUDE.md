@@ -11,7 +11,7 @@ A Vite + React rebuild of the VIP Premier Painting landing experience — a from
 ## B · The Goal
 - **Why it exists:** the static HTML pages can't do the interactive "Before → Visualization → After" slider experience the redesign spec calls for; this needs a real component framework.
 - **Done looks like:** the interactive timeline component (Before/Visualization/After) is live, either standalone or embedded into WordPress via shortcode/iframe — see `../02-The-Wiki/website-redesign-spec.md` for the full spec.
-- **Out of scope:** SEO city/community pages — those stay in `../sales-pages-oc/` and get published via WordPress, not this app.
+- **Out of scope:** SEO city/community pages — those live in the Vip-home-painting-orange-county repo (local: `C:\Users\Owner\oc-site`) and get published via WordPress, not this app.
 
 ## C · Stack
 - **Languages:** JavaScript (React 18)

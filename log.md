@@ -1,6 +1,18 @@
 # Activity Log — VIP Premier Lead Machine
 Append entries at TOP. Format: ## YYYY-MM-DD — [What happened]
 
+## 2026-09-15 — Sales pages consolidated into the OC repo; tagline, Free/Complimentary and colors settled
+Fabian confirmed that all sales-page work happens in `Vip-home-painting-orange-county`, and this repo stays the back office. Full reasoning in `memory/decisions.md`.
+
+**Changed:**
+- Tagline is "Visualize It. Love It. Paint It.", swept from 25 files (`142f19a`).
+- Removed `SALES-PAGE-DESIGN/`, `sales-pages-oc/` and `.tmp/repo-clone`: stale copies, and the OC repo's versions were newer. The five templates that existed only here moved to the OC repo's `docs/reference-templates/`. Everything is recoverable at `142f19a`.
+- "Complimentary" is canonical and "free" is on NEVER SAY; "Stress-Complimentary" becomes "Concierge Experience". **Lint fix** for the 2026-08-26 flag: `marketing/3-Step-Funnel-Framework.md` (2×) and `website-redesign-spec.md` (1×).
+- COLORS line corrected to the full four-color palette.
+- Repointed `CLAUDE.md`, `AGENTS.md`, `frontend-app/CLAUDE.md` and `memory/current-strategy.md` away from the removed folders. `.tmp/` added to `.gitignore`.
+
+**Left as-is, now dead:** `scratch/serve-all.js`, `scratch/take-oc-screenshot.js` and `scratch/update_sales_pages.js` still point at the removed folders.
+
 ## 2026-08-26 — Memory Architecture Overhaul: Two-Layer Split + Folder-Level Briefs
 Fabian shared two external patterns (an "LLM Wiki" idea doc, already covered by today's earlier Lint Report entry, and a folder-level "Operating Manual" CLAUDE.md template) and asked for a memory system covering VIP Lead Machine, the OC sales pages, and the agent system that compounds daily.
 

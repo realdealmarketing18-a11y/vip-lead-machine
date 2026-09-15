@@ -15,7 +15,7 @@ Three unconfigured integrations are the actual bottleneck, not content quality:
 3. **SAM.gov API key** — blocks the government-contracts lead channel entirely (unstarted).
 
 ## Current focus
-Get Newport Beach published end-to-end (unblocks the WordPress pipeline for all future cities), then run the DISPATCH queue for Irvine next since `sales-pages-oc/irvine/` already has the most community subpages built.
+Get Newport Beach published end-to-end (unblocks the WordPress pipeline for all future cities), then run the DISPATCH queue for Irvine next since Irvine already has the most community subpages built (they live in the Vip-home-painting-orange-county repo, not here).
 
 ## Not doing right now
 - Not building out `02-The-Wiki/communities/` until there's an actual referral/HOA source to ingest — no fabricated pages.

@@ -11,7 +11,7 @@ Build the "Custom Color Scheme Visualization" landing experience.
 ### 1. Hero Section
 - **Visuals:** Full bleed cinematic image (Placeholder: `https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2000&auto=format&fit=crop`).
 - **Copy:** "Makeover Visualized First, Then Painted." 
-- **Action:** A "Book Free Estimate" button pointing to the contact modal.
+- **Action:** A "Book Complimentary Estimate" button pointing to the contact modal.
 
 ### 2. The Interactive Timeline (Before -> Visualization -> After)
 This is a custom interactive component. It should allow the user to slide or step through three phases of a luxury home:

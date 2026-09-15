@@ -42,14 +42,14 @@ Awareness: Most aware (ready to decide)
 
 Hook: Social proof + urgency + risk reversal
 "67 luxury homeowners. 5 communities. Zero color regrets."
-"See your home transformed first — then decide. Always free."
+"See your home transformed first — then decide. Always complimentary."
 "Limited spots available for {{community}} this month"
 
 Visual: Render K (Final CTA Hero — peak golden hour, all upgrades)
         + Before/After gold wipe split
         + Client testimonial quote overlay
 Length: 15-30 seconds
-CTA: "Get My Free Visualization" → estimate link
+CTA: "Get My Complimentary Visualization" → estimate link
 Objective: Lead generation
 Audience: Step 2 engagers + landing page visitors (no conversion)
 
