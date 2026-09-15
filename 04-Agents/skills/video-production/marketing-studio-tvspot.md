@@ -12,7 +12,7 @@ The 4–5 min YouTube episode is the hero. This sub-skill produces the **short n
 Pull the strongest beats from the finished episode into shorter edits in CapCut:
 
 - **90-second Reel/FB ad:** Hook (gold split) → one line of struggle → Custom Color Scheme Visualization tease → gold-wipe reveal → CTA. Keep Fabian's hook VO + the reveal.
-- **15-second silent website loop:** Render A BEFORE → gold wipe → Render K hero, Ken Burns, text-only ("SEE IT. LOVE IT. PAINT IT." + phone). No VO; designed for autoplay-muted.
+- **15-second silent website loop:** Render A BEFORE → gold wipe → Render K hero, Ken Burns, text-only ("VISUALIZE IT. LOVE IT. PAINT IT." + phone). No VO; designed for autoplay-muted.
 - **30-second story ad:** Hook → reveal → CTA. Tightest possible transformation proof.
 
 Always lead with the result (HGTV cold-open logic) — the reveal is the scroll-stopper.
@@ -30,7 +30,7 @@ For a fast standalone spot without full episode assembly, use the installed `hig
 - Never "AI" — "Custom Color Scheme Visualization."
 - Navy #1a1f4e + gold #FFB200 grade. Logo on white pill over dark.
 - On-screen text uses "complimentary"; spoken VO may use the approved "FREE."
-- Taglines: "See It. Love It. Paint It." / "Visualize It. See It. Paint It."
+- Tagline: "Visualize It. Love It. Paint It."
 - CTA bar: navy bg, gold border, "(909) 312-5400 · BOOK YOUR COMPLIMENTARY VISUALIZATION."
 
 ## DISTRIBUTION (3-step funnel)

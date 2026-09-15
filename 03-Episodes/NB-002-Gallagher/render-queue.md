@@ -137,7 +137,7 @@ TOP PANEL - large hero shot: An elegant Caucasian couple in their 50s (matching 
 
 BOTTOM LEFT PANEL - close-up portrait: the wife's face showing a proud, warm smile, soft golden light. Text overlay "SEE IT" gold top left, "LOVE IT" below with gold divider. Dark navy background.
 
-BOTTOM RIGHT PANEL - close-up of the Newport Fog stucco and Iron Ore front door with brushed black hardware and an amber-glowing minimalist LED sconce. Bold gold text: "VISUALIZE IT. SEE IT. PAINT IT."
+BOTTOM RIGHT PANEL - close-up of the Newport Fog stucco and Iron Ore front door with brushed black hardware and an amber-glowing minimalist LED sconce. Bold gold text: "VISUALIZE IT. LOVE IT. PAINT IT."
 
 Color grade: Consistent navy #1a1f4e and gold #C9A961. Photorealistic skin and architectural textures. 8K.
 ```

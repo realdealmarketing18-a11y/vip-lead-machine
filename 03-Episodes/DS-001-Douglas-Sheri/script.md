@@ -56,5 +56,5 @@
 ---
 
 ## SCENE 8 · THE RESULT + CTA — YOUR HOME IS NEXT (4:15–5:00)
-* **Visual**: Full-screen video pan across Render K (Final CTA Hero) with a Ken Burns effect. The tagline "SEE IT. LOVE IT. PAINT IT." appears in bold gold. Fades to the final navy-and-gold card with contact details: "(909) 312-5400 · BOOK YOUR COMPLIMENTARY VISUALIZATION."
+* **Visual**: Full-screen video pan across Render K (Final CTA Hero) with a Ken Burns effect. The tagline "VISUALIZE IT. LOVE IT. PAINT IT." appears in bold gold. Fades to the final navy-and-gold card with contact details: "(909) 312-5400 · BOOK YOUR COMPLIMENTARY VISUALIZATION."
 * **Fabian (VO)**: "The result? A stunning transformation that turned their house into the standout home of the neighborhood. Douglas and Sheri's bold yet timeless look perfectly reflected their style and personality. They saved valuable time, avoided costly design errors, and eliminated all stress by partnering with VIP Premier Painting — and now they're proud to call this their dream home. Imagine walking up to your home and feeling that same pride and excitement every day. That's what our complimentary Custom Color Scheme Visualization Service can do for you!"

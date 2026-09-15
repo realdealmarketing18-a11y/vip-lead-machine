@@ -144,7 +144,7 @@ Audio: Environmental SFX only. No music. No subtitles.
 * **Camera Movement**: Medium close-up, slow Dolly-out on Fabian, then transition to static card.
 * **Text Overlay**:
   **VIP Premier Painting**  
-  *See It. Love It. Paint It.*  
+  *Visualize It. Love It. Paint It.*  
   Call: (909) 312-5400  
   viphomepainting.com
 * **Audio**: Music swells to a finish. Fabian: *"The result? A stunning transformation that turned their house into the standout home of the neighborhood. Douglas and Sheri's bold yet timeless look perfectly reflected their style and personality. They saved valuable time, avoided costly design errors, and eliminated all stress by partnering with VIP Premier Painting — and now they're proud to call this their dream home. Imagine walking up to your home and feeling that same pride and excitement every day. That's what our complimentary Custom Color Scheme Visualization Service can do for you!"*

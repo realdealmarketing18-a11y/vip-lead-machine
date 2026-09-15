@@ -41,7 +41,7 @@
 **[25–35s]**
 *Visual:* VIP logo. Navy card. Clean.
 *Audio (VO):* "VIP Premier Painting. We render your estate before we touch it."
-*Text:* "See It. Love It. Paint It." + "@vippremierpaintingca — Follow for the reveal."
+*Text:* "Visualize It. Love It. Paint It." + "@vippremierpaintingca — Follow for the reveal."
 
 **CTA:** Follow for the full transformation.
 
@@ -183,7 +183,7 @@ Cut to: design team working on visualization, then the rendering appearing on sc
 
 **[110–115s] — TITLE CARD**
 *Visual:* VIP Premier Painting logo. Navy background. Clean.
-*Text:* "See It. Love It. Paint It."
+*Text:* "Visualize It. Love It. Paint It."
 *Text:* "viphomepainting.com | (909) 312-5400"
 *Text:* "Serving Newport Beach estates from $2M–$20M | Complimentary Visualization"
 

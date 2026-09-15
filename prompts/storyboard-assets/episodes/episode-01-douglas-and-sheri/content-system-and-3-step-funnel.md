@@ -220,4 +220,4 @@ Post Step 1 (episode video). 2 days later post Step 2 (color poll). Set up Step 
 
 ---
 
-*VIP Premier Painting · See It. Love It. Paint It. · (909) 312-5400 · viphomepainting.com · Book Free Consultation*
+*VIP Premier Painting · Visualize It. Love It. Paint It. · (909) 312-5400 · viphomepainting.com · Book Free Consultation*

@@ -118,7 +118,7 @@ Body:
 - ALWAYS say: Custom Visualization Service, VIP Concierge, estate, investment, prestige
 - Colors: Orange #E8833A | Navy #1A1F4E | Gold #C9A961
 - Phone: (909) 312-5400 | Email: Contact@VIPHomePainting.com
-- Tagline: "See It. Love It. Paint It."
+- Tagline: "Visualize It. Love It. Paint It."
 - Avatar: Claire Robertson — 42-55, CEO/Business Owner, $1M-$5M HHI, fear = wrong contractor
 
 ---

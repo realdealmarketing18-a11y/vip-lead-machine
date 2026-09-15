@@ -449,7 +449,7 @@ export default function CityPage({ slug }) {
             <text x="52" y="32" fontFamily="Georgia,serif" fontSize="22" fontWeight="700" fill="#FFF" letterSpacing="2">VIP</text>
             <text x="52" y="48" fontFamily="Arial,sans-serif" fontSize="8" fontWeight="600" fill="rgba(255,255,255,0.6)" letterSpacing="3">HOME PAINTING</text>
           </svg>
-          <div style={{ fontFamily: 'Fraunces,Georgia,serif', fontStyle: 'italic', color: goldBright, fontSize: 18, marginBottom: 14 }}>"Visualize it. See it. Paint it."</div>
+          <div style={{ fontFamily: 'Fraunces,Georgia,serif', fontStyle: 'italic', color: goldBright, fontSize: 18, marginBottom: 14 }}>"Visualize It. Love It. Paint It."</div>
           <div style={{ fontSize: 13, letterSpacing: '0.06em', marginBottom: 6 }}>(909) 312-5400 · viphomepainting.com</div>
           <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.60)' }}>Proudly Serving {city} &amp; {page.region} · Licensed · Bonded · Insured</div>
           <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginTop: 16, letterSpacing: '0.04em' }}>© 2026 VIP Home Painting · CA Licensed &amp; Bonded</div>

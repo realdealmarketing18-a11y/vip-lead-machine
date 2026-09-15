@@ -268,7 +268,7 @@
 
 **Visual Direction**
 - Full-screen Render K: Final CTA hero. All upgrades visible. Slow epic Ken Burns pull-back. 5 seconds minimum.
-- Tagline: "SEE IT. LOVE IT. PAINT IT." — Cormorant Garamond italic, white, large.
+- Tagline: "VISUALIZE IT. LOVE IT. PAINT IT." — Cormorant Garamond italic, white, large.
 - CTA bar pulses in: Navy bg · gold border · "(909) 312-5400 · BOOK YOUR FREE VISUALIZATION"
 - "LIMITED SPOTS AVAILABLE" orange. viphomepainting.com + VIP crown logo.
 

@@ -36,9 +36,9 @@ htmlFiles.forEach((file) => {
   content = content.replace(/Stress-Complimentary\s*Experience/gi, 'Stress-Free Concierge Experience');
   content = content.replace(/Stress-Complimentary/gi, 'Stress-Free Concierge');
 
-  // 3. Tagline fix: "See It. Love It. Paint It." -> "Visualize it. See it. Paint it."
-  content = content.replace(/See It\. Love It\. Paint It\./gi, 'Visualize it. See it. Paint it.');
-  content = content.replace(/Visualize It\. See It\. Paint It\./gi, 'Visualize it. See it. Paint it.');
+  // 3. Tagline fix: both retired variants -> "Visualize It. Love It. Paint It."
+  content = content.replace(/See It\. Love It\. Paint It\./gi, 'Visualize It. Love It. Paint It.');
+  content = content.replace(/Visualize It\. See It\. Paint It\./gi, 'Visualize It. Love It. Paint It.');
 
   // 4. Color replacements
   content = content.replace(/#E8833A/gi, '#141838'); // replace legacy orange with navy

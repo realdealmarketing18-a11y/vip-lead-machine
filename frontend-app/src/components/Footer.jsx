@@ -10,7 +10,7 @@ export default function Footer({ onBookClick }) {
             <a href="/" style={styles.logo}>
               VIP<span style={styles.logoAccent}> Premier</span> Painting
             </a>
-            <p style={styles.tagline}>See It. Love It. Paint It.</p>
+            <p style={styles.tagline}>Visualize It. Love It. Paint It.</p>
             <p style={styles.brandDesc}>
               Southern California's foremost luxury exterior painting specialist.
               Serving estates from $2M to $20M across coastal Orange County,

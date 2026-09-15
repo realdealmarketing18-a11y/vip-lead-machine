@@ -20,7 +20,7 @@ FONTS:  Fraunces (headlines & logo wordmark) | Inter (body/UI)
 PHONE:  (909) 312-5400
 EMAIL:  Contact@VIPHomePainting.com
 WEB:    viphomepainting.com
-TAGLINE: "Visualize it. See it. Paint it."
+TAGLINE: "Visualize It. Love It. Paint It."
 FOOTER:  "We don't just paint homes, we transform lives."
 LOCATION: Anaheim-based, serving Orange County luxury residential communities
 WARRANTY: 2-Year Craftsmanship Guarantee (NEVER say 1-year)

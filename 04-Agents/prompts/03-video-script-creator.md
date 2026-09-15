@@ -168,7 +168,7 @@ OVERLAY TEXT: [any text on screen]
 
 [95-110s] THE NEW LIFE — Homeowner standing outside her finished estate. Neighbors stopping. Pride.
        DIALOGUE: "My home finally looks the way it always should have."
-       VOICEOVER: "VIP Premier Painting. See It. Love It. Paint It."
+       VOICEOVER: "VIP Premier Painting. Visualize It. Love It. Paint It."
 
 [110-120s] TITLE CARD — Logo. Phone. Website. Tagline.
        "Serving [city] estates from $2M–$20M. Complimentary visualization. (909) 312-5400"

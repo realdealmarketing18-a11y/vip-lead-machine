@@ -88,7 +88,7 @@ ALWAYS SAY: Custom Visualization Service, VIP Concierge, estate, investment, pre
 
 Colors: Orange #E8833A | Navy #1A1F4E | Gold #C9A961
 Phone: (909) 312-5400
-Tagline: "See It. Love It. Paint It."
+Tagline: "Visualize It. Love It. Paint It."
 Avatar: Claire — 42-55, HNW female, fear = wrong contractor, embarrassing result
 
 ---

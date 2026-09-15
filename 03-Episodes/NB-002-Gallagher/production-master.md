@@ -1,5 +1,5 @@
 # VIP Premier Painting
-**See It. Love It. Paint It.**
+**Visualize It. Love It. Paint It.**
 
 ## Richard & Elizabeth — Pelican Hill Villa Transformation
 **Episode 2 · Production Master**
@@ -100,7 +100,7 @@ The commercial serves as the hero element for the new Pelican Hill community lan
 * **Script (Word for Word)**:
   "The result? A stunning transformation that turned their house into the standout home of the neighborhood. Richard and Elizabeth's bold yet timeless look perfectly reflected their style and personality. They saved valuable time, avoided costly design errors, and eliminated all stress by partnering with VIP Premier Painting — and now they're proud to call this their dream home. Imagine walking up to your home and feeling that same pride and excitement every day. That's what our complimentary Custom Color Scheme Visualization Service can do for you!"
 * **Visual Direction**:
-  Full-screen video pan across Render K (Final CTA Hero) with a Ken Burns effect. The tagline "SEE IT. LOVE IT. PAINT IT." appears in bold gold. Fades to the final navy-and-gold card with contact details: "(909) 312-5400 · BOOK YOUR COMPLIMENTARY VISUALIZATION."
+  Full-screen video pan across Render K (Final CTA Hero) with a Ken Burns effect. The tagline "VISUALIZE IT. LOVE IT. PAINT IT." appears in bold gold. Fades to the final navy-and-gold card with contact details: "(909) 312-5400 · BOOK YOUR COMPLIMENTARY VISUALIZATION."
 * **Assets**: Render K + End CTA Graphic CardK YOUR COMPLIMENTARY VISUALIZATION."
 * **Assets**: Render K + End CTA Graphic Card
 
@@ -159,7 +159,7 @@ TOP PANEL - large hero shot: An elegant Caucasian couple in their 50s (matching 
 
 BOTTOM LEFT PANEL - close-up portrait: the wife's face showing a proud, warm smile, soft golden light. Text overlay "SEE IT" gold top left, "LOVE IT" below with gold divider. Dark navy background.
 
-BOTTOM RIGHT PANEL - close-up of the Newport Fog stucco and Iron Ore front door with brushed black hardware and an amber-glowing minimalist LED sconce. Bold gold text: "VISUALIZE IT. SEE IT. PAINT IT."
+BOTTOM RIGHT PANEL - close-up of the Newport Fog stucco and Iron Ore front door with brushed black hardware and an amber-glowing minimalist LED sconce. Bold gold text: "VISUALIZE IT. LOVE IT. PAINT IT."
 
 Color grade: Consistent navy #1a1f4e and gold #C9A961. Photorealistic skin and architectural textures. 8K.
 ```
