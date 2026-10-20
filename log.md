@@ -1,6 +1,16 @@
 # Activity Log — VIP Premier Lead Machine
 Append entries at TOP. Format: ## YYYY-MM-DD — [What happened]
 
+## 2026-10-20 — Lean Production Playbook added (Higgsfield Max-plan budget)
+Fabian asked whether the Max plan (1,800 credits/mo) covers storytelling commercials, the 3-step funnel and a short VSL.
+
+**Added:** `02-The-Wiki/marketing/Lean-Production-Playbook.md` — credit costs (Seedance 2.5: 24 cr per 8 s at 480p, 52 at 720p), a ~950-credit monthly package, the 7-step draft→final workflow, and which tools to use or skip.
+
+**Contradictions flagged:**
+- `03-Episodes/NB-002-Gallagher/render-queue.md` and `production-master.md` price renders at "1 credit" — outdated.
+- `3-Step-Funnel-Framework.md` Step 3 hook "67 luxury homeowners… Zero color regrets" is unverified (VIP has 9 reviews) — don't run it.
+- The Higgsfield connector was on a free plan with 0 credits on 2026-10-20.
+
 ## 2026-09-15 — Sales pages consolidated into the OC repo; tagline, Free/Complimentary and colors settled
 Fabian confirmed that all sales-page work happens in `Vip-home-painting-orange-county`, and this repo stays the back office. Full reasoning in `memory/decisions.md`.
 

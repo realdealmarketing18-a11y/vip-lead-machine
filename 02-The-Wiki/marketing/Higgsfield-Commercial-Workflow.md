@@ -2,6 +2,8 @@
 
 This document outlines the proven workflow for generating photorealistic, cinematic commercial videos using Higgsfield AI. It details the **MCSLA Prompting Formula**, style constraints, and sequence chaining rules utilized by our design team to create luxury-tier custom visualizations.
 
+> Budget, tool choice and the draft→final workflow: [[Lean-Production-Playbook]].
+
 ---
 
 ## The MCSLA Prompting Formula

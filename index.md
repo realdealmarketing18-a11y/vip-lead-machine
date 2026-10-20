@@ -55,7 +55,8 @@ VIP-Lead-Machine/
 ├── 02-The-Wiki/        ← KNOWLEDGE BASE — distilled & verified
 │   ├── marketing/      ← ICP, messaging, channels, campaigns
 │   │   ├── [[3-Step-Funnel-Framework]] ← 3-step ad funnel (cold/warm/hot) + UTM scheme
-│   │   └── [[Higgsfield-Commercial-Workflow]] ← MCSLA prompting formula + cinematic style prefix
+│   │   ├── [[Higgsfield-Commercial-Workflow]] ← MCSLA prompting formula + cinematic style prefix
+│   │   └── [[Lean-Production-Playbook]] ← Max-plan credit budget, monthly package, draft→final workflow
 │   ├── sales/          ← Scripts, objections, closing frameworks
 │   │   ├── [[Claire-Robertson-Avatar]] ← Target buyer profile (demographics, fears, desires, messaging rules)
 │   │   └── [[Doctor-Diagnosis-Script]] ← Sabri Suby 5-stage diagnose-before-prescribe sales script

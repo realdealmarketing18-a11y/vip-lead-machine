@@ -5,6 +5,8 @@
 
 ## 01 · Render Queue Overview
 
+> **Credits column is outdated (2026-10-20).** Current costs and the 60-second mini-commercial plan: [[Lean-Production-Playbook]].
+
 | ID | Render | Tool | Credits | Usage |
 |:---|:---|:---|:---|:---|
 | **A** | BEFORE Straight-On | Real photo | 0 | S1, S2, S3, S4, S7 |
