@@ -1,4 +1,6 @@
 # VIP Premier Painting
+
+> **⚠️ Script v2 (2026-10-27) lives in [script.md](./script.md)** — it replaces Section 02 below and fixes the timeline, the SW colors (Render C accent is Iron Ore SW 7069), the paint-can rule and the phone. Write Higgsfield prompts from `script.md`, not from this sheet.
 **Visualize It. Love It. Paint It.**
 
 ## Richard & Elizabeth — Pelican Hill Villa Transformation
