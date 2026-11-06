@@ -2,7 +2,7 @@
 **Show Title**: VIP Premier Transformations: Orange County Estates
 **Episode ID**: NB-002 (Pelican Hill Mediterranean Transformation)
 **Version**: v2 — 2026-10-27 (supersedes the script section in `production-master.md` and the panel timings in `storyboard.md`)
-**Length**: ~4:45 (8 scenes, 25 shots)
+**Length**: ~4:45 (8 scenes, 24 shots)
 **Clients**: Richard & Elizabeth Gallagher are real clients and gave permission to be portrayed (confirmed by Fabian 2026-09-23, `client-stories.json → gallagher-family`). The footage of them is rendered, so it is a **dramatization of their real project** — it is never presented as documentary footage.
 
 ---
