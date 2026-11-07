@@ -2,7 +2,7 @@
 **Show Title**: VIP Premier Transformations: Orange County Estates
 **Episode ID**: NB-002 (Pelican Hill Mediterranean Transformation)
 **Version**: v2 — 2026-10-27 (supersedes the script section in `production-master.md` and the panel timings in `storyboard.md`)
-**Length**: ~4:45 (8 scenes, 24 shots)
+**Length**: ~5:05 (8 scenes + the 7.5 time-lapse beat, 27 shots)
 **Clients**: Richard & Elizabeth Gallagher are real clients and gave permission to be portrayed (confirmed by Fabian 2026-09-23, `client-stories.json → gallagher-family`). The footage of them is rendered, so it is a **dramatization of their real project** — it is never presented as documentary footage.
 
 ---
@@ -115,13 +115,23 @@ Navy `#1A1F4E` + gold `#C9A961`, peak golden hour with a dramatic cloud sky on h
 
 ---
 
-## SCENE 8 · THE RESULT + CTA — YOUR HOME IS NEXT (4:00–4:45)
+## SCENE 7.5 · PAINT IT — THE CRAFT (4:00–4:20)
+* **Fabian (VO)**: "Then our crew made it real. Every surface prepped, primed and finished in Sherwin-Williams Emerald, exactly as they'd seen it."
+* **Shots** *(full prompts and settings: `timelapse-workflow.md`)*
+  * **7.5A · HOUSE · 4:00–4:12** — Wide time-lapse, locked-off camera: `@villa_before` (Render A) → prep (scaffolding, ladders, masking, drop cloths) → half-painted in Repose Gray → Render C. Three chained start/end-frame clips (Seedance 2.0), sped up in CapCut and slowed back to 1× as the finished house lands. Painters are faceless, motion-blurred, in plain white polos.
+  * **7.5B · HOUSE · 4:12–4:16** — Close-up time-lapse of one stucco wall section: tape lines, then roller passes laying down Repose Gray SW 7015 band by band.
+  * **7.5C · FABIAN · 4:16–4:20** — `@fabian-5` inspecting a freshly painted Iron Ore shutter edge at normal speed, a small satisfied nod.
+  * **On screen**: "PREP · PRIME · PAINT" (one word per stage), then "2-YEAR WARRANTY" over the last second.
+
+---
+
+## SCENE 8 · THE RESULT + CTA — YOUR HOME IS NEXT (4:20–5:05)
 * **Fabian (VO)**: "The result? Their house became the one people slow down to look at. A look that's bold, timeless, and completely theirs. They saved weeks, avoided an expensive mistake, and now they're proud to come home to it. Imagine walking up to your own home and feeling that same pride every day. That's what our complimentary Custom Color Scheme Visualization can do for you."
 * **Shots**
-  * **8A · HOUSE · 4:00–4:17** — Render K (final hero), golden hour, slow Ken Burns pull-back, minimum 5 seconds before any cut.
-  * **8B · CLIENTS · 4:17–4:27** — `@Richard` and `@Elizabeth` walking up the front path arm in arm, Elizabeth looking up at the house, Richard's hand on her back. Shot from behind and three-quarter, warm light.
-  * **8C · FABIAN · 4:27–4:35** — `@fabian-5` direct to camera, warm invitation, slight smile, small nod on "for you."
-  * **8D · GRAPHIC · 4:35–4:45** — Tagline "VISUALIZE IT. LOVE IT. PAINT IT." in bold gold, then the navy-and-gold end card: "BOOK YOUR COMPLIMENTARY VISUALIZATION · (949) 418-6461 · viphomepainting.com"
+  * **8A · HOUSE · 4:20–4:37** — Render K (final hero), golden hour, slow Ken Burns pull-back, minimum 5 seconds before any cut.
+  * **8B · CLIENTS · 4:37–4:47** — `@Richard` and `@Elizabeth` walking up the front path arm in arm, Elizabeth looking up at the house, Richard's hand on her back. Shot from behind and three-quarter, warm light.
+  * **8C · FABIAN · 4:47–4:55** — `@fabian-5` direct to camera, warm invitation, slight smile, small nod on "for you."
+  * **8D · GRAPHIC · 4:55–5:05** — Tagline "VISUALIZE IT. LOVE IT. PAINT IT." in bold gold, then the navy-and-gold end card: "BOOK YOUR COMPLIMENTARY VISUALIZATION · (949) 418-6461 · viphomepainting.com"
 
 ---
 
@@ -136,6 +146,8 @@ Navy `#1A1F4E` + gold `#C9A961`, peak golden hour with a dramatic cloud sky on h
 7. **Phone is (949) 418-6461**, the only number allowed in customer-facing copy (OC repo `context/ABOUT-VIP.md`). v1 used (909) 312-5400.
 
 ## NEEDS FABIAN BEFORE RENDERING
+
+- [ ] **Sherwin-Williams Emerald** (Scene 7.5 VO) — is that the product on this job? `brief.md` says so.
 
 - [ ] **Phone number** — this repo's `CLAUDE.md` and the video skill still say (909) 312-5400; the website rules say (949) 418-6461 only. Which one goes on the end card?
 - [ ] **Iron Ore vs Tricorn Black** on the shutters and doors — which did the Gallaghers actually pick?

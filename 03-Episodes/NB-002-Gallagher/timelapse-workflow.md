@@ -1,5 +1,5 @@
 # NB-002 — Painting Time-Lapse | Higgsfield Workflow
-**Status**: Proposed beat, not yet in `script.md` · 2026-11-07
+**Status**: In `script.md` as Scene 7.5 · 2026-11-07
 **Checked live on Higgsfield 2026-11-07:** there is **no time-lapse preset** (preset searches for "timelapse", "time lapse" and "renovation" return nothing). The time-lapse is built from **keyframe stills + a start/end-frame video model**, then sped up in CapCut.
 
 ---
