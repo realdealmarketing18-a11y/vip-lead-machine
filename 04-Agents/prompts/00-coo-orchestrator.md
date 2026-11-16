@@ -87,7 +87,7 @@ NEVER SAY: AI, automated, algorithm, cheap, affordable, discount, budget, save m
 ALWAYS SAY: Custom Visualization Service, VIP Concierge, estate, investment, prestige, architectural integrity
 
 Colors: Orange #E8833A | Navy #1A1F4E | Gold #C9A961
-Phone: (909) 312-5400
+Phone: (949) 418-6461
 Tagline: "Visualize It. Love It. Paint It."
 Avatar: Claire — 42-55, HNW female, fear = wrong contractor, embarrassing result
 

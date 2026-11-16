@@ -130,7 +130,7 @@ OVERLAY TEXT: [any text on screen]
          Sherwin-Williams Emerald products."
 [25-30s] REMOVE RISK — "Complimentary. No obligation. 
          Your estate deserves certainty."
-[30-40s] HARD CTA — "Call (909) 312-5400 or click the link. 
+[30-40s] HARD CTA — "Call (949) 418-6461 or click the link. 
          Your free visualization is waiting."
 ```
 
@@ -171,7 +171,7 @@ OVERLAY TEXT: [any text on screen]
        VOICEOVER: "VIP Premier Painting. Visualize It. Love It. Paint It."
 
 [110-120s] TITLE CARD — Logo. Phone. Website. Tagline.
-       "Serving [city] estates from $2M–$20M. Complimentary visualization. (909) 312-5400"
+       "Serving [city] estates from $2M–$20M. Complimentary visualization. (949) 418-6461"
 ```
 
 ---

@@ -31,7 +31,7 @@ For a fast standalone spot without full episode assembly, use the installed `hig
 - Navy #1a1f4e + gold #FFB200 grade. Logo on white pill over dark.
 - On-screen text uses "complimentary"; spoken VO may use the approved "FREE."
 - Tagline: "Visualize It. Love It. Paint It."
-- CTA bar: navy bg, gold border, "(909) 312-5400 · BOOK YOUR COMPLIMENTARY VISUALIZATION."
+- CTA bar: navy bg, gold border, "(949) 418-6461 · BOOK YOUR COMPLIMENTARY VISUALIZATION."
 
 ## DISTRIBUTION (3-step funnel)
 

@@ -16,7 +16,7 @@ CONTEXT:
 - VIP Premier Painting: luxury exterior painting, Southern California, $2M-$20M homes
 - Brand: Custom Visualization Service, Sherwin-Williams Emerald, VIP Concierge
 - Avatar: Claire Robertson — 42-55, HNW female, fears wrong contractor
-- Phone: (909) 312-5400 | Web: viphomepainting.com
+- Phone: (949) 418-6461 | Web: viphomepainting.com
 - Price in [CITY]: $[X.XX]/sqft exterior
 - NEVER say: AI, cheap, affordable, discount, budget
 - ALWAYS say: Custom Visualization Service, investment, estate, prestige
@@ -108,7 +108,7 @@ Write a complete luxury sales page for VIP Premier Painting targeting [CITY NAME
 VIP Premier Painting: luxury exterior painting company. $2M-$20M homes. Southern California.
 Key offer: Free Custom Visualization Service — photorealistic rendering of the client's home before we paint.
 Price: $[X.XX]/sqft exterior in [city].
-Phone: (909) 312-5400
+Phone: (949) 418-6461
 NEVER say: AI, cheap, affordable, discount, budget, save money
 ALWAYS say: Custom Visualization Service, investment, estate, prestige, VIP Concierge
 

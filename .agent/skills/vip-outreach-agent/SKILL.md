@@ -28,7 +28,7 @@ DAY 21   → Move to quarterly nurture
 ## SMS Templates
 Day 3: "Hi {{first_name}}, Fabian from VIP Premier — did you get a chance 
 to look at the 3 color concepts we created for your home? Happy to answer 
-any questions. (909) 312-5400"
+any questions. (949) 418-6461"
 
 Day 14: "Hi {{first_name}} — just wanted to leave the door open. If timing 
 isn't right, no worries at all. Our free visualization offer stands whenever 

@@ -59,7 +59,7 @@ Convert the sales page copy into these HTML sections:
     <p class="vip-body">[HERO BODY TEXT]</p>
     <div class="vip-actions">
       <a href="#contact" class="vip-btn-primary">Start Your Free Visualization →</a>
-      <a href="tel:9093125400" class="vip-btn-secondary">(909) 312-5400</a>
+      <a href="tel:9093125400" class="vip-btn-secondary">(949) 418-6461</a>
     </div>
     <div class="vip-trust-row">
       [TRUST BADGES — each in a small span with checkmark icon]
@@ -212,7 +212,7 @@ Status: [live / pending manual upload]
 ## QUALITY CHECK BEFORE PUBLISHING
 
 Run through this list:
-- [ ] Phone number (909) 312-5400 appears at least 3 times
+- [ ] Phone number (949) 418-6461 appears at least 3 times
 - [ ] "Custom Visualization Service" capitalized and appears 5+ times
 - [ ] City name in H1, meta title, meta description, and first paragraph
 - [ ] No mention of "cheap," "affordable," "discount," "AI," "automated"

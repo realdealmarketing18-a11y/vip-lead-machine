@@ -160,7 +160,7 @@ Use the city's HOA notes and avatar profile to write relevant questions:
 **CTA Block:**
 ```
 [Primary Button] → Request My Free Visualization
-[Secondary] → Call (909) 312-5400
+[Secondary] → Call (949) 418-6461
 [Disclaimer] → Complimentary. No obligation. Serving [city] estates from $2M–$20M.
 ```
 

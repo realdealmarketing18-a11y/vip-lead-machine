@@ -17,7 +17,7 @@ ALWAYS SAY: "Custom Visualization Service", "our design team", "VIP Concierge",
 
 COLORS: Navy #1A1F4E (text, dark sections) | Navy Deep #141838 (footer, deepest dark) | Gold #C9A961 (primary) | Gold Deep #A88A47 (hover, italic accent) | Cream #F5EFE2 | Champagne Border #DCD0B5 | Muted Slate #4A4F70 — tokens: design-system/colors_and_type.css in the OC repo
 FONTS:  Fraunces (headlines & logo wordmark) | Inter (body/UI)
-PHONE:  (909) 312-5400
+PHONE:  (949) 418-6461
 EMAIL:  Contact@VIPHomePainting.com
 WEB:    viphomepainting.com
 TAGLINE: "Visualize It. Love It. Paint It."

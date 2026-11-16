@@ -33,4 +33,4 @@ Location: {{location}} | Value: ${{value}}
 Closing: {{close_date}} ({{days}} days) | Link: {{sam_url}}
 My fee: {{pct}}% if awarded (${{commission}}).
 Worth a 20-minute call?
-— Fabian | (909) 312-5400
+— Fabian | (949) 418-6461

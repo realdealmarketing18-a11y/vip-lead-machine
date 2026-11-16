@@ -35,7 +35,7 @@ Douglas & Sheri = real portrait photo + any real footage. Do not attempt to gene
 - **Brand colors:** Navy #1a1f4e, Gold #FFB200, Orange #e8833a, Warm Gray #BAAEA1. Grade every render toward navy + gold.
 - **Logo:** white pill/container when on dark backgrounds. Badges only on dark/navy.
 - **Tagline:** "Visualize It. Love It. Paint It."
-- **Contact:** (909) 312-5400 · viphomepainting.com · Contact@VIPHomePainting.com
+- **Contact:** (949) 418-6461 · viphomepainting.com · Contact@VIPHomePainting.com
 
 ## RENDER SETTINGS (lock in every house node)
 

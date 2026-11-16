@@ -14,3 +14,4 @@
 
 ## Superseded (kept for history, not current)
 - `2026-04-xx` — "A.N.T. 3-Layer Build" (Architecture/Navigation/Tools) and the "B.L.A.S.T." 90-day execution framework were proposed. Never implemented — the repo evolved in a different direction (the raw-sources/wiki/episodes/agents structure documented in `index.md`). If either framework is revived, update this file with a real dated decision, don't just resurrect the old files.
+- 2026-11-16 — Grok Bot kit: `grok-bot-kit/` holds one folder per job (instructions + skills), rebuilt from the real skills by `build.sh`. Imported account-only skills `html-to-elementor`, `vip-lead-generation`, `vip-seedance-shotlist-director` into `.agents/skills/` (the VIP shotlist replaces the generic one). Phone (909) 312-5400 → (949) 418-6461 in all skills and prompts (matches the OC repo's Oct 21 change). Paperclip/Slack/Make.com references removed from vip-lead-generation.

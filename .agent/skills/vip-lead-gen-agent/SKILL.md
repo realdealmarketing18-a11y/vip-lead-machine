@@ -77,7 +77,7 @@ If any of these resonate, I'd love a quick 15-minute call.
 No pressure. No obligation. Just clarity.
 
 — Fabian | VIP Premier Painting
-(909) 312-5400 | viphomepainting.com
+(949) 418-6461 | viphomepainting.com
 
 NEVER SAY: AI, cheap, affordable, discount, sale, automated, budget, save money
 ALWAYS USE TONE: investment, estate, prestige, architectural integrity, flawless execution
