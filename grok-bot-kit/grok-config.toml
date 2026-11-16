@@ -1,0 +1,53 @@
+# VIP — Grok CLI permission rules
+# Copy into ~/.grok/config.toml  (your USER config — the permission mode is ignored in a project's .grok/config.toml)
+#
+# How it works:
+#   mode "ask"  → anything NOT allowed below stops and asks Fabian first
+#                 (sending email, publish-wp.js --live, ad spend, paid renders, deleting files)
+#   allow rules → safe, reversible work runs without asking
+#   deny rules  → blocked outright, even if Fabian clicks yes by accident. Deny always wins.
+
+[ui]
+permission_mode = "ask"
+
+[permission]
+rules = [
+  # ---- Allow without asking: reading and researching ----
+  { action = "allow", tool = "read" },
+  { action = "allow", tool = "grep" },
+  { action = "allow", tool = "webSearch" },
+  { action = "allow", tool = "webFetch" },
+  { action = "allow", tool = "bash", pattern = "ls *" },
+  { action = "allow", tool = "bash", pattern = "cat *" },
+
+  # ---- Allow without asking: drafts (every change is in git, so it can be undone) ----
+  { action = "allow", tool = "edit" },
+
+  # ---- Allow without asking: page checks and test runs (they change nothing live) ----
+  { action = "allow", tool = "bash", pattern = "node generator/generate.js*" },
+  { action = "allow", tool = "bash", pattern = "node generator/validate-brief.js *" },
+  { action = "allow", tool = "bash", pattern = "node generator/verify-site.js*" },
+  { action = "allow", tool = "bash", pattern = "node generator/pipeline.js status*" },
+  { action = "allow", tool = "bash", pattern = "node generator/rank-check.js report*" },
+  { action = "allow", tool = "bash", pattern = "bash grok-bot-kit/build.sh*" },
+  # publish-wp.js is deliberately NOT here: a pattern for its dry run would also match --live.
+  # It asks every time — say yes to the dry run, read what it will change, then decide on --live.
+
+  # ---- Allow without asking: saving work to Grok's own branches ----
+  { action = "allow", tool = "bash", pattern = "git status*" },
+  { action = "allow", tool = "bash", pattern = "git diff*" },
+  { action = "allow", tool = "bash", pattern = "git log*" },
+  { action = "allow", tool = "bash", pattern = "git fetch*" },
+  { action = "allow", tool = "bash", pattern = "git add *" },
+  { action = "allow", tool = "bash", pattern = "git commit *" },
+  { action = "allow", tool = "bash", pattern = "git checkout -b grok/*" },
+  { action = "allow", tool = "bash", pattern = "git push -u origin grok/*" },
+  { action = "allow", tool = "bash", pattern = "git push origin grok/*" },
+
+  # ---- Never: blocked even if approved ----
+  { action = "deny", tool = "bash", pattern = "rm -rf *" },
+  { action = "deny", tool = "bash", pattern = "git push --force*" },
+  { action = "deny", tool = "bash", pattern = "git push -f*" },
+  { action = "deny", tool = "bash", pattern = "git push * main*" },
+  { action = "deny", tool = "bash", pattern = "git reset --hard*" },
+]
